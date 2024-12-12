@@ -32,7 +32,7 @@ class Contact extends React.Component {
                             <div className="row">
                                 <div className="col-xs-12 col-lg-5 col-xxl-4">
                                     <div className="avatar">
-                                        <img src="https://cdn.naxalian.fr/avatars/ew-508953.png" alt="Ewen Rodrigues" className="profile-picture" />
+                                        <img src={process.env.PUBLIC_URL + "/images/photo.jpg"} alt="Ewen Rodrigues" className="profile-picture" />
                                         <img src={process.env.PUBLIC_URL + "/images/panda.avif"} alt="@funoxpanda" className="profile-picture-hover" />
                                     </div>
                                     <h1>Et si nous prenions contact {new Date().getHours() < 18 ? "aujourd'hui" : "ce soir"} ? {new Date().getHours() >= 18 ? <div className="tooltipHint">😴<span className="tooltiptext">Je ne répondrai peut-être pas dans la soirée</span></div> : null}</h1>

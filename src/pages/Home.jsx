@@ -25,7 +25,7 @@ class Home extends React.Component {
                             <div className="row">
                                 <div className="col-xs-12 col-lg-5 col-xxl-4">
                                     <div className="avatar">
-                                        <img src="https://cdn.naxalian.fr/avatars/ew-508953.png" alt="Ewen Rodrigues" className="profile-picture" />
+                                        <img src={process.env.PUBLIC_URL + "/images/photo.jpg"} alt="Ewen Rodrigues" className="profile-picture" />
                                         <img src={process.env.PUBLIC_URL + "/images/panda.avif"} alt="@funoxpanda" className="profile-picture-hover" />
                                     </div>
                                     <h1>{new Date().getHours() < 18 ? "Bonjour" : "Bonsoir"}, je suis Ewen Rodrigues de Oliveira <div className="tooltipHint">👋<span className="tooltiptext">"Rodrigues" avec un "s", pas un "z"</span></div></h1>
