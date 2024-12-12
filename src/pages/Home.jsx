@@ -54,6 +54,13 @@ class Home extends React.Component {
                                                 Permis B
                                             </div>
                                         </div>
+                                        <div className="diploma-badge">
+                                            <div className="tooltiptext">Statut National d'Etudiant-Entrepreneur</div>
+                                            <div className="content">
+                                                <img src={process.env.PUBLIC_URL + "/images/pépite.png"} alt="Pépite" />
+                                                 SNEE
+                                            </div>
+                                        </div>
 
                                     </div>
 

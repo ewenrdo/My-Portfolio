@@ -56,7 +56,13 @@ class Experience extends React.Component {
                                             Permis B
                                         </div>
                                     </div>
-
+                                    <div className="diploma-badge">
+                                        <div className="tooltiptext">Statut National d'Etudiant-Entrepreneur</div>
+                                        <div className="content">
+                                            <img src={process.env.PUBLIC_URL + "/images/pépite.png"} alt="Pépite" />
+                                            SNEE
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-xs-12 col-lg-5 ml5">
@@ -73,11 +79,23 @@ class Experience extends React.Component {
                                         </div>
                                     </div>*/}
                                     <div className="timeline-item">
+                                        <img src={process.env.PUBLIC_URL + "/images/pépite.png"} alt="Pépite CreaJ IDF" className="timeline-image" />
+                                        <div className="timeline-content">
+                                            <h3>Etudiant-Entrepreneur au Pépite Creaj IDF</h3>
+                                            <span className="date">Octobre 2024 - Aujourd'hui</span>
+                                            <p>
+                                                J'ai rejoint le Pépite Creaj IDF pour développer mon projet à plus grande échelle, Naxalian Studios.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-item">
                                         <img src={process.env.PUBLIC_URL + "/images/naxalian.png"} alt="Naxalian Studios" className="timeline-image" />
                                         <div className="timeline-content">
                                             <h3>Fondateur de Naxalian.Fr</h3>
                                             <span className="date">Février 2023 - Aujourd'hui</span>
-                                            <p>Je participe à la maintenance des services de Naxalian Studios et je développe des sites/applications web en ReactJS et NodeJS.</p>
+                                            <p>
+                                                Je participe à la création de sites web responsables : éco-conçus, accessibles à tous et respectueux des utilisateurs.
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="timeline-item">
@@ -88,7 +106,7 @@ class Experience extends React.Component {
                                             <p>Organisation de projets solidaires, sportifs et citoyens pour les élèves du lycée Gustave Monod. J'ai participé à la fondation du Conseil du Service National (CSN).</p>
                                         </div>
                                     </div>
-                                    <div className="timeline-item">
+                                    <div className="timeline-item mb-5">
                                         <img src={process.env.PUBLIC_URL + "/images/snu.jpg"} alt="CSN Monod" className="timeline-image" />
                                         <div className="timeline-content">
                                             <h3>Service National Universel</h3>
@@ -121,6 +139,13 @@ class Experience extends React.Component {
                                         <div className="content">
                                             <img src={process.env.PUBLIC_URL + "/images/marianne.png"} alt="Baccalauréat" />
                                             Permis B
+                                        </div>
+                                    </div>
+                                    <div className="diploma-badge">
+                                        <div className="tooltiptext">Statut National d'Etudiant-Entrepreneur</div>
+                                        <div className="content">
+                                            <img src={process.env.PUBLIC_URL + "/images/pépite.png"} alt="Pépite" />
+                                            SNEE
                                         </div>
                                     </div>
 

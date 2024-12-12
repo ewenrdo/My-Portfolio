@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 class NavBar extends React.Component {
     render() {
@@ -44,16 +44,22 @@ class NavBar extends React.Component {
 
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link" to="/"><i className="fas fa-home" /></NavLink>
+                                <button className="nav-link w-100 text-center" to="/" data-bs-dismiss="offcanvas" aria-label="Close"onClick={() => this.props.navigate("/")}><i className="fas fa-home" /></button>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link" to="/experience">Expérience</NavLink>
+                                <button className="nav-link w-100 text-center" to="/experience" data-bs-dismiss="offcanvas" aria-label="Close"
+                                    onClick={() => this.props.navigate("/experience")}
+                                >Expérience</button>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link" to="/portfolio">Portfolio</NavLink>
+                                <button className="nav-link w-100 text-center" to="/portfolio" data-bs-dismiss="offcanvas" aria-label="Close"
+                                    onClick={() => this.props.navigate("/portfolio")}
+                                >Portfolio</button>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link" to="/contact">Me contacter</NavLink>
+                                <button className="nav-link w-100 text-center" to="/contact" data-bs-dismiss="offcanvas" aria-label="Close"
+                                    onClick={() => this.props.navigate("/contact")}
+                                >Me contacter</button>
                             </li>
                         </ul>
                     </div>
@@ -66,4 +72,5 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar;
+// eslint-disable-next-line
+export default (props) => <NavBar {...props} navigate={useNavigate()} />;

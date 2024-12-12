@@ -563,3 +563,50 @@ body {
         margin-left: 0;
     }
 }
+
+/*
+
+                <div className="scroll">
+                    <div className="scroll-text">Scroll</div>
+                    <div className="scroll-line"></div>
+                </div>
+                */
+
+.scroll {
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    .scroll-text {
+        font-size: 0.75rem;
+        color: black;
+    }
+
+    .scroll-line {
+        width: 1px;
+        height: 2rem;
+        background-color: black;
+        margin-top: 0.5rem;
+        animation: scroll 1s infinite;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
