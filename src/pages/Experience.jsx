@@ -79,22 +79,42 @@ class Experience extends React.Component {
                                         </div>
                                     </div>*/}
                                     <div className="timeline-item">
+                                        <img src={process.env.PUBLIC_URL + "/images/wybz.png"} alt="Wybz" className="timeline-image" />
+                                        <div className="timeline-content">
+                                            <h3>Fondateur de Wybz.Fr</h3>
+                                            <span className="date">Février 2023 - Aujourd'hui</span>
+                                            <p>
+                                                Je participe à la création de sites web responsables : éco-conçus, accessibles à tous et respectueux des utilisateurs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-item">
                                         <img src={process.env.PUBLIC_URL + "/images/pépite.png"} alt="Pépite CreaJ IDF" className="timeline-image" />
                                         <div className="timeline-content">
                                             <h3>Etudiant-Entrepreneur au Pépite Creaj IDF</h3>
                                             <span className="date">Octobre 2024 - Aujourd'hui</span>
                                             <p>
-                                                J'ai rejoint le Pépite Creaj IDF pour développer mon projet à plus grande échelle, Naxalian Studios.
+                                                J'ai rejoint le Pépite Creaj IDF pour développer mon projet à plus grande échelle, Naxalian Studios (devenu Wybz).
                                             </p>
                                         </div>
                                     </div>
                                     <div className="timeline-item">
-                                        <img src={process.env.PUBLIC_URL + "/images/naxalian.png"} alt="Naxalian Studios" className="timeline-image" />
+                                        <img src={process.env.PUBLIC_URL + "/images/nddp.png"} alt="Pépite CreaJ IDF" className="timeline-image" />
                                         <div className="timeline-content">
-                                            <h3>Fondateur de Naxalian.Fr</h3>
-                                            <span className="date">Février 2023 - Aujourd'hui</span>
+                                            <h3>Bénévole d'accueil à Notre Dame de Paris</h3>
+                                            <span className="date">Juillet 2025 - Août 2025</span>
                                             <p>
-                                                Je participe à la création de sites web responsables : éco-conçus, accessibles à tous et respectueux des utilisateurs.
+                                                J'ai eu l'opportunité de participer à l'accueil des visiteurs de la cathédrale Notre-Dame de Paris, contribuant ainsi au 1er été de réouverture du monument après l'incendie de 2019.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="timeline-item">
+                                        <img src={process.env.PUBLIC_URL + "/images/monod.jpeg"} alt="Pépite CreaJ IDF" className="timeline-image" />
+                                        <div className="timeline-content">
+                                            <h3>Stage d'observation enseignant mathématiques</h3>
+                                            <span className="date">Juin 2025</span>
+                                            <p>
+                                                J'ai effectué un stage d'observation auprès d'enseignant de mathématiques dans un lycée, ce qui m'a permis de découvrir le métier d'enseignant et de partager ma passion pour les mathématiques.
                                             </p>
                                         </div>
                                     </div>
