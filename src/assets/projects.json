@@ -1,0 +1,185 @@
+[
+    {
+        "id": "featuring",
+        "title": "Featuring",
+        "date": "Juin 2025 - Octobre 2025",
+        "intro": "Featuring est une plateforme de réservation de studios de musique. J'ai travaillé sur toute l'interface et parcours utilisateur, de l'application au site web en passant par le système de paiement.",
+        "links": [
+            {
+                "href": "https://featuring.pro",
+                "label": "featuring.pro"
+            }
+        ],
+        "tags": [
+            "NextJS",
+            "NestJS"
+        ],
+        "images": [
+            "/images/sliders/featuring1.png",
+            "/images/sliders/featuring2.png"
+        ]
+    },
+    {
+        "id": "wybz",
+        "title": "Wybz",
+        "date": "Juillet 2025",
+        "intro": "Wybz est un studio de développement web responsable et un hébergeur de site web. J'ai participé à la création du site vitrine et de l'espace client de Wybz, mettant en avant leurs services et engagements à travers un design moderne et épuré.",
+        "links": [
+            {
+                "href": "https://wybz.fr",
+                "label": "wybz.fr"
+            }
+        ],
+        "tags": [
+            "NextJS",
+            "NestJS"
+        ],
+        "images": [
+            "/images/sliders/wybz1.png",
+            "/images/sliders/wybz2.png"
+        ]
+    },
+    {
+        "id": "ugroupe",
+        "title": "UGroupe",
+        "date": "Juillet 2025 - Août 2025",
+        "intro": "UGroupe est une conciergerie parisienne de luxe. J'ai eu l'occasion de travailler sur leur site vitrine, assurant luxe, modernité et mystère à travers un design épuré et des animations subtiles.",
+        "links": [
+            {
+                "href": "https://ugroupe.fr",
+                "label": "ugroupe.fr"
+            }
+        ],
+        "tags": [
+            "NextJS"
+        ],
+        "images": [
+            "/images/sliders/ugroupe2.png",
+            "/images/sliders/ugroupe1.png",
+            "/images/sliders/ugroupe3.png"
+        ]
+    },
+    {
+        "id": "spotable",
+        "title": "Spotable",
+        "date": "Novembre 2024 - Décembre 2024",
+        "intro": "Spotable est un réseau social de partage de contenu sous forme de communautés. J'ai été chargé de développer l'application web.",
+        "links": [],
+        "tags": [
+            "NextJS",
+            "NestJS"
+        ],
+        "images": [
+            "/images/sliders/slider17.png"
+        ]
+    },
+    {
+        "id": "unissons-les-coeurs",
+        "title": "Unissons les Coeurs",
+        "date": "Octobre 2024",
+        "intro": "Site pour une association d'aide aux adolescents hospitalisés. Présentation du travail de l'association et des bénévoles.",
+        "links": [
+            {
+                "href": "https://unissonslescoeurs.fr",
+                "label": "unissonslescoeurs.fr"
+            }
+        ],
+        "tags": [
+            "React",
+            "NodeJS"
+        ],
+        "images": [
+            "/images/sliders/slider15.png",
+            "/images/sliders/slider16.png"
+        ]
+    },
+    {
+        "id": "cyrus",
+        "title": "Cyrus",
+        "date": "Juillet 2024",
+        "intro": "Plateforme de caisse enregistreuse en ligne : gestion de caisse, produits et clients.",
+        "links": [],
+        "tags": [
+            "React",
+            "NodeJS"
+        ],
+        "images": [
+            "/images/sliders/slider12.png",
+            "/images/sliders/slider11.png",
+            "/images/sliders/slider13.png"
+        ]
+    },
+    {
+        "id": "skorpia",
+        "title": "SKORPIA",
+        "date": "Juillet 2024 - Novembre 2024",
+        "intro": "Participation bénévole à une association d'hébergement de serveurs : interface d'administration pour l'équipe.",
+        "links": [
+            {
+                "href": "https://skorpia.fr",
+                "label": "skorpia.fr"
+            }
+        ],
+        "tags": [
+            "VueJS",
+            "Design System"
+        ],
+        "images": [
+            "/images/sliders/slider14.png"
+        ]
+    },
+    {
+        "id": "naxalian",
+        "title": "Naxalian.Fr",
+        "date": "Février 2023 - Décembre 2024",
+        "intro": "Agence en ligne proposant des services web et mobile — travail sur plusieurs projets dont un SaaS.",
+        "links": [],
+        "tags": [
+            "React",
+            "NodeJS"
+        ],
+        "images": [
+            "/images/sliders/slider1.webp",
+            "/images/sliders/slider2.png",
+            "/images/sliders/slider3.png"
+        ]
+    },
+    {
+        "id": "course-solidaire",
+        "title": "Course solidaire & SSRM",
+        "date": "Mai 2024",
+        "intro": "Organisation d'une course solidaire et mise en place d'une infrastructure pour suivi des tours, gestion des dons et annonces en temps réel.",
+        "links": [],
+        "tags": [
+            "React",
+            "Organisation d'événement"
+        ],
+        "images": [
+            "/images/sliders/slider4.png",
+            "/images/sliders/slider5.jpg",
+            "/images/sliders/slider6.jpg"
+        ]
+    },
+    {
+        "id": "eclipsia",
+        "title": "Eclipsia",
+        "date": "Février 2024",
+        "intro": "Travail sur un serveur de jeu Minecraft : boutique, vote et statistiques pour les joueurs.",
+        "links": [
+            {
+                "href": "https://eclipsia.fr",
+                "label": "eclipsia.fr"
+            }
+        ],
+        "tags": [
+            "React",
+            "NodeJS"
+        ],
+        "images": [
+            "/images/sliders/slider7.png",
+            "/images/sliders/slider8.png",
+            "/images/sliders/slider9.png",
+            "/images/sliders/slider10.png"
+        ]
+    }
+]

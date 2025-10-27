@@ -381,7 +381,7 @@ body {
 }
 
 .portfolio {
-    margin-top: 3rem;
+    margin-top: 4rem;
 
 
     .portfolio-item {
@@ -609,4 +609,183 @@ body {
     100% {
         opacity: 0;
     }
+}
+
+
+/* Portfolio folders */
+.project-folders {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* max 3 per row */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.folder-card {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    height: 240px; /* bigger height */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    display: block;
+}
+
+.folder-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* overlay gradient at bottom for title/date */
+.folder-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.65) 100%);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.folder-overlay .folder-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.folder-overlay .date {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.9);
+}
+
+@media (max-width: 900px) {
+    .project-folders {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .folder-card {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-folders {
+        grid-template-columns: 1fr;
+    }
+    .folder-card {
+        height: 180px;
+    }
+}
+
+.MuiTypography-subtitle2 {
+    font-weight: 700 !important; 
+    color: $smooth-dark !important;
+    letter-spacing: 0.2px;
+    font-size: 0.95rem !important;
+}
+
+.portfolio .MuiTypography-subtitle2 {
+    color: $secondary !important;
+}
+
+.close-btn {
+    background: black;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.close-btn:focus {
+    outline: 2px solid rgba(0,0,0,0.15);
+}
+
+/* Gallery arrows overlay and sizing */
+.gallery-main {
+    position: relative;
+    width: 100%;
+}
+
+.gallery-main img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 20; /* above image */
+}
+
+.gallery-arrow.prev { left: 8px; }
+.gallery-arrow.next { right: 8px; }
+
+.gallery-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.gallery-arrow:focus { outline: none; box-shadow: 0 0 0 3px rgba(0,0,0,0.12); }
+
+/* Bootstrap carousels: ensure controls are above images and neutral colors */
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 15;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus,
+.carousel-control-prev:active,
+.carousel-control-next:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: none; /* remove possible blue tints */
+    background-color: transparent;
+}
+
+/* Make carousel images occupy more width */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Small icon used inside link chips */
+.link-icon {
+    font-size: 0.95rem;
+    line-height: 1;
 }
