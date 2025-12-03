@@ -15,10 +15,6 @@ class Experience extends React.Component {
         this.expRef = React.createRef();
     }
 
-    componentDidMount() {
-        //
-    }
-
     render() {
         return (
             <>
