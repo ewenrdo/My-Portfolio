@@ -16,7 +16,7 @@ class Contact extends React.Component {
 
         this.expRef = React.createRef();
     }
-    
+
     render() {
         return (
             <div className="Home">
@@ -47,7 +47,6 @@ class Contact extends React.Component {
                                             <div className="cta-section mb-3">
                                                 {/*<button className="btn btn-black mb-2" onClick={() => this.setState({ reason: "scolar" })} disabled={new Date().getTime() < new Date("2024-08-15T00:00:00Z").getTime()}>Accompagnement scolaire</button>*/}
                                                 <Link to="https://www.linkedin.com/in/ewen-rodrigues-de-oliveira-500736267/" target="_blank" className="btn btn-black mb-2">Mon LinkedIn</Link>
-                                                <button className="btn btn-black mb-2" onClick={() => this.setState({ reason: "website" })}>Demande de site web</button>
                                                 <button className="btn btn-black" onClick={() => this.setState({ reason: "other" })}>Autre</button>
                                             </div>
 
