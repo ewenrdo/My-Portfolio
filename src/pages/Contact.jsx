@@ -16,11 +16,7 @@ class Contact extends React.Component {
 
         this.expRef = React.createRef();
     }
-
-    componentDidMount() {
-        //
-    }
-
+    
     render() {
         return (
             <div className="Home">
