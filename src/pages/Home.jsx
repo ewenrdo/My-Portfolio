@@ -68,8 +68,8 @@ class Home extends React.Component {
 
                                 <div className="col-xs-12 col-lg-7 col-xxl-8 ps-lg-5">
                                     <div className="presentation">
-                                        <h2>Développeur Web Full Stack {/*et prof' particulier de maths*/}</h2>
-                                        <span className="description">Passionné depuis toujours par l'informatique et fondateur de Naxalian.Fr</span>
+                                        <h2>Étudiant, et j'espère futur enseignant</h2>
+                                        <span className="description">Passionné depuis toujours par l'informatique, et encore plus par les maths</span>
 
                                         <div className="cta-section">
                                             <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>

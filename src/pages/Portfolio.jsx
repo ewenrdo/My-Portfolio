@@ -4,7 +4,6 @@ import projects from '../assets/projects.json';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 
 function Portfolio() {
@@ -47,7 +46,7 @@ function Portfolio() {
             <section className="portfolio container">
                 <h2 className="mb-4 mt-4">Projets</h2>
 
-                <div className="project-folders">
+                <div className="project-folders mb-4">
                     {projects.map((p) => (
                         <div
                             key={p.id}
