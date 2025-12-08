@@ -46,7 +46,7 @@ function Portfolio() {
             <section className="portfolio container">
                 <h2 className="mb-4 mt-4">Projets</h2>
 
-                <div className="project-folders">
+                <div className="project-folders mb-4">
                     {projects.map((p) => (
                         <div
                             key={p.id}
