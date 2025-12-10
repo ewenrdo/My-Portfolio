@@ -22,4 +22,4 @@ Ce projet a été réalisé par Ewen Rodrigues de Oliveira (moi-même). Toute re
 Je vous invite à me contacter pour toute demande d'utilisation de ce projet : @funoxpanda (discord) ou par e-mail: ewen.rdo@naxalian.fr.
 
 
-2024 (c) Tous droits réservés. Ewen Rodrigues de Oliveira.
+2024 - 2025 (c) Tous droits réservés. Ewen Rodrigues de Oliveira.
