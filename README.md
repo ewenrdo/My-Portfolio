@@ -19,7 +19,7 @@ npm start
 # Auteur
 
 Ce projet a été réalisé par Ewen Rodrigues de Oliveira (moi-même). Toute reproduction publiée ou non est interdite sans mon accord.
-Je vous invite à me contacter pour toute demande d'utilisation de ce projet : @funoxpanda (discord) ou par e-mail: ewen.rdo@naxalian.fr.
+Je vous invite à me contacter pour toute demande d'utilisation de ce projet : @funoxpanda (discord) ou par e-mail: contact@ewenrdo.fr.
 
 
 2024 - 2025 (c) Tous droits réservés. Ewen Rodrigues de Oliveira.
