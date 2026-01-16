@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import NavBar from '../assets/components/NavBar';
 import TreeNode from '../assets/components/TreeNode';
 
 export default function Ressources() {
     const [tree, setTree] = useState([]);
     const [selected, setSelected] = useState(null);
+    const viewerRef = useRef(null);
 
     // Charger le ressources.json externe
     // TODO : À l'avenir, le synchroniser avec une base de données / GitHub.
@@ -17,6 +18,13 @@ export default function Ressources() {
     useEffect(() => {
         fetchSamples().then(setTree);
     }, []);
+
+    // Scroll vers le haut de resource-viewer quand un fichier est sélectionné
+    useEffect(() => {
+        if (selected && viewerRef.current) {
+            viewerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, [selected]);
 
     return (
         <>
@@ -35,7 +43,7 @@ export default function Ressources() {
                             </div>
                         </div>
                         <div className="col-xs-12 col-lg-8">
-                            <div className="resource-viewer">
+                            <div className="resource-viewer" ref={viewerRef}>
                                 {selected ? (
                                     (() => {
                                         // Vérification PDF
