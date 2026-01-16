@@ -303,6 +303,8 @@ body {
                 font-size: 1.25rem;
                 color: $smooth-dark;
                 margin-bottom: 0;
+
+
             }
 
             .date {
@@ -900,4 +902,10 @@ body {
 .link-icon {
     font-size: 0.95rem;
     line-height: 1;
+}
+
+
+.past {
+    color: $secondary !important;
+    filter: grayscale(100%);
 }

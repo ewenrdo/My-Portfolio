@@ -68,22 +68,22 @@ class Experience extends React.Component {
                         </div>
                         </div>*/}
                                     <div className="timeline-item">
-                                        <img src={process.env.PUBLIC_URL + "/images/wybz.png"} alt="Wybz" className="timeline-image" />
+                                        <img src={process.env.PUBLIC_URL + "/images/wybz.png"} alt="Wybz" className="timeline-image past" />
                                         <div className="timeline-content">
-                                            <h3>Fondateur de Wybz.Fr</h3>
+                                            <h3 className="past">Fondateur de Wybz.Fr</h3>
                                             <span className="date">Février 2023 - Décembre 2025 (2 ans et 10 mois)</span>
                                             <p>
-                                                J'ai participé à la création de sites web responsables : éco-conçus, accessibles à tous et respectueux des utilisateurs.
+                                                Participation à la création de sites web responsables : éco-conçus, accessibles à tous et respectueux des utilisateurs.
                                             </p>
                                         </div>
                                     </div>
                                     <div className="timeline-item">
-                                        <img src={process.env.PUBLIC_URL + "/images/pépite.png"} alt="Pépite CreaJ IDF" className="timeline-image" />
+                                        <img src={process.env.PUBLIC_URL + "/images/pépite.png"} alt="Pépite CreaJ IDF" className="timeline-image past" />
                                         <div className="timeline-content">
-                                            <h3>Etudiant-Entrepreneur au Pépite Creaj IDF</h3>
+                                            <h3 className="past">Etudiant-Entrepreneur au Pépite Creaj IDF</h3>
                                             <span className="date">Octobre 2024 - Décembre 2025 (1 an et 2 mois)</span>
                                             <p>
-                                                J'ai rejoint le Pépite Creaj IDF pour développer mon projet à plus grande échelle, Wybz.Fr.
+                                                Développement du projet Wybz.Fr à plus grande échelle au sein du Pépite Creaj IDF.
                                             </p>
                                         </div>
                                     </div>
@@ -93,32 +93,32 @@ class Experience extends React.Component {
                                             <h3>Bénévole d'accueil à Notre Dame de Paris</h3>
                                             <span className="date">Juillet 2025 - Aujourd'hui</span>
                                             <p>
-                                                J'aide à l'accueil et à la médiation avec les visiteurs dans la cathédrale, contribuant à la redécouverte du monument après les travaux de restauration.
+                                                Accueil et médiation auprès des visiteurs dans la cathédrale, contribution à la redécouverte du monument après les travaux de restauration.
                                             </p>
                                         </div>
                                     </div>
                                     <div className="timeline-item">
-                                        <img src={process.env.PUBLIC_URL + "/images/monod.jpeg"} alt="Pépite CreaJ IDF" className="timeline-image" />
+                                        <img src={process.env.PUBLIC_URL + "/images/monod.jpeg"} alt="Pépite CreaJ IDF" className="timeline-image past" />
                                         <div className="timeline-content">
                                             <h3>Stage d'observation enseignant mathématiques</h3>
                                             <span className="date">Juin 2025</span>
                                             <p>
-                                                J'ai effectué un stage d'observation auprès d'enseignants de mathématiques dans un lycée, ce qui m'a permis de découvrir le métier d'enseignant et de partager ma passion pour les mathématiques.
+                                                Stage d'observation auprès d'enseignants de mathématiques dans un lycée, découverte du métier d'enseignant et partage de la passion pour les mathématiques.
                                             </p>
                                         </div>
                                     </div>
                                     <div className="timeline-item">
-                                        <img src={process.env.PUBLIC_URL + "/images/csn.jpeg"} alt="CSN Monod" className="timeline-image" />
+                                        <img src={process.env.PUBLIC_URL + "/images/csn.jpeg"} alt="CSN Monod" className="timeline-image past" />
                                         <div className="timeline-content">
-                                            <h3>Président du CSN Monod</h3>
+                                            <h3 className="past">Président du CSN Monod</h3>
                                             <span className="date">Janvier 2023 - Juin 2024 (1 an et demi)</span>
-                                            <p>J'ai co-organisé des projets solidaires, sportifs et citoyens pour les élèves du lycée Gustave Monod. J'ai participé à la fondation du Conseil du Service National (CSN).</p>
+                                            <p>Co-organisation de projets solidaires, sportifs et citoyens pour les élèves du lycée Gustave Monod, participation à la fondation du Conseil du Service National (CSN).</p>
                                         </div>
                                     </div>
                                     <div className="timeline-item mb-5">
-                                        <img src={process.env.PUBLIC_URL + "/images/snu.jpg"} alt="CSN Monod" className="timeline-image" />
+                                        <img src={process.env.PUBLIC_URL + "/images/snu.jpg"} alt="CSN Monod" className="timeline-image past" />
                                         <div className="timeline-content">
-                                            <h3>Service National Universel</h3>
+                                            <h3 className="past">Service National Universel</h3>
                                             <span className="date">Juin 2022</span>
                                         </div>
                                     </div>
