@@ -58,7 +58,7 @@ export default function Ressources() {
                                         }
                                         return (
                                             <div className="resource-meta">
-                                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                <div className="resource-meta-head" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                                     <h3 style={{ fontFamily: 'Aleo, serif', fontWeight: 700, marginBottom: 0 }}>{selected.title}</h3>
                                                     <a
                                                         href={selected.path}

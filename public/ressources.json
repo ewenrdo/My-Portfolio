@@ -105,6 +105,13 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 6 : Réduction des endomorphismes",
                                 "date": "2026-01-16"
+                            },
+                            {
+                                "name": "partiel_al3.pdf",
+                                "path": "/ressources/partiel_al3.pdf",
+                                "credits": "Pr. Loïc Merel, université Paris Cité.",
+                                "title": "Examen, session 1",
+                                "date": "2026-01-16"
                             }
                         ]
                     },
