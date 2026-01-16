@@ -108,7 +108,7 @@
                             },
                             {
                                 "name": "partiel_al3.pdf",
-                                "path": "/ressources/partiel_al3.pdf",
+                                "path": "/resources/partiel_al3.pdf",
                                 "credits": "Pr. Loïc Merel, université Paris Cité.",
                                 "title": "Examen, session 1",
                                 "date": "2026-01-16"
@@ -146,7 +146,7 @@
         "children": [
             {
                 "name": "Programme du Capes",
-                "path": "/ressources/programme-capes1.pdf",
+                "path": "/resources/programme-capes1.pdf",
                 "credits": "Ministère de l'Éducation Nationale",
                 "title": "Programme du CAPES - épreuve n°1",
                 "comment": "Document officiel listant les connaissances et compétences à maîtriser pour l'examen du CAPES de Mathématiques en 2025 (niveau Licence 3)."
@@ -160,7 +160,7 @@
             },
             {
                 "name": "Sujet 0",
-                "path": "/ressources/sujet_0_capes1.pdf",
+                "path": "/resources/sujet_0_capes1.pdf",
                 "credits": "Ministère de l'Éducation Nationale",
                 "title": "Sujet 0 - épreuve n°1",
                 "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3."
