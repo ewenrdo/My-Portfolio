@@ -4,6 +4,104 @@ $background: #fffbf5;
 $smooth-dark: rgb(48, 48, 48);
 $secondary: rgb(83, 83, 83);
 
+// --- Ressources page ---
+.ressources {
+    min-height: 100vh;
+
+    .resource-tree {
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        padding: 2rem 1rem;
+        font-family: 'Rubik', sans-serif;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .resource-folder {
+        margin-bottom: 0.35rem;
+        position: relative;
+    }
+
+    .resource-folder-title {
+        font-weight: 700;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        color: $smooth-dark;
+        transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+
+    .resource-file {
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        color: $secondary;
+        font-size: 1rem;
+        transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        // Indentation visuelle pour l'arborescence
+        .resource-indent {
+            position: relative;
+            min-height: 32px;
+        }
+    }
+
+    .resource-viewer {
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        padding: 2rem 2rem 2rem 2rem;
+        min-height: 400px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .resource-meta h3 {
+        font-family: 'Aleo', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .resource-meta .date {
+        font-size: 1rem;
+        color: $secondary;
+        margin-bottom: 0.25rem;
+    }
+
+    .resource-meta p {
+        font-size: 1rem;
+        color: $smooth-dark;
+    }
+
+    .resource-placeholder {
+        text-align: center;
+        padding: 4rem 0;
+        color: #888;
+        font-style: italic;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400..800;1,400..800&family=Aleo:ital,wght@0,400..800;1,400..800&display=swap');
+
+$background: #fffbf5;
+$smooth-dark: rgb(48, 48, 48);
+$secondary: rgb(83, 83, 83);
+
 html,
 body {
     font-family: 'Rubik', sans-serif;
@@ -449,7 +547,7 @@ body {
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding: 1rem; 
+        padding: 1rem;
         background-color: rgba(0, 0, 0, 0.5); // semi-transparent black background
     }
 }
@@ -615,7 +713,8 @@ body {
 /* Portfolio folders */
 .project-folders {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* max 3 per row */
+    grid-template-columns: repeat(3, 1fr);
+    /* max 3 per row */
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -623,10 +722,11 @@ body {
 .folder-card {
     background: #ffffff;
     border-radius: 0.75rem;
-    height: 240px; /* bigger height */
+    height: 240px;
+    /* bigger height */
     position: relative;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     cursor: pointer;
     transition: transform 0.12s ease, box-shadow 0.12s ease;
     display: block;
@@ -634,7 +734,7 @@ body {
 
 .folder-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* overlay gradient at bottom for title/date */
@@ -644,7 +744,7 @@ body {
     right: 0;
     bottom: 0;
     padding: 1rem;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.65) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 40%, rgba(0, 0, 0, 0.65) 100%);
     color: white;
     display: flex;
     align-items: flex-end;
@@ -659,13 +759,14 @@ body {
 
 .folder-overlay .date {
     font-size: 0.85rem;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 900px) {
     .project-folders {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .folder-card {
         height: 200px;
     }
@@ -675,13 +776,14 @@ body {
     .project-folders {
         grid-template-columns: 1fr;
     }
+
     .folder-card {
         height: 180px;
     }
 }
 
 .MuiTypography-subtitle2 {
-    font-weight: 700 !important; 
+    font-weight: 700 !important;
     color: $smooth-dark !important;
     letter-spacing: 0.2px;
     font-size: 0.95rem !important;
@@ -707,7 +809,7 @@ body {
 }
 
 .close-btn:focus {
-    outline: 2px solid rgba(0,0,0,0.15);
+    outline: 2px solid rgba(0, 0, 0, 0.15);
 }
 
 /* Gallery arrows overlay and sizing */
@@ -727,7 +829,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
     width: 40px;
@@ -738,18 +840,27 @@ body {
     justify-content: center;
     font-size: 1.25rem;
     cursor: pointer;
-    z-index: 20; /* above image */
+    z-index: 20;
+    /* above image */
 }
 
-.gallery-arrow.prev { left: 8px; }
-.gallery-arrow.next { right: 8px; }
+.gallery-arrow.prev {
+    left: 8px;
+}
+
+.gallery-arrow.next {
+    right: 8px;
+}
 
 .gallery-arrow:disabled {
     opacity: 0.35;
     cursor: default;
 }
 
-.gallery-arrow:focus { outline: none; box-shadow: 0 0 0 3px rgba(0,0,0,0.12); }
+.gallery-arrow:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
 
 /* Bootstrap carousels: ensure controls are above images and neutral colors */
 .carousel-control-prev,
@@ -757,7 +868,7 @@ body {
     z-index: 15;
     width: 3.5rem;
     height: 3.5rem;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -774,7 +885,8 @@ body {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: none; /* remove possible blue tints */
+    filter: none;
+    /* remove possible blue tints */
     background-color: transparent;
 }
 

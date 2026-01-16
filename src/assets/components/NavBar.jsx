@@ -25,6 +25,9 @@ class NavBar extends React.Component {
                                     <NavLink className="nav-link" to="/portfolio">Portfolio</NavLink>
                                 </li>
                                 <li className="nav-item ms-lg-3">
+                                    <NavLink className="nav-link" to="/ressources">Ressources</NavLink>
+                                </li>
+                                <li className="nav-item ms-lg-3">
                                     <NavLink className="nav-link" to="/contact">Me contacter</NavLink>
                                 </li>
                             </ul>
@@ -55,6 +58,11 @@ class NavBar extends React.Component {
                                 <button className="nav-link w-100 text-center" to="/portfolio" data-bs-dismiss="offcanvas" aria-label="Close"
                                     onClick={() => this.props.navigate("/portfolio")}
                                 >Portfolio</button>
+                            </li>
+                            <li className="nav-item text-center">
+                                <button className="nav-link w-100 text-center" to="/ressources" data-bs-dismiss="offcanvas" aria-label="Close"
+                                    onClick={() => this.props.navigate("/ressources")}
+                                >Ressources</button>
                             </li>
                             <li className="nav-item text-center">
                                 <button className="nav-link w-100 text-center" to="/contact" data-bs-dismiss="offcanvas" aria-label="Close"
