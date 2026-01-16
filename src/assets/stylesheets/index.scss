@@ -436,7 +436,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 
     &.btn-black {
-        background-color: black;
+        background-color: black !important;
         color: white;
         border: 1px solid black;
         transition: box-shadow 0.3s, transform 0.3s;

@@ -1,11 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
+import BlurForm from '../componant/BlurForm';
 import NavBar from '../assets/components/NavBar';
 import TreeNode from '../assets/components/TreeNode';
 
 export default function Ressources() {
     const [tree, setTree] = useState([]);
     const [selected, setSelected] = useState(null);
+    const [formOpen, setFormOpen] = useState(true);
+    const [formFilled, setFormFilled] = useState(false);
     const viewerRef = useRef(null);
+
+    // Vérifie si le formulaire a été rempli dans les dernières 24h
+    useEffect(() => {
+        const filled = localStorage.getItem('formFilled');
+        const filledTime = localStorage.getItem('formFilledTime');
+        if (filled === 'true' && filledTime) {
+            const now = Date.now();
+            if (now - parseInt(filledTime, 10) < 24 * 60 * 60 * 1000) {
+                setFormFilled(true);
+            } else {
+                localStorage.removeItem('formFilled');
+                localStorage.removeItem('formFilledTime');
+            }
+        }
+    }, []);
 
     // Charger le ressources.json externe
     // TODO : À l'avenir, le synchroniser avec une base de données / GitHub.
@@ -26,14 +44,24 @@ export default function Ressources() {
         }
     }, [selected]);
 
+    // Callback quand le formulaire est rempli
+    const handleFormFilled = () => {
+        setFormOpen(false);
+        setFormFilled(true);
+        localStorage.setItem('formFilled', 'true');
+        localStorage.setItem('formFilledTime', Date.now().toString());
+    };
+
     return (
         <>
+            <BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />
             <section className="Header">
                 <NavBar background="bg-background" />
             </section>
             <div className="container">
                 <section className="ressources mt-lg-5">
                     <h2 className="mb-4 mt-4" style={{ fontFamily: 'Aleo, serif', fontWeight: 700 }}>Ressources</h2>
+
                     <div className="row">
                         <div className="col-xs-12 col-lg-4">
                             <div className="resource-tree">
