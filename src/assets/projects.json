@@ -1,5 +1,23 @@
 [
     {
+        "id": "willys",
+        "title": "Willys",
+        "date": "Octobre 2025 - Janvier 2026",
+        "intro": "Willys est un jeu de stratégie en temps réel inspiré de Worms. Il s'agit d'un projet universitaire réalisé en Java avec le framework Maven. J'ai participé au développement du jeu, en me concentrant sur l'architecture logicielle, la gestion des affichages et des écrans ainsi quelques autres fonctionnalités. Projet réalisé en collaboration avec Céline BOULAHIA, William FIJEAN, Bastien FORTRYE--CAMPAIT, Dan SANDRESCHI et Elsa VERVISCH dans le cadre de ma L2.",
+        "tags": [
+            "Java",
+            "Maven",
+            "JUnit",
+            "Mockito"
+        ],
+        "images": [
+            "/images/sliders/worms1.png",
+            "/images/sliders/worms2.png",
+            "/images/sliders/worms3.png",
+            "/images/sliders/worms4.png"
+        ]
+    },
+    {
         "id": "featuring",
         "title": "Featuring",
         "date": "Juin 2025 - Octobre 2025",
