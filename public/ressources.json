@@ -14,21 +14,21 @@
                         "children": [
                             {
                                 "name": "chapitre1.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/an3/chap1/chapitre1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap1/chapitre1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                 "title": "Chapitre 1 : Suites de Cauchy",
                                 "date": "2026-01-16"
                             },
                             {
                                 "name": "chapitre2.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/an3/chap2/chapitre2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap2/chapitre2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                 "title": "Chapitre 2 : Séries numériques",
                                 "date": "2026-01-16"
                             },
                             {
                                 "name": "chapitre3.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/an3/chap3/chap3.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap3/chap3.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                 "title": "Chapitre 3 : Intégrales impropres",
                                 "date": "2026-01-16"
@@ -38,14 +38,14 @@
                                 "children": [
                                     {
                                         "name": "chapitre4.pdf",
-                                        "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/an3/chap4/chap4.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap4/chap4.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                         "title": "Chapitre 4 : Topologie des espaces métriques",
                                         "date": "2026-01-16"
                                     },
                                     {
                                         "name": "question_cours.pdf",
-                                        "path": "https://github.com/ewenrdo/Math-Lesson-Maker/raw/main/exercises/an3/chap4/question_cours.pdf",
+                                        "path": "https://github.com/ewenrdo/Math-Lesson-Maker/raw/exercises/an3/chap4/question_cours.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
                                         "title": "TD : Questions de cours",
                                         "date": "2026-01-16"
@@ -54,7 +54,7 @@
                             },
                             {
                                 "name": "chapitre5.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/an3/chap5/chap5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap5/chap5.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                 "title": "Chapitre 5 : Fonctions de plusieurs variables",
                                 "date": "2026-01-16"
@@ -66,42 +66,42 @@
                         "children": [
                             {
                                 "name": "chapitre1.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/al3/chap1/chapitre1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap1/chapitre1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 1 : Groupes",
                                 "date": "2026-01-16"
                             },
                             {
                                 "name": "chapitre2.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/al3/chap2/chapitre2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap2/chapitre2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 2 : Groupe symétrique",
                                 "date": "2026-01-16"
                             },
                             {
                                 "name": "chapitre3.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/al3/chap3/chap3.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap3/chap3.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 3 : Espaces vectoriels",
                                 "date": "2026-01-16"
                             },
                             {
                                 "name": "chapitre4.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/al3/chap4/chap4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap4/chap4.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 4 : Matrices",
                                 "date": "2026-01-16"
                             },
                             {
                                 "name": "chapitre5.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/al3/chap5/chap5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap5/chap5.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 5 : Déterminants",
                                 "date": "2026-01-16"
                             },
                             {
                                 "name": "chapitre6.pdf",
-                                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/al3/chap6/chap6.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap6/chap6.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 6 : Réduction des endomorphismes",
                                 "date": "2026-01-16"
@@ -126,7 +126,7 @@
         "children": [
             {
                 "name": "git.pdf",
-                "path": "https://raw.githubusercontent.com/ewenrdo/Math-Lesson-Maker/main/lessons/dl2_lmath_info/cp3/git.pdf",
+                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/cp3/git.pdf",
                 "credits": "Ewen Rodrigues de Oliveira.",
                 "title": "Introduction à Git",
                 "comment": "Il s'agit de faire une introduction à Git, un système de contrôle de version distribué largement utilisé dans le développement logiciel. Ce document récapitulatif n'est pas exhaustif mais couvre les bases pour commencer à utiliser Git efficacement, notamment dans le cadre de projets.",
