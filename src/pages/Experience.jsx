@@ -93,7 +93,7 @@ class Experience extends React.Component {
                                             <h3>Bénévole d'accueil à Notre Dame de Paris</h3>
                                             <span className="date">Juillet 2025 - Aujourd'hui</span>
                                             <p>
-                                                J'ai aidé à l'accueil des visiteurs dans la cathédrale durant l'été 2025, contribuant à la redécouverte du monument après les travaux de restauration.
+                                                J'aide à l'accueil et à la médiation avec les visiteurs dans la cathédrale, contribuant à la redécouverte du monument après les travaux de restauration.
                                             </p>
                                         </div>
                                     </div>
@@ -112,7 +112,7 @@ class Experience extends React.Component {
                                         <div className="timeline-content">
                                             <h3>Président du CSN Monod</h3>
                                             <span className="date">Janvier 2023 - Juin 2024 (1 an et demi)</span>
-                                            <p>J'ai organisé des projets solidaires, sportifs et citoyens pour les élèves du lycée Gustave Monod. J'ai participé à la fondation du Conseil du Service National (CSN).</p>
+                                            <p>J'ai co-organisé des projets solidaires, sportifs et citoyens pour les élèves du lycée Gustave Monod. J'ai participé à la fondation du Conseil du Service National (CSN).</p>
                                         </div>
                                     </div>
                                     <div className="timeline-item mb-5">
