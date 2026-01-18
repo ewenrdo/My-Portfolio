@@ -116,10 +116,28 @@
                         ]
                     },
                     {
-                        "name": "Probabilités 4"
+                        "name": "Probabilités 4",
+                        "children": [
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 1 : Combinatoire",
+                                "date": "2026-01-18"
+                            }
+                        ]
                     },
                     {
-                        "name": "Analyse-Algèbre 4"
+                        "name": "Analyse-Algèbre 4",
+                        "children": [
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/mm4/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 1 : Révisions",
+                                "date": "2026-01-18"
+                            }
+                        ]
                     },
                     {
                         "name": "Math club 4"
