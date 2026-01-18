@@ -66,6 +66,26 @@
   transition: background 0.2s;
 }
 
+.blur-form-confirm-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.blur-form-confirm-content {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+}
+
 .blur-form-modal button[type="submit"]:hover {
   background: #1565c0;
 }
