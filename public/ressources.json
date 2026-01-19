@@ -119,6 +119,13 @@
                         "name": "Probabilités 4",
                         "children": [
                             {
+                                "name": "preambule.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/preambule/preambule.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Préambule et MCC",
+                                "date": "2026-01-18"
+                            },
+                            {
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",

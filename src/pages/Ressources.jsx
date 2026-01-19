@@ -54,7 +54,7 @@ export default function Ressources() {
 
     return (
         <>
-            <BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />
+            {/*<BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />*/}
             <section className="Header">
                 <NavBar background="bg-background" />
             </section>
