@@ -138,11 +138,11 @@
                         "name": "Analyse-Algèbre 4",
                         "children": [
                             {
-                                "name": "chap1.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/mm4/chap1/chap1.pdf",
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/mm4/chap2/chap2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
-                                "title": "Chapitre 1 : Révisions",
-                                "date": "2026-01-18"
+                                "title": "Chapitre 2 : Formes linéaires et dualité",
+                                "date": "2026-01-21"
                             }
                         ]
                     },

@@ -28,7 +28,8 @@ export default function Ressources() {
     // Charger le ressources.json externe
     // TODO : À l'avenir, le synchroniser avec une base de données / GitHub.
     function fetchSamples() {
-        return fetch('/ressources.json')
+        const url = '/ressources.json?v=' + new Date().getTime(); // évite le cache
+        return fetch(url)
             .then((res) => res.json())
             .catch(() => []);
     }
