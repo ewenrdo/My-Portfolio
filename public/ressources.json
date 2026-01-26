@@ -131,6 +131,13 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 1 : Combinatoire",
                                 "date": "2026-01-18"
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 2 : Espaces probabilisés",
+                                "date": "2026-01-26"
                             }
                         ]
                     },
