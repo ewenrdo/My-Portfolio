@@ -16,7 +16,7 @@ export default function Ressources() {
         const filledTime = localStorage.getItem('formFilledTime');
         if (filled === 'true' && filledTime) {
             const now = Date.now();
-            if (now - parseInt(filledTime, 10) < 24 * 60 * 60 * 1000) {
+            if (now - parseInt(filledTime, 10) < 2 * 24 * 60 * 60 * 1000) {
                 setFormFilled(true);
             } else {
                 localStorage.removeItem('formFilled');
@@ -55,7 +55,7 @@ export default function Ressources() {
 
     return (
         <>
-            {/*<BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />*/}
+            <BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />
             <section className="Header">
                 <NavBar background="bg-background" />
             </section>
