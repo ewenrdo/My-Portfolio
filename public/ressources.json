@@ -145,6 +145,13 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 3 : Probabilités conditionnelles",
                                 "date": "2026-02-04"
+                            },
+                            {
+                                "name": "chap4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap4/chap4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 4 : Variables aléatoires",
+                                "date": "2026-02-09"
                             }
                         ]
                     },
@@ -163,6 +170,13 @@
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/mm4/chap3/chap3.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 3 : Suites et séries de fonctions",
+                                "date": "2026-01-28"
+                            },
+                            {
+                                "name": "chap4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/mm4/chap4/chap4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 4 : Espaces euclidiens",
                                 "date": "2026-01-28"
                             }
                         ]
