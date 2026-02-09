@@ -6,8 +6,8 @@ import TreeNode from '../assets/components/TreeNode';
 export default function Ressources() {
     const [tree, setTree] = useState([]);
     const [selected, setSelected] = useState(null);
-    const [formOpen, setFormOpen] = useState(true);
-    const [formFilled, setFormFilled] = useState(false);
+    const [formOpen, setFormOpen] = useState(false);
+    const [formFilled, setFormFilled] = useState(true);
     const viewerRef = useRef(null);
 
     // Vérifie si le formulaire a été rempli dans les dernières 24h

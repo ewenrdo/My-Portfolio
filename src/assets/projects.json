@@ -179,6 +179,20 @@
         ]
     },
     {
+        "id": "monod",
+        "title": "Lycée Gustave Monod",
+        "date": "Février 2024",
+        "intro": "Proposition d'une refonte du site du lycée Gustave Monod, avec un design moderne et épuré, une navigation intuitive et une meilleure accessibilité pour les utilisateurs.",
+        "links": [],
+        "tags": [
+            "React"
+        ],
+        "images": [
+            "/images/sliders/monod1.png",
+            "/images/sliders/monod2.png"
+        ]
+    },
+    {
         "id": "eclipsia",
         "title": "Eclipsia",
         "date": "Février 2024",
