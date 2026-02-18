@@ -152,6 +152,13 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 4 : Variables aléatoires",
                                 "date": "2026-02-09"
+                            },
+                            {
+                                "name": "chap5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap5/chap5.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 5 : Espérance",
+                                "date": "2026-02-18"
                             }
                         ]
                     },
@@ -160,24 +167,31 @@
                         "children": [
                             {
                                 "name": "chap2.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/mm4/chap2/chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap2/chap2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 2 : Formes linéaires et dualité",
                                 "date": "2026-01-21"
                             },
                             {
                                 "name": "chap3.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/mm4/chap3/chap3.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap3/chap3.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 3 : Suites et séries de fonctions",
                                 "date": "2026-01-28"
                             },
                             {
                                 "name": "chap4.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/mm4/chap4/chap4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap4/chap4.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 4 : Espaces euclidiens",
                                 "date": "2026-01-28"
+                            },
+                            {
+                                "name": "chap5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap5/chap5.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 5 : Séries entières",
+                                "date": "2026-02-18"
                             }
                         ]
                     },
