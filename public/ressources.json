@@ -121,42 +121,42 @@
                             {
                                 "name": "preambule.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/preambule/preambule.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Préambule et MCC",
                                 "date": "2026-01-18"
                             },
                             {
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap1/chap1.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 1 : Combinatoire",
                                 "date": "2026-01-18"
                             },
                             {
                                 "name": "chap2.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap2/chap2.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 2 : Espaces probabilisés",
                                 "date": "2026-01-26"
                             },
                             {
                                 "name": "chap3.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap3/chap3.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 3 : Probabilités conditionnelles",
                                 "date": "2026-02-04"
                             },
                             {
                                 "name": "chap4.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap4/chap4.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 4 : Variables aléatoires",
                                 "date": "2026-02-09"
                             },
                             {
                                 "name": "chap5.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap5/chap5.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 5 : Espérance",
                                 "date": "2026-02-18"
                             }
@@ -196,7 +196,44 @@
                         ]
                     },
                     {
-                        "name": "Math club 4"
+                        "name": "Fiches d'entraînement",
+                        "children": [
+                            {
+                                "name": "training_cc1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm3/training_cc1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Révision CC1 ASF4",
+                                "date": "2026-02-27"
+                            },
+                            {
+                                "name": "training_sm4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm4/training_sm4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Révision semaine 4",
+                                "date": "2026-02-27"
+                            },
+                            {
+                                "name": "training_weekend.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm4/training_weekend.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Révision semaine 4 (2)",
+                                "date": "2026-02-27"
+                            },
+                            {
+                                "name": "sm5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm5/sm5.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Révision semaine 5",
+                                "date": "2026-02-27"
+                            },
+                            {
+                                "name": "sm_pause1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm_pause1/smp.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Révision semaine de pause",
+                                "date": "2026-02-27"
+                            }
+                        ]
                     }
                 ]
             }
