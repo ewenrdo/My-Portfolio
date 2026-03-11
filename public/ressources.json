@@ -192,6 +192,13 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 5 : Séries entières",
                                 "date": "2026-02-18"
+                            },
+                            {
+                                "name": "chap6.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap6/chap6.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 6 : Endomorphismes des espaces euclidiens",
+                                "date": "2026-03-11"
                             }
                         ]
                     },
