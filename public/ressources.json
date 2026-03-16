@@ -173,6 +173,20 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 7 : Outils probabilistes",
                                 "date": "2026-03-16"
+                            },
+                            {
+                                "name": "chap8.pdf",
+                                "path": "CHANGER LA DATE",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                "title": "Chapitre 8 : Marche aléatoire simple",
+                                "date": "2026-03-16"
+                            },
+                            {
+                                "name": "chap9.pdf",
+                                "path": "CHANGER LA DATE",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                "title": "Chapitre 9 : Chaînes de Markov",
+                                "date": "2026-03-16"
                             }
                         ]
                     },
@@ -213,6 +227,41 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Chapitre 6 : Endomorphismes des espaces euclidiens",
                                 "date": "2026-03-11"
+                            },
+                            {
+                                "name": "chap7.pdf",
+                                "path": "CHANGER DATE",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 7 : Intégrales dépendantes d'un paramètre",
+                                "date": "2026-03-18"
+                            },
+                            {
+                                "name": "chap8.pdf",
+                                "path": "CHANGER DATE",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 8 : Isométries en dimension 2 et 3",
+                                "date": "2026-03-18"
+                            },
+                            {
+                                "name": "chap9.pdf",
+                                "path": "CHANGER DATE",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 9 : Intégrales multiples",
+                                "date": "2026-03-18"
+                            },
+                            {
+                                "name": "chap10.pdf",
+                                "path": "CHANGER DATE",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 10 : Formes bilinéaires et quadratiques",
+                                "date": "2026-03-18"
+                            },
+                            {
+                                "name": "chap11.pdf",
+                                "path": "CHANGER DATE",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Chapitre 11 : Fonctions de plusieurs variables",
+                                "date": "2026-03-18"
                             }
                         ]
                     },
