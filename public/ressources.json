@@ -345,6 +345,13 @@
                 "credits": "Ministère de l'Éducation Nationale",
                 "title": "Sujet 0 - épreuve n°1",
                 "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3."
+            },
+            {
+                "name": "Annales mars 2026",
+                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/capes.pdf",
+                "credits": "Ministère de l'Éducation Nationale",
+                "title": "Sujet mars 2026 - épreuve n°1",
+                "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3."
             }
         ]
     }

@@ -10,14 +10,13 @@ import TmpDisabled from "./pages/TmpDisabled";
 const App = () => {
   return (
     <Router>
-      <Routes> 
-        <Route path="*" element={<TmpDisabled />} />
-        <Route path="/res" element={<Ressources />} />
-        {/*<Route path="*" element={<Home />} />
+      <Routes>
+        <Route path="*" element={<Home />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/ressources" element={<Ressources />} />*/}
+        <Route path="/ressources" element={<Ressources />} />
+        <Route path="/res" element={<Ressources />} />
       </Routes>
     </Router>
   );
