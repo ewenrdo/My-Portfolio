@@ -236,11 +236,11 @@
                                 "date": "2026-03-18"
                             },
                             {
-                                "name": "chap8.pdf",
-                                "path": "CHANGER DATE",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "name": "chap8_bis.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap8/chap8_bis.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Fortement inspiré du cours de Romain Petrides et John Borthwick.",
                                 "title": "Chapitre 8 : Isométries en dimension 2 et 3",
-                                "date": "2026-03-18"
+                                "date": "2026-03-21"
                             },
                             {
                                 "name": "chap9.pdf",
