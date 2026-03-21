@@ -319,6 +319,14 @@
                 "title": "Introduction à Git",
                 "comment": "Il s'agit de faire une introduction à Git, un système de contrôle de version distribué largement utilisé dans le développement logiciel. Ce document récapitulatif n'est pas exhaustif mais couvre les bases pour commencer à utiliser Git efficacement, notamment dans le cadre de projets.",
                 "date": "2026-01-16"
+            },
+            {
+                "name": "pres-willys.pdf",
+                "path": "/ressources/pres-willys.pdf",
+                "credits": "Celine Bouhalia, William Fijean, Bastien Fortrye--Campait, Ewen Rodrigues de Oliveira, Dan Sandreschi et Elsa Vervischi..",
+                "title": "Slides projet Willys",
+                "comment": "Slides de présentation du projet Willys (voir Portfolio) présenté lors de la soutenance du projet de fin d'année de la Licence 2 Mathématiques et Informatique à l'Université Paris Cité en janvier 2026.",
+                "date": "2026-01-15"
             }
         ]
     },
