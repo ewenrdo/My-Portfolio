@@ -12,7 +12,34 @@ export default function Ressources() {
     const [formFilled, setFormFilled] = useState(true);
     const [showModal, setShowModal] = useState(true);
     const [showUpdate, setShowUpdate] = useState(false);
+    const [search, setSearch] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
     const viewerRef = useRef(null);
+    // Recherche récursive de tous les fichiers (objets avec 'path' et sans 'children') correspondant au terme
+    function searchFiles(nodes, term) {
+        let results = [];
+        nodes.forEach(node => {
+            const isFile = node.path && !node.children;
+            if (isFile) {
+                const label = node.title || node.name || '';
+                if (label.toLowerCase().includes(term.toLowerCase())) {
+                    results.push(node);
+                }
+            }
+            if (node.children && Array.isArray(node.children)) {
+                results = results.concat(searchFiles(node.children, term));
+            }
+        });
+        return results;
+    }
+
+    useEffect(() => {
+        if (search.trim() !== "") {
+            setSearchResults(searchFiles(tree, search));
+        } else {
+            setSearchResults([]);
+        }
+    }, [search, tree]);
 
     // Vérifie si le formulaire a été rempli dans les dernières 24h
     useEffect(() => {
@@ -83,10 +110,43 @@ export default function Ressources() {
 
                     <div className="row">
                         <div className="col-xs-12 col-lg-4">
+                            {/* Barre de recherche */}
+                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
+                                <input
+                                    type="text"
+                                    value={search}
+                                    onChange={e => setSearch(e.target.value)}
+                                    placeholder="Rechercher un fichier..."
+                                    style={{ flex: 1, padding: '0.5rem 2.2rem 0.5rem 1rem', borderRadius: 20, border: '1px solid #ccc', fontSize: '1rem' }}
+                                />
+                                <span style={{ position: 'relative', left: '-2rem', color: '#888', pointerEvents: 'none' }}>
+                                    <i className="fas fa-search" />
+                                </span>
+                            </div>
                             <div className="resource-tree">
-                                {tree.map((node, i) => (
-                                    <TreeNode key={i} node={node} onSelect={setSelected} level={0} />
-                                ))}
+                                {search.trim() !== "" ? (
+                                    searchResults.length > 0 ? (
+                                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                                            {searchResults.map((file, idx) => (
+                                                <li key={idx} style={{ marginBottom: 8 }}>
+                                                    <button
+                                                        style={{ background: 'none', border: 'none', color: '#007bff', textAlign: 'left', cursor: 'pointer', padding: 0, fontSize: '1rem' }}
+                                                        onClick={() => setSelected(file)}
+                                                    >
+                                                        <i className="fas fa-file-alt" style={{ marginRight: 8 }} />
+                                                        {file.title || file.name}
+                                                    </button>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <div style={{ color: '#888', fontStyle: 'italic', padding: '1rem 0' }}>Aucun document ne correspond à votre recherche.</div>
+                                    )
+                                ) : (
+                                    tree.map((node, i) => (
+                                        <TreeNode key={i} node={node} onSelect={setSelected} level={0} />
+                                    ))
+                                )}
                             </div>
                         </div>
                         <div className="col-xs-12 col-lg-8">
