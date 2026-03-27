@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ModalRevision from '../componant/ModalRevision';
 import BlurForm from '../componant/BlurForm';
 import NavBar from '../assets/components/NavBar';
 import TreeNode from '../assets/components/TreeNode';
@@ -8,6 +9,7 @@ export default function Ressources() {
     const [selected, setSelected] = useState(null);
     const [formOpen, setFormOpen] = useState(false);
     const [formFilled, setFormFilled] = useState(true);
+    const [showModal, setShowModal] = useState(true);
     const viewerRef = useRef(null);
 
     // Vérifie si le formulaire a été rempli dans les dernières 24h
@@ -55,6 +57,7 @@ export default function Ressources() {
 
     return (
         <>
+            <ModalRevision isOpen={showModal} onClose={() => setShowModal(false)} />
             <BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />
             <section className="Header">
                 <NavBar background="bg-background" />
