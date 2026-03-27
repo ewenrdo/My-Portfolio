@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../assets/components/NavBar';
 import '../assets/stylesheets/index.scss';
 
@@ -9,12 +9,36 @@ const MATIERES = [
     { key: 'algo', label: "Éléments d'algorithmique" },
 ];
 
+
 export default function Simulateur() {
-    const [matiere, setMatiere] = useState('proba');
-    const [prob, setProb] = useState({ I1: '', I2: '', I3: '', E: '' });
-    const [analyse, setAnalyse] = useState({ CC1: '', CC2: '', P: '', E1: '' });
-    const [c, setC] = useState({ CC: '', P: '', E: '' });
+    // Chargement initial depuis le localStorage
+    const getInitial = (key, def) => {
+        try {
+            const val = localStorage.getItem(key);
+            return val ? JSON.parse(val) : def;
+        } catch {
+            return def;
+        }
+    };
+    const [matiere, setMatiere] = useState(() => getInitial('simulateur_matiere', 'proba'));
+    const [prob, setProb] = useState(() => getInitial('simulateur_prob', { I1: '', I2: '', I3: '', E: '' }));
+    const [analyse, setAnalyse] = useState(() => getInitial('simulateur_analyse', { CC1: '', CC2: '', P: '', E1: '' }));
+    const [c, setC] = useState(() => getInitial('simulateur_c', { CC: '', P: '', E: '' }));
     const [results, setResults] = useState({ prob: null, analyse: null, c: null });
+
+    // Sauvegarde dans le localStorage à chaque modification
+    useEffect(() => {
+        localStorage.setItem('simulateur_matiere', JSON.stringify(matiere));
+    }, [matiere]);
+    useEffect(() => {
+        localStorage.setItem('simulateur_prob', JSON.stringify(prob));
+    }, [prob]);
+    useEffect(() => {
+        localStorage.setItem('simulateur_analyse', JSON.stringify(analyse));
+    }, [analyse]);
+    useEffect(() => {
+        localStorage.setItem('simulateur_c', JSON.stringify(c));
+    }, [c]);
     // Langage C
     function calcC() {
         const CC = parseFloat(c.CC) || 0;
