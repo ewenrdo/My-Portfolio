@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ModalRevision from '../componant/ModalRevision';
+import UpdateRevision from '../componant/UpdateRevision';
 import BlurForm from '../componant/BlurForm';
 import NavBar from '../assets/components/NavBar';
 import TreeNode from '../assets/components/TreeNode';
@@ -10,6 +11,7 @@ export default function Ressources() {
     const [formOpen, setFormOpen] = useState(false);
     const [formFilled, setFormFilled] = useState(true);
     const [showModal, setShowModal] = useState(true);
+    const [showUpdate, setShowUpdate] = useState(false);
     const viewerRef = useRef(null);
 
     // Vérifie si le formulaire a été rempli dans les dernières 24h
@@ -24,6 +26,17 @@ export default function Ressources() {
                 localStorage.removeItem('formFilled');
                 localStorage.removeItem('formFilledTime');
             }
+        }
+
+        // Gestion UpdateRevision : afficher si changelog plus récent que la dernière vue
+        const changelog = [
+            { date: '2026-03-27' },
+            { date: '2026-03-15' },
+        ];
+        const lastSeen = localStorage.getItem('ressources-last-seen');
+        const latestChange = changelog[0].date;
+        if (!lastSeen || lastSeen < latestChange) {
+            setShowUpdate(true);
         }
     }, []);
 
@@ -57,7 +70,9 @@ export default function Ressources() {
 
     return (
         <>
-            <ModalRevision isOpen={showModal} onClose={() => setShowModal(false)} />
+            {/* Affiche UpdateRevision en priorité, sinon ModalRevision */}
+            <UpdateRevision isOpen={showUpdate} onClose={() => setShowUpdate(false)} />
+            <ModalRevision isOpen={!showUpdate && showModal} onClose={() => setShowModal(false)} />
             <BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />
             <section className="Header">
                 <NavBar background="bg-background" />

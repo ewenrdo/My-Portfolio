@@ -266,6 +266,18 @@
                         ]
                     },
                     {
+                        "name": "UE Climat (TEDs)",
+                        "children": [
+                            {
+                                "name": "pres_ue_climat.pdf",
+                                "path": "/resources/pres_ue_climat.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira, Alex Theophilos, Yaïr Ifergan et William Fijean. TOUTE REPRODUCTION OU UTILISATION, MÊME PARTIELLE, EST RIGOUREUSEMENT INTERDITE SANS L'AUTORISATION EXPLICITE DE TOUS LES AUTEURS.",
+                                "title": "Slides de soutenance",
+                                "date": "2026-03-27"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Fiches d'entraînement",
                         "children": [
                             {
