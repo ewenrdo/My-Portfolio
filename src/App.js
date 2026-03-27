@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Ressources from "./pages/Ressources";
 import TmpDisabled from "./pages/TmpDisabled";
+import Simulateur from "./pages/Simulateur";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/ressources" element={<Ressources />} />
         <Route path="/res" element={<Ressources />} />
+        <Route path="/mcc" element={<Simulateur />} />
       </Routes>
     </Router>
   );

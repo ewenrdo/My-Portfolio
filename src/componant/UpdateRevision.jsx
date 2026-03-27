@@ -4,6 +4,8 @@ const changelog = [
     {
         date: '2026-03-27',
         items: [
+            'Ajout d\'un simulateur de note pour les étudiants de la double-licence L2,',
+            'Ajout d\'un champ de recherche pour trouver rapidement une ressource,',
             'Implémentation d\'un popup qui informe des dernières mises à jour de la section Ressources,',
             'Amélioration des sommaires dans les cours de mathématiques du semestre 3,',
             'Ajout d\'une section TEDs, inutile pour les étudiants qui ne sont pas dans mon groupe,',

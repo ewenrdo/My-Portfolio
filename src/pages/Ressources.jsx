@@ -4,6 +4,7 @@ import UpdateRevision from '../componant/UpdateRevision';
 import BlurForm from '../componant/BlurForm';
 import NavBar from '../assets/components/NavBar';
 import TreeNode from '../assets/components/TreeNode';
+import { NavLink } from 'react-router-dom';
 
 export default function Ressources() {
     const [tree, setTree] = useState([]);
@@ -148,6 +149,9 @@ export default function Ressources() {
                                     ))
                                 )}
                             </div>
+                            <NavLink to="/mcc" className="btn btn-black" style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)', width: '100%' }}>
+                                Simulateur de note
+                            </NavLink>
                         </div>
                         <div className="col-xs-12 col-lg-8">
                             <div className="resource-viewer" ref={viewerRef}>
