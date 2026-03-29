@@ -11,7 +11,7 @@ export default function Ressources() {
     const [selected, setSelected] = useState(null);
     const [formOpen, setFormOpen] = useState(false);
     const [formFilled, setFormFilled] = useState(true);
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
     const [showUpdate, setShowUpdate] = useState(false);
     const [search, setSearch] = useState("");
     const [searchResults, setSearchResults] = useState([]);
