@@ -149,7 +149,7 @@ export default function Ressources() {
                                     ))
                                 )}
                             </div>
-                            <NavLink to="/mcc" className="btn btn-black" style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)', width: '100%' }}>
+                            <NavLink to="/mcc" className="btn btn-black mb-3" style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)', width: '100%' }}>
                                 Simulateur de note
                             </NavLink>
                         </div>
