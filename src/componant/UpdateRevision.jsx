@@ -2,6 +2,12 @@ import './ModalRevision.scss';
 
 const changelog = [
     {
+        date: '2026-03-30',
+        items: [
+            'Ajout de la matière "Élément d\'algorithmique" dans le simulateur de note.',
+        ],
+    },
+    {
         date: '2026-03-27',
         items: [
             'Ajout d\'un simulateur de note pour les étudiants de la double-licence L2,',

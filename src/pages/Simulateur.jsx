@@ -24,7 +24,29 @@ export default function Simulateur() {
     const [prob, setProb] = useState(() => getInitial('simulateur_prob', { I1: '', I2: '', I3: '', E: '' }));
     const [analyse, setAnalyse] = useState(() => getInitial('simulateur_analyse', { CC1: '', CC2: '', P: '', E1: '' }));
     const [c, setC] = useState(() => getInitial('simulateur_c', { CC: '', P: '', E: '' }));
-    const [results, setResults] = useState({ prob: null, analyse: null, c: null });
+    const [algo, setAlgo] = useState(() => getInitial('simulateur_algo', { CC1: '', CC2: '', Partiel: '', Assiduite: '', Examen: '' }));
+    const [results, setResults] = useState({ prob: null, analyse: null, c: null, algo: null });
+    useEffect(() => {
+        localStorage.setItem('simulateur_algo', JSON.stringify(algo));
+    }, [algo]);
+    // Éléments d'algorithmique
+    function calcAlgo() {
+        const CC1 = parseFloat(algo.CC1) || 0;
+        const CC2 = parseFloat(algo.CC2) || 0;
+        const Partiel = parseFloat(algo.Partiel) || 0;
+        const Assiduite = parseFloat(algo.Assiduite) || 0;
+        const Examen = algo.Examen === '' ? null : parseFloat(algo.Examen);
+        let note, neededExamen = null;
+        if (Examen === null) {
+            // 0.1*CC1 + 0.1*CC2 + 0.2*Partiel + 0.1*Assiduite + 0.5*Examen >= 10
+            // neededExamen = (10 - 0.1*CC1 - 0.1*CC2 - 0.2*Partiel - 0.1*Assiduite) / 0.5
+            neededExamen = (10 - 0.1*CC1 - 0.1*CC2 - 0.2*Partiel - 0.1*Assiduite) / 0.5;
+            setResults(r => ({ ...r, algo: { note: '', neededExamen: neededExamen.toFixed(2) } }));
+        } else {
+            note = 0.1*CC1 + 0.1*CC2 + 0.2*Partiel + 0.1*Assiduite + 0.5*Examen;
+            setResults(r => ({ ...r, algo: { note: note.toFixed(2), neededExamen: null } }));
+        }
+    }
 
     // Sauvegarde dans le localStorage à chaque modification
     useEffect(() => {
@@ -217,10 +239,25 @@ export default function Simulateur() {
                             {matiere === 'algo' && (
                                 <section>
                                     <h3 style={{ fontFamily: 'Aleo, serif', fontWeight: 700, marginBottom: 16 }}>Éléments d'algorithmique</h3>
-                                    <img src="/images/rickroll.gif" alt="rickroll" style={{ maxWidth: 320, width: '100%', borderRadius: 16, marginBottom: 16 }} />
-                                    <div style={{ fontSize: '1.2rem', fontWeight: 600, color: '#d32f2f' }}>
-                                        Même le simulateur ne sait pas comment valider cette matière.<br />Bonne chance&nbsp;!
+                                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
+                                        <input type="number" placeholder="CC1" value={algo.CC1} onChange={e => setAlgo({ ...algo, CC1: e.target.value })} style={inputStyle} />
+                                        <input type="number" placeholder="CC2" value={algo.CC2} onChange={e => setAlgo({ ...algo, CC2: e.target.value })} style={inputStyle} />
+                                        <input type="number" placeholder="Partiel" value={algo.Partiel} onChange={e => setAlgo({ ...algo, Partiel: e.target.value })} style={inputStyle} />
+                                        <input type="number" placeholder="Assiduité" value={algo.Assiduite} onChange={e => setAlgo({ ...algo, Assiduite: e.target.value })} style={inputStyle} />
+                                        <input type="number" placeholder="Examen" value={algo.Examen} onChange={e => setAlgo({ ...algo, Examen: e.target.value })} style={inputStyle} />
+                                        <button onClick={calcAlgo} style={btnStyle}>Calculer</button>
                                     </div>
+                                    {results.algo && (
+                                        <div style={{ marginTop: 8 }}>
+                                            {results.algo.neededExamen ? (
+                                                <div>Note minimale à l'examen pour valider : <b>{results.algo.neededExamen}</b></div>
+                                            ) : (
+                                                <div style={{ marginTop: 8 }}>
+                                                    <NoteProgressBar value={parseFloat(results.algo.note)} />
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
                                 </section>
                             )}
                             {matiere === 'analyse' && (
