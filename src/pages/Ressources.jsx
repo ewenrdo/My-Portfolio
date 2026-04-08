@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import ModalRevision from '../componant/ModalRevision';
 import UpdateRevision from '../componant/UpdateRevision';
 import BlurForm from '../componant/BlurForm';
@@ -15,7 +16,23 @@ export default function Ressources() {
     const [showUpdate, setShowUpdate] = useState(false);
     const [search, setSearch] = useState("");
     const [searchResults, setSearchResults] = useState([]);
+    const [openFolders, setOpenFolders] = useState([]); // tableau de slugs ouverts
     const viewerRef = useRef(null);
+    const location = useLocation();
+
+    // Recherche récursive d'un noeud (fichier ou dossier) par son slug
+    function findNodeBySlug(nodes, slug, path = []) {
+        for (const node of nodes) {
+            if (node.slug === slug) {
+                return { node, path: [...path, node] };
+            }
+            if (node.children && Array.isArray(node.children)) {
+                const found = findNodeBySlug(node.children, slug, [...path, node]);
+                if (found) return found;
+            }
+        }
+        return null;
+    }
     // Recherche récursive de tous les fichiers (objets avec 'path' et sans 'children') correspondant au terme
     function searchFiles(nodes, term) {
         let results = [];
@@ -58,6 +75,7 @@ export default function Ressources() {
 
         // Gestion UpdateRevision : afficher si changelog plus récent que la dernière vue
         const changelog = [
+            { date: '2026-04-08' },
             { date: '2026-03-27' },
             { date: '2026-03-15' },
         ];
@@ -78,8 +96,30 @@ export default function Ressources() {
     }
 
     useEffect(() => {
-        fetchSamples().then(setTree);
-    }, []);
+        fetchSamples().then(data => {
+            setTree(data);
+            // Sélection automatique via query param ?slug=...
+            const params = new URLSearchParams(location.search);
+            const slugParam = params.get('slug');
+            if (slugParam) {
+                const found = findNodeBySlug(data, slugParam);
+                if (found) {
+                    // Ouvre tous les dossiers parents ET le dossier cible (si c'est un dossier)
+                    const folderSlugs = found.path
+                        .filter(n => n.slug)
+                        .map(n => n.slug);
+                    setOpenFolders(folderSlugs);
+                    // Si c'est un fichier (pas de children mais a un path), on le sélectionne
+                    if (found.node.path && !found.node.children) {
+                        setSelected(found.node);
+                    } else {
+                        setSelected(null); // On n'affiche rien dans le viewer si c'est un dossier
+                    }
+                }
+            }
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location.search]);
 
     // Scroll vers le haut de resource-viewer quand un fichier est sélectionné
     useEffect(() => {
@@ -145,7 +185,13 @@ export default function Ressources() {
                                     )
                                 ) : (
                                     tree.map((node, i) => (
-                                        <TreeNode key={i} node={node} onSelect={setSelected} level={0} />
+                                        <TreeNode
+                                            key={i}
+                                            node={node}
+                                            onSelect={setSelected}
+                                            level={0}
+                                            openFolders={openFolders}
+                                        />
                                     ))
                                 )}
                             </div>
@@ -169,7 +215,7 @@ export default function Ressources() {
                                                     <i className="fas fa-exclamation-triangle" style={{ fontSize: '3rem', color: '#d32f2f', marginBottom: 16 }} />
                                                     <p style={{ color: '#d32f2f', fontWeight: 600, fontSize: '1.2rem' }}>Ce fichier n'est pas un PDF ou le chemin est invalide.</p>
                                                     <p style={{ color: '#888', fontSize: '1rem', marginTop: 12 }}>
-                                                        Il est possible que le fichier ne soit pas encore (ou plus) disponible.<br/>
+                                                        Il est possible que le fichier ne soit pas encore (ou plus) disponible.<br />
                                                         Besoin de cette ressource ? <a href="/contact" style={{ color: '#888', textDecoration: 'underline' }}>Me contacter</a>
                                                     </p>
                                                 </div>
@@ -177,16 +223,33 @@ export default function Ressources() {
                                         }
                                         return (
                                             <div className="resource-meta">
-                                                <div className="resource-meta-head" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                <div className="resource-meta-head mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                                     <h3 style={{ fontFamily: 'Aleo, serif', fontWeight: 700, marginBottom: 0 }}>{selected.title}</h3>
-                                                    <a
-                                                        href={selected.path}
-                                                        download
-                                                        className="btn btn-outline-black"
-                                                        style={{ marginLeft: 16, fontSize: '1rem', padding: '0.45rem 1.1rem', borderRadius: '2rem', border: '1px solid black', background: 'transparent', color: 'black', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
-                                                    >
-                                                        <i className="fas fa-download" style={{ marginRight: 6 }} /> Télécharger
-                                                    </a>
+                                                    <div className="d-flex align-items-center">
+
+                                                        <button
+                                                            onClick={() => {
+                                                                // Créer un lien https://ewenrdo.fr/ressources?slug=... pour partager la ressource sélectionnée
+                                                                const url = `${window.location.origin}/ressources?slug=${selected.slug}`;
+                                                                navigator.clipboard.writeText(url).then(() => {
+                                                                    alert('Lien copié dans le presse-papier !');
+                                                                }).catch(() => {
+                                                                    alert('Échec de la copie. Voici le lien : ' + url);
+                                                                });
+                                                            }}
+                                                            className="btn-icon"
+                                                        >
+                                                            <i className="fas fa-share" style={{ marginRight: 6 }} />
+                                                        </button>
+                                                        <a
+                                                            href={selected.path}
+                                                            download
+                                                            className="btn btn-outline-black"
+                                                            style={{ marginLeft: 16, fontSize: '1rem', padding: '0.45rem 1.1rem', borderRadius: '2rem', border: '1px solid black', background: 'transparent', color: 'black', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
+                                                        >
+                                                            <i className="fas fa-download" style={{ marginRight: 6 }} /> Télécharger
+                                                        </a>
+                                                    </div>
                                                 </div>
                                                 <p>{selected.comment}</p>
                                                 {hasDate ? (

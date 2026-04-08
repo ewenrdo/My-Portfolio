@@ -1,54 +1,64 @@
 [
     {
         "name": "Mathématiques",
+        "slug": "mathematiques",
         "children": [
             {
                 "name": "Licence 1",
+                "slug": "licence-1",
                 "children": []
             },
             {
                 "name": "Licence 2",
+                "slug": "licence-2",
                 "children": [
                     {
                         "name": "Analyse 3",
+                        "slug": "an3",
                         "children": [
                             {
                                 "name": "chapitre1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap1/chapitre1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                 "title": "Chapitre 1 : Suites de Cauchy",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "analyse-3-chapitre-1-suites-de-cauchy"
                             },
                             {
                                 "name": "chapitre2.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap2/chapitre2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                 "title": "Chapitre 2 : Séries numériques",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "analyse-3-chapitre-2-series-numeriques"
                             },
                             {
                                 "name": "chapitre3.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap3/chap3.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                 "title": "Chapitre 3 : Intégrales impropres",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "analyse-3-chapitre-3-integrales-impropres"
                             },
                             {
                                 "name": "Chapitre 4 : Topologie",
+                                "slug": "chap4",
                                 "children": [
                                     {
                                         "name": "chapitre4.pdf",
                                         "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap4/chap4.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                         "title": "Chapitre 4 : Topologie des espaces métriques",
-                                        "date": "2026-01-16"
+                                        "date": "2026-01-16",
+                                        "slug": "analyse-3-chapitre-4-topologie-des-espaces-metriques"
                                     },
                                     {
                                         "name": "question_cours.pdf",
                                         "path": "https://github.com/ewenrdo/Math-Lesson-Maker/raw/exercises/an3/chap4/question_cours.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
                                         "title": "TD : Questions de cours",
-                                        "date": "2026-01-16"
+                                        "date": "2026-01-16",
+                                        "slug": "analyse-3-chapitre-4-td-questions-de-cours"
                                     }
                                 ]
                             },
@@ -57,263 +67,294 @@
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap5/chap5.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
                                 "title": "Chapitre 5 : Fonctions de plusieurs variables",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "analyse-3-chapitre-5-fonctions-de-plusieurs-variables"
                             }
                         ]
                     },
                     {
                         "name": "Algèbre 3",
+                        "slug": "al3",
                         "children": [
                             {
                                 "name": "chapitre1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap1/chapitre1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 1 : Groupes",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "algebre-3-chapitre-1-groupes"
                             },
                             {
                                 "name": "chapitre2.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap2/chapitre2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 2 : Groupe symétrique",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "algebre-3-chapitre-2-groupe-symetrique"
                             },
                             {
                                 "name": "chapitre3.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap3/chap3.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 3 : Espaces vectoriels",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "algebre-3-chapitre-3-espaces-vectoriels"
                             },
                             {
                                 "name": "chapitre4.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap4/chap4.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 4 : Matrices",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "algebre-3-chapitre-4-matrices"
                             },
                             {
                                 "name": "chapitre5.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap5/chap5.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 5 : Déterminants",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "algebre-3-chapitre-5-determinants"
                             },
                             {
                                 "name": "chapitre6.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/al3/chap6/chap6.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Loïc Merel.",
                                 "title": "Chapitre 6 : Réduction des endomorphismes",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "algebre-3-chapitre-6-reduction-des-endomorphismes"
                             },
                             {
                                 "name": "partiel_al3.pdf",
                                 "path": "/resources/partiel_al3.pdf",
                                 "credits": "Pr. Loïc Merel, université Paris Cité.",
                                 "title": "Examen, session 1",
-                                "date": "2026-01-16"
+                                "date": "2026-01-16",
+                                "slug": "algebre-3-examen-session-1"
                             }
                         ]
                     },
                     {
                         "name": "Probabilités 4",
+                        "slug": "pr4",
                         "children": [
                             {
                                 "name": "preambule.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/preambule/preambule.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Préambule et MCC",
-                                "date": "2026-01-18"
+                                "date": "2026-01-18",
+                                "slug": "probabilites-4-preambule-et-mcc"
                             },
                             {
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 1 : Combinatoire",
-                                "date": "2026-01-18"
+                                "date": "2026-01-18",
+                                "slug": "probabilites-4-chapitre-1-combinatoire"
                             },
                             {
                                 "name": "chap2.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap2/chap2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 2 : Espaces probabilisés",
-                                "date": "2026-01-26"
+                                "date": "2026-01-26",
+                                "slug": "probabilites-4-chapitre-2-espaces-probabilises"
                             },
                             {
                                 "name": "chap3.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap3/chap3.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 3 : Probabilités conditionnelles",
-                                "date": "2026-02-04"
+                                "date": "2026-02-04",
+                                "slug": "probabilites-4-chapitre-3-probabilites-conditionnelles"
                             },
                             {
                                 "name": "chap4.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap4/chap4.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 4 : Variables aléatoires",
-                                "date": "2026-02-09"
+                                "date": "2026-02-09",
+                                "slug": "probabilites-4-chapitre-4-variables-aleatoires"
                             },
                             {
                                 "name": "chap5.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap5/chap5.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 5 : Espérance",
-                                "date": "2026-02-18"
+                                "date": "2026-02-18",
+                                "slug": "probabilites-4-chapitre-5-esperance"
                             },
                             {
                                 "name": "chap6.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap6/chap6.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 6 : Vecteurs aléatoires",
-                                "date": "2026-03-16"
+                                "date": "2026-03-16",
+                                "slug": "probabilites-4-chapitre-6-vecteurs-aleatoires"
                             },
                             {
                                 "name": "chap7.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap7/chap7.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
                                 "title": "Chapitre 7 : Outils probabilistes",
-                                "date": "2026-03-16"
+                                "date": "2026-03-16",
+                                "slug": "probabilites-4-chapitre-7-outils-probabilistes"
                             },
                             {
                                 "name": "chap8.pdf",
                                 "path": "CHANGER LA DATE",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 8 : Marche aléatoire simple",
-                                "date": "2026-03-16"
-                            },
-                            {
-                                "name": "chap9.pdf",
-                                "path": "CHANGER LA DATE",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 9 : Chaînes de Markov",
-                                "date": "2026-03-16"
+                                "title": "Chapitre 8 : Chaînes de Markov",
+                                "date": "2026-03-16",
+                                "slug": "probabilites-4-chapitre-8-chaines-de-markov"
                             }
                         ]
                     },
                     {
                         "name": "Analyse-Algèbre 4",
+                        "slug": "asf4",
                         "children": [
                             {
                                 "name": "chap2.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap2/chap2.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 2 : Formes linéaires et dualité",
-                                "date": "2026-01-21"
+                                "date": "2026-01-21",
+                                "slug": "analyse-algebre-4-chapitre-2-formes-lineaires-et-dualite"
                             },
                             {
                                 "name": "chap3.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap3/chap3.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 3 : Suites et séries de fonctions",
-                                "date": "2026-01-28"
+                                "date": "2026-01-28",
+                                "slug": "analyse-algebre-4-chapitre-3-suites-et-series-de-fonctions"
                             },
                             {
                                 "name": "chap4.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap4/chap4.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 4 : Espaces euclidiens",
-                                "date": "2026-01-28"
+                                "date": "2026-01-28",
+                                "slug": "analyse-algebre-4-chapitre-4-espaces-euclidiens"
                             },
                             {
                                 "name": "chap5.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap5/chap5.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 5 : Séries entières",
-                                "date": "2026-02-18"
+                                "date": "2026-02-18",
+                                "slug": "analyse-algebre-4-chapitre-5-series-entieres"
                             },
                             {
                                 "name": "chap6.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap6/chap6.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 6 : Endomorphismes des espaces euclidiens",
-                                "date": "2026-03-11"
+                                "date": "2026-03-11",
+                                "slug": "analyse-algebre-4-chapitre-6-endomorphismes-des-espaces-euclidiens"
                             },
                             {
                                 "name": "chap7.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap7/chap7.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 7 : Intégrales dépendantes d'un paramètre",
-                                "date": "2026-03-21"
+                                "date": "2026-03-21",
+                                "slug": "analyse-algebre-4-chapitre-7-integrales-dependantes-dun-parametre"
                             },
                             {
                                 "name": "chap8_bis.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap8/chap8_bis.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Fortement inspiré du cours de Romain Petrides et John Borthwick.",
                                 "title": "Chapitre 8 : Isométries en dimension 2 et 3",
-                                "date": "2026-03-21"
+                                "date": "2026-03-21",
+                                "slug": "analyse-algebre-4-chapitre-8-isometries-en-dimension-2-et-3"
                             },
                             {
                                 "name": "chap9.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap9/chap9.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 9 : Intégrales multiples",
-                                "date": "2026-03-27"
+                                "date": "2026-03-27",
+                                "slug": "analyse-algebre-4-chapitre-9-integrales-multiples"
                             },
                             {
                                 "name": "chap10.pdf",
                                 "path": "CHANGER DATE",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 10 : Formes bilinéaires et quadratiques",
-                                "date": "2026-03-18"
+                                "date": "2026-03-18",
+                                "slug": "analyse-algebre-4-chapitre-10-formes-bilineres-et-quadratiques"
                             },
                             {
                                 "name": "chap11.pdf",
                                 "path": "CHANGER DATE",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                 "title": "Chapitre 11 : Fonctions de plusieurs variables",
-                                "date": "2026-03-18"
+                                "date": "2026-03-18",
+                                "slug": "analyse-algebre-4-chapitre-11-fonctions-de-plusieurs-variables"
                             }
                         ]
                     },
                     {
                         "name": "UE Climat (TEDs)",
+                        "slug": "ue-climat-teds",
                         "children": [
                             {
                                 "name": "pres_ue_climat.pdf",
                                 "path": "/resources/pres_ue_climat.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira, Alex Theophilos, Yaïr Ifergan et William Fijean. TOUTE REPRODUCTION OU UTILISATION, MÊME PARTIELLE, EST RIGOUREUSEMENT INTERDITE SANS L'AUTORISATION EXPLICITE DE TOUS LES AUTEURS.",
                                 "title": "Slides de soutenance",
-                                "date": "2026-03-27"
+                                "date": "2026-03-27",
+                                "slug": "ue-climat-slides-de-soutenance"
                             }
                         ]
                     },
                     {
                         "name": "Fiches d'entraînement",
+                        "slug": "fiches-dentrainement",
                         "children": [
                             {
                                 "name": "training_cc1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm3/training_cc1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision CC1 ASF4",
-                                "date": "2026-02-27"
+                                "date": "2026-02-27",
+                                "slug": "fiches-dentrainement-revision-cc1-asf4"
                             },
                             {
                                 "name": "training_sm4.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm4/training_sm4.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision semaine 4",
-                                "date": "2026-02-27"
+                                "date": "2026-02-27",
+                                "slug": "fiches-dentrainement-revision-semaine-4"
                             },
                             {
                                 "name": "training_weekend.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm4/training_weekend.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision semaine 4 (2)",
-                                "date": "2026-02-27"
+                                "date": "2026-02-27",
+                                "slug": "fiches-dentrainement-revision-semaine-4-2"
                             },
                             {
                                 "name": "sm5.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm5/sm5.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision semaine 5",
-                                "date": "2026-02-27"
+                                "date": "2026-02-27",
+                                "slug": "fiches-dentrainement-revision-semaine-5"
                             },
                             {
                                 "name": "sm_pause1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm_pause1/smp.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision semaine de pause",
-                                "date": "2026-02-27"
+                                "date": "2026-02-27",
+                                "slug": "fiches-dentrainement-revision-semaine-de-pause"
                             }
                         ]
                     }
@@ -323,6 +364,7 @@
     },
     {
         "name": "Informatique",
+        "slug": "informatique",
         "children": [
             {
                 "name": "git.pdf",
@@ -330,7 +372,8 @@
                 "credits": "Ewen Rodrigues de Oliveira.",
                 "title": "Introduction à Git",
                 "comment": "Il s'agit de faire une introduction à Git, un système de contrôle de version distribué largement utilisé dans le développement logiciel. Ce document récapitulatif n'est pas exhaustif mais couvre les bases pour commencer à utiliser Git efficacement, notamment dans le cadre de projets.",
-                "date": "2026-01-16"
+                "date": "2026-01-16",
+                "slug": "introduction-a-git"
             },
             {
                 "name": "pres-willys.pdf",
@@ -338,40 +381,46 @@
                 "credits": "Celine Bouhalia, William Fijean, Bastien Fortrye--Campait, Ewen Rodrigues de Oliveira, Dan Sandreschi et Elsa Vervischi..",
                 "title": "Slides projet Willys",
                 "comment": "Slides de présentation du projet Willys (voir Portfolio) présenté lors de la soutenance du projet de fin d'année de la Licence 2 Mathématiques et Informatique à l'Université Paris Cité en janvier 2026.",
-                "date": "2026-01-15"
+                "date": "2026-01-15",
+                "slug": "slides-projet-willys"
             }
         ]
     },
     {
         "name": "CAPES",
+        "slug": "capes",
         "children": [
             {
                 "name": "Programme du Capes",
                 "path": "/resources/programme-capes1.pdf",
                 "credits": "Ministère de l'Éducation Nationale",
                 "title": "Programme du CAPES - épreuve n°1",
-                "comment": "Document officiel listant les connaissances et compétences à maîtriser pour l'examen du CAPES de Mathématiques en 2025 (niveau Licence 3)."
+                "comment": "Document officiel listant les connaissances et compétences à maîtriser pour l'examen du CAPES de Mathématiques en 2025 (niveau Licence 3).",
+                "slug": "programme-du-capes-epreuve-n1"
             },
             {
                 "name": "Programme des leçons",
                 "path": "https://capes-math.org/data/uploads/oraux/exposes_2025.pdf",
                 "credits": "Ministère de l'Éducation Nationale",
                 "title": "Programme des leçons - épreuve n°2",
-                "comment": "Document officiel listant les leçons à préparer pour l'examen du CAPES de Mathématiques en 2025."
+                "comment": "Document officiel listant les leçons à préparer pour l'examen du CAPES de Mathématiques en 2025.",
+                "slug": "programme-des-lecons-epreuve-n2"
             },
             {
                 "name": "Sujet 0",
                 "path": "/resources/sujet_0_capes1.pdf",
                 "credits": "Ministère de l'Éducation Nationale",
                 "title": "Sujet 0 - épreuve n°1",
-                "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3."
+                "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3.",
+                "slug": "sujet-0-capes-epreuve-n1"
             },
             {
                 "name": "Annales mars 2026",
                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/capes.pdf",
                 "credits": "Ministère de l'Éducation Nationale",
                 "title": "Sujet mars 2026 - épreuve n°1",
-                "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3."
+                "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3.",
+                "slug": "sujet-mars-2026-capes-epreuve-n1"
             }
         ]
     }

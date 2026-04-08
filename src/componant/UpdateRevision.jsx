@@ -2,6 +2,12 @@ import './ModalRevision.scss';
 
 const changelog = [
     {
+        date: '2026-04-08',
+        items: [
+            'Ajout d\'un bouton qui permet de copier le lien d\'une ressource dans le presse-papier, pour faciliter le partage dudit fichier.',
+        ],
+    },
+    {
         date: '2026-03-30',
         items: [
             'Ajout de la matière "Élément d\'algorithmique" dans le simulateur de note.',

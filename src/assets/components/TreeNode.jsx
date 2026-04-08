@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 
-export default function TreeNode({ node, onSelect, level = 0 }) {
+export default function TreeNode({ node, onSelect, level = 0, openFolders = [] }) {
   const [open, setOpen] = useState(false);
   const indent = level * 20;
   const showIndentLine = level > 0;
+  // Synchronise l'état open avec openFolders
+  React.useEffect(() => {
+    if (node.slug) {
+      setOpen(openFolders.includes(node.slug));
+    }
+  }, [node.slug, openFolders]);
+
   if (node.children) {
     return (
       <div className="resource-folder" style={{ marginLeft: indent, position: 'relative' }}>
@@ -21,7 +28,7 @@ export default function TreeNode({ node, onSelect, level = 0 }) {
           </div>
         </div>
         {open && node.children.map((child, i) => (
-          <TreeNode key={i} node={child} onSelect={onSelect} level={level + 1} />
+          <TreeNode key={i} node={child} onSelect={onSelect} level={level + 1} openFolders={openFolders} />
         ))}
       </div>
     );
