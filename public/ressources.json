@@ -387,6 +387,32 @@
                         ]
                     }
                 ]
+            },
+            {
+                
+                "name": "Suppléments",
+                "slug": "supplements-capes",
+                "children": [
+                    {
+                        "name": "Arithmétique",
+                        "slug": "arithmetique",
+                        "children": [
+                            {
+                                "name": "integration.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/course.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 1 : Généralités sur les nombres entiers",
+                                "date": "2026-04-09",
+                                "slug": "arithmetique-chapitre-1-generality-sur-les-nombres-entiers"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Séries statistiques",
+                        "slug": "series-statistiques",
+                        "children": []
+                    }
+                ]
             }
         ]
     },
