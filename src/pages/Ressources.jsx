@@ -244,10 +244,10 @@ export default function Ressources() {
                                                         <a
                                                             href={selected.path}
                                                             download
-                                                            className="btn btn-outline-black"
-                                                            style={{ marginLeft: 16, fontSize: '1rem', padding: '0.45rem 1.1rem', borderRadius: '2rem', border: '1px solid black', background: 'transparent', color: 'black', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
+                                                            className="btn-icon"
+                                                            style={{ color: 'black', textDecoration: 'none' }}
                                                         >
-                                                            <i className="fas fa-download" style={{ marginRight: 6 }} /> Télécharger
+                                                            <i className="fas fa-download" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -257,9 +257,6 @@ export default function Ressources() {
                                                 ) : (
                                                     <p className="date" style={{ color: '#d32f2f' }}><i className="fas fa-exclamation-circle" style={{ marginRight: 6 }} />Date de modification manquante</p>
                                                 )}
-                                                {hasCredits && (
-                                                    <p className="date"><strong>Crédits :</strong> {selected.credits}</p>
-                                                )}
                                                 <iframe
                                                     src={selected.path}
                                                     title={selected.title}
@@ -267,6 +264,9 @@ export default function Ressources() {
                                                     height="600px"
                                                     style={{ border: '1px solid #222', borderRadius: '0.5rem', marginTop: 16, background: '#fff' }}
                                                 />
+                                                {hasCredits && (
+                                                    <p className="date"><strong>Crédits :</strong> {selected.credits}</p>
+                                                )}
                                             </div>
                                         );
                                     })()

@@ -6,7 +6,35 @@
             {
                 "name": "Licence 1",
                 "slug": "licence-1",
-                "children": []
+                "children": [
+                    {
+                        "name": "Analyse 2",
+                        "slug": "an2",
+                        "children": [
+                            {
+                                "name": "integration.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl1_mathinfo/an2/integration/integration.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Intégration de fonctions continues par morceaux",
+                                "date": "2026-04-09",
+                                "slug": "analyse-2-integration-de-fonctions-continues-par-morceaux"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Algèbre 2",
+                        "slug": "al2",
+                        "children": [
+                            {
+                                "name": "unit_4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl1_mathinfo/al2/unit_4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 4 : Applications linéaires",
+                                "date": "2026-04-09",
+                                "slug": "algèbre-2-applications-lineaires"
+                            }]
+                    }
+                ]
             },
             {
                 "name": "Licence 2",
