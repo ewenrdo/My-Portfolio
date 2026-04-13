@@ -75,6 +75,7 @@ export default function Ressources() {
 
         // Gestion UpdateRevision : afficher si changelog plus récent que la dernière vue
         const changelog = [
+            { date: '2026-04-13' },
             { date: '2026-04-08' },
             { date: '2026-03-27' },
             { date: '2026-03-15' },
