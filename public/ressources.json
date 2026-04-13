@@ -245,84 +245,224 @@
                         "slug": "asf4",
                         "children": [
                             {
-                                "name": "chap2.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap2/chap2.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 2 : Formes linéaires et dualité",
-                                "date": "2026-01-21",
-                                "slug": "analyse-algebre-4-chapitre-2-formes-lineaires-et-dualite"
+                                "name": "Chapitre 2 : Formes linéaires et dualité",
+                                "slug": "chap-2",
+                                "children": [
+                                    {
+                                        "name": "chap2.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap2/chap2.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 2 : Formes linéaires et dualité",
+                                        "date": "2026-01-21",
+                                        "slug": "analyse-algebre-4-chapitre-2-formes-lineaires-et-dualite"
+                                    },
+                                    {
+                                        "name": "td2-formes-lineaires.pdf",
+                                        "path": "/resources/td-asf4/td2-formes-lineaires.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD2 associé",
+                                        "date": "2026-01-21",
+                                        "slug": "analyse-algebre-4-chapitre-2-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap3.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap3/chap3.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 3 : Suites et séries de fonctions",
-                                "date": "2026-01-28",
-                                "slug": "analyse-algebre-4-chapitre-3-suites-et-series-de-fonctions"
+                                "name": "Chapitre 3 : Suites et séries de fonctions",
+                                "slug": "chap-3",
+                                "children": [
+                                    {
+                                        "name": "chap3.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap3/chap3.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 3 : Suites et séries de fonctions",
+                                        "date": "2026-01-28",
+                                        "slug": "analyse-algebre-4-chapitre-3-suites-et-series-de-fonctions"
+                                    },
+                                    {
+                                        "name": "td3-Series-de-fonctions.pdf",
+                                        "path": "/resources/td-asf4/td3-Series-de-fonctions.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD3 associé",
+                                        "date": "2026-01-28",
+                                        "slug": "analyse-algebre-4-chapitre-3-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap4.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap4/chap4.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 4 : Espaces euclidiens",
-                                "date": "2026-01-28",
-                                "slug": "analyse-algebre-4-chapitre-4-espaces-euclidiens"
+                                "name": "Chapitre 4 : Espaces euclidiens",
+                                "slug": "chap-4",
+                                "children": [
+                                    {
+                                        "name": "chap4.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap4/chap4.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 4 : Espaces euclidiens",
+                                        "date": "2026-01-28",
+                                        "slug": "analyse-algebre-4-chapitre-4-espaces-euclidiens"
+                                    },
+                                    {
+                                        "name": "td4-espaces-euclidiens.pdf",
+                                        "path": "/resources/td-asf4/td4-espaces-euclidiens.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD4 associé",
+                                        "date": "2026-01-28",
+                                        "slug": "analyse-algebre-4-chapitre-4-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap5.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap5/chap5.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 5 : Séries entières",
-                                "date": "2026-02-18",
-                                "slug": "analyse-algebre-4-chapitre-5-series-entieres"
+                                "name": "Chapitre 5 : Séries entières",
+                                "slug": "chap-5",
+                                "children": [
+                                    {
+                                        "name": "chap5.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap5/chap5.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 5 : Séries entières",
+                                        "date": "2026-02-18",
+                                        "slug": "analyse-algebre-4-chapitre-5-series-entieres"
+                                    },
+                                    {
+                                        "name": "td5-series-entieres.pdf",
+                                        "path": "/resources/td-asf4/td5-series-entieres.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD5 associé",
+                                        "date": "2026-02-18",
+                                        "slug": "analyse-algebre-4-chapitre-5-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap6.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap6/chap6.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 6 : Endomorphismes des espaces euclidiens",
-                                "date": "2026-03-11",
-                                "slug": "analyse-algebre-4-chapitre-6-endomorphismes-des-espaces-euclidiens"
+                                "name": "Chapitre 6 : Endomorphismes des espaces euclidiens",
+                                "slug": "chap-6",
+                                "children": [
+                                    {
+                                        "name": "chap6.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap6/chap6.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 6 : Endomorphismes des espaces euclidiens",
+                                        "date": "2026-03-11",
+                                        "slug": "analyse-algebre-4-chapitre-6-endomorphismes-des-espaces-euclidiens"
+                                    },
+                                    {
+                                        "name": "td6-endo-espace-euclidien.pdf",
+                                        "path": "/resources/td-asf4/td6-endo-espace-euclidien.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD6 associé",
+                                        "date": "2026-03-11",
+                                        "slug": "analyse-algebre-4-chapitre-6-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap7.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap7/chap7.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 7 : Intégrales dépendantes d'un paramètre",
-                                "date": "2026-03-21",
-                                "slug": "analyse-algebre-4-chapitre-7-integrales-dependantes-dun-parametre"
+                                "name": "Chapitre 7 : Intégrales dépendantes d'un paramètre",
+                                "slug": "chap-7",
+                                "children": [
+                                    {
+                                        "name": "chap7.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap7/chap7.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 7 : Intégrales dépendantes d'un paramètre",
+                                        "date": "2026-03-21",
+                                        "slug": "analyse-algebre-4-chapitre-7-integrales-dependantes-dun-parametre"
+                                    },
+                                    {
+                                        "name": "td7-integrale-dependant-dun-parametre.pdf",
+                                        "path": "/resources/td-asf4/td7-integrale-dependant-dun-parametre.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD7 associé",
+                                        "date": "2026-03-21",
+                                        "slug": "analyse-algebre-4-chapitre-7-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap8_bis.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap8/chap8_bis.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Fortement inspiré du cours de Romain Petrides et John Borthwick.",
-                                "title": "Chapitre 8 : Isométries en dimension 2 et 3",
-                                "date": "2026-03-21",
-                                "slug": "analyse-algebre-4-chapitre-8-isometries-en-dimension-2-et-3"
+                                "name": "Chapitre 8 : Isométries en dimension 2 et 3",
+                                "slug": "chap-8",
+                                "children": [
+                                    {
+                                        "name": "chap8_bis.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap8/chap8_bis.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Fortement inspiré du cours de Romain Petrides et John Borthwick.",
+                                        "title": "Chapitre 8 : Isométries en dimension 2 et 3",
+                                        "date": "2026-03-21",
+                                        "slug": "analyse-algebre-4-chapitre-8-isometries-en-dimension-2-et-3"
+                                    },
+                                    {
+                                        "name": "td8-Isometrie2et3.pdf",
+                                        "path": "/resources/td-asf4/td8-Isometrie2et3.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD8 associé",
+                                        "date": "2026-03-21",
+                                        "slug": "analyse-algebre-4-chapitre-8-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap9.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap9/chap9.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 9 : Intégrales multiples",
-                                "date": "2026-03-27",
-                                "slug": "analyse-algebre-4-chapitre-9-integrales-multiples"
+                                "name": "Chapitre 9 : Intégrales multiples",
+                                "slug": "chap-9",
+                                "children": [
+                                    {
+                                        "name": "chap9.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap9/chap9.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 9 : Intégrales multiples",
+                                        "date": "2026-03-27",
+                                        "slug": "analyse-algebre-4-chapitre-9-integrales-multiples"
+                                    },
+                                    {
+                                        "name": "td9-integrales-multiples.pdf",
+                                        "path": "/resources/td-asf4/td9-integrales-multiples.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD9 associé",
+                                        "date": "2026-03-27",
+                                        "slug": "analyse-algebre-4-chapitre-9-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap10.pdf",
-                                "path": "CHANGER DATE",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 10 : Formes bilinéaires et quadratiques",
-                                "date": "2026-03-18",
-                                "slug": "analyse-algebre-4-chapitre-10-formes-bilineres-et-quadratiques"
+                                "name": "Chapitre 10 : Formes bilinéaires et quadratiques",
+                                "slug": "chap-10",
+                                "children": [
+                                    {
+                                        "name": "chap10.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap10/chap10.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 10 : Formes bilinéaires et quadratiques",
+                                        "date": "2026-04-13",
+                                        "slug": "analyse-algebre-4-chapitre-10-formes-bilineres-et-quadratiques"
+                                    },
+                                    {
+                                        "name": "td10-formes_quadratiques.pdf",
+                                        "path": "/resources/td-asf4/td10-formes_quadratiques.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD10 associé",
+                                        "date": "2026-04-13",
+                                        "slug": "analyse-algebre-4-chapitre-10-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap11.pdf",
-                                "path": "CHANGER DATE",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
-                                "title": "Chapitre 11 : Fonctions de plusieurs variables",
-                                "date": "2026-03-18",
-                                "slug": "analyse-algebre-4-chapitre-11-fonctions-de-plusieurs-variables"
+                                "name": "Chapitre 11 : Fonctions de plusieurs variables",
+                                "slug": "chap-11",
+                                "children": [
+                                    {
+                                        "name": "chap11.pdf",
+                                        "path": "CHANGER DATE",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "title": "Chapitre 11 : Fonctions de plusieurs variables",
+                                        "date": "2026-03-18",
+                                        "slug": "analyse-algebre-4-chapitre-11-fonctions-de-plusieurs-variables"
+                                    },
+                                    {
+                                        "name": "td11-étude des points critiques.pdf",
+                                        "path": "/resources/td-asf4/td11-étude des points critiques.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD11 associé",
+                                        "date": "2026-03-18",
+                                        "slug": "analyse-algebre-4-chapitre-11-td"
+                                    }
+                                ]
                             }
                         ]
                     },
