@@ -167,14 +167,6 @@
                         "slug": "pr4",
                         "children": [
                             {
-                                "name": "preambule.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/preambule/preambule.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Préambule et MCC",
-                                "date": "2026-01-18",
-                                "slug": "probabilites-4-preambule-et-mcc"
-                            },
-                            {
                                 "name": "Chapitre 1 : Combinatoire",
                                 "slug": "pr4-chap-1-combinatoire",
                                 "children": [
@@ -325,6 +317,14 @@
                                         "slug": "probabilites-4-chapitre-8-chaines-de-markov"
                                     }
                                 ]
+                            },
+                            {
+                                "name": "preambule.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/preambule/preambule.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                "title": "Préambule et MCC",
+                                "date": "2026-01-18",
+                                "slug": "probabilites-4-preambule-et-mcc"
                             }
                         ]
                     },
