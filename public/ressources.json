@@ -175,68 +175,156 @@
                                 "slug": "probabilites-4-preambule-et-mcc"
                             },
                             {
-                                "name": "chap1.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap1/chap1.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 1 : Combinatoire",
-                                "date": "2026-01-18",
-                                "slug": "probabilites-4-chapitre-1-combinatoire"
+                                "name": "Chapitre 1 : Combinatoire",
+                                "slug": "pr4-chap-1-combinatoire",
+                                "children": [
+                                    {
+                                        "name": "chap1.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap1/chap1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                        "title": "Chapitre 1 : Combinatoire",
+                                        "date": "2026-01-18",
+                                        "slug": "probabilites-4-chapitre-1-combinatoire"
+                                    },
+                                    {
+                                        "name": "TD1_PR4.pdf",
+                                        "path": "/resources/td-pr4/TD1_PR4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD1 associé",
+                                        "date": "2026-01-18",
+                                        "slug": "probabilites-4-chapitre-1-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap2.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap2/chap2.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 2 : Espaces probabilisés",
-                                "date": "2026-01-26",
-                                "slug": "probabilites-4-chapitre-2-espaces-probabilises"
+                                "name": "Chapitre 2 : Espaces probabilisés",
+                                "slug": "pr4-chap-2-espaces-probabilises",
+                                "children": [
+                                    {
+                                        "name": "chap2.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap2/chap2.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                        "title": "Chapitre 2 : Espaces probabilisés",
+                                        "date": "2026-01-26",
+                                        "slug": "probabilites-4-chapitre-2-espaces-probabilises"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap3.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap3/chap3.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 3 : Probabilités conditionnelles",
-                                "date": "2026-02-04",
-                                "slug": "probabilites-4-chapitre-3-probabilites-conditionnelles"
+                                "name": "Chapitre 3 : Probabilités conditionnelles",
+                                "slug": "pr4-chap-3-probabilites-conditionnelles",
+                                "children": [
+                                    {
+                                        "name": "chap3.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap3/chap3.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                        "title": "Chapitre 3 : Probabilités conditionnelles",
+                                        "date": "2026-02-04",
+                                        "slug": "probabilites-4-chapitre-3-probabilites-conditionnelles"
+                                    },
+                                    {
+                                        "name": "TD2_PR4.pdf",
+                                        "path": "/resources/td-pr4/TD2_PR4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD2 associé",
+                                        "date": "2026-02-04",
+                                        "slug": "probabilites-4-chapitre-3-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap4.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap4/chap4.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 4 : Variables aléatoires",
-                                "date": "2026-02-09",
-                                "slug": "probabilites-4-chapitre-4-variables-aleatoires"
+                                "name": "Chapitre 4 : Variables aléatoires",
+                                "slug": "pr4-chap-4-variables-aleatoires",
+                                "children": [
+                                    {
+                                        "name": "chap4.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap4/chap4.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                        "title": "Chapitre 4 : Variables aléatoires",
+                                        "date": "2026-02-09",
+                                        "slug": "probabilites-4-chapitre-4-variables-aleatoires"
+                                    },
+                                    {
+                                        "name": "TD3_PR4.pdf",
+                                        "path": "/resources/td-pr4/TD3_PR4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD3 associé",
+                                        "date": "2026-02-09",
+                                        "slug": "probabilites-4-chapitre-4-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap5.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap5/chap5.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 5 : Espérance",
-                                "date": "2026-02-18",
-                                "slug": "probabilites-4-chapitre-5-esperance"
+                                "name": "Chapitre 5 : Espérance",
+                                "slug": "pr4-chap-5-esperance",
+                                "children": [
+                                    {
+                                        "name": "chap5.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap5/chap5.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                        "title": "Chapitre 5 : Espérance",
+                                        "date": "2026-02-18",
+                                        "slug": "probabilites-4-chapitre-5-esperance"
+                                    },
+                                    {
+                                        "name": "TD4_PR4.pdf",
+                                        "path": "/resources/td-pr4/TD4_PR4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD4 associé",
+                                        "date": "2026-02-18",
+                                        "slug": "probabilites-4-chapitre-5-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap6.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap6/chap6.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 6 : Vecteurs aléatoires",
-                                "date": "2026-03-16",
-                                "slug": "probabilites-4-chapitre-6-vecteurs-aleatoires"
+                                "name": "Chapitre 6 : Vecteurs aléatoires",
+                                "slug": "pr4-chap-6-vecteurs-aleatoires",
+                                "children": [
+                                    {
+                                        "name": "chap6.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap6/chap6.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                        "title": "Chapitre 6 : Vecteurs aléatoires",
+                                        "date": "2026-03-16",
+                                        "slug": "probabilites-4-chapitre-6-vecteurs-aleatoires"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap7.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap7/chap7.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 7 : Outils probabilistes",
-                                "date": "2026-03-16",
-                                "slug": "probabilites-4-chapitre-7-outils-probabilistes"
+                                "name": "Chapitre 7 : Outils probabilistes",
+                                "slug": "pr4-chap-7-outils-probabilistes",
+                                "children": [
+                                    {
+                                        "name": "chap7.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/pr4/chap7/chap7.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                        "title": "Chapitre 7 : Outils probabilistes",
+                                        "date": "2026-03-16",
+                                        "slug": "probabilites-4-chapitre-7-outils-probabilistes"
+                                    },
+                                    {
+                                        "name": "TD5_PR4.pdf",
+                                        "path": "/resources/td-pr4/TD5_PR4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD5 associé",
+                                        "date": "2026-03-16",
+                                        "slug": "probabilites-4-chapitre-7-td"
+                                    }
+                                ]
                             },
                             {
-                                "name": "chap8.pdf",
-                                "path": "CHANGER LA DATE",
-                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
-                                "title": "Chapitre 8 : Chaînes de Markov",
-                                "date": "2026-03-16",
-                                "slug": "probabilites-4-chapitre-8-chaines-de-markov"
+                                "name": "Chapitre 8 : Chaînes de Markov",
+                                "slug": "pr4-chap-8-chaines-de-markov",
+                                "children": [
+                                    {
+                                        "name": "chap8.pdf",
+                                        "path": "CHANGER LA DATE",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Raphaël Lefevere.",
+                                        "title": "Chapitre 8 : Chaînes de Markov",
+                                        "date": "2026-03-16",
+                                        "slug": "probabilites-4-chapitre-8-chaines-de-markov"
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -246,7 +334,7 @@
                         "children": [
                             {
                                 "name": "Chapitre 2 : Formes linéaires et dualité",
-                                "slug": "chap-2",
+                                "slug": "asf4-chap-2-formes-lineaires-et-dualite",
                                 "children": [
                                     {
                                         "name": "chap2.pdf",
@@ -268,7 +356,7 @@
                             },
                             {
                                 "name": "Chapitre 3 : Suites et séries de fonctions",
-                                "slug": "chap-3",
+                                "slug": "asf4-chap-3-suites-et-series-de-fonctions",
                                 "children": [
                                     {
                                         "name": "chap3.pdf",
@@ -290,7 +378,7 @@
                             },
                             {
                                 "name": "Chapitre 4 : Espaces euclidiens",
-                                "slug": "chap-4",
+                                "slug": "asf4-chap-4-espaces-euclidiens",
                                 "children": [
                                     {
                                         "name": "chap4.pdf",
@@ -312,7 +400,7 @@
                             },
                             {
                                 "name": "Chapitre 5 : Séries entières",
-                                "slug": "chap-5",
+                                "slug": "asf4-chap-5-series-entieres",
                                 "children": [
                                     {
                                         "name": "chap5.pdf",
@@ -334,7 +422,7 @@
                             },
                             {
                                 "name": "Chapitre 6 : Endomorphismes des espaces euclidiens",
-                                "slug": "chap-6",
+                                "slug": "asf4-chap-6-endomorphismes-des-espaces-euclidiens",
                                 "children": [
                                     {
                                         "name": "chap6.pdf",
@@ -356,7 +444,7 @@
                             },
                             {
                                 "name": "Chapitre 7 : Intégrales dépendantes d'un paramètre",
-                                "slug": "chap-7",
+                                "slug": "asf4-chap-7-integrales-dependantes-dun-parametre",
                                 "children": [
                                     {
                                         "name": "chap7.pdf",
@@ -378,7 +466,7 @@
                             },
                             {
                                 "name": "Chapitre 8 : Isométries en dimension 2 et 3",
-                                "slug": "chap-8",
+                                "slug": "asf4-chap-8-isometries-en-dimension-2-et-3",
                                 "children": [
                                     {
                                         "name": "chap8_bis.pdf",
@@ -400,7 +488,7 @@
                             },
                             {
                                 "name": "Chapitre 9 : Intégrales multiples",
-                                "slug": "chap-9",
+                                "slug": "asf4-chap-9-integrales-multiples",
                                 "children": [
                                     {
                                         "name": "chap9.pdf",
@@ -422,7 +510,7 @@
                             },
                             {
                                 "name": "Chapitre 10 : Formes bilinéaires et quadratiques",
-                                "slug": "chap-10",
+                                "slug": "asf4-chap-10-formes-bilineaires-et-quadratiques",
                                 "children": [
                                     {
                                         "name": "chap10.pdf",
@@ -444,7 +532,7 @@
                             },
                             {
                                 "name": "Chapitre 11 : Fonctions de plusieurs variables",
-                                "slug": "chap-11",
+                                "slug": "asf4-chap-11-fonctions-de-plusieurs-variables",
                                 "children": [
                                     {
                                         "name": "chap11.pdf",
