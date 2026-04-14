@@ -611,6 +611,14 @@
                                 "title": "Révision semaine de pause",
                                 "date": "2026-02-27",
                                 "slug": "fiches-dentrainement-revision-semaine-de-pause"
+                            },
+                            {
+                                "name": "livret1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/livrets/livret1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                "title": "Livret de révision de Pâques",
+                                "date": "2026-04-14",
+                                "slug": "livret-de-revision-de-paques-2026"
                             }
                         ]
                     },
@@ -618,7 +626,7 @@
             {
                 "name": "math-club.pdf",
                 "path": "/resources/math-club.pdf",
-                "credits": "Ewen ROdrigues de Oliveira.",
+                "credits": "Ewen Rodrigues de Oliveira.",
                 "title": "Notes de Math Club",
                 "comment": "Notes des conférences du Math Club de l'Université Paris Cité, organisées par l'UFR de Math, couvrant divers sujets de mathématiques avancées présentés par des chercheurs et entrepreneurs invités. Ces notes sont destinées à fournir un aperçu des thèmes abordés lors de ces conférences et à servir de ressource pour les étudiants préparant l'examen, elles ne sont pas exhaustives et ne remplacent pas la participation aux conférences elles-mêmes.",
                 "date": "2026-04-09",
