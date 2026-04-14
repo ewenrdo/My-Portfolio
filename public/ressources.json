@@ -182,7 +182,7 @@
                                         "name": "TD1_PR4.pdf",
                                         "path": "/resources/td-pr4/TD1_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD1 associé",
+                                        "title": "TD1 PR4 associé",
                                         "date": "2026-01-18",
                                         "slug": "probabilites-4-chapitre-1-td"
                                     }
@@ -218,7 +218,7 @@
                                         "name": "TD2_PR4.pdf",
                                         "path": "/resources/td-pr4/TD2_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD2 associé",
+                                        "title": "TD2 PR4 associé",
                                         "date": "2026-02-04",
                                         "slug": "probabilites-4-chapitre-3-td"
                                     }
@@ -240,7 +240,7 @@
                                         "name": "TD3_PR4.pdf",
                                         "path": "/resources/td-pr4/TD3_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD3 associé",
+                                        "title": "TD3 PR4 associé",
                                         "date": "2026-02-09",
                                         "slug": "probabilites-4-chapitre-4-td"
                                     }
@@ -262,7 +262,7 @@
                                         "name": "TD4_PR4.pdf",
                                         "path": "/resources/td-pr4/TD4_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD4 associé",
+                                        "title": "TD4 PR4 associé",
                                         "date": "2026-02-18",
                                         "slug": "probabilites-4-chapitre-5-td"
                                     }
@@ -298,7 +298,7 @@
                                         "name": "TD5_PR4.pdf",
                                         "path": "/resources/td-pr4/TD5_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD5 associé",
+                                        "title": "TD5 PR4 associé",
                                         "date": "2026-03-16",
                                         "slug": "probabilites-4-chapitre-7-td"
                                     }
@@ -348,7 +348,7 @@
                                         "name": "td2-formes-lineaires.pdf",
                                         "path": "/resources/td-asf4/td2-formes-lineaires.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD2 associé",
+                                        "title": "TD2 ASF4 associé",
                                         "date": "2026-01-21",
                                         "slug": "analyse-algebre-4-chapitre-2-td"
                                     }
@@ -370,7 +370,7 @@
                                         "name": "td3-Series-de-fonctions.pdf",
                                         "path": "/resources/td-asf4/td3-Series-de-fonctions.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD3 associé",
+                                        "title": "TD3 ASF4 associé",
                                         "date": "2026-01-28",
                                         "slug": "analyse-algebre-4-chapitre-3-td"
                                     }
@@ -392,7 +392,7 @@
                                         "name": "td4-espaces-euclidiens.pdf",
                                         "path": "/resources/td-asf4/td4-espaces-euclidiens.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD4 associé",
+                                        "title": "TD4 ASF4 associé",
                                         "date": "2026-01-28",
                                         "slug": "analyse-algebre-4-chapitre-4-td"
                                     }
@@ -414,7 +414,7 @@
                                         "name": "td5-series-entieres.pdf",
                                         "path": "/resources/td-asf4/td5-series-entieres.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD5 associé",
+                                        "title": "TD5 ASF4 associé",
                                         "date": "2026-02-18",
                                         "slug": "analyse-algebre-4-chapitre-5-td"
                                     }
@@ -436,7 +436,7 @@
                                         "name": "td6-endo-espace-euclidien.pdf",
                                         "path": "/resources/td-asf4/td6-endo-espace-euclidien.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD6 associé",
+                                        "title": "TD6 ASF4 associé",
                                         "date": "2026-03-11",
                                         "slug": "analyse-algebre-4-chapitre-6-td"
                                     }
@@ -458,7 +458,7 @@
                                         "name": "td7-integrale-dependant-dun-parametre.pdf",
                                         "path": "/resources/td-asf4/td7-integrale-dependant-dun-parametre.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD7 associé",
+                                        "title": "TD7 ASF4 associé",
                                         "date": "2026-03-21",
                                         "slug": "analyse-algebre-4-chapitre-7-td"
                                     }
@@ -480,7 +480,7 @@
                                         "name": "td8-Isometrie2et3.pdf",
                                         "path": "/resources/td-asf4/td8-Isometrie2et3.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD8 associé",
+                                        "title": "TD8 ASF4 associé",
                                         "date": "2026-03-21",
                                         "slug": "analyse-algebre-4-chapitre-8-td"
                                     }
@@ -502,7 +502,7 @@
                                         "name": "td9-integrales-multiples.pdf",
                                         "path": "/resources/td-asf4/td9-integrales-multiples.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD9 associé",
+                                        "title": "TD9 ASF4 associé",
                                         "date": "2026-03-27",
                                         "slug": "analyse-algebre-4-chapitre-9-td"
                                     }
@@ -524,7 +524,7 @@
                                         "name": "td10-formes_quadratiques.pdf",
                                         "path": "/resources/td-asf4/td10-formes_quadratiques.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD10 associé",
+                                        "title": "TD10 ASF4 associé",
                                         "date": "2026-04-13",
                                         "slug": "analyse-algebre-4-chapitre-10-td"
                                     }
@@ -546,7 +546,7 @@
                                         "name": "td11-étude des points critiques.pdf",
                                         "path": "/resources/td-asf4/td11-étude des points critiques.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD11 associé",
+                                        "title": "TD11 ASF4 associé",
                                         "date": "2026-03-18",
                                         "slug": "analyse-algebre-4-chapitre-11-td"
                                     }
