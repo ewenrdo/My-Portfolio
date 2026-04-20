@@ -586,7 +586,15 @@
                                         "slug": "livret-de-revision-de-paques-2026"
                                     },
                                     {
-                                        "name": "livret1.pdf",
+                                        "name": "j1_a.pdf",
+                                        "path": "/resources/livret-paques-2026/j1_a.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                        "title": "Corrigé J1 partie A",
+                                        "date": "2026-04-20",
+                                        "slug": "livret-de-revision-de-paques-2026_corrige-j1-a"
+                                    },
+                                    {
+                                        "name": "j1_b-c.pdf",
                                         "path": "/resources/livret-paques-2026/j1_b-c.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J1 parties B et C",
