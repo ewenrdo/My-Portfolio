@@ -33,6 +33,10 @@ export default function TreeNode({ node, onSelect, level = 0, openFolders = [] }
       </div>
     );
   }
+  const isZip = node.path && node.path.toLowerCase().endsWith('.zip');
+  const fileIcon = isZip ? 'fa-file-archive' : 'fa-file-pdf';
+  const iconColor = isZip ? '#ff6f00' : '#d32f2f';
+
   return (
     <div className="resource-file" onClick={() => onSelect(node)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.95rem', marginLeft: indent, position: 'relative' }}>
       {showIndentLine && (
@@ -40,7 +44,7 @@ export default function TreeNode({ node, onSelect, level = 0, openFolders = [] }
       )}
       <span style={{ display: 'flex', alignItems: '' }}>
         <span style={{ display: 'inline-block', width: 12 }} />
-        <i className="fas fa-file-pdf" style={{ marginRight: 6, marginTop: 4, color: '#d32f2f', fontSize: '1rem' }} />
+        <i className={`fas ${fileIcon}`} style={{ marginRight: 6, marginTop: 4, color: iconColor, fontSize: '1rem' }} />
         <span style={{ fontSize: '0.97rem' }}>{node.title || node.name}</span>
       </span>
     </div>

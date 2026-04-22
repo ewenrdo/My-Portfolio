@@ -206,11 +206,13 @@ export default function Ressources() {
                                     (() => {
                                         // Vérification PDF
                                         const isPdf = selected.path && selected.path.toLowerCase().endsWith('.pdf');
+                                        // Vérification ZIP
+                                        const isZip = selected.path && selected.path.toLowerCase().endsWith('.zip');
                                         // Vérification crédits
                                         const hasCredits = selected.credits && selected.credits.trim() !== '';
                                         // Vérification date
                                         const hasDate = selected.date && selected.date.trim() !== '';
-                                        if (!isPdf) {
+                                        if (!isPdf && !isZip) {
                                             return (
                                                 <div className="resource-error" style={{ textAlign: 'center', padding: '4rem 0' }}>
                                                     <i className="fas fa-exclamation-triangle" style={{ fontSize: '3rem', color: '#d32f2f', marginBottom: 16 }} />
@@ -258,13 +260,22 @@ export default function Ressources() {
                                                 ) : (
                                                     <p className="date" style={{ color: '#d32f2f' }}><i className="fas fa-exclamation-circle" style={{ marginRight: 6 }} />Date de modification manquante</p>
                                                 )}
-                                                <iframe
-                                                    src={selected.path}
-                                                    title={selected.title}
-                                                    width="100%"
-                                                    height="600px"
-                                                    style={{ border: '1px solid #222', borderRadius: '0.5rem', marginTop: 16, background: '#fff' }}
-                                                />
+                                                {isZip ? (
+                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '400px' }}>
+                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center' }}>
+                                                            <i className="fas fa-download" style={{ marginRight: 12, fontSize: '1.5rem', color: '#007bff' }} />
+                                                            Cliquez sur le bouton télécharger pour récupérer le fichier ZIP.
+                                                        </p>
+                                                    </div>
+                                                ) : (
+                                                    <iframe
+                                                        src={selected.path}
+                                                        title={selected.title}
+                                                        width="100%"
+                                                        height="600px"
+                                                        style={{ border: '1px solid #222', borderRadius: '0.5rem', marginTop: 16, background: '#fff' }}
+                                                    />
+                                                )}
                                                 {hasCredits && (
                                                     <p className="date"><strong>Crédits :</strong> {selected.credits}</p>
                                                 )}
