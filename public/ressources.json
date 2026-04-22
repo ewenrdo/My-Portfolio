@@ -669,6 +669,15 @@
                         "comment": "Notes des conférences du Math Club de l'Université Paris Cité, organisées par l'UFR de Math, couvrant divers sujets de mathématiques avancées présentés par des chercheurs et entrepreneurs invités. Ces notes sont destinées à fournir un aperçu des thèmes abordés lors de ces conférences et à servir de ressource pour les étudiants préparant l'examen, elles ne sont pas exhaustives et ne remplacent pas la participation aux conférences elles-mêmes.",
                         "date": "2026-04-09",
                         "slug": "notes-de-math-club"
+                    },
+                    {
+                        "name": "math-club-laurent.zip",
+                        "path": "/resources/math-club-laurent.zip",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Notes de Math Club et photos (Laurent)",
+                        "comment": "Notes et photos de Laurent Cai. Notes des conférences du Math Club de l'Université Paris Cité, organisées par l'UFR de Math, couvrant divers sujets de mathématiques avancées présentés par des chercheurs et entrepreneurs invités. Ces notes sont destinées à fournir un aperçu des thèmes abordés lors de ces conférences et à servir de ressource pour les étudiants préparant l'examen, elles ne sont pas exhaustives et ne remplacent pas la participation aux conférences elles-mêmes.",
+                        "date": "2026-04-22",
+                        "slug": "notes-de-math-club"
                     }
                 ]
             },
