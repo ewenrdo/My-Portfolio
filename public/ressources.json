@@ -616,6 +616,14 @@
                                         "title": "Corrigé J3",
                                         "date": "2026-04-21",
                                         "slug": "livret-de-revision-de-paques-2026_corrige-j3"
+                                    },
+                                    {
+                                        "name": "j4.pdf",
+                                        "path": "/resources/livret-paques-2026/j4.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                        "title": "Corrigé J4",
+                                        "date": "2026-04-22",
+                                        "slug": "livret-de-revision-de-paques-2026_corrige-j4"
                                     }
                                 ]
                             },
@@ -677,7 +685,7 @@
                         "title": "Notes de Math Club et photos (Laurent)",
                         "comment": "Notes et photos de Laurent Cai. Notes des conférences du Math Club de l'Université Paris Cité, organisées par l'UFR de Math, couvrant divers sujets de mathématiques avancées présentés par des chercheurs et entrepreneurs invités. Ces notes sont destinées à fournir un aperçu des thèmes abordés lors de ces conférences et à servir de ressource pour les étudiants préparant l'examen, elles ne sont pas exhaustives et ne remplacent pas la participation aux conférences elles-mêmes.",
                         "date": "2026-04-22",
-                        "slug": "notes-de-math-club"
+                        "slug": "notes-de-math-club-laurent-zip"
                     }
                 ]
             },
