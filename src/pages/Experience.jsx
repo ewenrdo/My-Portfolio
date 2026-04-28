@@ -1,13 +1,12 @@
 import React from 'react';
 import NavBar from '../assets/components/NavBar';
 
-class Experience extends React.Component {
-    render() {
-        return (
-            <>
-                <section className="Header">
-                    <NavBar background="bg-background" />
-                </section>
+function Experience() {
+    return (
+        <>
+            <section className="Header">
+                <NavBar background="bg-background" />
+            </section>
                 <div className="container">
 
                     <section className="experience mt-lg-5">
@@ -145,9 +144,6 @@ class Experience extends React.Component {
                 </div >
             </>
         );
-
-    }
-
 }
 
 export default Experience;

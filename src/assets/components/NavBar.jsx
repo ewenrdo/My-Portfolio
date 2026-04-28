@@ -1,11 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-class NavBar extends React.Component {
-    render() {
-        return (
-            <>
-                <nav className={this.props.home ? "navbar navbar-expand-lg fixed-top " + this.props.background : "navbar navbar-expand-lg " + this.props.background}>
+function NavBar({ home, background }) {
+    return (
+        <>
+            <nav className={home ? "navbar navbar-expand-lg fixed-top " + background : "navbar navbar-expand-lg " + background}>
                     <div className="container">
                         <NavLink className="navbar-brand" to="/">Ewen</NavLink>
 
@@ -69,8 +68,6 @@ class NavBar extends React.Component {
                 </div>
             </>
         );
-    }
 }
 
-// eslint-disable-next-line
 export default NavBar;
