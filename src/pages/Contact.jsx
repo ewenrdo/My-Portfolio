@@ -63,11 +63,11 @@ class Contact extends React.Component {
                                                     Vous avez un projet de site web ? Vous avez besoin d'un développeur web pour vous aider à réaliser votre projet ? Vous êtes au bon endroit !<br />
                                                     Je suis développeur web NodeJS et ReactJS et je serais ravi de vous aider à réaliser votre projet.<br /><br />
 
-                                                    Contactez-moi dès maintenant pour discuter de votre projet par e-mail à <b>hello@ewenrdo.fr</b>.
+                                                    Contactez-moi dès maintenant pour discuter de votre projet par e-mail à <b>ewen.rdo@proton.me</b>.
                                                 </p>
 
                                                 <div className="cta-section">
-                                                    <Link to="mailto:hello@ewenrdo.fr" className="btn btn-black mb-2">Envoyer un e-mail</Link>
+                                                    <Link to="mailto:ewen.rdo@proton.me" className="btn btn-black mb-2">Envoyer un e-mail</Link>
                                                     <button className="btn btn-outline-black mb-2" onClick={() => this.setState({ reason: null })}>Retour</button>
                                                 </div>
 
@@ -101,11 +101,11 @@ class Contact extends React.Component {
                                                         <h2>Vous avez une autre demande ?</h2>
 
                                                         <p className="mt-3 m-0">
-                                                            Vous avez une autre demande ? Vous souhaitez me contacter pour un autre sujet ? N'hésitez pas à m'envoyer un e-mail à <b>hello@ewenrdo.fr</b>.
+                                                            Vous avez une autre demande ? Vous souhaitez me contacter pour un autre sujet ? N'hésitez pas à m'envoyer un e-mail à <b>ewen.rdo@proton.me</b>.
                                                         </p>
 
                                                         <div className="cta-section">
-                                                            <Link to="mailto:hello@ewenrdo.fr" className="btn btn-black mb-2">Envoyer un e-mail</Link>
+                                                            <Link to="mailto:ewen.rdo@proton.me" className="btn btn-black mb-2">Envoyer un e-mail</Link>
                                                             <button className="btn btn-outline-black mb-2" onClick={() => this.setState({ reason: null })}>Retour</button>
                                                         </div>
                                                     </div>

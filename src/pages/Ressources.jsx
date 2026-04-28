@@ -19,6 +19,13 @@ export default function Ressources() {
     const viewerRef = useRef(null);
     const location = useLocation();
 
+    function cleanupBootstrapOverlays() {
+        document.querySelectorAll('.offcanvas-backdrop, .modal-backdrop').forEach((el) => el.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.removeProperty('overflow');
+        document.body.style.removeProperty('padding-right');
+    }
+
     // Recherche récursive d'un noeud (fichier ou dossier) par son slug
     function findNodeBySlug(nodes, slug, path = []) {
         for (const node of nodes) {
@@ -114,6 +121,12 @@ export default function Ressources() {
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location.search]);
+
+    useEffect(() => {
+        return () => {
+            cleanupBootstrapOverlays();
+        };
+    }, []);
 
     // Scroll vers le haut de resource-viewer quand un fichier est sélectionné
     useEffect(() => {
