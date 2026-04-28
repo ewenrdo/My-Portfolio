@@ -41,7 +41,7 @@ function Contact() {
                                             
                                         </span>
                                     </div>
-                                    : reason === "website" ?
+                                    /*: reason === "website" ?
 
                                         <div className="presentation align-items-top">
                                             <h2>Vous souhaitez me contacter pour un site web ?</h2>
@@ -59,7 +59,7 @@ function Contact() {
                                             </div>
 
                                         </div>
-                                        /*: reason === "scolar" ?
+                                        : reason === "scolar" ?
 
                                             <div className="presentation align-items-top">
                                                 <h2>Vous souhaitez avoir un accompagnement en mathématiques pour les lycéens ?</h2>
@@ -85,14 +85,14 @@ function Contact() {
                                             </div>*/
                                             : reason === "other" ?
                                                 <div className="presentation align-items-top">
-                                                    <h2>Vous avez une autre demande ?</h2>
+                                                    <h2>Vous avez une demande ?</h2>
 
                                                     <p className="mt-3 m-0">
-                                                        Vous avez une autre demande ? Vous souhaitez me contacter pour un autre sujet ? N'hésitez pas à m'envoyer un e-mail à <b>ewen.rdo@proton.me</b>.
+                                                        Vous avez une demande ? Vous souhaitez me contacter ? N'hésitez pas à m'envoyer un e-mail à <b>contact@ewenrdo.fr</b>.
                                                     </p>
 
                                                     <div className="cta-section">
-                                                        <Link to="mailto:ewen.rdo@proton.me" className="btn btn-black mb-2">Envoyer un e-mail</Link>
+                                                        <Link to="mailto:contact@ewenrdo.fr" className="btn btn-black mb-2">Envoyer un e-mail</Link>
                                                         <button className="btn btn-outline-black mb-2" onClick={() => setReason(null)}>Retour</button>
                                                     </div>
                                                 </div>

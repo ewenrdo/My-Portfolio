@@ -50,7 +50,7 @@ function Home() {
                                 <div className="col-xs-12 col-lg-7 col-xxl-8 ps-lg-5">
                                     <div className="presentation">
                                         <h2>Étudiant en Mathématiques et Informatique</h2>
-                                        <span className="description">Passionné depuis toujours par l'informatique, et encore plus par les maths</span>
+                                        <span className="description">Développeur web à mes heures perdues, et étudiant le plus souvent (même en rêves).<br/>Je prépare une double licence et le CAPES de Mathématiques.</span>
 
                                         <div className="cta-section">
                                             <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>
