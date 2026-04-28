@@ -15,7 +15,6 @@ export default function Ressources() {
     const [showModal, setShowModal] = useState(false);
     const [showUpdate, setShowUpdate] = useState(false);
     const [search, setSearch] = useState("");
-    const [searchResults, setSearchResults] = useState([]);
     const [openFolders, setOpenFolders] = useState([]); // tableau de slugs ouverts
     const viewerRef = useRef(null);
     const location = useLocation();
@@ -51,13 +50,7 @@ export default function Ressources() {
         return results;
     }
 
-    useEffect(() => {
-        if (search.trim() !== "") {
-            setSearchResults(searchFiles(tree, search));
-        } else {
-            setSearchResults([]);
-        }
-    }, [search, tree, searchFiles]);
+    const searchResults = search.trim() !== "" ? searchFiles(tree, search) : [];
     
     // Vérifie si le formulaire a été rempli dans les dernières 24h
     useEffect(() => {

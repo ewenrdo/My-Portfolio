@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class NavBar extends React.Component {
     render() {
@@ -38,40 +38,32 @@ class NavBar extends React.Component {
                     </div>
                 </nav>
 
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
-                    <div class="offcanvas-header">
+                <div className="offcanvas offcanvas-end" tabIndex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+                    <div className="offcanvas-header">
                         <NavLink className="offcanvas-title navbar-brand" to="/">Ewen</NavLink>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
+                    <div className="offcanvas-body">
 
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item text-center">
-                                <button className="nav-link w-100 text-center" to="/" data-bs-dismiss="offcanvas" aria-label="Close"onClick={() => this.props.navigate("/")}><i className="fas fa-home" /></button>
+                                <NavLink className="nav-link w-100 text-center" to="/" data-bs-dismiss="offcanvas" aria-label="Close"><i className="fas fa-home" /></NavLink>
                             </li>
                             <li className="nav-item text-center">
-                                <button className="nav-link w-100 text-center" to="/experience" data-bs-dismiss="offcanvas" aria-label="Close"
-                                    onClick={() => this.props.navigate("/experience")}
-                                >Expérience</button>
+                                <NavLink className="nav-link w-100 text-center" to="/experience" data-bs-dismiss="offcanvas" aria-label="Close">Expérience</NavLink>
                             </li>
                             <li className="nav-item text-center">
-                                <button className="nav-link w-100 text-center" to="/portfolio" data-bs-dismiss="offcanvas" aria-label="Close"
-                                    onClick={() => this.props.navigate("/portfolio")}
-                                >Portfolio</button>
+                                <NavLink className="nav-link w-100 text-center" to="/portfolio" data-bs-dismiss="offcanvas" aria-label="Close">Portfolio</NavLink>
                             </li>
                             <li className="nav-item text-center">
-                                <button className="nav-link w-100 text-center" to="/ressources" data-bs-dismiss="offcanvas" aria-label="Close"
-                                    onClick={() => this.props.navigate("/ressources")}
-                                >Ressources</button>
+                                <NavLink className="nav-link w-100 text-center" to="/ressources" data-bs-dismiss="offcanvas" aria-label="Close">Ressources</NavLink>
                             </li>
                             <li className="nav-item text-center">
-                                <button className="nav-link w-100 text-center" to="/contact" data-bs-dismiss="offcanvas" aria-label="Close"
-                                    onClick={() => this.props.navigate("/contact")}
-                                >Me contacter</button>
+                                <NavLink className="nav-link w-100 text-center" to="/contact" data-bs-dismiss="offcanvas" aria-label="Close">Me contacter</NavLink>
                             </li>
                         </ul>
                     </div>
-                    <div class="offcanvas-footer text-center pb-4">
+                    <div className="offcanvas-footer text-center pb-4">
                         2024 {new Date().getFullYear() > 2024 ? "-" + new Date().getFullYear() : ""} © Ewen Rodrigues de Oliveira
                     </div>
                 </div>
@@ -81,4 +73,4 @@ class NavBar extends React.Component {
 }
 
 // eslint-disable-next-line
-export default (props) => <NavBar {...props} navigate={useNavigate()} />;
+export default NavBar;
