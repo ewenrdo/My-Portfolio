@@ -14,7 +14,6 @@ const GROUPS = [
 export default function BlurForm({ open, onClose }) {
     const [showConfirm, setShowConfirm] = useState(false);
     const [timer, setTimer] = useState(5);
-    const [formValid, setFormValid] = useState(false);
     const formRef = useRef(null);
     const timerRef = useRef();
 
@@ -39,7 +38,6 @@ export default function BlurForm({ open, onClose }) {
     const handlePreSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            setFormValid(true);
             setShowConfirm(true);
             setTimer(3);
             timerRef.current = setInterval(() => {
@@ -53,7 +51,6 @@ export default function BlurForm({ open, onClose }) {
                 });
             }, 1000);
         } else {
-            setFormValid(false);
             formRef.current.reportValidity(); // Affiche les erreurs natives d'HTML
         }
     };

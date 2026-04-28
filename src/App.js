@@ -5,7 +5,7 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Ressources from "./pages/Ressources";
-import TmpDisabled from "./pages/TmpDisabled";
+// import TmpDisabled from "./pages/TmpDisabled";
 import Simulateur from "./pages/Simulateur";
 
 const App = () => {

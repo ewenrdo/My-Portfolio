@@ -57,8 +57,8 @@ export default function Ressources() {
         } else {
             setSearchResults([]);
         }
-    }, [search, tree]);
-
+    }, [search, tree, searchFiles]);
+    
     // Vérifie si le formulaire a été rempli dans les dernières 24h
     useEffect(() => {
         const filled = localStorage.getItem('formFilled');
