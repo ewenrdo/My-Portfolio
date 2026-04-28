@@ -3,17 +3,6 @@ import { NavLink } from 'react-router-dom';
 import NavBar from '../assets/components/NavBar';
 
 class Home extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: "N/A",
-            isLoading: true,
-            establishmentInfos: [],
-            registrations: [],
-        };
-    }
-
     render() {
         return (
             <div className="Home">
@@ -44,7 +33,7 @@ class Home extends React.Component {
                                             <div className="tooltiptext">Mention Très Bien avec Section Européenne (Anglais)</div>
                                             <div className="content">
                                                 <img src={process.env.PUBLIC_URL + "/images/monod.jpeg"} alt="Baccalauréat" />
-                                                Baccaulauréat
+                                                Baccalauréat
                                             </div>
                                         </div>
                                         <div className="diploma-badge">

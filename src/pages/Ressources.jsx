@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import ModalRevision from '../componant/ModalRevision';
-import UpdateRevision from '../componant/UpdateRevision';
-import BlurForm from '../componant/BlurForm';
+import ModalRevision from '../component/ModalRevision';
+import UpdateRevision from '../component/UpdateRevision';
+import BlurForm from '../component/BlurForm';
 import NavBar from '../assets/components/NavBar';
 import TreeNode from '../assets/components/TreeNode';
 import { NavLink } from 'react-router-dom';

@@ -2,19 +2,6 @@ import React from 'react';
 import NavBar from '../assets/components/NavBar';
 
 class Experience extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: "N/A",
-            isLoading: true,
-            establishmentInfos: [],
-            registrations: [],
-        };
-
-        this.expRef = React.createRef();
-    }
-
     render() {
         return (
             <>
@@ -23,7 +10,7 @@ class Experience extends React.Component {
                 </section>
                 <div className="container">
 
-                    <section className="experience mt-lg-5" ref={this.expRef}>
+                    <section className="experience mt-lg-5">
 
                         <div className="row">
                             <div className="col-xs-12 col-lg-5 col-xxl-4 d-none d-lg-block">
@@ -42,7 +29,7 @@ class Experience extends React.Component {
                                         <div className="tooltiptext">Mention Très Bien avec Section Européenne (Anglais)</div>
                                         <div className="content">
                                             <img src={process.env.PUBLIC_URL + "/images/monod.jpeg"} alt="Baccalauréat" />
-                                            Baccaulauréat
+                                            Baccalauréat
                                         </div>
                                     </div>
                                     <div className="diploma-badge">
@@ -140,7 +127,7 @@ class Experience extends React.Component {
                                         <div className="tooltiptext">Mention Très Bien avec Section Européenne (Anglais)</div>
                                         <div className="content">
                                             <img src={process.env.PUBLIC_URL + "/images/monod.jpeg"} alt="Baccalauréat" />
-                                            Baccaulauréat
+                                            Baccalauréat
                                         </div>
                                     </div>
                                     <div className="diploma-badge">

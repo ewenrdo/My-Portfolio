@@ -3,18 +3,11 @@ import { Link } from 'react-router-dom';
 import NavBar from '../assets/components/NavBar';
 
 class Contact extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
-            name: "N/A",
-            isLoading: true,
-            establishmentInfos: [],
-            registrations: [],
             reason: null
         };
-
-        this.expRef = React.createRef();
     }
 
     render() {
