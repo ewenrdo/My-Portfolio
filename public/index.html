@@ -1,36 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/images/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta
-      name="description"
-      content="Étudiant en double licence Mathématiques et Informatique Fondamentale à l'Université Paris Cité."
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Favicons modernes -->
+    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/images/favicon_192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/images/favicon_512.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/favicon_192.png" />
     
+    <!-- Viewport & SEO basics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ewen Rodrigues de Oliveira. Étudiant en double licence Maths & Informatique, développeur à ses heures perdues. Découvrez mon expérience et mes projets." />
+    <meta name="keywords" content="Ewen Rodrigues, portfolio, développeur web, React, Node.js, Mathématiques, Informatique, Paris" />
+    <link rel="canonical" href="https://ewenrdo.fr/" />
+    
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ewenrdo.fr/" />
+    <meta property="og:title" content="Ewen Rodrigues de Oliveira - Développeur Web & Étudiant en DLMI" />
+    <meta property="og:description" content="Portfolio d'Ewen Rodrigues de Oliveira. Développeur à ses heures perdues, étudiant en double licence Maths & Informatique." />
+    <meta property="og:image" content="https://ewenrdo.fr/images/photo.jpg" />
+    <meta property="og:image:alt" content="Photo de profil - Ewen Rodrigues de Oliveira" />
+    <meta property="og:locale" content="fr_FR" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://ewenrdo.fr/" />
+    <meta name="twitter:title" content="Ewen Rodrigues de Oliveira - Développeur Web & Étudiant en DLMI" />
+    <meta name="twitter:description" content="Ewen Rodrigues de Oliveira. Développeur à ses heures perdues, étudiant en double licence Maths & Informatique." />
+    <meta name="twitter:image" content="https://ewenrdo.fr/images/photo.jpg" />
+    <meta name="twitter:creator" content="@funoxpanda" />
+    
+    <!-- Linked Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ewen Rodrigues de Oliveira",
+      "url": "https://ewenrdo.fr",
+      "image": "https://ewenrdo.fr/images/photo.jpg",
+      "jobTitle": "Développeur Web & Étudiant",
+      "sameAs": [
+        "https://www.linkedin.com/in/ewen-rodrigues-de-oliveira-500736267/"
+      ],
+      "email": "ewen.rdo@proton.me",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Wybz.Fr"
+      }
+    }
+    </script>
+    
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" crossorigin="use-credentials" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
+    <!-- Performance: Preconnect & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://ka-f.fontawesome.com" />
+    
+    <!-- CSS: Bootstrap + Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400..800;1,400..800&family=Aleo:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        
-    <title>Ewen Rodrigues de Oliveira - Étudiant en DLMI</title>
-    <!-- Open Graph thumbnail for social sharing -->
-    <meta property="og:image" content="%PUBLIC_URL%/images/photo.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:alt" content="Ewen Rodrigues de Oliveira" />
-    <meta property="og:image:width" content="600" />
-    <meta property="og:image:height" content="600" />
+    
+    <!-- Title -->
+    <title>Ewen Rodrigues de Oliveira - Développeur Web & Étudiant en DLMI</title>
   </head>
   <body>
-
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>JavaScript est nécessaire pour afficher ce site. Veuillez l'activer dans les paramètres de votre navigateur.</noscript>
     <div id="root"></div>
     
+    <!-- Bootstrap & FontAwesome -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/9effd4ff41.js" crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/9effd4ff41.js" crossorigin="anonymous" defer></script>
   </body>
 </html>

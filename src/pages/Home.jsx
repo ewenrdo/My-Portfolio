@@ -2,32 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import NavBar from '../assets/components/NavBar';
 
-class Home extends React.Component {
+function Home() {
+    return (
+        <div className="Home">
+            <section className="Header">
+                <NavBar home background="bg-white" />
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: "N/A",
-            isLoading: true,
-            establishmentInfos: [],
-            registrations: [],
-        };
-    }
-
-    render() {
-        return (
-            <div className="Home">
-                <section className="Header">
-                    <NavBar home background="bg-white" />
-
-                    <div className="hero">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-xs-12 col-lg-5 col-xxl-4">
-                                    <div className="avatar">
-                                        <img src={process.env.PUBLIC_URL + "/images/photo.jpg"} alt="Ewen Rodrigues" className="profile-picture" />
-                                        <img src={process.env.PUBLIC_URL + "/images/panda.avif"} alt="@funoxpanda" className="profile-picture-hover" />
-                                    </div>
+                <div className="hero">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-xs-12 col-lg-5 col-xxl-4">
+                                <div className="avatar">
+                                    <img src={process.env.PUBLIC_URL + "/images/photo.jpg"} alt="Ewen Rodrigues" className="profile-picture" />
+                                    <img src={process.env.PUBLIC_URL + "/images/panda.avif"} alt="@funoxpanda" className="profile-picture-hover" />
+                                </div>
                                     <h1>{new Date().getHours() < 18 ? "Bonjour" : "Bonsoir"}, je suis Ewen Rodrigues de Oliveira <div className="tooltipHint">👋<span className="tooltiptext">"Rodrigues" avec un "s", pas un "z"</span></div></h1>
 
 
@@ -44,7 +32,7 @@ class Home extends React.Component {
                                             <div className="tooltiptext">Mention Très Bien avec Section Européenne (Anglais)</div>
                                             <div className="content">
                                                 <img src={process.env.PUBLIC_URL + "/images/monod.jpeg"} alt="Baccalauréat" />
-                                                Baccaulauréat
+                                                Baccalauréat
                                             </div>
                                         </div>
                                         <div className="diploma-badge">
@@ -62,7 +50,7 @@ class Home extends React.Component {
                                 <div className="col-xs-12 col-lg-7 col-xxl-8 ps-lg-5">
                                     <div className="presentation">
                                         <h2>Étudiant en Mathématiques et Informatique</h2>
-                                        <span className="description">Passionné depuis toujours par l'informatique, et encore plus par les maths</span>
+                                        <span className="description">Développeur web à mes heures perdues, et étudiant le plus souvent (même en rêves).<br/>Je prépare une double licence et le CAPES de Mathématiques.</span>
 
                                         <div className="cta-section">
                                             <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>
@@ -78,9 +66,6 @@ class Home extends React.Component {
                 </section>
             </div>
         );
-
-    }
-
 }
 
 export default Home;
