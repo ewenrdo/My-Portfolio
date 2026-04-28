@@ -7,23 +7,25 @@ import Portfolio from "./pages/Portfolio";
 import Ressources from "./pages/Ressources";
 // import TmpDisabled from "./pages/TmpDisabled";
 import Simulateur from "./pages/Simulateur";
-import { Anaytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="*" element={<Home />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/ressources" element={<Ressources />} />
-        <Route path="/res" element={<Ressources />} />
-        <Route path="/mcc" element={<Simulateur />} />
-      </Routes>
-      <Anaytics />
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="*" element={<Home />} />
+                <Route path="/experience" element={<Experience />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/ressources" element={<Ressources />} />
+                <Route path="/res" element={<Ressources />} />
+                <Route path="/mcc" element={<Simulateur />} />
+            </Routes>
+            <Analytics />
+            <SpeedInsights />
+        </Router>
+    );
 }
 
 export default App;
