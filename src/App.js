@@ -7,6 +7,7 @@ import Portfolio from "./pages/Portfolio";
 import Ressources from "./pages/Ressources";
 // import TmpDisabled from "./pages/TmpDisabled";
 import Simulateur from "./pages/Simulateur";
+import { Anaytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/res" element={<Ressources />} />
         <Route path="/mcc" element={<Simulateur />} />
       </Routes>
+      <Anaytics />
     </Router>
   );
 }
