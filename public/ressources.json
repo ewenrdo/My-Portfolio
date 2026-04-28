@@ -562,6 +562,7 @@
                             {
                                 "name": "pres_ue_climat.pdf",
                                 "path": "/resources/pres_ue_climat.pdf",
+                                "heavy": true,
                                 "credits": "Ewen Rodrigues de Oliveira, Alex Theophilos, Yaïr Ifergan et William Fijean. TOUTE REPRODUCTION OU UTILISATION, MÊME PARTIELLE, EST RIGOUREUSEMENT INTERDITE SANS L'AUTORISATION EXPLICITE DE TOUS LES AUTEURS.",
                                 "title": "Slides de soutenance",
                                 "date": "2026-03-27",
@@ -698,7 +699,7 @@
                         "path": "/resources/math-club.pdf",
                         "credits": "Ewen Rodrigues de Oliveira.",
                         "title": "Notes de Math Club",
-                        "comment": "Notes des conférences du Math Club de l'Université Paris Cité (certaines sans doute illisibles). ERRATUM : sur la conférence n°2, la propriété du graphe eulérien est de passer une seule fois par chaque arête et revenir au sommet de départ",
+                        "comment": "Notes des conférences du Math Club de l'Université Paris Cité. Il s'agit de notes manuscrites (parfois illisibles). ERRATUM : un graphe eulérien a pour propriété de passer une seule fois par chaque arête et revenir au sommet de départ.",
                         "date": "2026-04-09",
                         "slug": "notes-de-math-club"
                     },
@@ -756,11 +757,22 @@
             {
                 "name": "pres-willys.pdf",
                 "path": "/resources/pres-willys.pdf",
+                "heavy": true,
                 "credits": "Celine Bouhalia, William Fijean, Bastien Fortrye--Campait, Ewen Rodrigues de Oliveira, Dan Sandreschi et Elsa Vervischi..",
                 "title": "Slides projet Willys",
                 "comment": "Slides de présentation du projet Willys (voir Portfolio) présenté lors de la soutenance du projet de fin d'année de la Licence 2 Mathématiques et Informatique à l'Université Paris Cité en janvier 2026.",
                 "date": "2026-01-15",
                 "slug": "slides-projet-willys"
+            },
+            {
+                "name": "symplexis-canva",
+                "path": "https://canva.link/fvbajry3hpz5j7r",
+                "type": "link",
+                "credits": "Ewen Rodrigues de Oliveira.",
+                "title": "Slides projet Symplexis",
+                "comment": "Présentation Canva du projet Symplexis.",
+                "date": "2026-04-28",
+                "slug": "slides-projet-symplexis"
             }
         ]
     },

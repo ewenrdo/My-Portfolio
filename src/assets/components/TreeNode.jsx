@@ -34,8 +34,9 @@ export default function TreeNode({ node, onSelect, level = 0, openFolders = [] }
     );
   }
   const isZip = node.path && node.path.toLowerCase().endsWith('.zip');
-  const fileIcon = isZip ? 'fa-file-archive' : 'fa-file-pdf';
-  const iconColor = isZip ? '#ff6f00' : '#d32f2f';
+  const isLink = node.type === 'link';
+  const fileIcon = isLink ? 'fa-external-link-alt' : isZip ? 'fa-file-archive' : 'fa-file-pdf';
+  const iconColor = isLink ? '#1976d2' : isZip ? '#ff6f00' : '#d32f2f';
 
   return (
     <div className="resource-file" onClick={() => onSelect(node)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.95rem', marginLeft: indent, position: 'relative' }}>

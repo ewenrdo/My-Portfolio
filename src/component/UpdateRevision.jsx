@@ -2,6 +2,15 @@ import './ModalRevision.scss';
 
 const changelog = [
     {
+        date: '2026-04-28',
+        items: [
+            'Migration du site vers une nouvelle machine (plus rapide, plus fiable, moins coûteuse),',
+            'Mise à jour de l\'architecture du site après un an d\'existence, pour plus de maintenabilité',
+            'Les fichiers trop lourds ne sont désormais plus affichés par soucis de performance, mais restent téléchargeables via un bouton dédié,',
+            'Ajout d\'une icône spécifique pour les liens externes, pour les différencier des autres ressources.',
+        ],
+    },
+    {
         date: '2026-04-13',
         items: [
             'Ajout des feuilles de TD de mathématiques du semestre 4 et réorganisation des cours "Analyse-Algèbre 4" et "Probabilités 4"',
@@ -50,7 +59,6 @@ const UpdateRevision = ({ isOpen, onClose }) => {
             <div className="modal-revision-content">
                 <h2>Il y a du nouveau ici !</h2>
                 <p>Voici les dernières mises à jour du site depuis votre dernière visite :</p>
-                <small><i className="fa fa-info-circle text-danger me-2" /> Les modifications des fichiers ne sont pas listées ici, seulement les changements de fonctionnalités ou de design.</small>
                 <div className="changelog-list">
                     {unseenChanges.map((entry) => (
                         <div key={entry.date} className="changelog-entry">
@@ -62,7 +70,9 @@ const UpdateRevision = ({ isOpen, onClose }) => {
                             </ul>
                         </div>
                     ))}
+                    <small><i className="fa fa-info-circle text-danger me-2" /> Les modifications des fichiers ne sont pas listées ici, seulement les changements de fonctionnalités ou de design.</small>
                 </div>
+
                 <button className="modal-revision-close" onClick={handleAcknowledge}>J'ai compris</button>
             </div>
         </div>

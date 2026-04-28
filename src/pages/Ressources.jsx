@@ -75,6 +75,7 @@ export default function Ressources() {
 
         // Gestion UpdateRevision : afficher si changelog plus récent que la dernière vue
         const changelog = [
+            { date: '2026-04-28' },
             { date: '2026-04-13' },
             { date: '2026-04-08' },
             { date: '2026-03-27' },
@@ -214,11 +215,13 @@ export default function Ressources() {
                                         const isPdf = selected.path && selected.path.toLowerCase().endsWith('.pdf');
                                         // Vérification ZIP
                                         const isZip = selected.path && selected.path.toLowerCase().endsWith('.zip');
+                                        const isHeavy = Boolean(selected.heavy);
+                                        const isLink = selected.type === 'link';
                                         // Vérification crédits
                                         const hasCredits = selected.credits && selected.credits.trim() !== '';
                                         // Vérification date
                                         const hasDate = selected.date && selected.date.trim() !== '';
-                                        if (!isPdf && !isZip) {
+                                        if (!isPdf && !isZip && !isLink) {
                                             return (
                                                 <div className="resource-error" style={{ textAlign: 'center', padding: '4rem 0' }}>
                                                     <i className="fas fa-exclamation-triangle" style={{ fontSize: '3rem', color: '#d32f2f', marginBottom: 16 }} />
@@ -250,14 +253,26 @@ export default function Ressources() {
                                                         >
                                                             <i className="fas fa-share" style={{ marginRight: 6 }} />
                                                         </button>
-                                                        <a
-                                                            href={selected.path}
-                                                            download
-                                                            className="btn-icon"
-                                                            style={{ color: 'black', textDecoration: 'none' }}
-                                                        >
-                                                            <i className="fas fa-download" />
-                                                        </a>
+                                                        {isLink ? (
+                                                            <a
+                                                                href={selected.path}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="btn-icon"
+                                                                style={{ color: 'black', textDecoration: 'none' }}
+                                                            >
+                                                                <i className="fas fa-external-link-alt" />
+                                                            </a>
+                                                        ) : (
+                                                            <a
+                                                                href={selected.path}
+                                                                download
+                                                                className="btn-icon"
+                                                                style={{ color: 'black', textDecoration: 'none' }}
+                                                            >
+                                                                <i className="fas fa-download" />
+                                                            </a>
+                                                        )}
                                                     </div>
                                                 </div>
                                                 <p>{selected.comment}</p>
@@ -266,12 +281,43 @@ export default function Ressources() {
                                                 ) : (
                                                     <p className="date" style={{ color: '#d32f2f' }}><i className="fas fa-exclamation-circle" style={{ marginRight: 6 }} />Date de modification manquante</p>
                                                 )}
-                                                {isZip ? (
-                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '400px' }}>
+                                                {isHeavy ? (
+                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px', flexDirection: 'column', gap: '1rem' }}>
+                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center', marginBottom: 0 }}>
+                                                            Ce fichier est lourd pour être affiché automatiquement sur le site.<br />
+                                                            Si vous souhaitez tout de même le consulter, cliquez sur le bouton ci-dessous.
+                                                        </p>
+                                                        <a
+                                                            href={selected.path}
+                                                            download
+                                                            className="btn btn-black"
+                                                            style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)' }}
+                                                        >
+                                                            Télécharger le document
+                                                        </a>
+                                                    </div>
+                                                ) : isZip ? (
+                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px' }}>
                                                         <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center' }}>
                                                             <i className="fas fa-download" style={{ marginRight: 12, fontSize: '1.5rem', color: '#007bff' }} />
                                                             Cliquez sur le bouton télécharger pour récupérer le fichier ZIP.
                                                         </p>
+                                                    </div>
+                                                ) : isLink ? (
+                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px', flexDirection: 'column', gap: '1rem' }}>
+                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center', marginBottom: 0 }}>
+                                                            Cette ressource est un lien externe.<br/>
+                                                            Cliquez sur le bouton ci-dessous pour l'ouvrir dans un nouvel onglet.
+                                                        </p>
+                                                        <a
+                                                            href={selected.path}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="btn btn-black"
+                                                            style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)' }}
+                                                        >
+                                                            Ouvrir le lien
+                                                        </a>
                                                     </div>
                                                 ) : (
                                                     <iframe
