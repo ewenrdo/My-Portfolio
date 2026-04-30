@@ -537,10 +537,10 @@
                                 "children": [
                                     {
                                         "name": "chap11.pdf",
-                                        "path": "CHANGER DATE",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap11/chap11.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
                                         "title": "Chapitre 11 : Fonctions de plusieurs variables",
-                                        "date": "2026-03-18",
+                                        "date": "2026-04-30",
                                         "slug": "analyse-algebre-4-chapitre-11-fonctions-de-plusieurs-variables"
                                     },
                                     {
@@ -657,6 +657,14 @@
                                         "title": "Corrigé J8",
                                         "date": "2026-04-29",
                                         "slug": "livret-de-revision-de-paques-2026_corrige-j8"
+                                    },
+                                    {
+                                        "name": "j9.pdf",
+                                        "path": "/resources/livret-paques-2026/j9.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                        "title": "Corrigé J9",
+                                        "date": "2026-04-30",
+                                        "slug": "livret-de-revision-de-paques-2026_corrige-j9"
                                     }
                                 ]
                             },
