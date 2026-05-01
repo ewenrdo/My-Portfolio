@@ -1,7 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 function NavBar({ home, background }) {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const offcanvasEl = document.getElementById('menuOffcanvas');
+        if (offcanvasEl) {
+            const offcanvasInstance = window.bootstrap?.Offcanvas.getInstance(offcanvasEl);
+            offcanvasInstance?.hide();
+        }
+    }, [location]);
+
     return (
         <>
             <nav className={home ? "navbar navbar-expand-lg fixed-top " + background : "navbar navbar-expand-lg " + background}>
@@ -46,19 +57,19 @@ function NavBar({ home, background }) {
 
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/" data-bs-dismiss="offcanvas" aria-label="Close"><i className="fas fa-home" /></NavLink>
+                                <NavLink className="nav-link w-100 text-center" to="/" ><i className="fas fa-home" /></NavLink>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/experience" data-bs-dismiss="offcanvas" aria-label="Close">Expérience</NavLink>
+                                <NavLink className="nav-link w-100 text-center" to="/experience" >Expérience</NavLink>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/portfolio" data-bs-dismiss="offcanvas" aria-label="Close">Portfolio</NavLink>
+                                <NavLink className="nav-link w-100 text-center" to="/portfolio" >Portfolio</NavLink>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/ressources" data-bs-dismiss="offcanvas" aria-label="Close">Ressources</NavLink>
+                                <NavLink className="nav-link w-100 text-center" to="/ressources" >Ressources</NavLink>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/contact" data-bs-dismiss="offcanvas" aria-label="Close">Me contacter</NavLink>
+                                <NavLink className="nav-link w-100 text-center" to="/contact" >Me contacter</NavLink>
                             </li>
                         </ul>
                     </div>

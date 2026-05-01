@@ -12,7 +12,7 @@ export default function Ressources() {
     const [selected, setSelected] = useState(null);
     const [formOpen, setFormOpen] = useState(false);
     const [formFilled, setFormFilled] = useState(true);
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(true);
     const [showUpdate, setShowUpdate] = useState(false);
     const [search, setSearch] = useState("");
     const [openFolders, setOpenFolders] = useState([]); // tableau de slugs ouverts
