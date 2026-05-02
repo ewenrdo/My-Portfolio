@@ -665,6 +665,22 @@
                                         "title": "Corrigé J9",
                                         "date": "2026-04-30",
                                         "slug": "livret-de-revision-de-paques-2026_corrige-j9"
+                                    },
+                                    {
+                                        "name": "j10.pdf",
+                                        "path": "/resources/livret-paques-2026/j10.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                        "title": "Corrigé J10",
+                                        "date": "2026-05-01",
+                                        "slug": "livret-de-revision-de-paques-2026_corrige-j10"
+                                    },
+                                    {
+                                        "name": "j11.pdf",
+                                        "path": "/resources/livret-paques-2026/j11.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                        "title": "Corrigé J11",
+                                        "date": "2026-05-02",
+                                        "slug": "livret-de-revision-de-paques-2026_corrige-j11"
                                     }
                                 ]
                             },
