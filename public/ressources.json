@@ -855,6 +855,16 @@
                 "comment": "Présentation Canva du projet Symplexis.",
                 "date": "2026-04-28",
                 "slug": "slides-projet-symplexis"
+            },
+            {
+                "name": "dirsim-canva",
+                "path": "https://canva.link/byi6odv2zv4mn5n",
+                "type": "link",
+                "credits": "Ewen Rodrigues de Oliveira.",
+                "title": "Slides projet Dirsim",
+                "comment": "Présentation Canva du projet Dirsim.",
+                "date": "2026-05-06",
+                "slug": "slides-projet-dirsim"
             }
         ]
     },
