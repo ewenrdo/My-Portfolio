@@ -786,6 +786,48 @@
         "slug": "informatique",
         "children": [
             {
+                "name": "Algorithmique",
+                "slug": "elements-algorithmique-l2",
+                "children": [
+                    {
+                        "name": "ea4-memento-complexites",
+                        "path": "/resources/ea4/ea4-memento-complexites.pdf",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Mémento complexités algorithmiques",
+                        "comment": "Memento sur les complexités algorithmiques du cours EA4 de l'Université Paris Cité.",
+                        "date": "2026-05-05",
+                        "slug": "memento-sur-les-complexites"
+                    },
+                    {
+                        "name": "ea4_exam2021",
+                        "path": "/resources/ea4/ea4_exam2021.pdf",
+                        "credits": "Dominique Poulalhon",
+                        "title": "Annale d'examen EA4 2021",
+                        "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
+                        "date": "06",
+                        "slug": "annale-ea4-2021"
+                    },
+                    {
+                        "name": "ea4_exam2022",
+                        "path": "/resources/ea4/ea4_exam2022.pdf",
+                        "credits": "Dominique Poulalhon",
+                        "title": "Annale d'examen EA4 2022",
+                        "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
+                        "date": "2026-05-06",
+                        "slug": "annale-ea4-2022"
+                    },
+                    {
+                        "name": "ea4_exam2023",
+                        "path": "/resources/ea4/ea4_exam2023.pdf",
+                        "credits": "Dominique Poulalhon",
+                        "title": "Annale d'examen EA4 2023",
+                        "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
+                        "date": "2026-05-06",
+                        "slug": "annale-ea4-2023"
+                    }
+                ]
+            },
+            {
                 "name": "git.pdf",
                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/cp3/git.pdf",
                 "credits": "Ewen Rodrigues de Oliveira.",
@@ -813,17 +855,7 @@
                 "comment": "Présentation Canva du projet Symplexis.",
                 "date": "2026-04-28",
                 "slug": "slides-projet-symplexis"
-            },
-            {
-                "name": "ea4-memento-complexites",
-                "path": "/resources/ea4-memento-complexites.pdf",
-                "credits": "Ewen Rodrigues de Oliveira.",
-                "title": "Mémento complexités algorithmiques",
-                "comment": "Memento sur les complexités algorithmiques du cours EA4 de l'Université Paris Cité.",
-                "date": "2026-05-05",
-                "slug": "memento-sur-les-complexites"
             }
-            
         ]
     },
     {
