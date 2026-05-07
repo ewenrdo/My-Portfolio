@@ -827,6 +827,31 @@
                     }
                 ]
             },
+
+            {
+                "name": "Langage C",
+                "slug": "langage-c4",
+                "children": [
+                    {
+                        "name": "lc4-partiel-annale-2024",
+                        "path": "/resources/lc4/partiel_2024.pdf",
+                        "credits": "Lélia Blin, partagé par Anthony Fernandez.",
+                        "title": "Annale de partiel 2024",
+                        "comment": "Annale de partiel du cours Langage C4 de l'Université Paris Cité.",
+                        "date": "2026-05-07",
+                        "slug": "annale-de-partiel-langage-c4-2024"
+                    },
+                    {
+                        "name": "lc4-examen-annale-2024",
+                        "path": "/resources/lc4/exam_2024.pdf",
+                        "credits": "Lélia Blin, partagé par Anthony Fernandez.",
+                        "title": "Annale d'examen 2024",
+                        "comment": "Annale d'examen du cours Langage C4 de l'Université Paris Cité.",
+                        "date": "2026-05-07",
+                        "slug": "annale-d-examen-langage-c4-2024"
+                    }
+                ]
+            },
             {
                 "name": "git.pdf",
                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/cp3/git.pdf",
