@@ -692,6 +692,21 @@
                                     }
                                 ]
                             },
+
+                            {
+                                "name": "Livret de révision des examens",
+                                "slug": "livret-de-revision-de-exam-l2-2026_folder",
+                                "children": [
+                                    {
+                                        "name": "livret2.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/livrets/livret2/livret2.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                        "title": "Livret de révision des examens",
+                                        "date": "2026-05-08",
+                                        "slug": "livret-de-revision-de-exam-l2-2026"
+                                    }
+                                ]
+                            },
                             {
                                 "name": "training_cc1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm3/training_cc1.pdf",
