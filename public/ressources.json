@@ -864,6 +864,15 @@
                         "comment": "Annale d'examen du cours Langage C4 de l'Université Paris Cité.",
                         "date": "2026-05-07",
                         "slug": "annale-d-examen-langage-c4-2024"
+                    },
+                    {
+                        "name": "lc4-fiche-revision",
+                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/lc4/bilan/fiche_c7.pdf",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Fiche de révision du cours",
+                        "comment": "Fiche de révision du cours Langage C4 de l'Université Paris Cité.",
+                        "date": "2026-05-15",
+                        "slug": "fiche-de-revision-langage-c4-2024"
                     }
                 ]
             },
