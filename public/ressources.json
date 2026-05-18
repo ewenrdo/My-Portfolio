@@ -704,6 +704,14 @@
                                         "title": "Livret de révision des examens",
                                         "date": "2026-05-08",
                                         "slug": "livret-de-revision-de-exam-l2-2026"
+                                    },
+                                    {
+                                        "name": "j1-8.pdf",
+                                        "path": "/resources/livret-exam-l2-2026/j1-8.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
+                                        "title": "Corrigé J1 à J8",
+                                        "date": "2026-05-18",
+                                        "slug": "livret-de-revision-de-exam-l2-2026_corrige-j1-8"
                                     }
                                 ]
                             },
