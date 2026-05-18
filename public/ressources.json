@@ -711,7 +711,8 @@
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J1 à J8",
                                         "date": "2026-05-18",
-                                        "slug": "livret-de-revision-de-exam-l2-2026_corrige-j1-8"
+                                        "slug": "livret-de-revision-de-exam-l2-2026_corrige-j1-8",
+                                        "heavy": true
                                     }
                                 ]
                             },
