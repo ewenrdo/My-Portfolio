@@ -817,6 +817,28 @@
                                 "slug": "series-statistiques-chapitre-2-sries-statistiques-dune-variable"
                             }
                         ]
+                    },
+                    {
+                        "name": "Analyse",
+                        "slug": "analyse-capes",
+                        "children": [
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 1 : Convexité et inégalité de Jensen",
+                                "date": "2026-05-25",
+                                "slug": "analyse-capes-chapitre-1-convexite-et-inegalite-de-jensen"
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Équations différentielles",
+                                "date": "2026-05-25",
+                                "slug": "analyse-capes-chapitre-2-equations-differentielles"
+                            }
+                        ]
                     }
                 ]
             }
