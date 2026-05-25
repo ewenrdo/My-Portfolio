@@ -799,7 +799,24 @@
                     {
                         "name": "Séries statistiques",
                         "slug": "series-statistiques",
-                        "children": []
+                        "children": [
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/statistiques/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 1 : Séries statistiques d'une variable",
+                                "date": "2026-05-25",
+                                "slug": "series-statistiques-chapitre-1-sries-statistiques-dune-variable"
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/statistiques/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Séries statistiques d'une variable",
+                                "date": "2026-05-25",
+                                "slug": "series-statistiques-chapitre-2-sries-statistiques-dune-variable"
+                            }
+                        ]
                     }
                 ]
             }
