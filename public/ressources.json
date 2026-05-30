@@ -787,12 +787,20 @@
                         "slug": "arithmetique",
                         "children": [
                             {
-                                "name": "integration.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/course.pdf",
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
-                                "title": "Chapitre 1 : Généralités sur les nombres entiers",
+                                "title": "Chapitre 1 : Construction de N et Z",
                                 "date": "2026-04-09",
-                                "slug": "arithmetique-chapitre-1-generality-sur-les-nombres-entiers"
+                                "slug": "arithmetique-chapitre-1-construction-de-n-et-z"
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Généralités sur les nombres entiers",
+                                "date": "2026-04-09",
+                                "slug": "arithmetique-chapitre-2-generality-sur-les-nombres-entiers"
                             }
                         ]
                     },
