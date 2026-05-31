@@ -6,7 +6,7 @@ const Safety = () => (
 		<h1 style={{ color: "#721c24", marginBottom: "1rem" }}>Site indisponible</h1>
 		<p style={{ color: "#721c24", fontSize: "1.2rem", maxWidth: 500, textAlign: "center" }}>
 			Afin de garantir ma sécurité personnelle et celle de mon entourage, ce site est temporairement indisponible.<br/><br/>
-			Pour toute question, vous pouvez me contacter à <a href="mailto:ewen.rdo@proton.me" style={{ color: "#721c24", textDecoration: "underline" }}>ewen.rdo@proton.me</a>.
+			Pour toute question, vous pouvez me contacter à <a href="mailto:contact@ewenrdo.fr" style={{ color: "#721c24", textDecoration: "underline" }}>contact@ewenrdo.fr</a>.
 		</p>
 	</div>
 );
