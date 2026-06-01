@@ -115,7 +115,7 @@ function Home() {
                             <div className="col-xs-12 col-lg-7 col-xxl-8 ps-lg-5">
                                 <div className="presentation" id="home-presentation">
                                     <h2>Étudiant en Mathématiques et Informatique</h2>
-                                    <span className="description">Développeur web à mes heures perdues, et étudiant le plus souvent (même en rêves).<br />Je prépare une double licence et le CAPES de Mathématiques.</span>
+                                    <span className="description">Développeur à mes heures perdues, et étudiant le plus souvent (même en rêves).<br />Je prépare une double licence et le CAPES de Mathématiques.</span>
 
                                     <div className="cta-section">
                                         <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>
@@ -130,11 +130,11 @@ function Home() {
                 </div>
             </section>
 
-            <section className="experience2 experience2-home" id="presentation">
-                <div className="container experience2-main">
-                    <section className="experience2-hero">
-                        <div className="experience2-hero-copy">
-                            <span className="experience2-kicker">
+            <section className="experience experience-home" id="presentation">
+                <div className="container experience-main">
+                    <section className="experience-hero">
+                        <div className="experience-hero-copy">
+                            <span className="experience-kicker">
                                 <i className="fas fa-wave-square" />
                                 Parcours en construction continue
                             </span>
@@ -145,16 +145,16 @@ function Home() {
                             </p>
                         </div>
 
-                        <div className="experience2-hero-panel">
-                            <div className="experience2-panel-intro">
-                                <span className="experience2-panel-kicker">Repères clés</span>
+                        <div className="experience-hero-panel">
+                            <div className="experience-panel-intro">
+                                <span className="experience-panel-kicker">Repères clés</span>
                                 <h2>Un parcours qui relie savoir, projet et relation humaine</h2>
                                 <p>
                                     Chaque étape a ajouté une compétence différente, mais elles racontent toutes la même manière de voir le monde.
                                 </p>
                             </div>
 
-                            <div className="experience2-panel-band">
+                            <div className="experience-panel-band">
                                 <div className="panel-band-item">
                                     <span className="panel-band-label">En cours</span>
                                     <strong>Double licence + CAPES</strong>
@@ -168,8 +168,8 @@ function Home() {
 
                     </section>
 
-                    <section className="experience2-mosaic">
-                        <div className="experience2-orbit">
+                    <section className="experience-mosaic">
+                        <div className="experience-orbit">
                             <div className="orbit-core">
                                 <span>Parcours</span>
                                 <strong>Maths · Tech · Engagement</strong>
@@ -177,14 +177,14 @@ function Home() {
                         </div>
 
                         {highlights.map((item, index) => (
-                            <article className={`experience2-card card-${index + 1}`} key={item.title}>
+                            <article className={`experience-card card-${index + 1}`} key={item.title}>
                                 <span className="card-label">{item.label}</span>
                                 <h2>{item.title}</h2>
                                 <p>{item.text}</p>
                             </article>
                         ))}
 
-                        <article className="experience2-card card-side">
+                        <article className="experience-card card-side">
                             <div className="card-side-copy">
                                 <span className="card-label">Fil rouge</span>
                                 <h2>Mes expériences, en lecture directe</h2>
@@ -194,7 +194,7 @@ function Home() {
                                 </p>
                             </div>
 
-                            <div className="experience2-thread-grid" aria-label="Repères du parcours">
+                            <div className="experience-thread-grid" aria-label="Repères du parcours">
                                 {experiences.slice(0, showAllExperiences ? experiences.length : 4).map((experience) => (
                                     <div className={`thread-item thread-item-${experience.status}`} key={experience.title}>
                                         <span className="thread-period">{experience.period}</span>
@@ -208,7 +208,7 @@ function Home() {
                             {experiences.length > 4 && (
                                 <button
                                     type="button"
-                                    className="experience2-thread-toggle"
+                                    className="experience-thread-toggle"
                                     onClick={() => setShowAllExperiences((value) => !value)}
                                 >
                                     {showAllExperiences ? 'Réduire le fil rouge' : 'Déployer toutes les expériences'}
