@@ -23,7 +23,6 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
     const handleShare = () => {
         const url = `${window.location.origin}/ressources?slug=${item.slug || ''}`;
         
-        // Utilisation d'une méthode de copie robuste pour les environnements web standard
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(url)
                 .then(() => alert('Lien de partage copié dans le presse-papiers !'))
@@ -143,8 +142,6 @@ export default function RessourcesClone() {
     const [dataSource, setDataSource] = useState('mock');
     const [navDirection, setNavDirection] = useState('forward');
     const [transitionKey, setTransitionKey] = useState(0);
-    
-    // État pour gérer la ressource sélectionnée dans le Modal
     const [selectedItem, setSelectedItem] = useState(null);
 
     useEffect(() => {
@@ -259,10 +256,27 @@ export default function RessourcesClone() {
                             {loadError ? <p className="apple-feedback apple-feedback-error">{loadError}</p> : null}
                             {dataSource === 'mock' ? <p className="apple-feedback apple-feedback-subtle">Mode démo : données mockées.</p> : null}
 
-                            {!isLoading && currentFolderChildren.length === 0 ? <p className="apple-feedback">Ce dossier est vide.</p> : null}
+                            {!isLoading && currentFolderChildren.length === 0 && pathStack.length > 0 ? (
+                                <p className="apple-feedback">Ce dossier est vide.</p>
+                            ) : null}
 
                             {!isLoading ? (
                                 <ul className="apple-list">
+                                    {/* Ligne pour le simulateur de notes (hors ressources.json, racine seulement) */}
+                                    {pathStack.length === 0 && (
+                                        <li>
+                                            <a href="/mcc" className="apple-row" style={{ textDecoration: 'none' }}>
+                                                <span className="apple-row-leading is-proba" aria-hidden="true" style={{ background: 'linear-gradient(135deg, #ff9500, #ff5e00)', color: '#fff' }}>
+                                                    <i className="fas fa-calculator" />
+                                                </span>
+                                                <span className="apple-row-copy">
+                                                    <span className="apple-row-title" style={{ fontWeight: '600' }}>Simulateur de notes (MCC)</span>
+                                                    <span className="apple-row-meta">Outil interactif</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    )}
+
                                     {currentFolderChildren.map((item, index) => {
                                         const folder = isFolderNode(item);
                                         const file = isFileNode(item);
@@ -325,7 +339,6 @@ export default function RessourcesClone() {
                 <div className="clone-glow clone-glow-b" aria-hidden="true" />
             </div>
 
-            {/* Modal d'affichage des ressources */}
             <ResourceViewerModal 
                 item={selectedItem} 
                 isOpen={!!selectedItem} 
