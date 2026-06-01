@@ -1,349 +1,336 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-import ModalRevision from '../component/ModalRevision';
-import UpdateRevision from '../component/UpdateRevision';
-import BlurForm from '../component/BlurForm';
-import NavBar from '../assets/components/NavBar';
-import TreeNode from '../assets/components/TreeNode';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useMemo, useState } from 'react';
+import DockNav from '../assets/components/DockNav';
+import '../assets/stylesheets/ressources.scss';
 
-export default function Ressources() {
-    const [tree, setTree] = useState([]);
-    const [selected, setSelected] = useState(null);
-    const [formOpen, setFormOpen] = useState(false);
-    const [formFilled, setFormFilled] = useState(true);
-    const [showModal, setShowModal] = useState(true);
-    const [showUpdate, setShowUpdate] = useState(false);
-    const [search, setSearch] = useState("");
-    const [openFolders, setOpenFolders] = useState([]); // tableau de slugs ouverts
-    const viewerRef = useRef(null);
-    const location = useLocation();
-
-    function cleanupBootstrapOverlays() {
-        document.querySelectorAll('.offcanvas-backdrop, .modal-backdrop').forEach((el) => el.remove());
-        document.body.classList.remove('modal-open');
-        document.body.style.removeProperty('overflow');
-        document.body.style.removeProperty('padding-right');
-    }
-
-    // Recherche récursive d'un noeud (fichier ou dossier) par son slug
-    function findNodeBySlug(nodes, slug, path = []) {
-        for (const node of nodes) {
-            if (node.slug === slug) {
-                return { node, path: [...path, node] };
-            }
-            if (node.children && Array.isArray(node.children)) {
-                const found = findNodeBySlug(node.children, slug, [...path, node]);
-                if (found) return found;
-            }
-        }
-        return null;
-    }
-    // Recherche récursive de tous les fichiers (objets avec 'path' et sans 'children') correspondant au terme
-    function searchFiles(nodes, term) {
-        let results = [];
-        nodes.forEach(node => {
-            const isFile = node.path && !node.children;
-            if (isFile) {
-                const label = node.title || node.name || '';
-                if (label.toLowerCase().includes(term.toLowerCase())) {
-                    results.push(node);
-                }
-            }
-            if (node.children && Array.isArray(node.children)) {
-                results = results.concat(searchFiles(node.children, term));
-            }
-        });
-        return results;
-    }
-
-    const searchResults = search.trim() !== "" ? searchFiles(tree, search) : [];
-    
-    // Vérifie si le formulaire a été rempli dans les dernières 24h
+function ResourceViewerModal({ item, isOpen, onClose }) {
     useEffect(() => {
-        const filled = localStorage.getItem('formFilled');
-        const filledTime = localStorage.getItem('formFilledTime');
-        if (filled === 'true' && filledTime) {
-            const now = Date.now();
-            if (now - parseInt(filledTime, 10) < 2 * 24 * 60 * 60 * 1000) {
-                setFormFilled(true);
-            } else {
-                localStorage.removeItem('formFilled');
-                localStorage.removeItem('formFilledTime');
-            }
-        }
-
-        // Gestion UpdateRevision : afficher si changelog plus récent que la dernière vue
-        const changelog = [
-            { date: '2026-04-28' },
-            { date: '2026-04-13' },
-            { date: '2026-04-08' },
-            { date: '2026-03-27' },
-            { date: '2026-03-15' },
-        ];
-        const lastSeen = localStorage.getItem('ressources-last-seen');
-        const latestChange = changelog[0].date;
-        if (!lastSeen || lastSeen < latestChange) {
-            setShowUpdate(true);
-        }
-    }, []);
-
-    // Charger le ressources.json externe
-    // TODO : À l'avenir, le synchroniser avec une base de données / GitHub.
-    function fetchSamples() {
-        const url = '/ressources.json?v=' + new Date().getTime(); // évite le cache
-        return fetch(url)
-            .then((res) => res.json())
-            .catch(() => []);
-    }
-
-    useEffect(() => {
-        fetchSamples().then(data => {
-            setTree(data);
-            // Sélection automatique via query param ?slug=...
-            const params = new URLSearchParams(location.search);
-            const slugParam = params.get('slug');
-            if (slugParam) {
-                const found = findNodeBySlug(data, slugParam);
-                if (found) {
-                    // Ouvre tous les dossiers parents ET le dossier cible (si c'est un dossier)
-                    const folderSlugs = found.path
-                        .filter(n => n.slug)
-                        .map(n => n.slug);
-                    setOpenFolders(folderSlugs);
-                    // Si c'est un fichier (pas de children mais a un path), on le sélectionne
-                    if (found.node.path && !found.node.children) {
-                        setSelected(found.node);
-                    } else {
-                        setSelected(null); // On n'affiche rien dans le viewer si c'est un dossier
-                    }
-                }
-            }
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [location.search]);
-
-    useEffect(() => {
-        return () => {
-            cleanupBootstrapOverlays();
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') onClose();
         };
-    }, []);
+        window.addEventListener('keydown', handleEsc);
+        return () => window.removeEventListener('keydown', handleEsc);
+    }, [onClose]);
 
-    // Scroll vers le haut de resource-viewer quand un fichier est sélectionné
-    useEffect(() => {
-        if (selected && viewerRef.current) {
-            viewerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!isOpen || !item) return null;
+
+    const isPdf = item.path?.toLowerCase().endsWith('.pdf');
+    const isZip = item.path?.toLowerCase().endsWith('.zip');
+    const isLink = item.type === 'link';
+    const isHeavy = Boolean(item.heavy);
+    const hasCredits = item.credits && item.credits.trim() !== '';
+    const hasDate = item.date && item.date.trim() !== '';
+
+    const handleShare = () => {
+        const url = `${window.location.origin}/ressources?slug=${item.slug || ''}`;
+        
+        // Utilisation d'une méthode de copie robuste pour les environnements web standard
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url)
+                .then(() => alert('Lien de partage copié dans le presse-papiers !'))
+                .catch(() => fallbackCopy(url));
+        } else {
+            fallbackCopy(url);
         }
-    }, [selected]);
+    };
 
-    // Callback quand le formulaire est rempli
-    const handleFormFilled = () => {
-        setFormOpen(false);
-        setFormFilled(true);
-        localStorage.setItem('formFilled', 'true');
-        localStorage.setItem('formFilledTime', Date.now().toString());
+    const fallbackCopy = (text) => {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        textArea.style.position = "fixed"; 
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            alert('Lien de partage copié dans le presse-papiers !');
+        } catch (err) {
+            alert('Impossible de copier le lien automatiquement. Le voici : ' + text);
+        }
+        document.body.removeChild(textArea);
     };
 
     return (
-        <>
-            {/* Affiche UpdateRevision en priorité, sinon ModalRevision */}
-            <UpdateRevision isOpen={showUpdate} onClose={() => setShowUpdate(false)} />
-            <ModalRevision isOpen={!showUpdate && showModal} onClose={() => setShowModal(false)} />
-            <BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />
-            <section className="Header">
-                <NavBar background="bg-background" />
-            </section>
-            <div className="container">
-                <section className="ressources mt-lg-5">
-                    <h2 className="mb-4 mt-4" style={{ fontFamily: 'Aleo, serif', fontWeight: 700 }}>Ressources</h2>
-
-                    <div className="row">
-                        <div className="col-xs-12 col-lg-4">
-                            {/* Barre de recherche */}
-                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
-                                <input
-                                    type="text"
-                                    value={search}
-                                    onChange={e => setSearch(e.target.value)}
-                                    placeholder="Rechercher un fichier..."
-                                    style={{ flex: 1, padding: '0.5rem 2.2rem 0.5rem 1rem', borderRadius: 20, border: '1px solid #ccc', fontSize: '1rem' }}
-                                />
-                                <span style={{ position: 'relative', left: '-2rem', color: '#888', pointerEvents: 'none' }}>
-                                    <i className="fas fa-search" />
-                                </span>
-                            </div>
-                            <div className="resource-tree">
-                                {search.trim() !== "" ? (
-                                    searchResults.length > 0 ? (
-                                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                            {searchResults.map((file, idx) => (
-                                                <li key={idx} style={{ marginBottom: 8 }}>
-                                                    <button
-                                                        style={{ background: 'none', border: 'none', color: '#007bff', textAlign: 'left', cursor: 'pointer', padding: 0, fontSize: '1rem' }}
-                                                        onClick={() => setSelected(file)}
-                                                    >
-                                                        <i className="fas fa-file-alt" style={{ marginRight: 8 }} />
-                                                        {file.title || file.name}
-                                                    </button>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    ) : (
-                                        <div style={{ color: '#888', fontStyle: 'italic', padding: '1rem 0' }}>Aucun document ne correspond à votre recherche.</div>
-                                    )
-                                ) : (
-                                    tree.map((node, i) => (
-                                        <TreeNode
-                                            key={i}
-                                            node={node}
-                                            onSelect={setSelected}
-                                            level={0}
-                                            openFolders={openFolders}
-                                        />
-                                    ))
-                                )}
-                            </div>
-                            <NavLink to="/mcc" className="btn btn-black mb-5" style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)', width: '100%' }}>
-                                Simulateur de note
-                            </NavLink>
-                        </div>
-                        <div className="col-xs-12 col-lg-8">
-                            <div className="resource-viewer" ref={viewerRef}>
-                                {selected ? (
-                                    (() => {
-                                        // Vérification PDF
-                                        const isPdf = selected.path && selected.path.toLowerCase().endsWith('.pdf');
-                                        // Vérification ZIP
-                                        const isZip = selected.path && selected.path.toLowerCase().endsWith('.zip');
-                                        const isHeavy = Boolean(selected.heavy);
-                                        const isLink = selected.type === 'link';
-                                        // Vérification crédits
-                                        const hasCredits = selected.credits && selected.credits.trim() !== '';
-                                        // Vérification date
-                                        const hasDate = selected.date && selected.date.trim() !== '';
-                                        if (!isPdf && !isZip && !isLink) {
-                                            return (
-                                                <div className="resource-error" style={{ textAlign: 'center', padding: '4rem 0' }}>
-                                                    <i className="fas fa-exclamation-triangle" style={{ fontSize: '3rem', color: '#d32f2f', marginBottom: 16 }} />
-                                                    <p style={{ color: '#d32f2f', fontWeight: 600, fontSize: '1.2rem' }}>Ce fichier n'est pas un PDF ou le chemin est invalide.</p>
-                                                    <p style={{ color: '#888', fontSize: '1rem', marginTop: 12 }}>
-                                                        Il est possible que le fichier ne soit pas encore (ou plus) disponible.<br />
-                                                        Besoin de cette ressource ? <a href="/contact" style={{ color: '#888', textDecoration: 'underline' }}>Me contacter</a>
-                                                    </p>
-                                                </div>
-                                            );
-                                        }
-                                        return (
-                                            <div className="resource-meta">
-                                                <div className="resource-meta-head mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                                    <h3 style={{ fontFamily: 'Aleo, serif', fontWeight: 700, marginBottom: 0 }}>{selected.title}</h3>
-                                                    <div className="d-flex align-items-center">
-
-                                                        <button
-                                                            onClick={() => {
-                                                                // Créer un lien https://ewenrdo.fr/ressources?slug=... pour partager la ressource sélectionnée
-                                                                const url = `${window.location.origin}/ressources?slug=${selected.slug}`;
-                                                                navigator.clipboard.writeText(url).then(() => {
-                                                                    alert('Lien copié dans le presse-papier !');
-                                                                }).catch(() => {
-                                                                    alert('Échec de la copie. Voici le lien : ' + url);
-                                                                });
-                                                            }}
-                                                            className="btn-icon"
-                                                        >
-                                                            <i className="fas fa-share" style={{ marginRight: 6 }} />
-                                                        </button>
-                                                        {isLink ? (
-                                                            <a
-                                                                href={selected.path}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="btn-icon"
-                                                                style={{ color: 'black', textDecoration: 'none' }}
-                                                            >
-                                                                <i className="fas fa-external-link-alt" />
-                                                            </a>
-                                                        ) : (
-                                                            <a
-                                                                href={selected.path}
-                                                                download
-                                                                className="btn-icon"
-                                                                style={{ color: 'black', textDecoration: 'none' }}
-                                                            >
-                                                                <i className="fas fa-download" />
-                                                            </a>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                                <p>{selected.comment}</p>
-                                                {hasDate ? (
-                                                    <p className="date">Modifié la dernière fois le <i>{selected.date}</i></p>
-                                                ) : (
-                                                    <p className="date" style={{ color: '#d32f2f' }}><i className="fas fa-exclamation-circle" style={{ marginRight: 6 }} />Date de modification manquante</p>
-                                                )}
-                                                {isHeavy ? (
-                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px', flexDirection: 'column', gap: '1rem' }}>
-                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center', marginBottom: 0 }}>
-                                                            Ce fichier est lourd pour être affiché automatiquement sur le site.<br />
-                                                            Si vous souhaitez tout de même le consulter, cliquez sur le bouton ci-dessous.
-                                                        </p>
-                                                        <a
-                                                            href={selected.path}
-                                                            download
-                                                            className="btn btn-black"
-                                                            style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)' }}
-                                                        >
-                                                            Télécharger le document
-                                                        </a>
-                                                    </div>
-                                                ) : isZip ? (
-                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px' }}>
-                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center' }}>
-                                                            <i className="fas fa-download" style={{ marginRight: 12, fontSize: '1.5rem', color: '#007bff' }} />
-                                                            Cliquez sur le bouton télécharger pour récupérer le fichier ZIP.
-                                                        </p>
-                                                    </div>
-                                                ) : isLink ? (
-                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px', flexDirection: 'column', gap: '1rem' }}>
-                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center', marginBottom: 0 }}>
-                                                            Cette ressource est un lien externe.<br/>
-                                                            Cliquez sur le bouton ci-dessous pour l'ouvrir dans un nouvel onglet.
-                                                        </p>
-                                                        <a
-                                                            href={selected.path}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="btn btn-black"
-                                                            style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)' }}
-                                                        >
-                                                            Ouvrir le lien
-                                                        </a>
-                                                    </div>
-                                                ) : (
-                                                    <iframe
-                                                        src={selected.path}
-                                                        title={selected.title}
-                                                        width="100%"
-                                                        height="600px"
-                                                        style={{ border: '1px solid #222', borderRadius: '0.5rem', marginTop: 16, background: '#fff' }}
-                                                    />
-                                                )}
-                                                {hasCredits && (
-                                                    <p className="date"><strong>Crédits :</strong> {selected.credits}</p>
-                                                )}
-                                            </div>
-                                        );
-                                    })()
-                                ) : (
-                                    <div className="resource-placeholder">
-                                        <p style={{ color: '#888', fontStyle: 'italic', marginTop: '4rem' }}>Sélectionnez un document pour l'afficher.</p>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
+        <div className="apple-modal-overlay" onClick={onClose}>
+            <div className="apple-modal-container" onClick={(e) => e.stopPropagation()}>
+                <header className="apple-modal-header">
+                    <div className="header-left">
+                        <span className="modal-kicker">Aperçu de la ressource</span>
+                        <h2 className="modal-title">{item.title || item.name}</h2>
                     </div>
-                </section>
+                    <div className="header-actions">
+                        <button onClick={handleShare} className="action-btn" title="Partager le lien">
+                            <i className="fas fa-share-alt" />
+                        </button>
+                        {isLink ? (
+                            <a href={item.path} target="_blank" rel="noopener noreferrer" className="action-btn" title="Ouvrir le lien">
+                                <i className="fas fa-external-link-alt" />
+                            </a>
+                        ) : (
+                            <a href={item.path} download className="action-btn primary" title="Télécharger">
+                                <i className="fas fa-download" />
+                            </a>
+                        )}
+                        <button onClick={onClose} className="action-btn close" title="Fermer">
+                            <i className="fas fa-times" />
+                        </button>
+                    </div>
+                </header>
+
+                <div className="apple-modal-body">
+                    {item.comment && <p className="modal-comment">{item.comment}</p>}
+
+                    <div className="modal-content-viewer">
+                        {isHeavy ? (
+                            <div className="viewer-placeholder">
+                                <i className="fas fa-file-archive mb-3" />
+                                <p>Ce fichier est lourd pour être affiché automatiquement sur le site.</p>
+                                <a href={item.path} download className="apple-btn-primary">Télécharger le document</a>
+                            </div>
+                        ) : isZip ? (
+                            <div className="viewer-placeholder">
+                                <i className="fas fa-file-archive mb-3" />
+                                <p>Cette archive ZIP est prête à être téléchargée.</p>
+                                <a href={item.path} download className="apple-btn-primary">Télécharger l'archive ZIP</a>
+                            </div>
+                        ) : isLink ? (
+                            <div className="viewer-placeholder">
+                                <i className="fas fa-link mb-3" />
+                                <p>Cette ressource est un lien externe.</p>
+                                <a href={item.path} target="_blank" rel="noopener noreferrer" className="apple-btn-primary">Ouvrir le lien</a>
+                            </div>
+                        ) : isPdf ? (
+                            <iframe src={item.path} title={item.title || item.name} className="pdf-iframe" />
+                        ) : (
+                            <div className="viewer-error">
+                                <i className="fas fa-exclamation-triangle" />
+                                <p>Aucun aperçu direct disponible pour ce type de fichier.</p>
+                                <a href={item.path} download className="apple-btn-primary">Télécharger le fichier</a>
+                            </div>
+                        )}
+                    </div>
+
+                    <footer className="modal-footer">
+                        {hasDate ? (
+                            <span className="footer-info">Dernière modification le : <strong>{item.date}</strong></span>
+                        ) : (
+                            <span className="footer-info error"><i className="fas fa-exclamation-circle" /> Date de modification manquante</span>
+                        )}
+                        {hasCredits && (
+                            <span className="footer-info credits"><strong>Crédits :</strong> {item.credits}</span>
+                        )}
+                    </footer>
+                </div>
             </div>
+        </div>
+    );
+}
+
+const EMPTY_TREE = [];
+
+function isFolderNode(node) {
+    return Boolean(node && Array.isArray(node.children));
+}
+
+function isFileNode(node) {
+    return Boolean(node && node.path && !Array.isArray(node.children));
+}
+
+export default function RessourcesClone() {
+    const [rootTree, setRootTree] = useState([]);
+    const [pathStack, setPathStack] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadError, setLoadError] = useState('');
+    const [dataSource, setDataSource] = useState('mock');
+    const [navDirection, setNavDirection] = useState('forward');
+    const [transitionKey, setTransitionKey] = useState(0);
+    
+    // État pour gérer la ressource sélectionnée dans le Modal
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    useEffect(() => {
+        const url = '/ressources.json?v=' + Date.now();
+
+        fetch(url)
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error('Impossible de charger les ressources.');
+                }
+                return res.json();
+            })
+            .then((data) => {
+                if (Array.isArray(data) && data.length > 0) {
+                    setRootTree(data);
+                    setDataSource('json');
+                    return;
+                }
+                setRootTree(EMPTY_TREE);
+                setDataSource('mock');
+            })
+            .catch(() => {
+                setRootTree(EMPTY_TREE);
+                setDataSource('mock');
+                setLoadError('Le fichier ressources.json est indisponible. Affichage du mode démo.');
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
+    }, []);
+
+    const currentFolderChildren = useMemo(() => {
+        if (pathStack.length === 0) {
+            return rootTree;
+        }
+        const currentFolder = pathStack[pathStack.length - 1];
+        return Array.isArray(currentFolder.children) ? currentFolder.children : [];
+    }, [pathStack, rootTree]);
+
+    const breadcrumbs = useMemo(() => {
+        return [{ label: 'Racine' }, ...pathStack.map((folder) => ({ label: folder.name || folder.title || 'Dossier' }))];
+    }, [pathStack]);
+
+    function openFolder(folder) {
+        setNavDirection('forward');
+        setTransitionKey((value) => value + 1);
+        setPathStack((prev) => [...prev, folder]);
+    }
+
+    function goBackOneLevel() {
+        setNavDirection('back');
+        setTransitionKey((value) => value + 1);
+        setPathStack((prev) => prev.slice(0, -1));
+    }
+
+    function goToLevel(levelIndex) {
+        setNavDirection(levelIndex < pathStack.length - 1 ? 'back' : 'forward');
+
+        if (levelIndex < 0) {
+            setTransitionKey((value) => value + 1);
+            setPathStack([]);
+            return;
+        }
+
+        setTransitionKey((value) => value + 1);
+        setPathStack((prev) => prev.slice(0, levelIndex + 1));
+    }
+
+    return (
+        <>
+            <div className="ressources-clone-page">
+                <main className="ressources-clone-shell">
+                    <section className="clone-shell-copy">
+                        <span className="clone-kicker">Explorateur de ressources</span>
+                        <h1>Arborescence fluide, sobre et lisible</h1>
+                        <p>
+                            Ouvrez un dossier, remontez d&apos;un niveau avec le chevron discret, ou revenez directement via le chemin.
+                        </p>
+                    </section>
+
+                    <section className="apple-explorer" aria-label="Explorateur de fichiers">
+                        <header className="apple-explorer-head">
+                            <button
+                                type="button"
+                                className="apple-back"
+                                aria-label="Remonter d'un dossier"
+                                onClick={goBackOneLevel}
+                                disabled={pathStack.length === 0}
+                            >
+                                <i className="fas fa-chevron-left" />
+                            </button>
+
+                            <nav className="apple-breadcrumbs" aria-label="Fil d'ariane">
+                                {breadcrumbs.map((item, index) => (
+                                    <React.Fragment key={`${item.label}-${index}`}>
+                                        {index > 0 ? <span className="apple-crumb-separator">/</span> : null}
+                                        <button
+                                            type="button"
+                                            className={`apple-crumb ${index === breadcrumbs.length - 1 ? 'is-current' : ''}`}
+                                            onClick={() => goToLevel(index - 1)}
+                                            disabled={index === breadcrumbs.length - 1}
+                                        >
+                                            {item.label}
+                                        </button>
+                                    </React.Fragment>
+                                ))}
+                            </nav>
+                        </header>
+
+                        <div key={transitionKey} className={`apple-list-wrap ${navDirection === 'forward' ? 'is-forward' : 'is-back'}`}>
+                            {isLoading ? <p className="apple-feedback">Chargement...</p> : null}
+                            {loadError ? <p className="apple-feedback apple-feedback-error">{loadError}</p> : null}
+                            {dataSource === 'mock' ? <p className="apple-feedback apple-feedback-subtle">Mode démo : données mockées.</p> : null}
+
+                            {!isLoading && currentFolderChildren.length === 0 ? <p className="apple-feedback">Ce dossier est vide.</p> : null}
+
+                            {!isLoading ? (
+                                <ul className="apple-list">
+                                    {currentFolderChildren.map((item, index) => {
+                                        const folder = isFolderNode(item);
+                                        const file = isFileNode(item);
+                                        const itemPath = String(item.path || '').toLowerCase();
+                                        const isPdf = file && itemPath.endsWith('.pdf');
+                                        const isZip = file && itemPath.endsWith('.zip');
+                                        const isLink = item.type === 'link';
+                                        const itemLabel = item.title || item.name || `Élément ${index + 1}`;
+                                        const itemMeta = folder
+                                            ? `${Array.isArray(item.children) ? item.children.length : 0} élément(s)`
+                                            : isLink
+                                                ? 'Lien'
+                                                : isPdf
+                                                    ? 'PDF'
+                                                    : isZip
+                                                        ? 'ZIP'
+                                                        : 'Fichier quelconque';
+
+                                        return (
+                                            <li key={`${itemLabel}-${index}`}>
+                                                <button
+                                                    type="button"
+                                                    className="apple-row"
+                                                    onClick={() => {
+                                                        if (folder) {
+                                                            openFolder(item);
+                                                        } else {
+                                                            setSelectedItem(item);
+                                                        }
+                                                    }}
+                                                    onDoubleClick={() => {
+                                                        if (folder) {
+                                                            openFolder(item);
+                                                        }
+                                                    }}
+                                                >
+                                                    <span
+                                                        className={`apple-row-leading ${folder ? 'is-folder' : isPdf ? 'is-pdf' : isZip ? 'is-zip' : isLink ? 'is-link' : 'is-file'}`}
+                                                        aria-hidden="true"
+                                                    >
+                                                        <i className={`fas ${folder ? 'fa-folder' : isPdf ? 'fa-file-pdf' : isZip ? 'fa-file-archive' : isLink ? 'fa-link' : 'fa-file-alt'}`} />
+                                                    </span>
+
+                                                    <span className="apple-row-copy">
+                                                        <span className="apple-row-title">{itemLabel}</span>
+                                                        <span className="apple-row-meta">{itemMeta}</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            ) : null}
+                        </div>
+                    </section>
+                </main>
+
+                <DockNav />
+                <div className="clone-glow clone-glow-a" aria-hidden="true" />
+                <div className="clone-glow clone-glow-b" aria-hidden="true" />
+            </div>
+
+            {/* Modal d'affichage des ressources */}
+            <ResourceViewerModal 
+                item={selectedItem} 
+                isOpen={!!selectedItem} 
+                onClose={() => setSelectedItem(null)} 
+            />
         </>
     );
 }

@@ -5,7 +5,6 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Ressources from "./pages/Ressources";
-import RessourcesClone from "./pages/RessourcesClone";
 import Simulateur from "./pages/Simulateur";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
@@ -19,7 +18,6 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/ressources" element={<Ressources />} />
-                <Route path="/ressources-clone" element={<RessourcesClone />} />
                 <Route path="/mcc" element={<Simulateur />} />
                 <Route path="*" element={<Home />} />
             </Routes>
