@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import DockNav from '../assets/components/DockNav';
 
 function Home() {
@@ -121,6 +121,7 @@ function Home() {
                                         <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>
                                         <a className="btn btn-outline-black" href="#presentation">Découvrir mon expérience</a>
                                     </div>
+
                                 </div>
 
                             </div>
@@ -192,6 +193,14 @@ function Home() {
                                     Le fil rouge est simple: comprendre, structurer, agir et transmettre. Voici les étapes qui composent
                                     ce parcours, formulées pour être lues d’un coup d’œil.
                                 </p>
+                                <div className="card-side-social">
+                                    <Link to="https://www.linkedin.com/in/ewen-rodrigues-de-oliveira-500736267/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                        <i className="fab fa-linkedin" />
+                                    </Link>
+                                    <Link to="mailto:contact@ewenrdo.fr" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                                        <i className="fas fa-envelope" />
+                                    </Link>
+                                </div>
                             </div>
 
                             <div className="experience-thread-grid" aria-label="Repères du parcours">
