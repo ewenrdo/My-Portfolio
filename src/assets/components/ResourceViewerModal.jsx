@@ -1,6 +1,22 @@
-import React, { useEffect, } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function ResourceViewerModal({ item, isOpen, onClose }) {
+    // États pour la gestion du formulaire de retour
+    const [isFormOpen, setIsFormOpen] = useState(false);
+    const [feedbackForm, setFeedbackForm] = useState({
+        firstname: '',
+        lastname: '',
+        comment: ''
+    });
+    const [status, setStatus] = useState({ loading: false, error: '', success: false });
+
+    // Réinitialisation au changement de ressource
+    useEffect(() => {
+        setIsFormOpen(false);
+        setFeedbackForm({ firstname: '', lastname: '', comment: '' });
+        setStatus({ loading: false, error: '', success: false });
+    }, [item, isOpen]);
+
     useEffect(() => {
         const handleEsc = (e) => {
             if (e.key === 'Escape') onClose();
@@ -44,6 +60,46 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
             alert('Impossible de copier le lien automatiquement. Le voici : ' + text);
         }
         document.body.removeChild(textArea);
+    };
+
+    // Soumission du retour incluant l'identité de l'auteur
+    const handleFeedbackSubmit = async (e) => {
+        e.preventDefault();
+        if (!feedbackForm.comment.trim() || !feedbackForm.firstname.trim() || !feedbackForm.lastname.trim()) return;
+
+        setStatus({ loading: true, error: '', success: false });
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    type: 'feedback',
+                    resourceSlug: item.slug || 'aucun-slug',
+                    resourceTitle: item.title || item.name,
+                    firstname: feedbackForm.firstname,
+                    lastname: feedbackForm.lastname,
+                    comment: feedbackForm.comment
+                })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Une erreur est survenue.');
+            }
+
+            setStatus({ loading: false, error: '', success: true });
+            setFeedbackForm({ firstname: '', lastname: '', comment: '' });
+
+            setTimeout(() => {
+                setStatus(prev => ({ ...prev, success: false }));
+                setIsFormOpen(false);
+            }, 3000);
+
+        } catch (err) {
+            setStatus({ loading: false, error: err.message, success: false });
+        }
     };
 
     return (
@@ -106,6 +162,84 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
                         )}
                     </div>
 
+                    {/* --- ZONE REVISITÉE DE RETOURS --- */}
+                    <div className="apple-modal-feedback-section">
+                        {!isFormOpen ? (
+                            <button 
+                                type="button" 
+                                className="feedback-toggle-btn"
+                                onClick={() => setIsFormOpen(true)}
+                            >
+                                <i className="fas fa-comment-alt" />
+                                Faire un retour ou signaler une erreur
+                            </button>
+                        ) : (
+                            <div className="feedback-drawer">
+                                <div className="feedback-drawer-header">
+                                    <h3 className="feedback-title">Faire un retour sur ce document</h3>
+                                    <button 
+                                        type="button" 
+                                        className="feedback-close-btn"
+                                        onClick={() => setIsFormOpen(false)}
+                                        disabled={status.loading}
+                                    >
+                                        Annuler
+                                    </button>
+                                </div>
+
+                                <form onSubmit={handleFeedbackSubmit} className="feedback-form">
+                                    <div className="feedback-identity-grid">
+                                        <div className="feedback-field">
+                                            <input 
+                                                type="text" 
+                                                placeholder="Prénom" 
+                                                required
+                                                value={feedbackForm.firstname}
+                                                disabled={status.loading}
+                                                onChange={(e) => setFeedbackForm({...feedbackForm, firstname: e.target.value})}
+                                            />
+                                        </div>
+                                        <div className="feedback-field">
+                                            <input 
+                                                type="text" 
+                                                placeholder="Nom" 
+                                                required
+                                                value={feedbackForm.lastname}
+                                                disabled={status.loading}
+                                                onChange={(e) => setFeedbackForm({...feedbackForm, lastname: e.target.value})}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="feedback-input-wrapper">
+                                        <textarea
+                                            rows="3"
+                                            placeholder="Votre message (correction, remarque...)"
+                                            value={feedbackForm.comment}
+                                            disabled={status.loading}
+                                            onChange={(e) => setFeedbackForm({...feedbackForm, comment: e.target.value})}
+                                            required
+                                        />
+                                        <button 
+                                            type="submit" 
+                                            className="feedback-send-btn" 
+                                            disabled={status.loading || !feedbackForm.comment.trim() || !feedbackForm.firstname.trim() || !feedbackForm.lastname.trim()}
+                                            title="Envoyer le retour"
+                                        >
+                                            {status.loading ? (
+                                                <i className="fas fa-spinner fa-spin" />
+                                            ) : (
+                                                <i className="fas fa-paper-plane" />
+                                            )}
+                                        </button>
+                                    </div>
+                                    {status.error && <p className="feedback-msg error">{status.error}</p>}
+                                    {status.success && <p className="feedback-msg success">Retour envoyé avec succès !</p>}
+                                </form>
+                            </div>
+                        )}
+                    </div>
+
                     <footer className="modal-footer">
                         {hasDate ? (
                             <span className="footer-info">Dernière modification le : <strong>{item.date}</strong></span>
@@ -120,6 +254,6 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
             </div>
         </div>
     );
-};
+}
 
 export default ResourceViewerModal;
