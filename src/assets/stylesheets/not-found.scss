@@ -1,0 +1,227 @@
+.error-page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #ffffff;
+    color: #111;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Halos lumineux en arrière-plan */
+.error-page::before,
+.error-page::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(80px);
+    opacity: 0.8;
+    z-index: 0;
+    transition: transform 0.2s ease-out;
+}
+
+.error-page::before {
+    top: -6rem;
+    right: -6rem;
+    width: min(34vw, 28rem);
+    height: min(34vw, 28rem);
+    background: radial-gradient(circle, rgba(255, 175, 92, 0.35) 0%, rgba(255, 175, 92, 0.08) 33%, transparent 72%);
+}
+
+.error-page::after {
+    left: -6rem;
+    bottom: 4rem;
+    width: min(30vw, 24rem);
+    height: min(30vw, 24rem);
+    background: radial-gradient(circle, rgba(116, 189, 255, 0.28) 0%, rgba(116, 189, 255, 0.06) 34%, transparent 72%);
+}
+
+/* Navigation */
+.local-navbar {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 1rem 2rem;
+}
+
+.navbar-container {
+    max-width: 76rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    font-size: 1.1rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 150ms ease;
+}
+
+.nav-link:hover {
+    color: #111;
+}
+
+/* Conteneur principal */
+.error-shell {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.error-card {
+    max-width: 32rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: cardFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Surtitre, Titre et Paragraphe */
+.error-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(211, 43, 58, 0.08);
+    color: #d32b3a;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.error-card h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: #0b0b0b;
+    margin: 0 0 1rem 0;
+}
+
+.error-card p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.58);
+    margin: 0 auto 2rem;
+    max-width: 26rem;
+}
+
+/* Diagramme de Venn Mathématique Interactif (Agrandi) */
+.math-diagram-container {
+    position: relative;
+    width: 340px;
+    height: 220px;
+    margin-bottom: 2.5rem;
+    user-select: none;
+}
+
+.venn-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Actions boutons */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.apple-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.8rem;
+    background: #111;
+    color: #fff;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 180ms ease;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.apple-btn-primary:hover {
+    transform: translateY(-1.5px);
+    background: #2a2a2a;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.apple-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.8rem;
+    background: rgba(0, 0, 0, 0.04);
+    color: #111;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 180ms ease;
+    border: 0;
+    cursor: pointer;
+}
+
+.apple-btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .apple-btn-primary,
+    .apple-btn-secondary {
+        width: 100%;
+    }
+}
