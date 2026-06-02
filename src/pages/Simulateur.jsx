@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from '../assets/components/NavBar';
 import '../assets/stylesheets/simulateur.scss';
 import DockNav from '../assets/components/DockNav';
 

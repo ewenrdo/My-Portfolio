@@ -93,6 +93,75 @@
     padding: 0.4rem 0 0;
 }
 
+/* --- BARRE DE RECHERCHE APPLE-LIKE --- */
+.apple-search-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    .apple-search-icon {
+        position: absolute;
+        left: 1.2rem;
+        color: rgba(0, 0, 0, 0.32);
+        font-size: 1.05rem;
+        pointer-events: none;
+    }
+
+    .apple-search-input {
+        width: 100%;
+        padding: 0.85rem 2.8rem 0.85rem 2.8rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #111;
+        background: rgba(0, 0, 0, 0.04);
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        outline: none;
+        transition: all 180ms ease;
+
+        &:focus {
+            background: #ffffff;
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 0 0 3px rgba(0, 0, 0, 0.03);
+        }
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.32);
+            font-weight: 500;
+        }
+    }
+
+    .apple-search-clear {
+        position: absolute;
+        right: 1.2rem;
+        background: none;
+        border: none;
+        color: rgba(0, 0, 0, 0.28);
+        font-size: 1.1rem;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        transition: color 150ms ease;
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.apple-search-results-header {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;
+    padding-left: 0.85rem;
+}
+
 .apple-explorer-head {
     display: flex;
     align-items: center;
@@ -375,6 +444,60 @@
     background: radial-gradient(circle, rgba(129, 196, 255, 0.22) 0%, rgba(129, 196, 255, 0.08) 35%, transparent 72%);
 }
 
+// --- PAGINATION APPLE-LIKE (AJOUTÉ) ---
+.apple-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+
+    .pagination-btn {
+        min-width: 2.25rem;
+        height: 2.25rem;
+        padding: 0 0.65rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 0.75rem;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 180ms ease;
+
+        &:hover:not(:disabled) {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+            transform: translateY(-1px);
+        }
+
+        &:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        &.is-active {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+            cursor: default;
+        }
+    }
+
+    .pagination-info {
+        font-size: 0.82rem;
+        color: rgba(0, 0, 0, 0.44);
+        font-weight: 500;
+        margin: 0 0.5rem;
+    }
+}
+
 @keyframes explorerFadeIn {
     from {
         opacity: 0;
@@ -616,16 +739,6 @@
     }
 }
 
-@keyframes modalFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes modalSlideUp {
-    from { opacity: 0; transform: translateY(24px) scale(0.985); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
 @media (max-width: 991px) {
     .ressources-clone-shell {
         padding-bottom: 7.5rem;
@@ -638,66 +751,5 @@
 
     .apple-explorer {
         width: 100%;
-    }
-
-    .apple-explorer-head {
-        align-items: flex-start;
-    }
-
-    .apple-breadcrumbs {
-        width: 100%;
-    }
-
-    .apple-list-wrap {
-        min-height: 18rem;
-    }
-
-    .apple-row {
-        padding: 0.82rem 0.75rem;
-    }
-
-    .clone-glow-a {
-        top: 0;
-        right: -5rem;
-    }
-
-    .clone-glow-b {
-        left: -6rem;
-        bottom: 10rem;
-    }
-    
-    // Ajustements modal sur mobile
-    .apple-modal-overlay {
-        padding: 0.75rem;
-    }
-    
-    .apple-modal-container {
-        height: 90vh; /* Ajusté à 90vh maximum pour une meilleure ergonomie */
-        border-radius: 1.5rem;
-    }
-    
-    .apple-modal-header {
-        padding: 1rem 1.25rem;
-        
-        .modal-title {
-            font-size: 1.15rem;
-        }
-    }
-    
-    .apple-modal-body {
-        padding: 1.25rem;
-        gap: 1rem;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .apple-list-wrap,
-    .apple-row,
-    .apple-back,
-    .apple-crumb,
-    .apple-modal-overlay,
-    .apple-modal-container {
-        animation: none !important;
-        transition: none !important;
     }
 }

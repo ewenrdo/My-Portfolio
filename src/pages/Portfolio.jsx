@@ -185,10 +185,10 @@ export default function Portfolio() {
 
             <main className="portfolio-shell">
                 <section className="portfolio-shell-copy">
-                    <span className="portfolio-kicker">Mes Réalisations</span>
-                    <h1>Portfolio & Projets</h1>
+                    <span className="portfolio-kicker">PORTFOLIO</span>
+                    <h1>Mes Projets & Réalisations</h1>
                     <p>
-                        Découvrez mes projets académiques et mes développements web. Cliquez sur une carte pour explorer les détails et les technologies utilisées.
+                        Découvrez mes projets universitaires, professionnels et personnels. Cliquez sur une carte pour explorer les détails et les technologies utilisées.
                     </p>
                 </section>
 
