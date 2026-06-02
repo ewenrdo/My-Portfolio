@@ -5,27 +5,77 @@ import DockNav from '../assets/components/DockNav';
 const MATIERES = [
     {
         key: 'proba',
-        label: 'Probabilités',
-        desc: 'Calcul fondé sur 3 interros et l\'examen final avec formule d\'optimisation.',
+        label: 'Probabilités Discrètes',
+        desc: 'Introduction aux probabilités dans le cas du discret.',
         icon: 'fa-dice'
     },
     {
         key: 'analyse',
         label: 'Analyse-Algèbre',
-        desc: 'Évaluation combinant 2 CC, un examen partiel et un examen final.',
+        desc: 'Étude des espaces euclidiens et séries de fonctions',
         icon: 'fa-calculator'
     },
     {
         key: 'c',
         label: 'Langage C',
-        desc: 'Contrôle continu sur table, projet d\'application et épreuve sur ordinateur.',
+        desc: 'Découverte de la programmation bas niveau et de la gestion mémoire.',
         icon: 'fa-code'
     },
     {
         key: 'algo',
-        label: "Algorithmique",
-        desc: 'Barème complet : 2 CC, un projet, une note d\'assiduité et examen final.',
+        label: "Algorithmique 4",
+        desc: 'Complexité et algorithmes de tris et structures binaires.',
         icon: 'fa-project-diagram'
+    },
+    // NOUVELLES MATIÈRES DÉSACTIVÉES
+    {
+        key: 'algo5',
+        label: "Algorithmique 5",
+        desc: 'Étude et algorithmique sur les graphes (parcours, chemins, etc.).',
+        icon: 'fa-sitemap',
+        disabled: true
+    },
+    {
+        key: 'se',
+        label: "Système d'Exploitation",
+        desc: 'Maîtriser les concepts de bases d\'Unix.',
+        icon: 'fa-terminal',
+        disabled: true
+    },
+    {
+        key: 'pf',
+        label: "Prog. Fonctionnelle",
+        desc: 'Bases de la programmation fonctionnelle avec OCaml.',
+        icon: 'fa-code-branch',
+        disabled: true
+    },
+    {
+        key: 'groupes',
+        label: "Groupes et actions",
+        desc: 'Notions de la théorie des groupes et des actions de groupe.',
+        icon: 'fa-shapes',
+        disabled: true
+    },
+    {
+        key: 'diff',
+        label: "Calcul Différentiel",
+        desc: 'Maîtrise du calcul différentiel en dimension finie, étude locale.',
+        icon: 'fa-chart-line',
+        disabled: true
+    },
+    {
+        key: 'integ',
+        label: "Intégration et Probabilités",
+        desc: 'Étude des probabilités continues et liens avec l\'intégration.',
+        icon: 'fa-infinity',
+        disabled: true
+    },
+    {
+        key: 'anglais',
+        label: "Anglais",
+        desc: 'Keep calm and stay positive, it won\'t be difficult :)',
+        icon: 'fa-language',
+        disabled: true
     },
 ];
 
@@ -159,7 +209,7 @@ export default function Simulateur() {
                     <span className="simulateur-kicker">Simulateur de notes</span>
                     <h1>Calculateur de moyenne (MCC)</h1>
                     <p>
-                        Renseignez vos notes intermédiaires pour évaluer votre moyenne ou simuler l&apos;exigence minimale requise pour valider l&apos;UE.
+                        Simulez vos notes pour les UE de l'année en cours. Les simulateurs sont basés sur les formules données par les responsables d'UE.
                     </p>
                 </section>
 
@@ -170,9 +220,11 @@ export default function Simulateur() {
                             <button
                                 key={m.key}
                                 type="button"
-                                className="subject-card"
-                                onClick={() => setSelectedMatiere(m.key)}
+                                className={`subject-card ${m.disabled ? 'is-disabled' : ''}`}
+                                onClick={() => !m.disabled && setSelectedMatiere(m.key)}
+                                disabled={m.disabled}
                             >
+                                {m.disabled && <span className="coming-soon-tag">Bientôt</span>}
                                 <span className={`subject-icon is-${m.key}`} aria-hidden="true">
                                     <i className={`fas ${m.icon}`} />
                                 </span>
