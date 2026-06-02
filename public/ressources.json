@@ -778,6 +778,34 @@
                 ]
             },
             {
+                "name": "Licence 3",
+                "slug": "licence-3",
+                "children": [
+                    {
+                        "name": "Groupes et Actions 5",
+                        "slug": "ga5",
+                        "children": [
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/ga5/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 1 : Généralités sur les groupes",
+                                "date": "2026-06-02",
+                                "slug": "ga5-chapitre-1-generality-sur-les-groupes"
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/ga5/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Groupes quotients",
+                                "date": "2026-06-02",
+                                "slug": "ga5-chapitre-2-groupes-quotients"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "name": "Suppléments",
                 "slug": "supplements-capes",
                 "children": [
