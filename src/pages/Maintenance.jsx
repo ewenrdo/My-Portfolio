@@ -163,9 +163,6 @@ export default function Maintenance() {
                     <a href="mailto:contact@ewenrdo.fr" className="apple-btn-primary">
                         <i className="fas fa-envelope" style={{ marginRight: '0.5rem' }} /> Me contacter
                     </a>
-                    <a href="/" className="apple-btn-secondary">
-                        Retour à l'accueil
-                    </a>
                 </div>
             </main>
         </div>

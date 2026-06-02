@@ -119,7 +119,7 @@ function Home() {
 
                                     <div className="cta-section">
                                         <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>
-                                        <a className="btn btn-outline-black" href="#presentation">Découvrir mon expérience</a>
+                                        <NavLink className="btn btn-outline-black" to="/portfolio">Découvrir mes projets</NavLink>
                                     </div>
 
                                 </div>
