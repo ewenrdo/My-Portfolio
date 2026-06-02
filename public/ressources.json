@@ -692,7 +692,6 @@
                                     }
                                 ]
                             },
-
                             {
                                 "name": "Livret de révision des examens",
                                 "slug": "livret-de-revision-de-exam-l2-2026_folder",
@@ -898,7 +897,6 @@
                     }
                 ]
             },
-
             {
                 "name": "Langage C",
                 "slug": "langage-c4",
@@ -929,6 +927,15 @@
                         "comment": "Fiche de révision du cours Langage C4 de l'Université Paris Cité.",
                         "date": "2026-05-15",
                         "slug": "fiche-de-revision-langage-c4-2024"
+                    },
+                    {
+                        "name": "soutenance.pdf",
+                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/lc4/soutenance/soutenance.pdf",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Notes de soutenance Dirsim",
+                        "comment": "Présentation Canva du projet Dirsim.",
+                        "date": "2026-06-02",
+                        "slug": "notes-de-soutenance-dirsim"
                     }
                 ]
             },
@@ -960,16 +967,6 @@
                 "comment": "Présentation Canva du projet Symplexis.",
                 "date": "2026-04-28",
                 "slug": "slides-projet-symplexis"
-            },
-            {
-                "name": "dirsim-canva",
-                "path": "https://canva.link/byi6odv2zv4mn5n",
-                "type": "link",
-                "credits": "Ewen Rodrigues de Oliveira.",
-                "title": "Slides projet Dirsim",
-                "comment": "Présentation Canva du projet Dirsim.",
-                "date": "2026-05-06",
-                "slug": "slides-projet-dirsim"
             }
         ]
     },

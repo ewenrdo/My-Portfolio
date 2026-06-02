@@ -1,349 +1,558 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-import ModalRevision from '../component/ModalRevision';
-import UpdateRevision from '../component/UpdateRevision';
-import BlurForm from '../component/BlurForm';
-import NavBar from '../assets/components/NavBar';
-import TreeNode from '../assets/components/TreeNode';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useMemo, useState } from 'react';
+import '../assets/stylesheets/ressources.scss';
+import DockNav from '../assets/components/DockNav';
+import ResourceViewerModal from '../assets/components/ResourceViewerModal';
 
-export default function Ressources() {
-    const [tree, setTree] = useState([]);
-    const [selected, setSelected] = useState(null);
-    const [formOpen, setFormOpen] = useState(false);
-    const [formFilled, setFormFilled] = useState(true);
-    const [showModal, setShowModal] = useState(true);
-    const [showUpdate, setShowUpdate] = useState(false);
-    const [search, setSearch] = useState("");
-    const [openFolders, setOpenFolders] = useState([]); // tableau de slugs ouverts
-    const viewerRef = useRef(null);
-    const location = useLocation();
+const EMPTY_TREE = [];
 
-    function cleanupBootstrapOverlays() {
-        document.querySelectorAll('.offcanvas-backdrop, .modal-backdrop').forEach((el) => el.remove());
-        document.body.classList.remove('modal-open');
-        document.body.style.removeProperty('overflow');
-        document.body.style.removeProperty('padding-right');
+function isFolderNode(node) {
+    return Boolean(node && Array.isArray(node.children));
+}
+
+function isFileNode(node) {
+    return Boolean(node && node.path && !Array.isArray(node.children));
+}
+
+function findNodeBySlug(nodes, slug, path = []) {
+    for (const node of nodes) {
+        if (node.slug === slug) {
+            return { node, path: [...path, node] };
+        }
+        if (node.children && Array.isArray(node.children)) {
+            const found = findNodeBySlug(node.children, slug, [...path, node]);
+            if (found) return found;
+        }
     }
+    return null;
+}
 
-    // Recherche récursive d'un noeud (fichier ou dossier) par son slug
-    function findNodeBySlug(nodes, slug, path = []) {
-        for (const node of nodes) {
-            if (node.slug === slug) {
-                return { node, path: [...path, node] };
-            }
-            if (node.children && Array.isArray(node.children)) {
-                const found = findNodeBySlug(node.children, slug, [...path, node]);
-                if (found) return found;
+function searchFiles(nodes, term) {
+    let results = [];
+    nodes.forEach(node => {
+        const isFile = isFileNode(node);
+        if (isFile) {
+            const label = node.title || node.name || '';
+            if (label.toLowerCase().includes(term.toLowerCase())) {
+                results.push(node);
             }
         }
-        return null;
-    }
-    // Recherche récursive de tous les fichiers (objets avec 'path' et sans 'children') correspondant au terme
-    function searchFiles(nodes, term) {
-        let results = [];
-        nodes.forEach(node => {
-            const isFile = node.path && !node.children;
-            if (isFile) {
-                const label = node.title || node.name || '';
-                if (label.toLowerCase().includes(term.toLowerCase())) {
-                    results.push(node);
-                }
-            }
-            if (node.children && Array.isArray(node.children)) {
-                results = results.concat(searchFiles(node.children, term));
-            }
-        });
-        return results;
-    }
+        if (node.children && Array.isArray(node.children)) {
+            results = results.concat(searchFiles(node.children, term));
+        }
+    });
+    return results;
+}
 
-    const searchResults = search.trim() !== "" ? searchFiles(tree, search) : [];
+export default function RessourcesClone() {
+    const [rootTree, setRootTree] = useState([]);
+    const [pathStack, setPathStack] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadError, setLoadError] = useState('');
+    const [dataSource, setDataSource] = useState('mock');
+    const [navDirection, setNavDirection] = useState('forward');
+    const [transitionKey, setTransitionKey] = useState(0);
+    const [selectedItem, setSelectedItem] = useState(null);
     
-    // Vérifie si le formulaire a été rempli dans les dernières 24h
-    useEffect(() => {
-        const filled = localStorage.getItem('formFilled');
-        const filledTime = localStorage.getItem('formFilledTime');
-        if (filled === 'true' && filledTime) {
-            const now = Date.now();
-            if (now - parseInt(filledTime, 10) < 2 * 24 * 60 * 60 * 1000) {
-                setFormFilled(true);
-            } else {
-                localStorage.removeItem('formFilled');
-                localStorage.removeItem('formFilledTime');
-            }
-        }
+    // États pour la recherche et la pagination
+    const [searchQuery, setSearchQuery] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
 
-        // Gestion UpdateRevision : afficher si changelog plus récent que la dernière vue
-        const changelog = [
-            { date: '2026-04-28' },
-            { date: '2026-04-13' },
-            { date: '2026-04-08' },
-            { date: '2026-03-27' },
-            { date: '2026-03-15' },
-        ];
-        const lastSeen = localStorage.getItem('ressources-last-seen');
-        const latestChange = changelog[0].date;
-        if (!lastSeen || lastSeen < latestChange) {
-            setShowUpdate(true);
-        }
+    // --- NOUVEAUX ÉTATS POUR LE FORMULAIRE DE PROPOSITION ---
+    const [isSuggesting, setIsSuggesting] = useState(false);
+    const [suggestionForm, setSuggestionForm] = useState({
+        firstname: '',
+        lastname: '',
+        contact: '',
+        resourceLink: '',
+        consent: false
+    });
+    const [formStatus, setFormStatus] = useState({ loading: false, error: '', success: false });
+
+    useEffect(() => {
+        const url = '/ressources.json?v=' + Date.now();
+
+        fetch(url)
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error('Impossible de charger les ressources.');
+                }
+                return res.json();
+            })
+            .then((data) => {
+                if (Array.isArray(data) && data.length > 0) {
+                    setRootTree(data);
+                    setDataSource('json');
+                    return;
+                }
+                setRootTree(EMPTY_TREE);
+                setDataSource('mock');
+            })
+            .catch(() => {
+                setRootTree(EMPTY_TREE);
+                setDataSource('mock');
+                setLoadError('Le fichier ressources.json est indisponible. Affichage du mode démo.');
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
     }, []);
 
-    // Charger le ressources.json externe
-    // TODO : À l'avenir, le synchroniser avec une base de données / GitHub.
-    function fetchSamples() {
-        const url = '/ressources.json?v=' + new Date().getTime(); // évite le cache
-        return fetch(url)
-            .then((res) => res.json())
-            .catch(() => []);
-    }
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [pathStack, searchQuery]);
 
     useEffect(() => {
-        fetchSamples().then(data => {
-            setTree(data);
-            // Sélection automatique via query param ?slug=...
-            const params = new URLSearchParams(location.search);
+        if (rootTree && rootTree.length > 0) {
+            const params = new URLSearchParams(window.location.search);
             const slugParam = params.get('slug');
             if (slugParam) {
-                const found = findNodeBySlug(data, slugParam);
+                const found = findNodeBySlug(rootTree, slugParam);
                 if (found) {
-                    // Ouvre tous les dossiers parents ET le dossier cible (si c'est un dossier)
-                    const folderSlugs = found.path
-                        .filter(n => n.slug)
-                        .map(n => n.slug);
-                    setOpenFolders(folderSlugs);
-                    // Si c'est un fichier (pas de children mais a un path), on le sélectionne
-                    if (found.node.path && !found.node.children) {
-                        setSelected(found.node);
-                    } else {
-                        setSelected(null); // On n'affiche rien dans le viewer si c'est un dossier
+                    const parentFolders = found.path.filter(node => isFolderNode(node) && node.slug !== slugParam);
+                    setPathStack(parentFolders);
+                    
+                    if (isFileNode(found.node)) {
+                        setSelectedItem(found.node);
+                    } else if (isFolderNode(found.node)) {
+                        setPathStack(found.path);
                     }
                 }
             }
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [location.search]);
-
-    useEffect(() => {
-        return () => {
-            cleanupBootstrapOverlays();
-        };
-    }, []);
-
-    // Scroll vers le haut de resource-viewer quand un fichier est sélectionné
-    useEffect(() => {
-        if (selected && viewerRef.current) {
-            viewerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, [selected]);
+    }, [rootTree]);
 
-    // Callback quand le formulaire est rempli
-    const handleFormFilled = () => {
-        setFormOpen(false);
-        setFormFilled(true);
-        localStorage.setItem('formFilled', 'true');
-        localStorage.setItem('formFilledTime', Date.now().toString());
+    const currentFolderChildren = useMemo(() => {
+        if (pathStack.length === 0) {
+            return rootTree;
+        }
+        const currentFolder = pathStack[pathStack.length - 1];
+        return Array.isArray(currentFolder.children) ? currentFolder.children : [];
+    }, [pathStack, rootTree]);
+
+    const unifiedRootChildren = useMemo(() => {
+        if (pathStack.length > 0) return currentFolderChildren;
+        
+        const simulatorItem = {
+            isSimulator: true,
+            title: "Simulateur de notes (MCC)",
+            name: "mcc",
+            type: "link"
+        };
+        return [simulatorItem, ...currentFolderChildren];
+    }, [currentFolderChildren, pathStack]);
+
+    const breadcrumbs = useMemo(() => {
+        return [{ label: 'Racine' }, ...pathStack.map((folder) => ({ label: folder.name || folder.title || 'Dossier' }))];
+    }, [pathStack]);
+
+    const searchResults = useMemo(() => {
+        if (!searchQuery.trim()) return [];
+        return searchFiles(rootTree, searchQuery);
+    }, [rootTree, searchQuery]);
+
+    const paginatedItems = useMemo(() => {
+        const start = (currentPage - 1) * itemsPerPage;
+        if (searchQuery.trim() !== '') {
+            return searchResults.slice(start, start + itemsPerPage);
+        }
+        return unifiedRootChildren.slice(start, start + itemsPerPage);
+    }, [unifiedRootChildren, searchResults, searchQuery, currentPage]);
+
+    const totalPages = useMemo(() => {
+        const totalItems = searchQuery.trim() !== '' ? searchResults.length : unifiedRootChildren.length;
+        return Math.ceil(totalItems / itemsPerPage);
+    }, [unifiedRootChildren, searchResults, searchQuery]);
+
+    function openFolder(folder) {
+        setNavDirection('forward');
+        setTransitionKey((value) => value + 1);
+        setPathStack((prev) => [...prev, folder]);
+    }
+
+    function goBackOneLevel() {
+        setNavDirection('back');
+        setTransitionKey((value) => value + 1);
+        setPathStack((prev) => prev.slice(0, -1));
+    }
+
+    function goToLevel(levelIndex) {
+        setNavDirection(levelIndex < pathStack.length - 1 ? 'back' : 'forward');
+
+        if (levelIndex < 0) {
+            setTransitionKey((value) => value + 1);
+            setPathStack([]);
+            return;
+        }
+
+        setTransitionKey((value) => value + 1);
+        setPathStack((prev) => prev.slice(0, levelIndex + 1));
+    }
+
+    // --- SOUMISSION DU FORMULAIRE VIA API VERCEL ---
+    const handleSuggestionSubmit = async (e) => {
+        e.preventDefault();
+        setFormStatus({ loading: true, error: '', success: false });
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    type: 'suggestion',
+                    ...suggestionForm
+                })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Une erreur est survenue.');
+            }
+
+            setFormStatus({ loading: false, error: '', success: true });
+            setSuggestionForm({ firstname: '', lastname: '', contact: '', resourceLink: '', consent: false });
+            
+            setTimeout(() => {
+                setIsSuggesting(false);
+                setFormStatus(prev => ({ ...prev, success: false }));
+            }, 2500);
+
+        } catch (err) {
+            setFormStatus({ loading: false, error: err.message, success: false });
+        }
     };
 
     return (
         <>
-            {/* Affiche UpdateRevision en priorité, sinon ModalRevision */}
-            <UpdateRevision isOpen={showUpdate} onClose={() => setShowUpdate(false)} />
-            <ModalRevision isOpen={!showUpdate && showModal} onClose={() => setShowModal(false)} />
-            <BlurForm open={formOpen && !formFilled} onClose={handleFormFilled} />
-            <section className="Header">
-                <NavBar background="bg-background" />
-            </section>
-            <div className="container">
-                <section className="ressources mt-lg-5">
-                    <h2 className="mb-4 mt-4" style={{ fontFamily: 'Aleo, serif', fontWeight: 700 }}>Ressources</h2>
+            <div className="ressources-clone-page">
+                <main className="ressources-clone-shell">
+                    <section className="clone-shell-copy">
+                        <span className="clone-kicker">Bibliothèque numérique</span>
+                        <h1>Ressources et Archives</h1>
+                        <p>
+                            Retrouvez mes notes de cours et toutes les ressources que j'utilise pour mes études et recherches personnelles.
+                        </p>
+                    </section>
 
-                    <div className="row">
-                        <div className="col-xs-12 col-lg-4">
-                            {/* Barre de recherche */}
-                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
+                    <section className="apple-explorer" aria-label="Explorateur de fichiers">
+                        
+                        {/* --- BARRE DE RECHERCHE APPLE-LIKE AVEC BOUTON AJOUT --- */}
+                        <div className="apple-search-layout">
+                            <div className="apple-search-wrapper">
+                                <i className="fas fa-search apple-search-icon" />
                                 <input
                                     type="text"
-                                    value={search}
-                                    onChange={e => setSearch(e.target.value)}
-                                    placeholder="Rechercher un fichier..."
-                                    style={{ flex: 1, padding: '0.5rem 2.2rem 0.5rem 1rem', borderRadius: 20, border: '1px solid #ccc', fontSize: '1rem' }}
+                                    className="apple-search-input"
+                                    placeholder="Rechercher un document..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    disabled={isSuggesting}
                                 />
-                                <span style={{ position: 'relative', left: '-2rem', color: '#888', pointerEvents: 'none' }}>
-                                    <i className="fas fa-search" />
-                                </span>
-                            </div>
-                            <div className="resource-tree">
-                                {search.trim() !== "" ? (
-                                    searchResults.length > 0 ? (
-                                        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                            {searchResults.map((file, idx) => (
-                                                <li key={idx} style={{ marginBottom: 8 }}>
-                                                    <button
-                                                        style={{ background: 'none', border: 'none', color: '#007bff', textAlign: 'left', cursor: 'pointer', padding: 0, fontSize: '1rem' }}
-                                                        onClick={() => setSelected(file)}
-                                                    >
-                                                        <i className="fas fa-file-alt" style={{ marginRight: 8 }} />
-                                                        {file.title || file.name}
-                                                    </button>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    ) : (
-                                        <div style={{ color: '#888', fontStyle: 'italic', padding: '1rem 0' }}>Aucun document ne correspond à votre recherche.</div>
-                                    )
-                                ) : (
-                                    tree.map((node, i) => (
-                                        <TreeNode
-                                            key={i}
-                                            node={node}
-                                            onSelect={setSelected}
-                                            level={0}
-                                            openFolders={openFolders}
-                                        />
-                                    ))
+                                {searchQuery && (
+                                    <button 
+                                        className="apple-search-clear" 
+                                        onClick={() => setSearchQuery('')}
+                                        aria-label="Effacer la recherche"
+                                    >
+                                        <i className="fas fa-times-circle" />
+                                    </button>
                                 )}
                             </div>
-                            <NavLink to="/mcc" className="btn btn-black mb-5" style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)', width: '100%' }}>
-                                Simulateur de note
-                            </NavLink>
+                            
+                            <button 
+                                type="button"
+                                className={`apple-suggest-trigger ${isSuggesting ? 'is-active' : ''}`}
+                                onClick={() => setIsSuggesting(!isSuggesting)}
+                                aria-label="Proposer un document"
+                                title="Proposer un document"
+                            >
+                                <i className={`fas ${isSuggesting ? 'fa-times' : 'fa-plus'}`} />
+                                <span className="btn-text">{isSuggesting ? 'Fermer' : 'Contribuer'}</span>
+                            </button>
                         </div>
-                        <div className="col-xs-12 col-lg-8">
-                            <div className="resource-viewer" ref={viewerRef}>
-                                {selected ? (
-                                    (() => {
-                                        // Vérification PDF
-                                        const isPdf = selected.path && selected.path.toLowerCase().endsWith('.pdf');
-                                        // Vérification ZIP
-                                        const isZip = selected.path && selected.path.toLowerCase().endsWith('.zip');
-                                        const isHeavy = Boolean(selected.heavy);
-                                        const isLink = selected.type === 'link';
-                                        // Vérification crédits
-                                        const hasCredits = selected.credits && selected.credits.trim() !== '';
-                                        // Vérification date
-                                        const hasDate = selected.date && selected.date.trim() !== '';
-                                        if (!isPdf && !isZip && !isLink) {
-                                            return (
-                                                <div className="resource-error" style={{ textAlign: 'center', padding: '4rem 0' }}>
-                                                    <i className="fas fa-exclamation-triangle" style={{ fontSize: '3rem', color: '#d32f2f', marginBottom: 16 }} />
-                                                    <p style={{ color: '#d32f2f', fontWeight: 600, fontSize: '1.2rem' }}>Ce fichier n'est pas un PDF ou le chemin est invalide.</p>
-                                                    <p style={{ color: '#888', fontSize: '1rem', marginTop: 12 }}>
-                                                        Il est possible que le fichier ne soit pas encore (ou plus) disponible.<br />
-                                                        Besoin de cette ressource ? <a href="/contact" style={{ color: '#888', textDecoration: 'underline' }}>Me contacter</a>
-                                                    </p>
-                                                </div>
-                                            );
-                                        }
-                                        return (
-                                            <div className="resource-meta">
-                                                <div className="resource-meta-head mb-2" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                                    <h3 style={{ fontFamily: 'Aleo, serif', fontWeight: 700, marginBottom: 0 }}>{selected.title}</h3>
-                                                    <div className="d-flex align-items-center">
 
-                                                        <button
-                                                            onClick={() => {
-                                                                // Créer un lien https://ewenrdo.fr/ressources?slug=... pour partager la ressource sélectionnée
-                                                                const url = `${window.location.origin}/ressources?slug=${selected.slug}`;
-                                                                navigator.clipboard.writeText(url).then(() => {
-                                                                    alert('Lien copié dans le presse-papier !');
-                                                                }).catch(() => {
-                                                                    alert('Échec de la copie. Voici le lien : ' + url);
-                                                                });
-                                                            }}
-                                                            className="btn-icon"
-                                                        >
-                                                            <i className="fas fa-share" style={{ marginRight: 6 }} />
-                                                        </button>
-                                                        {isLink ? (
-                                                            <a
-                                                                href={selected.path}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="btn-icon"
-                                                                style={{ color: 'black', textDecoration: 'none' }}
-                                                            >
-                                                                <i className="fas fa-external-link-alt" />
-                                                            </a>
-                                                        ) : (
-                                                            <a
-                                                                href={selected.path}
-                                                                download
-                                                                className="btn-icon"
-                                                                style={{ color: 'black', textDecoration: 'none' }}
-                                                            >
-                                                                <i className="fas fa-download" />
-                                                            </a>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                                <p>{selected.comment}</p>
-                                                {hasDate ? (
-                                                    <p className="date">Modifié la dernière fois le <i>{selected.date}</i></p>
-                                                ) : (
-                                                    <p className="date" style={{ color: '#d32f2f' }}><i className="fas fa-exclamation-circle" style={{ marginRight: 6 }} />Date de modification manquante</p>
-                                                )}
-                                                {isHeavy ? (
-                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px', flexDirection: 'column', gap: '1rem' }}>
-                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center', marginBottom: 0 }}>
-                                                            Ce fichier est lourd pour être affiché automatiquement sur le site.<br />
-                                                            Si vous souhaitez tout de même le consulter, cliquez sur le bouton ci-dessous.
-                                                        </p>
-                                                        <a
-                                                            href={selected.path}
-                                                            download
-                                                            className="btn btn-black"
-                                                            style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)' }}
-                                                        >
-                                                            Télécharger le document
-                                                        </a>
-                                                    </div>
-                                                ) : isZip ? (
-                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px' }}>
-                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center' }}>
-                                                            <i className="fas fa-download" style={{ marginRight: 12, fontSize: '1.5rem', color: '#007bff' }} />
-                                                            Cliquez sur le bouton télécharger pour récupérer le fichier ZIP.
-                                                        </p>
-                                                    </div>
-                                                ) : isLink ? (
-                                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.5rem', padding: '2rem', marginTop: 16, backgroundColor: '#f5f5f5', border: '1px solid #ddd', minHeight: '300px', flexDirection: 'column', gap: '1rem' }}>
-                                                        <p style={{ color: '#666', fontSize: '1.1rem', fontStyle: 'italic', textAlign: 'center', marginBottom: 0 }}>
-                                                            Cette ressource est un lien externe.<br/>
-                                                            Cliquez sur le bouton ci-dessous pour l'ouvrir dans un nouvel onglet.
-                                                        </p>
-                                                        <a
-                                                            href={selected.path}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="btn btn-black"
-                                                            style={{ fontWeight: 600, fontFamily: 'Rubik, sans-serif', fontSize: '.875rem', borderRadius: '2rem', padding: '0.75rem 1.5rem', textDecoration: 'none', boxShadow: '0px 5px 0px 0px rgba(0,0,0,0.1)' }}
-                                                        >
-                                                            Ouvrir le lien
-                                                        </a>
-                                                    </div>
-                                                ) : (
-                                                    <iframe
-                                                        src={selected.path}
-                                                        title={selected.title}
-                                                        width="100%"
-                                                        height="600px"
-                                                        style={{ border: '1px solid #222', borderRadius: '0.5rem', marginTop: 16, background: '#fff' }}
-                                                    />
-                                                )}
-                                                {hasCredits && (
-                                                    <p className="date"><strong>Crédits :</strong> {selected.credits}</p>
-                                                )}
-                                            </div>
-                                        );
-                                    })()
-                                ) : (
-                                    <div className="resource-placeholder">
-                                        <p style={{ color: '#888', fontStyle: 'italic', marginTop: '4rem' }}>Sélectionnez un document pour l'afficher.</p>
+                        {/* --- COMPOSANT FORMULAIRE DE PROPOSITION --- */}
+                        {isSuggesting ? (
+                            <div className="apple-form-container">
+                                <h2 className="form-title">Proposer un document</h2>
+                                <p className="form-subtitle">Partagez une ressource utile. Elle sera vérifiée avant publication.<br/>
+                                Vous pouvez utiliser GitHub ou Google Drive (avec un lien public !) pour héberger votre document et obtenir un lien.</p>
+                                
+                                <form onSubmit={handleSuggestionSubmit} className="apple-form">
+                                    <div className="form-row-grid">
+                                        <div className="form-group">
+                                            <label htmlFor="firstname">Prénom</label>
+                                            <input 
+                                                type="text" id="firstname" required placeholder="Jean"
+                                                value={suggestionForm.firstname}
+                                                onChange={e => setSuggestionForm({...suggestionForm, firstname: e.target.value})}
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="lastname">Nom</label>
+                                            <input 
+                                                type="text" id="lastname" required placeholder="Dupont"
+                                                value={suggestionForm.lastname}
+                                                onChange={e => setSuggestionForm({...suggestionForm, lastname: e.target.value})}
+                                            />
+                                        </div>
                                     </div>
+
+                                    <div className="form-group">
+                                        <label htmlFor="contact">Moyen de contact</label>
+                                        <input 
+                                            type="text" id="contact" required placeholder="Email, Discord ou Instagram"
+                                            value={suggestionForm.contact}
+                                            onChange={e => setSuggestionForm({...suggestionForm, contact: e.target.value})}
+                                        />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label htmlFor="resourceLink">Lien public vers la ressource</label>
+                                        <input 
+                                            type="url" id="resourceLink" required placeholder="https://drive.google.com/..."
+                                            value={suggestionForm.resourceLink}
+                                            onChange={e => setSuggestionForm({...suggestionForm, resourceLink: e.target.value})}
+                                        />
+                                    </div>
+
+                                    <div className="form-group-checkbox">
+                                        <label className="apple-checkbox-label">
+                                            <input 
+                                                type="checkbox" required
+                                                checked={suggestionForm.consent}
+                                                onChange={e => setSuggestionForm({...suggestionForm, consent: e.target.checked})}
+                                            />
+                                            <span className="checkbox-text">
+                                                J'accepte la publication de ce document sur le site s'il est validé.
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" className="apple-btn-primary form-submit" disabled={formStatus.loading}>
+                                        {formStatus.loading ? 'Envoi...' : 'Envoyer la proposition'}
+                                    </button>
+
+                                    {formStatus.error && <p className="form-message error">{formStatus.error}</p>}
+                                    {formStatus.success && <p className="form-message success">Merci ! Votre proposition a été envoyée par e-mail.</p>}
+                                </form>
+                            </div>
+                        ) : (
+                            /* --- LE RESTE DE VOTRE INTERFACE S'AFFICHE SI PAS DE FORMULAIRE --- */
+                            <div key={transitionKey} className={`apple-list-wrap ${navDirection === 'forward' ? 'is-forward' : 'is-back'}`}>
+                                {isLoading ? <p className="apple-feedback">Chargement...</p> : null}
+                                {loadError ? <p className="apple-feedback apple-feedback-error">{loadError}</p> : null}
+                                {dataSource === 'mock' && searchQuery.trim() === '' ? (
+                                    <p className="apple-feedback apple-feedback-subtle">Mode démo : données mockées.</p>
+                                ) : null}
+
+                                {/* NAVIGATION CHEVRON ET ARIANE */}
+                                {searchQuery.trim() === '' && (
+                                    <header className="apple-explorer-head">
+                                        <button
+                                            type="button"
+                                            className="apple-back"
+                                            aria-label="Remonter d'un dossier"
+                                            onClick={goBackOneLevel}
+                                            disabled={pathStack.length === 0}
+                                        >
+                                            <i className="fas fa-chevron-left" />
+                                        </button>
+
+                                        <nav className="apple-breadcrumbs" aria-label="Fil d'ariane">
+                                            {breadcrumbs.map((item, index) => (
+                                                <React.Fragment key={`${item.label}-${index}`}>
+                                                    {index > 0 ? <span className="apple-crumb-separator">/</span> : null}
+                                                    <button
+                                                        type="button"
+                                                        className={`apple-crumb ${index === breadcrumbs.length - 1 ? 'is-current' : ''}`}
+                                                        onClick={() => goToLevel(index - 1)}
+                                                        disabled={index === breadcrumbs.length - 1}
+                                                    >
+                                                        {item.label}
+                                                    </button>
+                                                </React.Fragment>
+                                            ))}
+                                        </nav>
+                                    </header>
+                                )}
+
+                                {/* RENDU RECHERCHE ACTIVE */}
+                                {searchQuery.trim() !== '' ? (
+                                    <>
+                                        <div className="apple-search-results-header">
+                                            Résultats de recherche ({searchResults.length})
+                                        </div>
+                                        {searchResults.length === 0 ? (
+                                            <p className="apple-feedback">Aucun document ne correspond à votre recherche.</p>
+                                        ) : (
+                                            <ul className="apple-list">
+                                                {paginatedItems.map((item, index) => {
+                                                    const itemPath = String(item.path || '').toLowerCase();
+                                                    const isPdf = itemPath.endsWith('.pdf');
+                                                    const isZip = itemPath.endsWith('.zip');
+                                                    const isLink = item.type === 'link';
+                                                    const itemLabel = item.title || item.name || `Élément ${index + 1}`;
+                                                    const itemMeta = isLink ? 'Lien' : isPdf ? 'PDF' : isZip ? 'ZIP' : 'Fichier';
+
+                                                    return (
+                                                        <li key={`${itemLabel}-${index}`}>
+                                                            <button
+                                                                type="button"
+                                                                className="apple-row"
+                                                                onClick={() => setSelectedItem(item)}
+                                                            >
+                                                                <span
+                                                                    className={`apple-row-leading ${isPdf ? 'is-pdf' : isZip ? 'is-zip' : isLink ? 'is-link' : 'is-file'}`}
+                                                                    aria-hidden="true"
+                                                                >
+                                                                    <i className={`fas ${isPdf ? 'fa-file-pdf' : isZip ? 'fa-file-archive' : isLink ? 'fa-link' : 'fa-file-alt'}`} />
+                                                                </span>
+
+                                                                <span className="apple-row-copy">
+                                                                    <span className="apple-row-title">{itemLabel}</span>
+                                                                    <span className="apple-row-meta">{itemMeta}</span>
+                                                                </span>
+                                                            </button>
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ul>
+                                        )}
+                                    </>
+                                ) : (
+                                    /* RENDU ARBORESCENCE STANDARD */
+                                    <>
+                                        {!isLoading && unifiedRootChildren.length === 0 ? (
+                                            <p className="apple-feedback">Ce dossier est vide.</p>
+                                        ) : null}
+
+                                        {!isLoading ? (
+                                            <ul className="apple-list">
+                                                {paginatedItems.map((item, index) => {
+                                                    if (item.isSimulator) {
+                                                        return (
+                                                            <li key="mcc-simulator-link">
+                                                                <a href="/mcc" className="apple-row" style={{ textDecoration: 'none' }}>
+                                                                    <span className="apple-row-leading" aria-hidden="true" style={{ background: 'linear-gradient(135deg, #ff9500, #ff5e00)', color: '#fff' }}>
+                                                                        <i className="fas fa-calculator" />
+                                                                    </span>
+                                                                    <span className="apple-row-copy">
+                                                                        <span className="apple-row-title" style={{ fontWeight: '600' }}>Simulateur de notes (MCC)</span>
+                                                                        <span className="apple-row-meta">Outil interactif</span>
+                                                                    </span>
+                                                                </a>
+                                                            </li >
+                                                        );
+                                                    }
+
+                                                    const folder = isFolderNode(item);
+                                                    const file = isFileNode(item);
+                                                    const itemPath = String(item.path || '').toLowerCase();
+                                                    const isPdf = file && itemPath.endsWith('.pdf');
+                                                    const isZip = file && itemPath.endsWith('.zip');
+                                                    const isLink = item.type === 'link';
+                                                    const itemLabel = item.title || item.name || `Élément ${index + 1}`;
+                                                    const itemMeta = folder
+                                                        ? `${Array.isArray(item.children) ? item.children.length : 0} élément(s)`
+                                                        : isLink
+                                                            ? 'Lien'
+                                                            : isPdf
+                                                                ? 'PDF'
+                                                                : isZip
+                                                                    ? 'ZIP'
+                                                                    : 'Fichier quelconque';
+
+                                                    return (
+                                                        <li key={`${itemLabel}-${index}`}>
+                                                            <button
+                                                                type="button"
+                                                                className="apple-row"
+                                                                onClick={() => {
+                                                                    if (folder) {
+                                                                        openFolder(item);
+                                                                    } else {
+                                                                        setSelectedItem(item);
+                                                                    }
+                                                                }}
+                                                                onDoubleClick={() => {
+                                                                    if (folder) {
+                                                                        openFolder(item);
+                                                                    }
+                                                                }}
+                                                            >
+                                                                <span
+                                                                    className={`apple-row-leading ${folder ? 'is-folder' : isPdf ? 'is-pdf' : isZip ? 'is-zip' : isLink ? 'is-link' : 'is-file'}`}
+                                                                    aria-hidden="true"
+                                                                >
+                                                                    <i className={`fas ${folder ? 'fa-folder' : isPdf ? 'fa-file-pdf' : isZip ? 'fa-file-archive' : isLink ? 'fa-link' : 'fa-file-alt'}`} />
+                                                                </span>
+
+                                                                <span className="apple-row-copy">
+                                                                    <span className="apple-row-title">{itemLabel}</span>
+                                                                    <span className="apple-row-meta">{itemMeta}</span>
+                                                                </span>
+                                                            </button>
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ul>
+                                        ) : null}
+                                    </>
+                                )}
+
+                                {/* --- COMPOSANT DE PAGINATION --- */}
+                                {totalPages > 1 && (
+                                    <nav className="apple-pagination" aria-label="Pagination">
+                                        <button 
+                                            type="button"
+                                            className="pagination-btn"
+                                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                                            disabled={currentPage === 1}
+                                            aria-label="Page précédente"
+                                        >
+                                            <i className="fas fa-chevron-left" />
+                                        </button>
+                                        
+                                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                                            <button
+                                                key={page}
+                                                type="button"
+                                                className={`pagination-btn ${currentPage === page ? 'is-active' : ''}`}
+                                                onClick={() => setCurrentPage(page)}
+                                                disabled={currentPage === page}
+                                            >
+                                                {page}
+                                            </button>
+                                        ))}
+
+                                        <button 
+                                            type="button"
+                                            className="pagination-btn"
+                                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                                            disabled={currentPage === totalPages}
+                                            aria-label="Page suivante"
+                                        >
+                                            <i className="fas fa-chevron-right" />
+                                        </button>
+                                    </nav>
                                 )}
                             </div>
-                        </div>
-                    </div>
-                </section>
+                        )}
+                    </section>
+                </main>
+
+                <DockNav />
+                <div className="clone-glow clone-glow-a" aria-hidden="true" />
+                <div className="clone-glow clone-glow-b" aria-hidden="true" />
             </div>
+
+            <ResourceViewerModal 
+                item={selectedItem} 
+                isOpen={!!selectedItem} 
+                onClose={() => setSelectedItem(null)} 
+            />
         </>
     );
 }

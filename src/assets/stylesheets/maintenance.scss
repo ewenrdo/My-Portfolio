@@ -1,0 +1,169 @@
+.maintenance-page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #ffffff;
+    color: #111;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Halos lumineux floutés Apple-like en arrière-plan */
+.maintenance-page::before,
+.maintenance-page::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(90px);
+    opacity: 0.75;
+    z-index: 0;
+    transition: transform 0.3s cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+
+/* Conteneur principal */
+.maintenance-shell {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 34rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: shellFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Surtitre, Titre principal et Paragraphe */
+.maintenance-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.maintenance-shell h1 {
+    font-size: clamp(2rem, 5.5vw, 3.25rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+    color: #0b0b0b;
+    margin: 0 0 1.2rem 0;
+}
+
+.maintenance-shell p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: rgba(0, 0, 0, 0.58);
+    margin: 0 auto 2.5rem;
+    max-width: 28rem;
+}
+
+/* Diagramme / Repère mathématique intéractif */
+.math-canvas-container {
+    position: relative;
+    width: 340px;
+    height: 220px;
+    margin-bottom: 2.5rem;
+    user-select: none;
+}
+
+.math-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Boutons de retour et contact */
+.btn-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.apple-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 2rem;
+    background: #111;
+    color: #fff;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 180ms ease;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.apple-btn-primary:hover {
+    transform: translateY(-1.5px);
+    background: #2a2a2a;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.apple-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    background: rgba(0, 0, 0, 0.04);
+    color: #111;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 180ms ease;
+    border: 0;
+    cursor: pointer;
+}
+
+.apple-btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+}
+
+@keyframes shellFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .apple-btn-primary,
+    .apple-btn-secondary {
+        width: 100%;
+    }
+
+    .math-canvas-container {
+        width: 100%;
+        height: 180px;
+    }
+}

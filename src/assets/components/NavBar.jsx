@@ -32,6 +32,9 @@ function NavBar({ home, background }) {
                                     <NavLink className="nav-link" to="/experience">Expérience</NavLink>
                                 </li>
                                 <li className="nav-item ms-lg-3">
+                                    <NavLink className="nav-link" to="/experience2">Experience2</NavLink>
+                                </li>
+                                <li className="nav-item ms-lg-3">
                                     <NavLink className="nav-link" to="/portfolio">Portfolio</NavLink>
                                 </li>
                                 <li className="nav-item ms-lg-3">
@@ -61,6 +64,9 @@ function NavBar({ home, background }) {
                             </li>
                             <li className="nav-item text-center">
                                 <NavLink className="nav-link w-100 text-center" to="/experience" >Expérience</NavLink>
+                            </li>
+                            <li className="nav-item text-center">
+                                <NavLink className="nav-link w-100 text-center" to="/experience2" >Experience2</NavLink>
                             </li>
                             <li className="nav-item text-center">
                                 <NavLink className="nav-link w-100 text-center" to="/portfolio" >Portfolio</NavLink>
