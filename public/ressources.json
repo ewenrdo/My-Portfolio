@@ -802,6 +802,16 @@
                                 "slug": "ga5-chapitre-2-groupes-quotients"
                             }
                         ]
+                    },
+                    {
+                        "name": "Calcul différentiel 5",
+                        "slug": "cd5",
+                        "children": []
+                    },
+                    {
+                        "name": "Intégration et probabilités 5",
+                        "slug": "pr5",
+                        "children": []
                     }
                 ]
             },
