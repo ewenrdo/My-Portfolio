@@ -14,6 +14,8 @@ const App = () => {
         <Router>
             <Routes>
                 <Route path="*" element={<Maintenance />} />
+                <Route path="/hidden-rsc" element={<Ressources />} />
+                <Route path="/hidden-mcc" element={<Simulateur />} />
                 {/*
                 <Route path="/" element={<Home />} />
                 <Route path="/portfolio" element={<Portfolio />} />
