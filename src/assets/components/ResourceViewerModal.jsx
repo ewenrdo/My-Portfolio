@@ -80,7 +80,7 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
                         {isHeavy ? (
                             <div className="viewer-placeholder">
                                 <i className="fas fa-file-archive mb-3" />
-                                <p>Ce fichier est lourd pour être affiché automatiquement sur le site.</p>
+                                <p>Ce fichier est trop lourd pour être affiché automatiquement sur le site.</p>
                                 <a href={item.path} download className="apple-btn-primary">Télécharger le document</a>
                             </div>
                         ) : isZip ? (

@@ -25,7 +25,7 @@ function Home() {
             period: "2024 - aujourd'hui",
             title: "Université Paris Cité",
             meta: "Double licence Maths & Informatique",
-            text: "Je construis une base solide entre abstraction mathématique, logique algorithmique et autonomie de travail."
+            text: "Préparation de deux licences en parallèle en mathématiques et en informatique fondamentale."
         },
         {
             status: "current",
@@ -39,7 +39,7 @@ function Home() {
             period: "Juillet 2025 - aujourd'hui",
             title: "Notre-Dame de Paris",
             meta: "Bénévole d'accueil",
-            text: "Accueil, médiation et relation au public dans un lieu emblématique, avec une vraie exigence de posture."
+            text: "Accueil, médiation et relation au public dans un lieu emblématique, avec une vraie exigence d'écoute et de patience."
         },
         {
             status: "past",
@@ -59,7 +59,7 @@ function Home() {
             status: "past",
             period: "Juin 2025",
             title: "Stage d'observation",
-            meta: "Mathématiques au lycée",
+            meta: "Mathématiques au lycée Gustave Monod",
             text: "Découverte du métier d’enseignant, immersion pédagogique et regard concret sur la transmission."
         },
         {
