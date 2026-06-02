@@ -13,15 +13,11 @@ const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="*" element={<Maintenance />} />
-                <Route path="/hidden-rsc" element={<Ressources />} />
-                <Route path="/hidden-mcc" element={<Simulateur />} />
-                {/*
                 <Route path="/" element={<Home />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/ressources" element={<Ressources />} />
                 <Route path="/mcc" element={<Simulateur />} />
-                <Route path="*" element={<NotFound />} />*/}
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Analytics />
             <SpeedInsights />
