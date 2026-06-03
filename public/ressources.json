@@ -882,6 +882,14 @@
                                 "title": "Chapitre 2 : Équations différentielles",
                                 "date": "2026-05-25",
                                 "slug": "analyse-capes-chapitre-2-equations-differentielles"
+                            },
+                            {
+                                "name": "chap3.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap3/chap3.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 3 : Suites arithmético-géométriques",
+                                "date": "2026-06-03",
+                                "slug": "analyse-capes-chapitre-3-suites-arithmetico-geometriques"
                             }
                         ]
                     }
