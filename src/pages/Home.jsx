@@ -200,6 +200,9 @@ function Home() {
                                     <Link to="mailto:contact@ewenrdo.fr" target="_blank" rel="noopener noreferrer" aria-label="Email">
                                         <i className="fas fa-envelope" />
                                     </Link>
+                                    <Link to="https://www.strava.com/athletes/ewenrdo" target="_blank" rel="noopener noreferrer" aria-label="Strava">
+                                        <i className="fab fa-strava" />
+                                    </Link>
                                 </div>
                             </div>
 
