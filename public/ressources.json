@@ -800,6 +800,14 @@
                                 "title": "Chapitre 2 : Groupes quotients",
                                 "date": "2026-06-02",
                                 "slug": "ga5-chapitre-2-groupes-quotients"
+                            },
+                            {
+                                "name": "chap3.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/ga5/chap3/chap3.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 3 : Exemples de groupes",
+                                "date": "2026-06-02",
+                                "slug": "ga5-chapitre-3-exemples-de-groupes"
                             }
                         ]
                     },
