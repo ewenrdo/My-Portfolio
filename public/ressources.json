@@ -854,12 +854,34 @@
                         "slug": "series-statistiques",
                         "children": [
                             {
-                                "name": "chap1.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/statistiques/chap1/chap1.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira.",
-                                "title": "Chapitre 1 : Séries statistiques d'une variable",
-                                "date": "2026-05-25",
-                                "slug": "series-statistiques-chapitre-1-sries-statistiques-dune-variable"
+                                "name": "Chapitre 1 : Séries statistiques d'une variable",
+                                "slug": "stats-capes-chapitre-1-series-statistiques-dune-variable",
+                                "children": [
+                                    {
+                                        "name": "chap1.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/statistiques/chap1/chap1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Chapitre 1 : Séries statistiques d'une variable",
+                                        "date": "2026-05-25",
+                                        "slug": "series-statistiques-chapitre-1-sries-statistiques-dune-variable"
+                                    },
+                                    {
+                                        "name": "sujet1.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/statistiques/chap1/sujet1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Sujet d'entraînement n°1",
+                                        "date": "2026-06-04",
+                                        "slug": "series-statistiques-chapitre-1-sujet-dentrainement-1"
+                                    },
+                                    {
+                                        "name": "corrige1.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/statistiques/chap1/corrige1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Corrigé du sujet d'entraînement n°1",
+                                        "date": "2026-06-04",
+                                        "slug": "series-statistiques-chapitre-1-corrigé-du-sujet-dentrainement-1"
+                                    }
+                                ]
                             },
                             {
                                 "name": "chap2.pdf",
