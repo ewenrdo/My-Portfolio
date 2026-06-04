@@ -93,8 +93,8 @@
                             },
                             {
                                 "name": "chapitre5.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap5/chap5.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap11/chap11.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Sources : Cours de Stéphane Vassout, Romain Petrides et Adrien Boyer.",
                                 "title": "Chapitre 5 : Fonctions de plusieurs variables",
                                 "date": "2026-01-16",
                                 "slug": "analyse-3-chapitre-5-fonctions-de-plusieurs-variables"
@@ -538,7 +538,7 @@
                                     {
                                         "name": "chap11.pdf",
                                         "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap11/chap11.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité par Romain Petrides, notes de cours de Stephane Vassout.",
+                                        "credits": "Ewen Rodrigues de Oliveira. Sources : Cours de Stéphane Vassout, Romain Petrides et Adrien Boyer.",
                                         "title": "Chapitre 11 : Fonctions de plusieurs variables",
                                         "date": "2026-04-30",
                                         "slug": "analyse-algebre-4-chapitre-11-fonctions-de-plusieurs-variables"
