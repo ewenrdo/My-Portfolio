@@ -93,7 +93,7 @@
                             },
                             {
                                 "name": "chapitre5.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap11/chap11.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap11/chap11_refacto.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Sources : Cours de Stéphane Vassout, Romain Petrides et Adrien Boyer.",
                                 "title": "Chapitre 5 : Fonctions de plusieurs variables",
                                 "date": "2026-01-16",
@@ -537,7 +537,7 @@
                                 "children": [
                                     {
                                         "name": "chap11.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap11/chap11.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/asf4/chap11/chap11_refacto.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Sources : Cours de Stéphane Vassout, Romain Petrides et Adrien Boyer.",
                                         "title": "Chapitre 11 : Fonctions de plusieurs variables",
                                         "date": "2026-04-30",
