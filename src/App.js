@@ -6,7 +6,6 @@ import Ressources from "./pages/Ressources";
 import Simulateur from "./pages/Simulateur";
 import NotFound from "./pages/NotFound";
 import Maintenance from "./pages/Maintenance";
-import Safety from "./pages/Safety";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
@@ -14,7 +13,7 @@ const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/*" element={<Safety />} />
+                <Route path="/*" element={<Maintenance />} />
 
                 {/*
                 <Route path="/" element={<Home />} />
