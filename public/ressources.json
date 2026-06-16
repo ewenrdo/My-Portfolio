@@ -835,7 +835,7 @@
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
-                                "title": "Chapitre 1 : Construction de N et Z",
+                                "title": "Chapitre 1 : Construction de N, Z et Q",
                                 "date": "2026-04-09",
                                 "slug": "arithmetique-chapitre-1-construction-de-n-et-z"
                             },
@@ -872,14 +872,6 @@
                                         "title": "Sujet d'entraînement n°1",
                                         "date": "2026-06-04",
                                         "slug": "series-statistiques-chapitre-1-sujet-dentrainement-1"
-                                    },
-                                    {
-                                        "name": "sujet2.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/statistiques/chap1/sujet2/sujet2.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Sujet d'entraînement n°2",
-                                        "date": "2026-06-04",
-                                        "slug": "series-statistiques-chapitre-1-sujet-dentrainement-2"
                                     }
                                 ]
                             },
@@ -920,6 +912,22 @@
                                 "title": "Chapitre 3 : Suites arithmético-géométriques",
                                 "date": "2026-06-03",
                                 "slug": "analyse-capes-chapitre-3-suites-arithmetico-geometriques"
+                            },
+                            {
+                                "name": "chap4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap4/chap4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 4 : Interpolation de Lagrange",
+                                "date": "2026-06-16",
+                                "slug": "analyse-capes-chapitre-4-interpolation-de-lagrange"
+                            },
+                            {
+                                "name": "chap5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap5/chap5.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 5 : Intégration",
+                                "date": "2026-06-16",
+                                "slug": "analyse-capes-chapitre-5-integration"
                             }
                         ]
                     }
