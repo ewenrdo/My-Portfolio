@@ -1188,7 +1188,15 @@
                 "title": "Sujet mars 2026 - épreuve n°1",
                 "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3.",
                 "slug": "sujet-mars-2026-capes-epreuve-n1"
+            },
+            {
+                "name": "Roadmap CAPES.pdf",
+                "path": "/resources/Roadmap CAPES.pdf",
+                "credits": "Ewen Rodrigues de Oliveira.",
+                "title": "Planning de l'année 2026-2027",
+                "slug": "roadmap-capes-2027"
             }
+            
         ]
     }
 ]
