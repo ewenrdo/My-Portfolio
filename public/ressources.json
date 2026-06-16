@@ -18,6 +18,46 @@
                                 "title": "Chapitre 2 : Intégration de fonctions continues par morceaux",
                                 "date": "2026-04-09",
                                 "slug": "analyse-2-integration-de-fonctions-continues-par-morceaux"
+                            },
+                            {
+                                "name": "td1.pdf",
+                                "path": "/resources/an2/TD1_AN2.pdf",
+                                "credits": "Université Paris Cité. Amina Mecherbet.",
+                                "title": "TD1 : Dérivation",
+                                "date": "2026-06-16",
+                                "slug": "analyse-2-td1-derivation"
+                            },
+                            {
+                                "name": "td1_bis.pdf",
+                                "path": "/resources/an2/TD1_bis_AN2.pdf",
+                                "credits": "Université Paris Cité. Amina Mecherbet.",
+                                "title": "TD1b : Fonctions usuelles",
+                                "date": "2026-06-16",
+                                "slug": "analyse-2-td1b-fonctions-usuelles"
+                            },
+                            {
+                                "name": "td2.pdf",
+                                "path": "/resources/an2/TD2_AN2.pdf",
+                                "credits": "Université Paris Cité. Amina Mecherbet.",
+                                "title": "TD2 : Intégration",
+                                "date": "2026-06-16",
+                                "slug": "analyse-2-td2-integration"
+                            },
+                            {
+                                "name": "td3.pdf",
+                                "path": "/resources/an2/TD3_AN2.pdf",
+                                "credits": "Université Paris Cité. Amina Mecherbet.",
+                                "title": "TD3 : Développements limités",
+                                "date": "2026-06-16",
+                                "slug": "analyse-2-td3-developpements-limites"
+                            },
+                            {
+                                "name": "td4.pdf",
+                                "path": "/resources/an2/TD4_AN2.pdf",
+                                "credits": "Université Paris Cité. Amina Mecherbet.",
+                                "title": "TD4 : Équations différentielles linéaires",
+                                "date": "2026-06-16",
+                                "slug": "analyse-2-td4-equations-differentielles-lineaires"
                             }
                         ]
                     },
@@ -28,10 +68,42 @@
                             {
                                 "name": "unit_4.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl1_mathinfo/al2/unit_4.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "credits": "Université Paris Cité.",
                                 "title": "Chapitre 4 : Applications linéaires",
                                 "date": "2026-04-09",
                                 "slug": "algèbre-2-applications-lineaires"
+                            },
+                            {
+                                "name": "td1.pdf",
+                                "path": "/resources/al2/TD1_AL2.pdf",
+                                "credits": "Université Paris Cité.",
+                                "title": "TD1 : Polynômes",
+                                "date": "2026-06-16",
+                                "slug": "algèbre-2-td1-polynomes"
+                            },
+                            {
+                                "name": "td2.pdf",
+                                "path": "/resources/al2/TD2_AL2.pdf",
+                                "credits": "Université Paris Cité.",
+                                "title": "TD2 : Matrices",
+                                "date": "2026-06-16",
+                                "slug": "algèbre-2-td2-matrices"
+                            },
+                            {
+                                "name": "td3.pdf",
+                                "path": "/resources/al2/TD3_AL2.pdf",
+                                "credits": "Université Paris Cité.",
+                                "title": "TD3 : Espaces vectoriels",
+                                "date": "2026-06-16",
+                                "slug": "algèbre-2-td3-espaces-vectoriels"
+                            },
+                            {
+                                "name": "td4.pdf",
+                                "path": "/resources/al2/TD4_AL2.pdf",
+                                "credits": "Université Paris Cité.",
+                                "title": "TD4 : Applications linéaires",
+                                "date": "2026-06-16",
+                                "slug": "algèbre-2-td4-applications-lineaires"
                             }
                         ]
                     }
@@ -940,117 +1012,144 @@
         "slug": "informatique",
         "children": [
             {
-                "name": "Algorithmique",
-                "slug": "elements-algorithmique-l2",
+                "name": "Licence 2",
+                "slug": "licence-2-info",
                 "children": [
                     {
-                        "name": "ea4-memento-complexites",
-                        "path": "/resources/ea4/ea4-memento-complexites.pdf",
+                        "name": "Algorithmique",
+                        "slug": "elements-algorithmique-l2",
+                        "children": [
+                            {
+                                "name": "ea4-memento-complexites",
+                                "path": "/resources/ea4/ea4-memento-complexites.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Mémento complexités algorithmiques",
+                                "comment": "Memento sur les complexités algorithmiques du cours EA4 de l'Université Paris Cité.",
+                                "date": "2026-05-05",
+                                "slug": "memento-sur-les-complexites"
+                            },
+                            {
+                                "name": "ea4_exam2021",
+                                "path": "/resources/ea4/ea4_exam2021.pdf",
+                                "credits": "Dominique Poulalhon",
+                                "title": "Annale d'examen EA4 2021",
+                                "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
+                                "date": "2026-05-06",
+                                "slug": "annale-ea4-2021"
+                            },
+                            {
+                                "name": "ea4_exam2022",
+                                "path": "/resources/ea4/ea4_exam2022.pdf",
+                                "credits": "Dominique Poulalhon",
+                                "title": "Annale d'examen EA4 2022",
+                                "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
+                                "date": "2026-05-06",
+                                "slug": "annale-ea4-2022"
+                            },
+                            {
+                                "name": "ea4_exam2023",
+                                "path": "/resources/ea4/ea4_exam2023.pdf",
+                                "credits": "Dominique Poulalhon",
+                                "title": "Annale d'examen EA4 2023",
+                                "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
+                                "date": "2026-05-06",
+                                "slug": "annale-ea4-2023"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Langage C",
+                        "slug": "langage-c4",
+                        "children": [
+                            {
+                                "name": "lc4-partiel-annale-2024",
+                                "path": "/resources/lc4/partiel_2024.pdf",
+                                "credits": "Lélia Blin, partagé par Anthony Fernandez.",
+                                "title": "Annale de partiel 2024",
+                                "comment": "Annale de partiel du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "annale-de-partiel-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-examen-annale-2024",
+                                "path": "/resources/lc4/exam_2024.pdf",
+                                "credits": "Lélia Blin, partagé par Anthony Fernandez.",
+                                "title": "Annale d'examen 2024",
+                                "comment": "Annale d'examen du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "annale-d-examen-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-fiche-revision",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/lc4/bilan/fiche_c7.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Fiche de révision du cours",
+                                "comment": "Fiche de révision du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-15",
+                                "slug": "fiche-de-revision-langage-c4-2024"
+                            },
+                            {
+                                "name": "soutenance.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/lc4/soutenance/soutenance.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Notes de soutenance Dirsim",
+                                "comment": "Présentation Canva du projet Dirsim.",
+                                "date": "2026-06-02",
+                                "slug": "notes-de-soutenance-dirsim"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "git.pdf",
+                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/cp3/git.pdf",
                         "credits": "Ewen Rodrigues de Oliveira.",
-                        "title": "Mémento complexités algorithmiques",
-                        "comment": "Memento sur les complexités algorithmiques du cours EA4 de l'Université Paris Cité.",
-                        "date": "2026-05-05",
-                        "slug": "memento-sur-les-complexites"
+                        "title": "Introduction à Git",
+                        "comment": "Il s'agit de faire une introduction à Git, un système de contrôle de version distribué largement utilisé dans le développement logiciel. Ce document récapitulatif n'est pas exhaustif mais couvre les bases pour commencer à utiliser Git efficacement, notamment dans le cadre de projets.",
+                        "date": "2026-01-16",
+                        "slug": "introduction-a-git"
                     },
                     {
-                        "name": "ea4_exam2021",
-                        "path": "/resources/ea4/ea4_exam2021.pdf",
-                        "credits": "Dominique Poulalhon",
-                        "title": "Annale d'examen EA4 2021",
-                        "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
-                        "date": "2026-05-06",
-                        "slug": "annale-ea4-2021"
+                        "name": "pres-willys.pdf",
+                        "path": "/resources/pres-willys.pdf",
+                        "heavy": true,
+                        "credits": "Celine Bouhalia, William Fijean, Bastien Fortrye--Campait, Ewen Rodrigues de Oliveira, Dan Sandreschi et Elsa Vervischi..",
+                        "title": "Slides projet Willys",
+                        "comment": "Slides de présentation du projet Willys (voir Portfolio) présenté lors de la soutenance du projet de fin d'année de la Licence 2 Mathématiques et Informatique à l'Université Paris Cité en janvier 2026.",
+                        "date": "2026-01-15",
+                        "slug": "slides-projet-willys"
                     },
                     {
-                        "name": "ea4_exam2022",
-                        "path": "/resources/ea4/ea4_exam2022.pdf",
-                        "credits": "Dominique Poulalhon",
-                        "title": "Annale d'examen EA4 2022",
-                        "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
-                        "date": "2026-05-06",
-                        "slug": "annale-ea4-2022"
-                    },
-                    {
-                        "name": "ea4_exam2023",
-                        "path": "/resources/ea4/ea4_exam2023.pdf",
-                        "credits": "Dominique Poulalhon",
-                        "title": "Annale d'examen EA4 2023",
-                        "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
-                        "date": "2026-05-06",
-                        "slug": "annale-ea4-2023"
+                        "name": "symplexis-canva",
+                        "path": "https://canva.link/fvbajry3hpz5j7r",
+                        "type": "link",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Slides projet Symplexis",
+                        "comment": "Présentation Canva du projet Symplexis.",
+                        "date": "2026-04-28",
+                        "slug": "slides-projet-symplexis"
                     }
                 ]
             },
             {
-                "name": "Langage C",
-                "slug": "langage-c4",
+                "name": "Licence 3",
+                "slug": "licence-3-info",
                 "children": [
                     {
-                        "name": "lc4-partiel-annale-2024",
-                        "path": "/resources/lc4/partiel_2024.pdf",
-                        "credits": "Lélia Blin, partagé par Anthony Fernandez.",
-                        "title": "Annale de partiel 2024",
-                        "comment": "Annale de partiel du cours Langage C4 de l'Université Paris Cité.",
-                        "date": "2026-05-07",
-                        "slug": "annale-de-partiel-langage-c4-2024"
+                        "name": "Algorithmique",
+                        "slug": "algorithmique-5",
+                        "children": []
                     },
                     {
-                        "name": "lc4-examen-annale-2024",
-                        "path": "/resources/lc4/exam_2024.pdf",
-                        "credits": "Lélia Blin, partagé par Anthony Fernandez.",
-                        "title": "Annale d'examen 2024",
-                        "comment": "Annale d'examen du cours Langage C4 de l'Université Paris Cité.",
-                        "date": "2026-05-07",
-                        "slug": "annale-d-examen-langage-c4-2024"
+                        "name": "Système d'exploitation",
+                        "slug": "systeme-d-exploitation-5",
+                        "children": []
                     },
                     {
-                        "name": "lc4-fiche-revision",
-                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/lc4/bilan/fiche_c7.pdf",
-                        "credits": "Ewen Rodrigues de Oliveira.",
-                        "title": "Fiche de révision du cours",
-                        "comment": "Fiche de révision du cours Langage C4 de l'Université Paris Cité.",
-                        "date": "2026-05-15",
-                        "slug": "fiche-de-revision-langage-c4-2024"
-                    },
-                    {
-                        "name": "soutenance.pdf",
-                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/lc4/soutenance/soutenance.pdf",
-                        "credits": "Ewen Rodrigues de Oliveira.",
-                        "title": "Notes de soutenance Dirsim",
-                        "comment": "Présentation Canva du projet Dirsim.",
-                        "date": "2026-06-02",
-                        "slug": "notes-de-soutenance-dirsim"
+                        "name": "Programmation fonctionnelle",
+                        "slug": "programmation-fonctionnelle-5",
+                        "children": []
                     }
                 ]
-            },
-            {
-                "name": "git.pdf",
-                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/cp3/git.pdf",
-                "credits": "Ewen Rodrigues de Oliveira.",
-                "title": "Introduction à Git",
-                "comment": "Il s'agit de faire une introduction à Git, un système de contrôle de version distribué largement utilisé dans le développement logiciel. Ce document récapitulatif n'est pas exhaustif mais couvre les bases pour commencer à utiliser Git efficacement, notamment dans le cadre de projets.",
-                "date": "2026-01-16",
-                "slug": "introduction-a-git"
-            },
-            {
-                "name": "pres-willys.pdf",
-                "path": "/resources/pres-willys.pdf",
-                "heavy": true,
-                "credits": "Celine Bouhalia, William Fijean, Bastien Fortrye--Campait, Ewen Rodrigues de Oliveira, Dan Sandreschi et Elsa Vervischi..",
-                "title": "Slides projet Willys",
-                "comment": "Slides de présentation du projet Willys (voir Portfolio) présenté lors de la soutenance du projet de fin d'année de la Licence 2 Mathématiques et Informatique à l'Université Paris Cité en janvier 2026.",
-                "date": "2026-01-15",
-                "slug": "slides-projet-willys"
-            },
-            {
-                "name": "symplexis-canva",
-                "path": "https://canva.link/fvbajry3hpz5j7r",
-                "type": "link",
-                "credits": "Ewen Rodrigues de Oliveira.",
-                "title": "Slides projet Symplexis",
-                "comment": "Présentation Canva du projet Symplexis.",
-                "date": "2026-04-28",
-                "slug": "slides-projet-symplexis"
             }
         ]
     },

@@ -8,19 +8,19 @@ import NotFound from "./pages/NotFound";
 import Maintenance from "./pages/Maintenance";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import MaintenanceRessources from "./pages/MaintenanceRessources";
 
 const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/*" element={<Maintenance />} />
 
-                {/*
                 <Route path="/" element={<Home />} />
                 <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/ressources" element={<Ressources />} />
-                <Route path="/mcc" element={<Simulateur />} />
-                <Route path="*" element={<NotFound />} />*/}
+                <Route path="/ressources" element={<MaintenanceRessources />} />
+                <Route path="/mcc" element={<MaintenanceRessources />} />
+                <Route path="/res-prv" element={<Ressources />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Analytics />
             <SpeedInsights />
