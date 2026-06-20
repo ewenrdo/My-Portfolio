@@ -118,6 +118,60 @@
                         "slug": "an3",
                         "children": [
                             {
+                                "name": "Feuilles de TD",
+                                "slug": "an3-td",
+                                "children": [
+                                    {
+                                        "name": "td1.pdf",
+                                        "path": "/resources/td-an3/td1.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD1 AN3 : Topologie",
+                                        "date": "2026-06-20",
+                                        "slug": "analyse-3-chapitre-1-td"
+                                    },
+                                    {
+                                        "name": "td2.pdf",
+                                        "path": "/resources/td-an3/td2.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD2 AN3 : Séries numériques",
+                                        "date": "2026-06-20",
+                                        "slug": "analyse-3-chapitre-2-td"
+                                    },
+                                    {
+                                        "name": "td3.pdf",
+                                        "path": "/resources/td-an3/td3.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD3 AN3 : Intégrales impropres",
+                                        "date": "2026-06-20",
+                                        "slug": "analyse-3-chapitre-3-td"
+                                    },
+                                    {
+                                        "name": "td4.pdf",
+                                        "path": "/resources/td-an3/td4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD4 AN3 : Espaces métriques",
+                                        "date": "2026-06-20",
+                                        "slug": "analyse-3-chapitre-4-td"
+                                    },
+                                    {
+                                        "name": "td5.pdf",
+                                        "path": "/resources/td-an3/td5.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD5 AN3 : Fonctions de plusieurs variables",
+                                        "date": "2026-06-20",
+                                        "slug": "analyse-3-chapitre-5-td"
+                                    },
+                                    {
+                                        "name": "question_cours.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/an3/chap4/question_cours.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "TD : Questions de cours",
+                                        "date": "2026-01-16",
+                                        "slug": "analyse-3-chapitre-4-td-questions-de-cours"
+                                    }
+                                ]
+                            },
+                            {
                                 "name": "chapitre1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap1/chapitre1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
@@ -142,26 +196,12 @@
                                 "slug": "analyse-3-chapitre-3-integrales-impropres"
                             },
                             {
-                                "name": "Chapitre 4 : Topologie",
-                                "slug": "chap4",
-                                "children": [
-                                    {
-                                        "name": "chapitre4.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap4/chap4.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
-                                        "title": "Chapitre 4 : Topologie des espaces métriques",
-                                        "date": "2026-01-16",
-                                        "slug": "analyse-3-chapitre-4-topologie-des-espaces-metriques"
-                                    },
-                                    {
-                                        "name": "question_cours.pdf",
-                                        "path": "https://github.com/ewenrdo/Math-Lesson-Maker/raw/exercises/an3/chap4/question_cours.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "TD : Questions de cours",
-                                        "date": "2026-01-16",
-                                        "slug": "analyse-3-chapitre-4-td-questions-de-cours"
-                                    }
-                                ]
+                                "name": "chapitre4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl2_lmath_info/an3/chap4/chap4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Le contenu du chapitre est basé sur le cours du Pr. Adrien Boyer.",
+                                "title": "Chapitre 4 : Topologie des espaces métriques",
+                                "date": "2026-01-16",
+                                "slug": "analyse-3-chapitre-4-topologie-des-espaces-metriques"
                             },
                             {
                                 "name": "chapitre5.pdf",
@@ -232,6 +272,15 @@
                                 "title": "Examen, session 1",
                                 "date": "2026-01-16",
                                 "slug": "algebre-3-examen-session-1"
+                            },
+                            {
+                                "name": "td-feuilles",
+                                "type": "link",
+                                "path": "https://drive.google.com/drive/folders/1QnyVDnIes34fOFM-RJCsdqt1rbpLMXB2",
+                                "credits": "Université Paris Cité, Anthony Fernandez",
+                                "title": "Feuilles de TD",
+                                "date": "2026-01-16",
+                                "slug": "algebre-3-feuilles-de-td"
                             }
                         ]
                     },
@@ -858,6 +907,60 @@
                         "slug": "ga5",
                         "children": [
                             {
+                                "name": "Feuilles de TD",
+                                "slug": "ga5-td",
+                                "children": [
+                                    {
+                                        "name": "td1.pdf",
+                                        "path": "/resources/td-ga5/td1.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD1 GA5 : Groupes et sous-groupes",
+                                        "date": "2026-06-20",
+                                        "slug": "groupes-et-actions-5-td-1"
+                                    },
+                                    {
+                                        "name": "td2.pdf",
+                                        "path": "/resources/td-ga5/td2.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD2 GA5 : Morphismes de groupes, groupes monogènes",
+                                        "date": "2026-06-20",
+                                        "slug": "groupes-et-actions-5-td-2"
+                                    },
+                                    {
+                                        "name": "td3.pdf",
+                                        "path": "/resources/td-ga5/td3.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD3 GA5 : Relations d'équivalence, ensembles quotient",
+                                        "date": "2026-06-20",
+                                        "slug": "groupes-et-actions-5-td-3"
+                                    },
+                                    {
+                                        "name": "td4.pdf",
+                                        "path": "/resources/td-ga5/td4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD4 GA5 : Sous-groupes distingués, quotients",
+                                        "date": "2026-06-20",
+                                        "slug": "groupes-et-actions-5-td-4"
+                                    },
+                                    {
+                                        "name": "td5.pdf",
+                                        "path": "/resources/td-ga5/td5.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD5 GA5 : Actions de groupes",
+                                        "date": "2026-06-20",
+                                        "slug": "groupes-et-actions-5-td-5"
+                                    },
+                                    {
+                                        "name": "td6.pdf",
+                                        "path": "/resources/td-ga5/td6.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD6 GA5 : Produit semi-direct et sous-groupe de Sylow",
+                                        "date": "2026-06-20",
+                                        "slug": "groupes-et-actions-5-td-6"
+                                    }
+                                ]
+                            },
+                            {
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/ga5/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
@@ -886,12 +989,107 @@
                     {
                         "name": "Calcul différentiel 5",
                         "slug": "cd5",
-                        "children": []
+                        
+                        "children": [
+                            {
+                                "name": "Feuilles de TD",
+                                "slug": "cd5-td",
+                                "children": [
+                                    {
+                                        "name": "td1.pdf",
+                                        "path": "/resources/td-cd5/td1.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD1 CD5 : Normes et topologie",
+                                        "date": "2026-06-20",
+                                        "slug": "calcul-differentiel-5-chapitre-1-td"
+                                    },
+                                    {
+                                        "name": "td2.pdf",
+                                        "path": "/resources/td-cd5/td2.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD2 CD5 : Continuité",
+                                        "date": "2026-06-20",
+                                        "slug": "calcul-differentiel-5-chapitre-2-td"
+                                    },
+                                    {
+                                        "name": "td3.pdf",
+                                        "path": "/resources/td-cd5/td3.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD3 CD5 : Différentiabilité",
+                                        "date": "2026-06-20",
+                                        "slug": "calcul-differentiel-5-chapitre-3-td"
+                                    },
+                                    {
+                                        "name": "td4.pdf",
+                                        "path": "/resources/td-cd5/td4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD4 CD5 : Différentiation d'ordre supérieur, extrema",
+                                        "date": "2026-06-20",
+                                        "slug": "calcul-differentiel-5-chapitre-4-td"
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "name": "Intégration et probabilités 5",
                         "slug": "pr5",
-                        "children": []
+                        "children": [
+                            {
+                                "name": "Feuilles de TD",
+                                "slug": "pr5-td",
+                                "children": [
+                                    {
+                                        "name": "td1.pdf",
+                                        "path": "/resources/td-pr5/td1.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD1 PR5 : Révisions",
+                                        "date": "2026-06-20",
+                                        "slug": "integration-et-probabilites-5-td-1"
+                                    },
+                                    {
+                                        "name": "td2.pdf",
+                                        "path": "/resources/td-pr5/td2.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD2 PR5 : Tribus, mesures, fonctions de répartition, variables aléatoires",
+                                        "date": "2026-06-20",
+                                        "slug": "integration-et-probabilites-5-td-2"
+                                    },
+                                    {
+                                        "name": "td3.pdf",
+                                        "path": "/resources/td-pr5/td3.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD3 PR5 : Variables aléaotires, espérance, variance, lois usuelles",
+                                        "date": "2026-06-20",
+                                        "slug": "integration-et-probabilites-5-td-3"
+                                    },
+                                    {
+                                        "name": "td4.pdf",
+                                        "path": "/resources/td-pr5/td4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD4 PR5 : Fonctions génératrices, transformée de Laplace, lois jointes",
+                                        "date": "2026-06-20",
+                                        "slug": "integration-et-probabilites-5-td-4"
+                                    },
+                                    {
+                                        "name": "td5.pdf",
+                                        "path": "/resources/td-pr5/td5.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD5 PR5 : Lois jointes, vecteurs Gaussiens",
+                                        "date": "2026-06-20",
+                                        "slug": "integration-et-probabilites-5-td-5"
+                                    },
+                                    {
+                                        "name": "td6.pdf",
+                                        "path": "/resources/td-pr5/td6.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TD6 PR5 : Convergences",
+                                        "date": "2026-06-20",
+                                        "slug": "integration-et-probabilites-5-td-6"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -1204,7 +1402,6 @@
                 "title": "Planning de l'année 2026-2027",
                 "slug": "roadmap-capes-2027"
             }
-            
         ]
     }
 ]
