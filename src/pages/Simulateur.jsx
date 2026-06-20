@@ -3,6 +3,7 @@ import '../assets/stylesheets/simulateur.scss';
 import DockNav from '../assets/components/DockNav';
 
 const MATIERES = [
+    /*
     {
         key: 'proba',
         label: 'Probabilités Discrètes',
@@ -27,55 +28,55 @@ const MATIERES = [
         desc: 'Complexité et algorithmes de tris et structures binaires.',
         icon: 'fa-project-diagram'
     },
-    // NOUVELLES MATIÈRES DÉSACTIVÉES
+    */
     {
         key: 'algo5',
         label: "Algorithmique 5",
         desc: 'Étude et algorithmique sur les graphes (parcours, chemins, etc.).',
         icon: 'fa-sitemap',
-        disabled: true
+        disabled: false
     },
     {
         key: 'se',
         label: "Système d'Exploitation",
         desc: 'Maîtriser les concepts de bases d\'Unix.',
         icon: 'fa-terminal',
-        disabled: true
+        disabled: false
     },
     {
         key: 'pf',
         label: "Prog. Fonctionnelle",
         desc: 'Bases de la programmation fonctionnelle avec OCaml.',
         icon: 'fa-code-branch',
-        disabled: true
+        disabled: false
     },
     {
         key: 'groupes',
         label: "Groupes et actions",
         desc: 'Notions de la théorie des groupes et des actions de groupe.',
         icon: 'fa-shapes',
-        disabled: true
+        disabled: false
     },
     {
         key: 'diff',
         label: "Calcul Différentiel",
         desc: 'Maîtrise du calcul différentiel en dimension finie, étude locale.',
         icon: 'fa-chart-line',
-        disabled: true
+        disabled: false
     },
     {
         key: 'integ',
         label: "Intégration et Probabilités",
         desc: 'Étude des probabilités continues et liens avec l\'intégration.',
         icon: 'fa-infinity',
-        disabled: true
+        disabled: false
     },
     {
         key: 'anglais',
         label: "Anglais",
         desc: 'Keep calm and stay positive, it won\'t be difficult :)',
         icon: 'fa-language',
-        disabled: true
+        disabled: false
     },
 ];
 
@@ -400,6 +401,12 @@ export default function Simulateur() {
                                             )}
                                         </div>
                                     )}
+                                </div>
+                            )}
+
+                            {selectedMatiere !== 'proba' && selectedMatiere !== 'analyse' && selectedMatiere !== 'c' && selectedMatiere !== 'algo' && (
+                                <div className="simulator-form">
+                                    <p className="coming-soon-text">Le simulateur pour cette matière n'est pas encore disponible. Revenez plus tard !</p>
                                 </div>
                             )}
                         </div>

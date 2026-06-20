@@ -23,7 +23,7 @@
                                 "name": "td1.pdf",
                                 "path": "/resources/an2/TD1_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
-                                "title": "TD1 : Dérivation",
+                                "title": "TD1 AN2 : Dérivation",
                                 "date": "2026-06-16",
                                 "slug": "analyse-2-td1-derivation"
                             },
@@ -31,7 +31,7 @@
                                 "name": "td1_bis.pdf",
                                 "path": "/resources/an2/TD1_bis_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
-                                "title": "TD1b : Fonctions usuelles",
+                                "title": "TD1b AN2 : Fonctions usuelles",
                                 "date": "2026-06-16",
                                 "slug": "analyse-2-td1b-fonctions-usuelles"
                             },
@@ -39,7 +39,7 @@
                                 "name": "td2.pdf",
                                 "path": "/resources/an2/TD2_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
-                                "title": "TD2 : Intégration",
+                                "title": "TD2 AN2 : Intégration",
                                 "date": "2026-06-16",
                                 "slug": "analyse-2-td2-integration"
                             },
@@ -47,7 +47,7 @@
                                 "name": "td3.pdf",
                                 "path": "/resources/an2/TD3_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
-                                "title": "TD3 : Développements limités",
+                                "title": "TD3 AN2 : Développements limités",
                                 "date": "2026-06-16",
                                 "slug": "analyse-2-td3-developpements-limites"
                             },
@@ -55,7 +55,7 @@
                                 "name": "td4.pdf",
                                 "path": "/resources/an2/TD4_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
-                                "title": "TD4 : Équations différentielles linéaires",
+                                "title": "TD4 AN2 : Équations différentielles linéaires",
                                 "date": "2026-06-16",
                                 "slug": "analyse-2-td4-equations-differentielles-lineaires"
                             }
@@ -77,7 +77,7 @@
                                 "name": "td1.pdf",
                                 "path": "/resources/al2/TD1_AL2.pdf",
                                 "credits": "Université Paris Cité.",
-                                "title": "TD1 : Polynômes",
+                                "title": "TD1 AL2 : Polynômes",
                                 "date": "2026-06-16",
                                 "slug": "algèbre-2-td1-polynomes"
                             },
@@ -85,7 +85,7 @@
                                 "name": "td2.pdf",
                                 "path": "/resources/al2/TD2_AL2.pdf",
                                 "credits": "Université Paris Cité.",
-                                "title": "TD2 : Matrices",
+                                "title": "TD2 AL2 : Matrices",
                                 "date": "2026-06-16",
                                 "slug": "algèbre-2-td2-matrices"
                             },
@@ -93,7 +93,7 @@
                                 "name": "td3.pdf",
                                 "path": "/resources/al2/TD3_AL2.pdf",
                                 "credits": "Université Paris Cité.",
-                                "title": "TD3 : Espaces vectoriels",
+                                "title": "TD3 AL2 : Espaces vectoriels",
                                 "date": "2026-06-16",
                                 "slug": "algèbre-2-td3-espaces-vectoriels"
                             },
@@ -101,7 +101,7 @@
                                 "name": "td4.pdf",
                                 "path": "/resources/al2/TD4_AL2.pdf",
                                 "credits": "Université Paris Cité.",
-                                "title": "TD4 : Applications linéaires",
+                                "title": "TD4 AL2 : Applications linéaires",
                                 "date": "2026-06-16",
                                 "slug": "algèbre-2-td4-applications-lineaires"
                             }
@@ -304,7 +304,7 @@
                                         "name": "TD1_PR4.pdf",
                                         "path": "/resources/td-pr4/TD1_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD1 PR4 associé",
+                                        "title": "TD1 PR4 : Combinatoire et espaces probabilisés",
                                         "date": "2026-01-18",
                                         "slug": "probabilites-4-chapitre-1-td"
                                     }
@@ -340,7 +340,7 @@
                                         "name": "TD2_PR4.pdf",
                                         "path": "/resources/td-pr4/TD2_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD2 PR4 associé",
+                                        "title": "TD2 PR4 : Probabilités conditionnelles",
                                         "date": "2026-02-04",
                                         "slug": "probabilites-4-chapitre-3-td"
                                     }
@@ -362,7 +362,7 @@
                                         "name": "TD3_PR4.pdf",
                                         "path": "/resources/td-pr4/TD3_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD3 PR4 associé",
+                                        "title": "TD3 PR4 : Variables aléatoires",
                                         "date": "2026-02-09",
                                         "slug": "probabilites-4-chapitre-4-td"
                                     }
@@ -384,7 +384,7 @@
                                         "name": "TD4_PR4.pdf",
                                         "path": "/resources/td-pr4/TD4_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD4 PR4 associé",
+                                        "title": "TD4 PR4 : Espérance et variance",
                                         "date": "2026-02-18",
                                         "slug": "probabilites-4-chapitre-5-td"
                                     }
@@ -420,7 +420,7 @@
                                         "name": "TD5_PR4.pdf",
                                         "path": "/resources/td-pr4/TD5_PR4.pdf",
                                         "credits": "Université Paris Cité",
-                                        "title": "TD5 PR4 associé",
+                                        "title": "TD5 PR4 : Outils probabilistes",
                                         "date": "2026-03-16",
                                         "slug": "probabilites-4-chapitre-7-td"
                                     }
