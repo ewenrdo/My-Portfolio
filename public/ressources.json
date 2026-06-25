@@ -989,7 +989,6 @@
                     {
                         "name": "Calcul différentiel 5",
                         "slug": "cd5",
-                        
                         "children": [
                             {
                                 "name": "Feuilles de TD",
@@ -1356,18 +1355,96 @@
                 "children": [
                     {
                         "name": "Algorithmique",
-                        "slug": "algorithmique-5",
+                        "slug": "algo5",
                         "children": []
                     },
                     {
                         "name": "Système d'exploitation",
-                        "slug": "systeme-d-exploitation-5",
+                        "slug": "se5",
                         "children": []
                     },
                     {
                         "name": "Programmation fonctionnelle",
-                        "slug": "programmation-fonctionnelle-5",
-                        "children": []
+                        "slug": "pf5",
+                        "children": [
+                            {
+                                "name": "Feuilles de TP",
+                                "slug": "tp-pf5",
+                                "children": []
+                            },
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 1 : Introduction à la programmation fonctionnelle, expressions et fonctions",
+                                "date": "2026-06-24",
+                                "slug": "programmation-fonctionnelle-chapitre-1-introduction"
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 2 : Listes",
+                                "date": "2026-06-24",
+                                "slug": "programmation-fonctionnelle-chapitre-2-listes"
+                            },
+                            {
+                                "name": "chap3.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap3/chap3.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 3 : Quelques types structurés",
+                                "date": "2026-06-24",
+                                "slug": "programmation-fonctionnelle-chapitre-3-quelques-types-structures"
+                            },
+                            {
+                                "name": "chap4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap4/chap4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 4 : Exceptions et gestion d'erreurs",
+                                "date": "2026-06-24",
+                                "slug": "programmation-fonctionnelle-chapitre-4-exceptions"
+                            },
+                            {
+                                "name": "chap5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap5/chap5.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 5 : Efficacité et récursions terminales",
+                                "date": "2026-06-24",
+                                "slug": "programmation-fonctionnelle-chapitre-5-efficiency-et-recursions-terminales"
+                            },
+                            {
+                                "name": "chap6.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap6/chap6.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 6 : Entrées, sorties et effets de bord",
+                                "date": "2026-06-25",
+                                "slug": "programmation-fonctionnelle-chapitre-6-entrees-sorties-et-effets-de-bord"
+                            },
+                            {
+                                "name": "chap7.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap7/chap7.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 7 : Compilation et architecture modulaire",
+                                "date": "2026-06-25",
+                                "slug": "programmation-fonctionnelle-chapitre-7-compilation-et-architecture-modulaire"
+                            },
+                            {
+                                "name": "chap8.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap8/chap8.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 8 : Traits impératifs en OCaml",
+                                "date": "2026-06-26",
+                                "slug": "programmation-fonctionnelle-chapitre-8-traits-impératifs-en-ocaml"
+                            },
+                            {
+                                "name": "chap9.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/pf5/chap9/chap9.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner.",
+                                "title": "Chapitre 9 : Introduction au lambda-calcul",
+                                "date": "2026-06-27",
+                                "slug": "programmation-fonctionnelle-chapitre-9-introduction-au-lambda-calcul"
+                            }
+                        ]
                     }
                 ]
             }
