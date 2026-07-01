@@ -1135,6 +1135,11 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "name": "Fiches d'entraînement et livrets de révision",
+                        "slug": "fiches-dentrainement-et-livrets-de-revision-semestre5",
+                        "children": []
                     }
                 ]
             },
