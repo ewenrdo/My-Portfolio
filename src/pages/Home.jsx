@@ -35,8 +35,8 @@ function Home() {
             text: "Une direction claire: transmettre, expliquer et structurer des idées complexes de façon accessible."
         },
         {
-            status: "current",
-            period: "Juillet 2025 - aujourd'hui",
+            status: "past",
+            period: "Juillet 2025 - Juillet 2026",
             title: "Notre-Dame de Paris",
             meta: "Bénévole d'accueil",
             text: "Accueil, médiation et relation au public dans un lieu emblématique, avec une vraie exigence d'écoute et de patience."
