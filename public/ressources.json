@@ -961,6 +961,20 @@
                                 ]
                             },
                             {
+                                "name": "Avancement en TD",
+                                "slug": "ga5-td-notes",
+                                "children": [
+                                    {
+                                        "name": "td1.pdf",
+                                        "path": "/resources/notes/GA5/TD1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Notes de TD 1",
+                                        "date": "2026-07-10",
+                                        "slug": "ga5-td-notes-td1"
+                                    }
+                                ]
+                            },
+                            {
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl3_lmath_info/ga5/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
@@ -1027,6 +1041,11 @@
                                         "slug": "calcul-differentiel-5-chapitre-4-td"
                                     }
                                 ]
+                            },
+                            {
+                                "name": "Avancement en TD",
+                                "slug": "cd5-td-notes",
+                                "children": []
                             },
                             {
                                 "name": "chap1.pdf",
@@ -1133,6 +1152,11 @@
                                         "slug": "integration-et-probabilites-5-td-6"
                                     }
                                 ]
+                            },
+                            {
+                                "name": "Avancement en TD",
+                                "slug": "pr5-td-notes",
+                                "children": []
                             }
                         ]
                     },
