@@ -229,7 +229,7 @@ export default function RessourcesClone() {
                 <main className="ressources-clone-shell">
                     <section className="clone-shell-copy">
                         <span className="clone-kicker">Bibliothèque numérique</span>
-                        <h1>Ressources et Archives</h1>
+                        <h1>Ressources et archives</h1>
                         <p>
                             Retrouvez mes notes de cours et toutes les ressources que j'utilise pour mes études et recherches personnelles.
                         </p>
