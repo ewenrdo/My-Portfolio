@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import '../assets/stylesheets/ressources.scss';
 import DockNav from '../assets/components/DockNav';
 import ResourceViewerModal from '../assets/components/ResourceViewerModal';
+import WarningModal from '../assets/components/WarningModal';
 
 const EMPTY_TREE = [];
 
@@ -52,6 +53,7 @@ export default function RessourcesClone() {
     const [navDirection, setNavDirection] = useState('forward');
     const [transitionKey, setTransitionKey] = useState(0);
     const [selectedItem, setSelectedItem] = useState(null);
+    const [warningItem, setWarningItem] = useState(null);
     
     // États pour la recherche et la pagination
     const [searchQuery, setSearchQuery] = useState('');
@@ -168,6 +170,36 @@ export default function RessourcesClone() {
         setNavDirection('forward');
         setTransitionKey((value) => value + 1);
         setPathStack((prev) => [...prev, folder]);
+    }
+
+    function getItemWarning(item) {
+        return typeof item?.warning === 'string' ? item.warning.trim() : '';
+    }
+
+    function openItem(item) {
+        if (isFolderNode(item)) {
+            openFolder(item);
+            return;
+        }
+
+        setSelectedItem(item);
+    }
+
+    function handleItemClick(item) {
+        if (getItemWarning(item)) {
+            setWarningItem(item);
+            return;
+        }
+
+        openItem(item);
+    }
+
+    function confirmWarningItem() {
+        if (!warningItem) return;
+
+        const itemToOpen = warningItem;
+        setWarningItem(null);
+        openItem(itemToOpen);
     }
 
     function goBackOneLevel() {
@@ -339,7 +371,6 @@ export default function RessourcesClone() {
                                 </form>
                             </div>
                         ) : (
-                            /* --- LE RESTE DE VOTRE INTERFACE S'AFFICHE SI PAS DE FORMULAIRE --- */
                             <div key={transitionKey} className={`apple-list-wrap ${navDirection === 'forward' ? 'is-forward' : 'is-back'}`}>
                                 {isLoading ? <p className="apple-feedback">Chargement...</p> : null}
                                 {loadError ? <p className="apple-feedback apple-feedback-error">{loadError}</p> : null}
@@ -401,7 +432,7 @@ export default function RessourcesClone() {
                                                             <button
                                                                 type="button"
                                                                 className="apple-row"
-                                                                onClick={() => setSelectedItem(item)}
+                                                                onClick={() => handleItemClick(item)}
                                                             >
                                                                 <span
                                                                     className={`apple-row-leading ${isPdf ? 'is-pdf' : isZip ? 'is-zip' : isLink ? 'is-link' : 'is-file'}`}
@@ -469,18 +500,8 @@ export default function RessourcesClone() {
                                                             <button
                                                                 type="button"
                                                                 className="apple-row"
-                                                                onClick={() => {
-                                                                    if (folder) {
-                                                                        openFolder(item);
-                                                                    } else {
-                                                                        setSelectedItem(item);
-                                                                    }
-                                                                }}
-                                                                onDoubleClick={() => {
-                                                                    if (folder) {
-                                                                        openFolder(item);
-                                                                    }
-                                                                }}
+                                                                onClick={() => handleItemClick(item)}
+                                                                onDoubleClick={() => handleItemClick(item)}
                                                             >
                                                                 <span
                                                                     className={`apple-row-leading ${folder ? 'is-folder' : isPdf ? 'is-pdf' : isZip ? 'is-zip' : isLink ? 'is-link' : 'is-file'}`}
@@ -547,6 +568,13 @@ export default function RessourcesClone() {
                 <div className="clone-glow clone-glow-a" aria-hidden="true" />
                 <div className="clone-glow clone-glow-b" aria-hidden="true" />
             </div>
+
+            <WarningModal
+                item={warningItem}
+                isOpen={!!warningItem}
+                onClose={() => setWarningItem(null)}
+                onConfirm={confirmWarningItem}
+            />
 
             <ResourceViewerModal 
                 item={selectedItem} 

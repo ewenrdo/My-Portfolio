@@ -112,6 +112,7 @@
             {
                 "name": "Licence 2",
                 "slug": "licence-2",
+                "warning": "Ce dossier contient mes notes de cours de l'année universitaire 2025-2026. Les démonstrations proposées sont systématiquement celles des enseignants, recopiées en cours. Il convient de les vérifier.",
                 "children": [
                     {
                         "name": "Analyse 3",
@@ -683,6 +684,7 @@
                             {
                                 "name": "pres_ue_climat.pdf",
                                 "path": "/resources/pres_ue_climat.pdf",
+                                "warning": "Toute réutilisation, même partielle, de ce document est interdite sans l'accord préalable de **tous** ses auteurs.",
                                 "heavy": true,
                                 "credits": "Ewen Rodrigues de Oliveira, Alex Theophilos, Yaïr Ifergan et William Fijean. TOUTE REPRODUCTION OU UTILISATION, MÊME PARTIELLE, EST RIGOUREUSEMENT INTERDITE SANS L'AUTORISATION EXPLICITE DE TOUS LES AUTEURS.",
                                 "title": "Slides de soutenance",
@@ -901,6 +903,7 @@
             {
                 "name": "Licence 3",
                 "slug": "licence-3",
+                "warning": "Bonne rentrée ! Le site est de retour après une longue pause. Quelques ressources sont déjà disponibles, elles sont adaptées des cours de 2ème année pour les notions qui se répètent.\n**NOUVEAU :** Retrouvez les cours de L3 Info dans un dossier dédié. Les chapitres pour la programation fonctionnelle *(introduction)* sont déjà disponibles.",
                 "children": [
                     {
                         "name": "Groupes et Actions 5",
@@ -1444,6 +1447,7 @@
                         "path": "/resources/pres-willys.pdf",
                         "heavy": true,
                         "credits": "Celine Bouhalia, William Fijean, Bastien Fortrye--Campait, Ewen Rodrigues de Oliveira, Dan Sandreschi et Elsa Vervischi..",
+                        "warning": "Toute réutilisation, même partielle, de ce document est interdite sans l'accord préalable de **tous** ses auteurs.",
                         "title": "Slides projet Willys",
                         "comment": "Slides de présentation du projet Willys (voir Portfolio) présenté lors de la soutenance du projet de fin d'année de la Licence 2 Mathématiques et Informatique à l'Université Paris Cité en janvier 2026.",
                         "date": "2026-01-15",
@@ -1453,6 +1457,7 @@
                         "name": "symplexis-canva",
                         "path": "https://canva.link/fvbajry3hpz5j7r",
                         "type": "link",
+                        "warning": "Toute réutilisation, même partielle, de ce document est interdite sans l'accord préalable de **tous** ses auteurs.",
                         "credits": "Ewen Rodrigues de Oliveira.",
                         "title": "Slides projet Symplexis",
                         "comment": "Présentation Canva du projet Symplexis.",
