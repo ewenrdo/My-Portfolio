@@ -1,0 +1,612 @@
+.november-page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.25) 24%, transparent 58%),
+        radial-gradient(circle at 82% 16%, rgba(116, 189, 255, 0.34) 0%, rgba(116, 189, 255, 0.08) 26%, transparent 62%),
+        radial-gradient(circle at 50% 86%, rgba(255, 175, 92, 0.12) 0%, rgba(255, 175, 92, 0.04) 24%, transparent 60%),
+        linear-gradient(180deg, #f9fbff 0%, #eef5ff 46%, #f6f8fc 100%);
+    color: #111;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Rubik', sans-serif;
+}
+
+.november-page::before,
+.november-page::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(78px);
+    opacity: 0.9;
+    transform: translateZ(0);
+}
+
+.november-page::before {
+    top: -7rem;
+    right: -6rem;
+    width: min(34vw, 30rem);
+    height: min(34vw, 30rem);
+    background: radial-gradient(circle, rgba(116, 189, 255, 0.34) 0%, rgba(116, 189, 255, 0.12) 34%, transparent 72%);
+}
+
+.november-page::after {
+    left: -7rem;
+    bottom: 8rem;
+    width: min(30vw, 26rem);
+    height: min(30vw, 26rem);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(116, 189, 255, 0.12) 34%, transparent 72%);
+}
+
+.november-shell {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.november-stage {
+    position: relative;
+    width: min(100%, 48rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.november-heart-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.november-invitation-card {
+    position: relative;
+    width: min(92vw, 48rem);
+    max-width: 100%;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.58) 0%, rgba(232, 244, 255, 0.28) 50%, rgba(214, 232, 255, 0.22) 100%),
+        linear-gradient(135deg, rgba(124, 198, 255, 0.08), rgba(255, 159, 90, 0.08), rgba(222, 109, 115, 0.06));
+    backdrop-filter: blur(24px) saturate(1.3);
+    -webkit-backdrop-filter: blur(24px) saturate(1.3);
+    box-shadow:
+        0 24px 60px rgba(70, 108, 168, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.68),
+        inset 0 -1px 0 rgba(116, 189, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1.4rem;
+}
+
+.november-invitation-card.is-vibrating {
+    animation: novemberShake 320ms ease-in-out;
+}
+
+.november-backdrop-number {
+    position: absolute;
+    inset: auto auto 38% 50%;
+    transform: translate(-50%, 50%);
+    line-height: 1;
+    letter-spacing: -0.08em;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    user-select: none;
+    font-size: clamp(12rem, 40vw, 20rem);
+    color: rgba(116, 189, 255, 0.08);
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.58),
+        0 18px 40px rgba(89, 137, 196, 0.12);
+    filter: blur(0.2px);
+    pointer-events: none;
+}
+
+.november-invitation-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.08) 18%, transparent 34%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.1) 28%, transparent 54%);
+    mix-blend-mode: screen;
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+.november-foreground-number {
+    display: none;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.55),
+        0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.november-cta-section {
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.november-invitation-topline,
+.november-invitation-heading,
+.november-card-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.november-invitation-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.november-kicker,
+.november-date-pill,
+.november-itinerary-time {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.73rem;
+}
+
+.november-itinerary-content-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.november-kicker {
+    padding: 0.4rem 0.75rem;
+    background: rgba(116, 189, 255, 0.14);
+    color: #2c6fba;
+}
+
+.november-date-pill {
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 159, 90, 0.13);
+    color: #a85b19;
+}
+
+.november-invitation-heading {
+    width: min(100%, 34rem);
+    margin-bottom: 1rem;
+}
+
+.november-invitation-eyebrow {
+    margin: 0 0 0.45rem;
+    color: rgba(17, 17, 17, 0.52);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.november-invitation-heading h1 {
+    margin: 0;
+    font-size: clamp(2.1rem, 5vw, 3rem);
+    line-height: 1.03;
+    letter-spacing: -0.05em;
+    color: #111;
+}
+
+.november-invitation-intro {
+    margin: 0.85rem 0 0;
+    max-width: 34rem;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: rgba(17, 17, 17, 0.62);
+}
+
+.november-path {
+    position: absolute;
+    left: 2.1rem;
+    top: 11rem;
+    bottom: 7.4rem;
+    width: 3rem;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.november-itinerary-scroll {
+    position: relative;
+    width: 100%;
+    max-height: clamp(24rem, 52vh, 31rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    padding: 0.15rem 0.35rem 0.15rem 0;
+    margin-top: 0.2rem;
+    mask-image: linear-gradient(180deg, transparent 0%, black 6%, black 94%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.november-itinerary-scroll::-webkit-scrollbar {
+    width: 0.42rem;
+}
+
+.november-itinerary-scroll::-webkit-scrollbar-track {
+    background: rgba(17, 17, 17, 0.03);
+    border-radius: 999px;
+}
+
+.november-itinerary-scroll::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(116, 189, 255, 0.72), rgba(255, 159, 90, 0.72));
+}
+
+.november-itinerary {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 1rem;
+    margin-left: 0.4rem;
+    margin-top: 0.5rem;
+    padding-right: 0.25rem;
+}
+
+.november-itinerary-item {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+    scroll-snap-align: start;
+    opacity: 0.42;
+    transform: translateY(18px) scale(0.985);
+    filter: saturate(0.92);
+    transition: opacity 320ms ease, transform 420ms cubic-bezier(0.16, 1, 0.3, 1), filter 320ms ease;
+}
+
+.november-itinerary-item.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: saturate(1);
+}
+
+.november-itinerary-item.is-terminal {
+    padding-bottom: 0.5rem;
+}
+
+.november-itinerary-marker {
+    position: relative;
+    display: flex;
+    min-height: 6.4rem;
+}
+
+.november-itinerary-dot {
+    position: absolute;
+    top: 0.35rem;
+    left: 50%;
+    width: 1.3rem;
+    height: 1.3rem;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: var(--moment-accent);
+    box-shadow: 0 0 0 0.42rem var(--moment-glow), 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.november-itinerary-connector {
+    position: absolute;
+    left: 50%;
+    top: 2.25rem;
+    bottom: -0.7rem;
+    width: 2px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, var(--moment-accent), rgba(255, 255, 255, 0.1));
+    opacity: 0.72;
+    transform: translateX(-50%);
+}
+
+.november-itinerary-item.is-terminal .november-itinerary-connector {
+    bottom: -1.3rem;
+    background: linear-gradient(180deg, var(--moment-accent) 0%, rgba(222, 109, 115, 0.55) 56%, rgba(222, 109, 115, 0.0) 100%);
+    opacity: 0.9;
+}
+
+.november-itinerary-content {
+    padding: 1rem 1.1rem 1rem 1.15rem;
+    border-radius: 1.4rem;
+    background: rgba(255, 255, 255, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    box-shadow:
+        0 14px 30px rgba(68, 98, 142, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.november-itinerary-content h2 {
+    margin: 0.5rem 0 0.35rem;
+    font-size: 1.15rem;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #111;
+}
+
+.november-itinerary-content p {
+    margin: 0;
+    color: rgba(17, 17, 17, 0.63);
+    line-height: 1.6;
+    font-size: 0.96rem;
+}
+
+.november-itinerary-location {
+    margin-top: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(17, 17, 17, 0.5);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.november-itinerary-location i {
+    color: #707070;
+    font-size: 0.85rem;
+}
+
+.november-itinerary-time {
+    padding: 0.38rem 0.68rem;
+    background: rgba(17, 17, 17, 0.05);
+    color: rgba(17, 17, 17, 0.66);
+}
+
+.november-card-footer {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.95rem;
+    text-align: center;
+}
+
+.november-card-footer p {
+    margin: 0;
+    max-width: 34rem;
+    color: rgba(17, 17, 17, 0.58);
+    line-height: 1.6;
+    font-size: 0.94rem;
+}
+
+.november-no-thanks-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.15rem;
+    min-height: 2.2rem;
+}
+
+.november-no-thanks {
+    position: relative;
+    z-index: 2;
+    transform: translateY(0);
+    padding: 0.38rem 0.65rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.58);
+    color: rgba(17, 17, 17, 0.62);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow:
+        0 8px 20px rgba(70, 108, 168, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: left 180ms ease, top 180ms ease, transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.november-no-thanks:hover,
+.november-no-thanks:focus-visible {
+    background: rgba(255, 255, 255, 0.8);
+    color: rgba(17, 17, 17, 0.82);
+    transform: translateY(-1px) scale(1.03);
+    outline: none;
+}
+
+.november-no-thanks.is-teleporting {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.november-love-button {
+    min-width: 14rem;
+    min-height: 3.4rem;
+    padding: 1rem 1.65rem;
+    font-size: 1.05rem;
+    position: relative;
+    z-index: 3;
+}
+
+.november-love-button.is-vibrating {
+    animation: novemberButtonShake 320ms ease-in-out;
+}
+
+.november-particle {
+    position: absolute;
+    color: rgba(227, 30, 45, 0.96);
+    font-size: 1rem;
+    line-height: 1;
+    opacity: 0;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.88),
+        0 0 18px rgba(227, 30, 45, 0.22);
+    transform: translate(-50%, 0) scale(0.4);
+    animation: heartFloat var(--heart-duration) ease-out var(--heart-delay) forwards;
+    filter: drop-shadow(0 8px 16px rgba(227, 30, 45, 0.16));
+}
+
+.november-heart {
+    color: rgba(227, 30, 45, 0.96);
+}
+
+.november-flame {
+    color: rgba(255, 132, 30, 0.98);
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 132, 30, 0.3);
+    filter: drop-shadow(0 8px 16px rgba(255, 132, 30, 0.18));
+}
+
+@keyframes heartFloat {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0) scale(0.4) rotate(0deg);
+    }
+
+    12% {
+        opacity: var(--heart-opacity);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--heart-drift)), calc(-1 * var(--heart-rise))) scale(1.35) rotate(var(--heart-rotate));
+    }
+}
+
+.november-flame {
+    animation-name: flameFloat;
+}
+
+@keyframes flameFloat {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0) scale(0.35) rotate(0deg);
+    }
+
+    12% {
+        opacity: var(--heart-opacity);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--heart-drift)), calc(-1 * var(--heart-rise))) scale(1.2) rotate(var(--heart-rotate));
+    }
+}
+
+@keyframes novemberShake {
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+    20% {
+        transform: translateX(-2px) translateY(1px);
+    }
+
+    40% {
+        transform: translateX(3px) translateY(-1px);
+    }
+
+    60% {
+        transform: translateX(-3px) translateY(1px);
+    }
+
+    80% {
+        transform: translateX(2px) translateY(0);
+    }
+}
+
+@keyframes novemberButtonShake {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateX(-2px) rotate(-0.4deg);
+    }
+
+    40% {
+        transform: translateX(3px) rotate(0.5deg);
+    }
+
+    60% {
+        transform: translateX(-3px) rotate(-0.5deg);
+    }
+
+    80% {
+        transform: translateX(2px) rotate(0.35deg);
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 480px) {
+    .november-shell {
+        padding: 1rem;
+    }
+
+    .november-invitation-card {
+        width: min(94vw, 32rem);
+        border-radius: 1.8rem;
+        padding: 1rem;
+    }
+
+    .november-itinerary-scroll {
+        max-height: clamp(20rem, 44vh, 26rem);
+        padding-right: 0.25rem;
+    }
+
+    .november-invitation-card::before {
+        inset: 0.7rem;
+        border-radius: calc(1.8rem - 0.7rem);
+    }
+
+    .november-path {
+        left: 1.35rem;
+        top: 10.8rem;
+        bottom: 7.2rem;
+    }
+
+    .november-itinerary-item {
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+        gap: 0.75rem;
+    }
+
+    .november-itinerary-marker {
+        width: 2.5rem;
+    }
+
+    .november-itinerary-content {
+        padding: 0.95rem 0.95rem 0.95rem 1rem;
+    }
+
+    .november-love-button {
+        min-width: 12rem;
+        width: min(88vw, 20rem);
+    }
+
+    .november-no-thanks {
+        font-size: 0.72rem;
+        padding: 0.34rem 0.6rem;
+    }
+
+    .november-no-thanks-row {
+        min-height: 2rem;
+    }
+}
