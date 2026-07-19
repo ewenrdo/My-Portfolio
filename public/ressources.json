@@ -1000,6 +1000,27 @@
                                 "title": "Chapitre 3 : Exemples de groupes",
                                 "date": "2026-06-02",
                                 "slug": "ga5-chapitre-3-exemples-de-groupes"
+                            },
+                            {
+                                "name": "chap4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 4 : Actions de groupes",
+                                "date": "2026-07-19",
+                                "slug": "ga5-chapitre-4-actions-de-groupes"
+                            },
+                            {
+                                "name": "chap5.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 5 : Produit semi-direct de groupes",
+                                "date": "2026-07-19",
+                                "slug": "ga5-chapitre-5-produit-semi-direct-de-groupes"
+                            },
+                            {
+                                "name": "chap6.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 6 : Théorème de Sylox",
+                                "date": "2026-07-19",
+                                "slug": "ga5-chapitre-6-theoreme-de-sylow"
                             }
                         ]
                     },
