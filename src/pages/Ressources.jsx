@@ -141,7 +141,13 @@ export default function RessourcesClone() {
             name: "mcc",
             type: "link"
         };
-        return [simulatorItem, ...currentFolderChildren];
+        const vacationCountdownItem = {
+            isVacationCountdown: true,
+            title: "Décompte avant les vacances",
+            name: "holidays",
+            type: "link"
+        };
+        return [simulatorItem, vacationCountdownItem, ...currentFolderChildren];
     }, [currentFolderChildren, pathStack]);
 
     const breadcrumbs = useMemo(() => {
@@ -475,6 +481,22 @@ export default function RessourcesClone() {
                                                                     </span>
                                                                 </a>
                                                             </li >
+                                                        );
+                                                    }
+
+                                                    if (item.isVacationCountdown) {
+                                                        return (
+                                                            <li key="holidays-countdown-link">
+                                                                <a href="/holidays" className="apple-row" style={{ textDecoration: 'none' }}>
+                                                                    <span className="apple-row-leading" aria-hidden="true" style={{ background: 'linear-gradient(135deg, #34c759, #1f9d4a)', color: '#fff' }}>
+                                                                        <i className="fas fa-umbrella-beach" />
+                                                                    </span>
+                                                                    <span className="apple-row-copy">
+                                                                        <span className="apple-row-title" style={{ fontWeight: '600' }}>Décompte avant les vacances</span>
+                                                                        <span className="apple-row-meta">Compte à rebours animé</span>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
                                                         );
                                                     }
 
