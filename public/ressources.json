@@ -1216,17 +1216,9 @@
                                         "name": "chap2.pdf",
                                         "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap2/chap2.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 2 : Généralités sur les nombres entiers",
+                                        "title": "Chapitre 2 : Arithmétique des entiers et équations diophantiennes linéaires",
                                         "date": "2026-04-09",
-                                        "slug": "arithmetique-chapitre-2-generality-sur-les-nombres-entiers"
-                                    },
-                                    {
-                                        "name": "chap3.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap3/chap3.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 3 : Résolution d'équations diophantiennes",
-                                        "date": "2026-03-19",
-                                        "slug": "arithmetique-chapitre-3-resolution-d-equations-diophantiennes"
+                                        "slug": "arithmetique-chapitre-2-arithmetic-des-entiers-et-equations-diophantiennes-linéaires"
                                     }
                                 ]
                             },
