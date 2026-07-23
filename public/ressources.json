@@ -1264,11 +1264,19 @@
                                 "children": [
                                     {
                                         "name": "chap1.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/geometry/chap1.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/geometry/chap1/chap1.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
                                         "title": "Chapitre 1 : Géométrie collège (synthèse)",
                                         "date": "2026-06-22",
                                         "slug": "geometrie-capes-chapitre-1-geometrie-college-synthese"
+                                    },
+                                    {
+                                        "name": "chap2.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/geometry/chap2/chap2.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Chapitre 2 : Espaces et applications affines",
+                                        "date": "2026-07-23",
+                                        "slug": "geometrie-capes-chapitre-2-espaces-et-applications-affines"
                                     }
                                 ]
                             },
