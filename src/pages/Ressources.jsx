@@ -493,7 +493,7 @@ export default function RessourcesClone() {
                                                                     </span>
                                                                     <span className="apple-row-copy">
                                                                         <span className="apple-row-title" style={{ fontWeight: '600' }}>Décompte avant les vacances</span>
-                                                                        <span className="apple-row-meta">Compte à rebours animé</span>
+                                                                        <span className="apple-row-meta">Compte à rebours</span>
                                                                     </span>
                                                                 </a>
                                                             </li>
