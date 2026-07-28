@@ -1193,171 +1193,134 @@
                 ]
             },
             {
-                "name": "CAPES",
-                "slug": "capes",
+                "name": "Suppléments de cours",
+                "slug": "supplements-capes",
                 "children": [
                     {
-                        "name": "Suppléments de cours",
-                        "slug": "supplements-capes",
+                        "name": "Arithmétique",
+                        "slug": "arithmetique",
                         "children": [
                             {
-                                "name": "Arithmétique",
-                                "slug": "arithmetique",
-                                "children": [
-                                    {
-                                        "name": "chap1.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap1/chap1.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 1 : Construction de N, Z et Q",
-                                        "date": "2026-04-09",
-                                        "slug": "arithmetique-chapitre-1-construction-de-n-et-z"
-                                    },
-                                    {
-                                        "name": "chap2.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap2/chap2.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 2 : Arithmétique des entiers et équations diophantiennes linéaires",
-                                        "date": "2026-04-09",
-                                        "slug": "arithmetique-chapitre-2-arithmetic-des-entiers-et-equations-diophantiennes-linéaires"
-                                    }
-                                ]
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 1 : Construction de N, Z et Q",
+                                "date": "2026-04-09",
+                                "slug": "arithmetique-chapitre-1-construction-de-n-et-z"
                             },
                             {
-                                "name": "Séries statistiques",
-                                "slug": "series-statistiques",
-                                "children": [
-                                    {
-                                        "name": "Chapitre 1 : Séries statistiques d'une variable",
-                                        "slug": "stats-capes-chapitre-1-series-statistiques-dune-variable",
-                                        "children": [
-                                            {
-                                                "name": "chap1.pdf",
-                                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/statistiques/chap1/chap1.pdf",
-                                                "credits": "Ewen Rodrigues de Oliveira.",
-                                                "title": "Chapitre 1 : Séries statistiques d'une variable",
-                                                "date": "2026-05-25",
-                                                "slug": "series-statistiques-chapitre-1-sries-statistiques-dune-variable"
-                                            },
-                                            {
-                                                "name": "sujet1.pdf",
-                                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/statistiques/chap1/sujet1/sujet1.pdf",
-                                                "credits": "Ewen Rodrigues de Oliveira.",
-                                                "title": "Sujet d'entraînement n°1",
-                                                "date": "2026-06-04",
-                                                "slug": "series-statistiques-chapitre-1-sujet-dentrainement-1"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "name": "chap2.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/statistiques/chap2/chap2.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 2 : Séries statistiques d'une variable",
-                                        "date": "2026-05-25",
-                                        "slug": "series-statistiques-chapitre-2-sries-statistiques-dune-variable"
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "Géométrie",
-                                "slug": "geometrie-capes",
-                                "children": [
-                                    {
-                                        "name": "chap1.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/geometry/chap1/chap1.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 1 : Géométrie collège (synthèse)",
-                                        "date": "2026-06-22",
-                                        "slug": "geometrie-capes-chapitre-1-geometrie-college-synthese"
-                                    },
-                                    {
-                                        "name": "chap2.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/geometry/chap2/chap2.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 2 : Espaces et applications affines",
-                                        "date": "2026-07-23",
-                                        "slug": "geometrie-capes-chapitre-2-espaces-et-applications-affines"
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "Analyse",
-                                "slug": "analyse-capes",
-                                "children": [
-                                    {
-                                        "name": "chap1.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap1/chap1.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 1 : Convexité et inégalité de Jensen",
-                                        "date": "2026-05-25",
-                                        "slug": "analyse-capes-chapitre-1-convexite-et-inegalite-de-jensen"
-                                    },
-                                    {
-                                        "name": "chap2.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap2/chap2.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 2 : Équations différentielles",
-                                        "date": "2026-05-25",
-                                        "slug": "analyse-capes-chapitre-2-equations-differentielles"
-                                    },
-                                    {
-                                        "name": "chap3.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap3/chap3.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 3 : Suites arithmético-géométriques",
-                                        "date": "2026-06-03",
-                                        "slug": "analyse-capes-chapitre-3-suites-arithmetico-geometriques"
-                                    },
-                                    {
-                                        "name": "chap4.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap4/chap4.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 4 : Interpolation de Lagrange",
-                                        "date": "2026-06-16",
-                                        "slug": "analyse-capes-chapitre-4-interpolation-de-lagrange"
-                                    },
-                                    {
-                                        "name": "chap5.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap5/chap5.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
-                                        "title": "Chapitre 5 : Intégration",
-                                        "date": "2026-06-16",
-                                        "slug": "analyse-capes-chapitre-5-integration"
-                                    }
-                                ]
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/arithmetic/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Arithmétique des entiers et équations diophantiennes linéaires",
+                                "date": "2026-04-09",
+                                "slug": "arithmetique-chapitre-2-arithmetic-des-entiers-et-equations-diophantiennes-linéaires"
                             }
                         ]
                     },
                     {
-                        "name": "Roadmap CAPES.pdf",
-                        "path": "/resources/Roadmap CAPES.pdf",
-                        "credits": "Ewen Rodrigues de Oliveira.",
-                        "title": "Planning de l'année 2026-2027",
-                        "slug": "roadmap-capes-2027"
+                        "name": "Séries statistiques",
+                        "slug": "series-statistiques",
+                        "children": [
+                            {
+                                "name": "Chapitre 1 : Séries statistiques d'une variable",
+                                "slug": "stats-capes-chapitre-1-series-statistiques-dune-variable",
+                                "children": [
+                                    {
+                                        "name": "chap1.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/statistiques/chap1/chap1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Chapitre 1 : Séries statistiques d'une variable",
+                                        "date": "2026-05-25",
+                                        "slug": "series-statistiques-chapitre-1-sries-statistiques-dune-variable"
+                                    },
+                                    {
+                                        "name": "sujet1.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/statistiques/chap1/sujet1/sujet1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Sujet d'entraînement n°1",
+                                        "date": "2026-06-04",
+                                        "slug": "series-statistiques-chapitre-1-sujet-dentrainement-1"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/statistiques/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Séries statistiques d'une variable",
+                                "date": "2026-05-25",
+                                "slug": "series-statistiques-chapitre-2-sries-statistiques-dune-variable"
+                            }
+                        ]
                     },
                     {
-                        "name": "Programme du Capes",
-                        "path": "/resources/programme-capes1.pdf",
-                        "credits": "Ministère de l'Éducation Nationale",
-                        "title": "Programme du CAPES - épreuve n°1",
-                        "comment": "Document officiel listant les connaissances et compétences à maîtriser pour l'examen du CAPES de Mathématiques en 2025 (niveau Licence 3).",
-                        "slug": "programme-du-capes-epreuve-n1"
+                        "name": "Géométrie",
+                        "slug": "geometrie-capes",
+                        "children": [
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/geometry/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 1 : Géométrie collège (synthèse)",
+                                "date": "2026-06-22",
+                                "slug": "geometrie-capes-chapitre-1-geometrie-college-synthese"
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/geometry/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Espaces et applications affines",
+                                "date": "2026-07-23",
+                                "slug": "geometrie-capes-chapitre-2-espaces-et-applications-affines"
+                            }
+                        ]
                     },
                     {
-                        "name": "Sujet 0",
-                        "path": "/resources/sujet_0_capes1.pdf",
-                        "credits": "Ministère de l'Éducation Nationale",
-                        "title": "Sujet 0 - épreuve n°1",
-                        "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3.",
-                        "slug": "sujet-0-capes-epreuve-n1"
-                    },
-                    {
-                        "name": "Annales mars 2026",
-                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/capes.pdf",
-                        "credits": "Ministère de l'Éducation Nationale",
-                        "title": "Sujet mars 2026 - épreuve n°1",
-                        "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3.",
-                        "slug": "sujet-mars-2026-capes-epreuve-n1"
+                        "name": "Analyse",
+                        "slug": "analyse-capes",
+                        "children": [
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 1 : Convexité et inégalité de Jensen",
+                                "date": "2026-05-25",
+                                "slug": "analyse-capes-chapitre-1-convexite-et-inegalite-de-jensen"
+                            },
+                            {
+                                "name": "chap2.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap2/chap2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 2 : Équations différentielles",
+                                "date": "2026-05-25",
+                                "slug": "analyse-capes-chapitre-2-equations-differentielles"
+                            },
+                            {
+                                "name": "chap3.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap3/chap3.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 3 : Suites arithmético-géométriques",
+                                "date": "2026-06-03",
+                                "slug": "analyse-capes-chapitre-3-suites-arithmetico-geometriques"
+                            },
+                            {
+                                "name": "chap4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap4/chap4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 4 : Interpolation de Lagrange",
+                                "date": "2026-06-16",
+                                "slug": "analyse-capes-chapitre-4-interpolation-de-lagrange"
+                            },
+                            {
+                                "name": "chap5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/capes/analyse/chap5/chap5.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 5 : Intégration",
+                                "date": "2026-06-16",
+                                "slug": "analyse-capes-chapitre-5-integration"
+                            }
+                        ]
                     }
                 ]
             }
@@ -1584,6 +1547,49 @@
                                 "slug": "programmation-fonctionnelle-chapitre-9-introduction-au-lambda-calcul"
                             }
                         ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Archives",
+        "slug": "archives",
+        "children": [
+            {
+                "name": "CAPES",
+                "slug": "capes",
+                "children": [
+                    {
+                        "name": "Roadmap CAPES.pdf",
+                        "path": "/resources/Roadmap CAPES.pdf",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Planning de l'année 2026-2027",
+                        "slug": "roadmap-capes-2027"
+                    },
+                    {
+                        "name": "Programme du Capes",
+                        "path": "/resources/programme-capes1.pdf",
+                        "credits": "Ministère de l'Éducation Nationale",
+                        "title": "Programme du CAPES - épreuve n°1",
+                        "comment": "Document officiel listant les connaissances et compétences à maîtriser pour l'examen du CAPES de Mathématiques en 2025 (niveau Licence 3).",
+                        "slug": "programme-du-capes-epreuve-n1"
+                    },
+                    {
+                        "name": "Sujet 0",
+                        "path": "/resources/sujet_0_capes1.pdf",
+                        "credits": "Ministère de l'Éducation Nationale",
+                        "title": "Sujet 0 - épreuve n°1",
+                        "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3.",
+                        "slug": "sujet-0-capes-epreuve-n1"
+                    },
+                    {
+                        "name": "Annales mars 2026",
+                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/capes/capes.pdf",
+                        "credits": "Ministère de l'Éducation Nationale",
+                        "title": "Sujet mars 2026 - épreuve n°1",
+                        "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3.",
+                        "slug": "sujet-mars-2026-capes-epreuve-n1"
                     }
                 ]
             }

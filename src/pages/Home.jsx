@@ -13,9 +13,9 @@ function Home() {
             text: "J’avance entre logique, rigueur et création. Mon quotidien mélange cours, autonomie et projets concrets."
         },
         {
-            label: "Cap",
-            title: "Préparation du CAPES de Mathématiques",
-            text: "Je garde un fil conducteur clair: transmettre, structurer et donner du sens à ce que j’apprends."
+            label: "En paralèle",
+            title: "Sport & rédaction de cours",
+            text: "J'essaie de garder un équilibre entre sport, écriture et apprentissage, pour ne pas me laisser enfermer dans un seul domaine."
         }
     ];
 
@@ -26,13 +26,6 @@ function Home() {
             title: "Université Paris Cité",
             meta: "Double licence Maths & Informatique",
             text: "Préparation de deux licences en parallèle en mathématiques et en informatique fondamentale."
-        },
-        {
-            status: "current",
-            period: "Pour la session 2027",
-            title: "CAPES de Mathématiques",
-            meta: "Objectif d’enseignement",
-            text: "Une direction claire: transmettre, expliquer et structurer des idées complexes de façon accessible."
         },
         {
             status: "past",
@@ -115,7 +108,7 @@ function Home() {
                             <div className="col-xs-12 col-lg-7 col-xxl-8 ps-lg-5">
                                 <div className="presentation" id="home-presentation">
                                     <h2>Étudiant en Mathématiques et Informatique</h2>
-                                    <span className="description">Développeur à mes heures perdues, et étudiant le plus souvent (même en rêves).<br />Je prépare une double licence et le CAPES de Mathématiques.</span>
+                                    <span className="description">Développeur à mes heures perdues, et étudiant le plus souvent (même en rêves).<br />Je prépare une double licence de Mathématiques.</span>
 
                                     <div className="cta-section">
                                         <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>
@@ -158,7 +151,7 @@ function Home() {
                             <div className="experience-panel-band">
                                 <div className="panel-band-item">
                                     <span className="panel-band-label">En cours</span>
-                                    <strong>Double licence + CAPES</strong>
+                                    <strong>Double licence</strong>
                                 </div>
                                 <div className="panel-band-item">
                                     <span className="panel-band-label">Expériences</span>
@@ -191,7 +184,7 @@ function Home() {
                                 <h2>Mes expériences, en lecture directe</h2>
                                 <p>
                                     Le fil rouge est simple: comprendre, structurer, agir et transmettre. Voici les étapes qui composent
-                                    ce parcours, formulées pour être lues d’un coup d’œil.
+                                    mon parcours, en quelques mots.
                                 </p>
                                 <div className="card-side-social">
                                     <Link to="https://www.linkedin.com/in/ewen-rodrigues-de-oliveira-500736267/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">

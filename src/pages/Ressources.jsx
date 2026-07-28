@@ -147,7 +147,7 @@ export default function RessourcesClone() {
             name: "holidays",
             type: "link"
         };
-        return [simulatorItem, vacationCountdownItem, ...currentFolderChildren];
+        return [...currentFolderChildren, simulatorItem, vacationCountdownItem];
     }, [currentFolderChildren, pathStack]);
 
     const breadcrumbs = useMemo(() => {

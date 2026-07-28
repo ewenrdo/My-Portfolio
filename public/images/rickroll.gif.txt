@@ -1,2 +1,0 @@
-// Placez ici le GIF rickroll.gif dans public/images/rickroll.gif pour l'affichage dans le simulateur.
-// Ceci est un placeholder, le fichier doit être ajouté manuellement si absent.

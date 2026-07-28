@@ -1,9 +1,28 @@
 [
     {
+        "id": "symplexis",
+        "title": "Symplexis",
+        "date": "Janvier 2026 - Mai 2026",
+        "intro": "Jeu de simulation de guerre hybrides, d'acquisition de compétences et de développement territorial. Projet réalisé en collaboration avec Stefan ZVONKOVSKI, Laurent CAI, Yaïr IFERGAN, Farzad RASHIDI dans le cadre de ma deuxième année de licence sous la direction de Vlady Ravelomanana.",
+        "tags": [
+            "Java",
+            "Maven",
+            "JUnit",
+            "Mockito"
+        ],
+        "images": [
+            "/images/sliders/symplexis1.png",
+            "/images/sliders/symplexis2.png",
+            "/images/sliders/symplexis3.png",
+            "/images/sliders/symplexis4.png",
+            "/images/sliders/symplexis5.png"
+        ]
+    },
+    {
         "id": "willys",
         "title": "Willys",
         "date": "Octobre 2025 - Janvier 2026",
-        "intro": "Willys est un jeu de stratégie en temps réel inspiré de Worms. Il s'agit d'un projet universitaire réalisé en Java avec le framework Maven. J'ai participé au développement du jeu, en me concentrant sur l'architecture logicielle, la gestion des affichages et des écrans ainsi quelques autres fonctionnalités. Projet réalisé en collaboration avec Céline BOULAHIA, William FIJEAN, Bastien FORTRYE--CAMPAIT, Dan SANDRESCHI et Elsa VERVISCH dans le cadre de ma deuxième année de licence.",
+        "intro": "Willys est un jeu de combat en temps réel inspiré de Worms. Il s'agit d'un projet universitaire réalisé en Java avec le framework Maven. J'ai participé au développement du jeu, en me concentrant sur l'architecture logicielle, la gestion des affichages et des écrans ainsi quelques autres fonctionnalités. Projet réalisé en collaboration avec Céline BOULAHIA, William FIJEAN, Bastien FORTRYE--CAMPAIT, Dan SANDRESCHI et Elsa VERVISCH dans le cadre de ma deuxième année de licence.",
         "tags": [
             "Java",
             "Maven",
@@ -96,12 +115,6 @@
         "title": "Unissons les Coeurs",
         "date": "Octobre 2024",
         "intro": "Site pour une association d'aide aux adolescents hospitalisés. Présentation du travail de l'association et des bénévoles.",
-        "links": [
-            {
-                "href": "https://unissonslescoeurs.fr",
-                "label": "unissonslescoeurs.fr"
-            }
-        ],
         "tags": [
             "React",
             "NodeJS"
@@ -197,12 +210,6 @@
         "title": "Eclipsia",
         "date": "Février 2024",
         "intro": "Travail sur un serveur de jeu Minecraft : boutique, vote et statistiques pour les joueurs.",
-        "links": [
-            {
-                "href": "https://eclipsia.fr",
-                "label": "eclipsia.fr"
-            }
-        ],
         "tags": [
             "React",
             "NodeJS"
