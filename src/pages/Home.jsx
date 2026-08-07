@@ -28,8 +28,8 @@ function Home() {
             text: "Préparation de deux licences en parallèle en mathématiques et en informatique fondamentale."
         },
         {
-            status: "past",
-            period: "Juillet 2025 - Juillet 2026",
+            status: "current",
+            period: "Juillet 2025 - Septembre 2026",
             title: "Notre-Dame de Paris",
             meta: "Bénévole d'accueil",
             text: "Accueil, médiation et relation au public dans un lieu emblématique, avec une vraie exigence d'écoute et de patience."
@@ -108,7 +108,7 @@ function Home() {
                             <div className="col-xs-12 col-lg-7 col-xxl-8 ps-lg-5">
                                 <div className="presentation" id="home-presentation">
                                     <h2>Étudiant en Mathématiques et Informatique</h2>
-                                    <span className="description">Développeur à mes heures perdues, et étudiant le plus souvent (même en rêves).<br />Je prépare une double licence de Mathématiques.</span>
+                                    <span className="description">Développeur à mes heures perdues, et étudiant le plus souvent (même en rêves).<br />Je prépare une double licence de Mathématiques et d'Informatique fondamentale.</span>
 
                                     <div className="cta-section">
                                         <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>
