@@ -13,7 +13,7 @@
                         "children": [
                             {
                                 "name": "integration.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl1_mathinfo/an2/integration/integration.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl1_lmath_info/an2/integration/integration.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
                                 "title": "Chapitre 2 : Intégration de fonctions continues par morceaux",
                                 "date": "2026-04-09",
@@ -67,7 +67,7 @@
                         "children": [
                             {
                                 "name": "unit_4.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl1_mathinfo/al2/unit_4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/lessons/dl1_lmath_info/al2/unit_4.pdf",
                                 "credits": "Université Paris Cité.",
                                 "title": "Chapitre 4 : Applications linéaires",
                                 "date": "2026-04-09",
