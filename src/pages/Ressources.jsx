@@ -70,6 +70,7 @@ export default function RessourcesClone() {
         consent: false
     });
     const [formStatus, setFormStatus] = useState({ loading: false, error: '', success: false });
+    const contributeUrl = 'https://github.com/ewenrdo/dl-mathinfo-vault#contribuer';
 
     useEffect(() => {
         const url = '/ressources.json?v=' + Date.now();
@@ -301,12 +302,14 @@ export default function RessourcesClone() {
                             <button 
                                 type="button"
                                 className={`apple-suggest-trigger ${isSuggesting ? 'is-active' : ''}`}
-                                onClick={() => setIsSuggesting(!isSuggesting)}
-                                aria-label="Proposer un document"
-                                title="Proposer un document"
+                                onClick={() => {
+                                    window.location.assign(contributeUrl);
+                                }}
+                                aria-label="Contribuer sur GitHub"
+                                title="Contribuer sur GitHub"
                             >
                                 <i className={`fas ${isSuggesting ? 'fa-times' : 'fa-plus'}`} />
-                                <span className="btn-text">{isSuggesting ? 'Fermer' : 'Contribuer'}</span>
+                                <span className="btn-text">Contribuer</span>
                             </button>
                         </div>
 
