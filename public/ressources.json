@@ -106,6 +106,15 @@
                                 "slug": "algèbre-2-td4-applications-lineaires"
                             }
                         ]
+                    },
+                    {
+                        "name": "repo_lean",
+                        "type": "link",
+                        "path": "https://github.com/ewenrdo/Lean-S2-UPC",
+                        "credits": "Ewen Rodrigues de Oliveira. Riccardo Brasca.",
+                        "title": "TP de Lean complétés",
+                        "date": "2026-08-09",
+                        "slug": "demontrer-2-tp-de-lean-completes"
                     }
                 ]
             },
@@ -164,7 +173,7 @@
                                     },
                                     {
                                         "name": "question_cours.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/an3/chap4/question_cours.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/dl2_lmath_info/an3/chap4/question_cours.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
                                         "title": "TD : Questions de cours",
                                         "date": "2026-01-16",
@@ -703,7 +712,7 @@
                                 "children": [
                                     {
                                         "name": "livret1.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/livrets/livret1.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/dl2_lmath_info/livrets/livret1.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Livret de révision de Pâques",
                                         "date": "2026-04-14",
@@ -821,7 +830,7 @@
                                 "children": [
                                     {
                                         "name": "livret2.pdf",
-                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/livrets/livret2/livret2.pdf",
+                                        "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/dl2_lmath_info/livrets/livret2/livret2.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Livret de révision des examens",
                                         "date": "2026-05-08",
@@ -840,7 +849,7 @@
                             },
                             {
                                 "name": "training_cc1.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm3/training_cc1.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/dl2_lmath_info/mm4/sm3/training_cc1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision CC1 ASF4",
                                 "date": "2026-02-27",
@@ -848,7 +857,7 @@
                             },
                             {
                                 "name": "training_sm4.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm4/training_sm4.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/dl2_lmath_info/mm4/sm4/training_sm4.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision semaine 4",
                                 "date": "2026-02-27",
@@ -856,7 +865,7 @@
                             },
                             {
                                 "name": "training_weekend.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm4/training_weekend.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/dl2_lmath_info/mm4/sm4/training_weekend.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision semaine 4 (2)",
                                 "date": "2026-02-27",
@@ -864,7 +873,7 @@
                             },
                             {
                                 "name": "sm5.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm5/sm5.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/dl2_lmath_info/mm4/sm5/sm5.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision semaine 5",
                                 "date": "2026-02-27",
@@ -872,7 +881,7 @@
                             },
                             {
                                 "name": "sm_pause1.pdf",
-                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/mm4/sm_pause1/smp.pdf",
+                                "path": "https://ewenrdo.github.io/Math-Lesson-Maker/exercises/dl2_lmath_info/mm4/sm_pause1/smp.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                 "title": "Révision semaine de pause",
                                 "date": "2026-02-27",
@@ -1415,6 +1424,15 @@
                                 "comment": "Présentation Canva du projet Dirsim.",
                                 "date": "2026-06-02",
                                 "slug": "notes-de-soutenance-dirsim"
+                            },
+                            {
+                                "name": "repo_tp_c4",
+                                "type": "link",
+                                "path": "https://github.com/ewenrdo/UPC-TP-C",
+                                "credits": "Ewen Rodrigues de Oliveira. Juliusz Chroboczek.",
+                                "title": "TP de C complétés",
+                                "date": "2026-08-09",
+                                "slug": "langage-c4-tp-completes"
                             }
                         ]
                     },
