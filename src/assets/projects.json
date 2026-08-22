@@ -1,5 +1,19 @@
 [
     {
+        "id": "jarvisPi",
+        "title": "Jarvis Pi",
+        "date": "Août 2026",
+        "intro": "PDA de bureau pour Raspberry Pi, permettant de consulter les informations essentielles de la journée, telles que la météo, l'heure, les rendez-vous et les actualités. Connecté aux APIs de Proton, Renault, France Info, Île de France Mobilités (PRIM) et Open Meteo.",
+        "tags": [
+            "NodeJS",
+            "React (Vite)",
+            "API REST"
+        ],
+        "images": [
+            "/images/sliders/jarvisPi.png"
+        ]
+    },
+    {
         "id": "symplexis",
         "title": "Symplexis",
         "date": "Janvier 2026 - Mai 2026",

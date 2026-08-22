@@ -28,8 +28,8 @@ function Home() {
             text: "Préparation de deux licences en parallèle en mathématiques et en informatique fondamentale."
         },
         {
-            status: "current",
-            period: "Juillet 2025 - Septembre 2026",
+            status: "past",
+            period: "Juillet 2025 - Août 2026",
             title: "Notre-Dame de Paris",
             meta: "Bénévole d'accueil",
             text: "Accueil, médiation et relation au public dans un lieu emblématique, avec une vraie exigence d'écoute et de patience."
