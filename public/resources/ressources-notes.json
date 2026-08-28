@@ -1,1 +1,52 @@
-[]
+[
+    {
+        "title": "Administration système",
+        "slug": "administration-système",
+        "children": [
+            {
+                "name": "scp-transfert.md",
+                "slug": "scp-transfert",
+                "path": "/resources/md-notes/sysadmin/scp-transfert.md",
+                "title": "SCP - Transférer des fichiers entre UNIX",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-08-28"
+            }
+        ]
+    },
+    {
+        "title": "Cochon d'inde",
+        "slug": "guinea-pig",
+        "children": [
+            {
+                "name": "besoins.md",
+                "slug": "besoins",
+                "path": "/resources/md-notes/guinea-pig/besoins.md",
+                "title": "Besoins du cochon d'inde",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-08-28"
+            },
+            {
+                "name": "alimentation.md",
+                "slug": "alimentation",
+                "path": "/resources/md-notes/guinea-pig/alimentation.md",
+                "title": "Alimentation du cochon d'inde",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-08-28"
+            }
+        ]
+    },
+    {
+        "title": "Divers",
+        "slug": "miscellaneous",
+        "children": [
+            {
+                "name": "fin-du-reseau-telephonique-cuivre.md",
+                "slug": "fin-du-reseau-telephonique-cuivre",
+                "path": "/resources/md-notes/miscellaneous/fin-cuivre-telephone.md",
+                "title": "Fin du réseau téléphonique cuivre",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-08-28"
+            }
+        ]
+    }
+]
