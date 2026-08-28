@@ -73,7 +73,7 @@ export default function RessourcesClone() {
     const contributeUrl = 'https://github.com/ewenrdo/dl-mathinfo-vault#contribuer';
 
     useEffect(() => {
-        const url = '/ressources.json?v=' + Date.now();
+        const url = '/resources/ressources.json?v=' + Date.now();
 
         fetch(url)
             .then((res) => {
@@ -94,7 +94,7 @@ export default function RessourcesClone() {
             .catch(() => {
                 setRootTree(EMPTY_TREE);
                 setDataSource('mock');
-                setLoadError('Le fichier ressources.json est indisponible. Affichage du mode démo.');
+                setLoadError('Le fichier ressources.json est indisponible, seuls les liens mockés seront affichés.');
             })
             .finally(() => {
                 setIsLoading(false);
@@ -384,7 +384,7 @@ export default function RessourcesClone() {
                                 {isLoading ? <p className="apple-feedback">Chargement...</p> : null}
                                 {loadError ? <p className="apple-feedback apple-feedback-error">{loadError}</p> : null}
                                 {dataSource === 'mock' && searchQuery.trim() === '' ? (
-                                    <p className="apple-feedback apple-feedback-subtle">Mode démo : données mockées.</p>
+                                    <p className="apple-feedback apple-feedback-subtle">Mode secure : liens mockés seulement.</p>
                                 ) : null}
 
                                 {/* NAVIGATION CHEVRON ET ARIANE */}

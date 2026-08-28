@@ -21,7 +21,7 @@
                             },
                             {
                                 "name": "td1.pdf",
-                                "path": "/resources/an2/TD1_AN2.pdf",
+                                "path": "/resources/university/an2/TD1_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
                                 "title": "TD1 AN2 : Dérivation",
                                 "date": "2026-06-16",
@@ -29,7 +29,7 @@
                             },
                             {
                                 "name": "td1_bis.pdf",
-                                "path": "/resources/an2/TD1_bis_AN2.pdf",
+                                "path": "/resources/university/an2/TD1_bis_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
                                 "title": "TD1b AN2 : Fonctions usuelles",
                                 "date": "2026-06-16",
@@ -37,7 +37,7 @@
                             },
                             {
                                 "name": "td2.pdf",
-                                "path": "/resources/an2/TD2_AN2.pdf",
+                                "path": "/resources/university/an2/TD2_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
                                 "title": "TD2 AN2 : Intégration",
                                 "date": "2026-06-16",
@@ -45,7 +45,7 @@
                             },
                             {
                                 "name": "td3.pdf",
-                                "path": "/resources/an2/TD3_AN2.pdf",
+                                "path": "/resources/university/an2/TD3_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
                                 "title": "TD3 AN2 : Développements limités",
                                 "date": "2026-06-16",
@@ -53,7 +53,7 @@
                             },
                             {
                                 "name": "td4.pdf",
-                                "path": "/resources/an2/TD4_AN2.pdf",
+                                "path": "/resources/university/an2/TD4_AN2.pdf",
                                 "credits": "Université Paris Cité. Amina Mecherbet.",
                                 "title": "TD4 AN2 : Équations différentielles linéaires",
                                 "date": "2026-06-16",
@@ -75,7 +75,7 @@
                             },
                             {
                                 "name": "td1.pdf",
-                                "path": "/resources/al2/TD1_AL2.pdf",
+                                "path": "/resources/university/al2/TD1_AL2.pdf",
                                 "credits": "Université Paris Cité.",
                                 "title": "TD1 AL2 : Polynômes",
                                 "date": "2026-06-16",
@@ -83,7 +83,7 @@
                             },
                             {
                                 "name": "td2.pdf",
-                                "path": "/resources/al2/TD2_AL2.pdf",
+                                "path": "/resources/university/al2/TD2_AL2.pdf",
                                 "credits": "Université Paris Cité.",
                                 "title": "TD2 AL2 : Matrices",
                                 "date": "2026-06-16",
@@ -91,7 +91,7 @@
                             },
                             {
                                 "name": "td3.pdf",
-                                "path": "/resources/al2/TD3_AL2.pdf",
+                                "path": "/resources/university/al2/TD3_AL2.pdf",
                                 "credits": "Université Paris Cité.",
                                 "title": "TD3 AL2 : Espaces vectoriels",
                                 "date": "2026-06-16",
@@ -99,7 +99,7 @@
                             },
                             {
                                 "name": "td4.pdf",
-                                "path": "/resources/al2/TD4_AL2.pdf",
+                                "path": "/resources/university/al2/TD4_AL2.pdf",
                                 "credits": "Université Paris Cité.",
                                 "title": "TD4 AL2 : Applications linéaires",
                                 "date": "2026-06-16",
@@ -133,7 +133,7 @@
                                 "children": [
                                     {
                                         "name": "td1.pdf",
-                                        "path": "/resources/td-an3/td1.pdf",
+                                        "path": "/resources/university/td-an3/td1.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD1 AN3 : Topologie",
                                         "date": "2026-06-20",
@@ -141,7 +141,7 @@
                                     },
                                     {
                                         "name": "td2.pdf",
-                                        "path": "/resources/td-an3/td2.pdf",
+                                        "path": "/resources/university/td-an3/td2.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD2 AN3 : Séries numériques",
                                         "date": "2026-06-20",
@@ -149,7 +149,7 @@
                                     },
                                     {
                                         "name": "td3.pdf",
-                                        "path": "/resources/td-an3/td3.pdf",
+                                        "path": "/resources/university/td-an3/td3.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD3 AN3 : Intégrales impropres",
                                         "date": "2026-06-20",
@@ -157,7 +157,7 @@
                                     },
                                     {
                                         "name": "td4.pdf",
-                                        "path": "/resources/td-an3/td4.pdf",
+                                        "path": "/resources/university/td-an3/td4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD4 AN3 : Espaces métriques",
                                         "date": "2026-06-20",
@@ -165,7 +165,7 @@
                                     },
                                     {
                                         "name": "td5.pdf",
-                                        "path": "/resources/td-an3/td5.pdf",
+                                        "path": "/resources/university/td-an3/td5.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD5 AN3 : Fonctions de plusieurs variables",
                                         "date": "2026-06-20",
@@ -277,7 +277,7 @@
                             },
                             {
                                 "name": "partiel_al3.pdf",
-                                "path": "/resources/partiel_al3.pdf",
+                                "path": "/resources/university/partiel_al3.pdf",
                                 "credits": "Pr. Loïc Merel, université Paris Cité.",
                                 "title": "Examen, session 1",
                                 "date": "2026-01-16",
@@ -312,7 +312,7 @@
                                     },
                                     {
                                         "name": "TD1_PR4.pdf",
-                                        "path": "/resources/td-pr4/TD1_PR4.pdf",
+                                        "path": "/resources/university/td-pr4/TD1_PR4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD1 PR4 : Combinatoire et espaces probabilisés",
                                         "date": "2026-01-18",
@@ -348,7 +348,7 @@
                                     },
                                     {
                                         "name": "TD2_PR4.pdf",
-                                        "path": "/resources/td-pr4/TD2_PR4.pdf",
+                                        "path": "/resources/university/td-pr4/TD2_PR4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD2 PR4 : Probabilités conditionnelles",
                                         "date": "2026-02-04",
@@ -370,7 +370,7 @@
                                     },
                                     {
                                         "name": "TD3_PR4.pdf",
-                                        "path": "/resources/td-pr4/TD3_PR4.pdf",
+                                        "path": "/resources/university/td-pr4/TD3_PR4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD3 PR4 : Variables aléatoires",
                                         "date": "2026-02-09",
@@ -392,7 +392,7 @@
                                     },
                                     {
                                         "name": "TD4_PR4.pdf",
-                                        "path": "/resources/td-pr4/TD4_PR4.pdf",
+                                        "path": "/resources/university/td-pr4/TD4_PR4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD4 PR4 : Espérance et variance",
                                         "date": "2026-02-18",
@@ -428,7 +428,7 @@
                                     },
                                     {
                                         "name": "TD5_PR4.pdf",
-                                        "path": "/resources/td-pr4/TD5_PR4.pdf",
+                                        "path": "/resources/university/td-pr4/TD5_PR4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD5 PR4 : Outils probabilistes",
                                         "date": "2026-03-16",
@@ -478,7 +478,7 @@
                                     },
                                     {
                                         "name": "td2-formes-lineaires.pdf",
-                                        "path": "/resources/td-asf4/td2-formes-lineaires.pdf",
+                                        "path": "/resources/university/td-asf4/td2-formes-lineaires.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD2 ASF4 associé",
                                         "date": "2026-01-21",
@@ -500,7 +500,7 @@
                                     },
                                     {
                                         "name": "td3-Series-de-fonctions.pdf",
-                                        "path": "/resources/td-asf4/td3-Series-de-fonctions.pdf",
+                                        "path": "/resources/university/td-asf4/td3-Series-de-fonctions.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD3 ASF4 associé",
                                         "date": "2026-01-28",
@@ -522,7 +522,7 @@
                                     },
                                     {
                                         "name": "td4-espaces-euclidiens.pdf",
-                                        "path": "/resources/td-asf4/td4-espaces-euclidiens.pdf",
+                                        "path": "/resources/university/td-asf4/td4-espaces-euclidiens.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD4 ASF4 associé",
                                         "date": "2026-01-28",
@@ -544,7 +544,7 @@
                                     },
                                     {
                                         "name": "td5-series-entieres.pdf",
-                                        "path": "/resources/td-asf4/td5-series-entieres.pdf",
+                                        "path": "/resources/university/td-asf4/td5-series-entieres.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD5 ASF4 associé",
                                         "date": "2026-02-18",
@@ -566,7 +566,7 @@
                                     },
                                     {
                                         "name": "td6-endo-espace-euclidien.pdf",
-                                        "path": "/resources/td-asf4/td6-endo-espace-euclidien.pdf",
+                                        "path": "/resources/university/td-asf4/td6-endo-espace-euclidien.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD6 ASF4 associé",
                                         "date": "2026-03-11",
@@ -588,7 +588,7 @@
                                     },
                                     {
                                         "name": "td7-integrale-dependant-dun-parametre.pdf",
-                                        "path": "/resources/td-asf4/td7-integrale-dependant-dun-parametre.pdf",
+                                        "path": "/resources/university/td-asf4/td7-integrale-dependant-dun-parametre.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD7 ASF4 associé",
                                         "date": "2026-03-21",
@@ -610,7 +610,7 @@
                                     },
                                     {
                                         "name": "td8-Isometrie2et3.pdf",
-                                        "path": "/resources/td-asf4/td8-Isometrie2et3.pdf",
+                                        "path": "/resources/university/td-asf4/td8-Isometrie2et3.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD8 ASF4 associé",
                                         "date": "2026-03-21",
@@ -632,7 +632,7 @@
                                     },
                                     {
                                         "name": "td9-integrales-multiples.pdf",
-                                        "path": "/resources/td-asf4/td9-integrales-multiples.pdf",
+                                        "path": "/resources/university/td-asf4/td9-integrales-multiples.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD9 ASF4 associé",
                                         "date": "2026-03-27",
@@ -654,7 +654,7 @@
                                     },
                                     {
                                         "name": "td10-formes_quadratiques.pdf",
-                                        "path": "/resources/td-asf4/td10-formes_quadratiques.pdf",
+                                        "path": "/resources/university/td-asf4/td10-formes_quadratiques.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD10 ASF4 associé",
                                         "date": "2026-04-13",
@@ -676,7 +676,7 @@
                                     },
                                     {
                                         "name": "td11-étude des points critiques.pdf",
-                                        "path": "/resources/td-asf4/td11-étude des points critiques.pdf",
+                                        "path": "/resources/university/td-asf4/td11-étude des points critiques.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD11 ASF4 associé",
                                         "date": "2026-03-18",
@@ -692,7 +692,7 @@
                         "children": [
                             {
                                 "name": "pres_ue_climat.pdf",
-                                "path": "/resources/pres_ue_climat.pdf",
+                                "path": "/resources/university/pres_ue_climat.pdf",
                                 "warning": "Toute réutilisation, même partielle, de ce document est interdite sans l'accord préalable de **tous** ses auteurs.",
                                 "heavy": true,
                                 "credits": "Ewen Rodrigues de Oliveira, Alex Theophilos, Yaïr Ifergan et William Fijean. TOUTE REPRODUCTION OU UTILISATION, MÊME PARTIELLE, EST RIGOUREUSEMENT INTERDITE SANS L'AUTORISATION EXPLICITE DE TOUS LES AUTEURS.",
@@ -720,7 +720,7 @@
                                     },
                                     {
                                         "name": "j1_a.pdf",
-                                        "path": "/resources/livret-paques-2026/j1_a.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j1_a.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J1 partie A",
                                         "date": "2026-04-20",
@@ -728,7 +728,7 @@
                                     },
                                     {
                                         "name": "j1_b-c.pdf",
-                                        "path": "/resources/livret-paques-2026/j1_b-c.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j1_b-c.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J1 parties B et C",
                                         "date": "2026-04-18",
@@ -736,7 +736,7 @@
                                     },
                                     {
                                         "name": "j2.pdf",
-                                        "path": "/resources/livret-paques-2026/j2.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j2.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J2",
                                         "date": "2026-04-20",
@@ -744,7 +744,7 @@
                                     },
                                     {
                                         "name": "j3.pdf",
-                                        "path": "/resources/livret-paques-2026/j3.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j3.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J3",
                                         "date": "2026-04-21",
@@ -752,7 +752,7 @@
                                     },
                                     {
                                         "name": "j4.pdf",
-                                        "path": "/resources/livret-paques-2026/j4.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j4.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J4",
                                         "date": "2026-04-22",
@@ -760,7 +760,7 @@
                                     },
                                     {
                                         "name": "j5.pdf",
-                                        "path": "/resources/livret-paques-2026/j5.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j5.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J5",
                                         "date": "2026-04-25",
@@ -768,7 +768,7 @@
                                     },
                                     {
                                         "name": "j6.pdf",
-                                        "path": "/resources/livret-paques-2026/j6.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j6.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J6",
                                         "date": "2026-04-27",
@@ -776,7 +776,7 @@
                                     },
                                     {
                                         "name": "j7.pdf",
-                                        "path": "/resources/livret-paques-2026/j7.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j7.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J7",
                                         "date": "2026-04-28",
@@ -784,7 +784,7 @@
                                     },
                                     {
                                         "name": "j8.pdf",
-                                        "path": "/resources/livret-paques-2026/j8.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j8.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J8",
                                         "date": "2026-04-29",
@@ -792,7 +792,7 @@
                                     },
                                     {
                                         "name": "j9.pdf",
-                                        "path": "/resources/livret-paques-2026/j9.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j9.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J9",
                                         "date": "2026-04-30",
@@ -800,7 +800,7 @@
                                     },
                                     {
                                         "name": "j10.pdf",
-                                        "path": "/resources/livret-paques-2026/j10.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j10.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J10",
                                         "date": "2026-05-01",
@@ -808,7 +808,7 @@
                                     },
                                     {
                                         "name": "j11.pdf",
-                                        "path": "/resources/livret-paques-2026/j11.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j11.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J11",
                                         "date": "2026-05-02",
@@ -816,7 +816,7 @@
                                     },
                                     {
                                         "name": "j12.pdf",
-                                        "path": "/resources/livret-paques-2026/j12.pdf",
+                                        "path": "/resources/university/livret-paques-2026/j12.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J12",
                                         "date": "2026-05-03",
@@ -838,7 +838,7 @@
                                     },
                                     {
                                         "name": "j1-8.pdf",
-                                        "path": "/resources/livret-exam-l2-2026/j1-8.pdf",
+                                        "path": "/resources/university/livret-exam-l2-2026/j1-8.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité.",
                                         "title": "Corrigé J1 à J8",
                                         "date": "2026-05-18",
@@ -891,7 +891,7 @@
                     },
                     {
                         "name": "math-club.pdf",
-                        "path": "/resources/math-club.pdf",
+                        "path": "/resources/university/math-club.pdf",
                         "credits": "Ewen Rodrigues de Oliveira.",
                         "title": "Notes de Math Club",
                         "comment": "Notes des conférences du Math Club de l'Université Paris Cité. Il s'agit de notes manuscrites (parfois illisibles). ERRATUM : un graphe eulérien a pour propriété de passer une seule fois par chaque arête et revenir au sommet de départ.",
@@ -900,7 +900,7 @@
                     },
                     {
                         "name": "math-club-laurent.zip",
-                        "path": "/resources/math-club-laurent.zip",
+                        "path": "/resources/university/math-club-laurent.zip",
                         "credits": "Laurent Cai.",
                         "title": "Notes de Math Club et photos (Laurent)",
                         "comment": "Notes et photos de Laurent Cai pour les conférences du Math-Club 2026.",
@@ -924,7 +924,7 @@
                                 "children": [
                                     {
                                         "name": "td1.pdf",
-                                        "path": "/resources/td-ga5/td1.pdf",
+                                        "path": "/resources/university/td-ga5/td1.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD1 GA5 : Groupes et sous-groupes",
                                         "date": "2026-06-20",
@@ -932,7 +932,7 @@
                                     },
                                     {
                                         "name": "td2.pdf",
-                                        "path": "/resources/td-ga5/td2.pdf",
+                                        "path": "/resources/university/td-ga5/td2.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD2 GA5 : Morphismes de groupes, groupes monogènes",
                                         "date": "2026-06-20",
@@ -940,7 +940,7 @@
                                     },
                                     {
                                         "name": "td3.pdf",
-                                        "path": "/resources/td-ga5/td3.pdf",
+                                        "path": "/resources/university/td-ga5/td3.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD3 GA5 : Relations d'équivalence, ensembles quotient",
                                         "date": "2026-06-20",
@@ -948,7 +948,7 @@
                                     },
                                     {
                                         "name": "td4.pdf",
-                                        "path": "/resources/td-ga5/td4.pdf",
+                                        "path": "/resources/university/td-ga5/td4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD4 GA5 : Sous-groupes distingués, quotients",
                                         "date": "2026-06-20",
@@ -956,7 +956,7 @@
                                     },
                                     {
                                         "name": "td5.pdf",
-                                        "path": "/resources/td-ga5/td5.pdf",
+                                        "path": "/resources/university/td-ga5/td5.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD5 GA5 : Actions de groupes",
                                         "date": "2026-06-20",
@@ -964,7 +964,7 @@
                                     },
                                     {
                                         "name": "td6.pdf",
-                                        "path": "/resources/td-ga5/td6.pdf",
+                                        "path": "/resources/university/td-ga5/td6.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD6 GA5 : Produit semi-direct et sous-groupe de Sylow",
                                         "date": "2026-06-20",
@@ -1044,7 +1044,7 @@
                                 "children": [
                                     {
                                         "name": "td1.pdf",
-                                        "path": "/resources/td-cd5/td1.pdf",
+                                        "path": "/resources/university/td-cd5/td1.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD1 CD5 : Normes et topologie",
                                         "date": "2026-06-20",
@@ -1052,7 +1052,7 @@
                                     },
                                     {
                                         "name": "td2.pdf",
-                                        "path": "/resources/td-cd5/td2.pdf",
+                                        "path": "/resources/university/td-cd5/td2.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD2 CD5 : Continuité",
                                         "date": "2026-06-20",
@@ -1060,7 +1060,7 @@
                                     },
                                     {
                                         "name": "td3.pdf",
-                                        "path": "/resources/td-cd5/td3.pdf",
+                                        "path": "/resources/university/td-cd5/td3.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD3 CD5 : Différentiabilité",
                                         "date": "2026-06-20",
@@ -1068,7 +1068,7 @@
                                     },
                                     {
                                         "name": "td4.pdf",
-                                        "path": "/resources/td-cd5/td4.pdf",
+                                        "path": "/resources/university/td-cd5/td4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD4 CD5 : Différentiation d'ordre supérieur, extrema",
                                         "date": "2026-06-20",
@@ -1139,7 +1139,7 @@
                                 "children": [
                                     {
                                         "name": "td1.pdf",
-                                        "path": "/resources/td-pr5/td1.pdf",
+                                        "path": "/resources/university/td-pr5/td1.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD1 PR5 : Révisions",
                                         "date": "2026-06-20",
@@ -1147,7 +1147,7 @@
                                     },
                                     {
                                         "name": "td2.pdf",
-                                        "path": "/resources/td-pr5/td2.pdf",
+                                        "path": "/resources/university/td-pr5/td2.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD2 PR5 : Tribus, mesures, fonctions de répartition, variables aléatoires",
                                         "date": "2026-06-20",
@@ -1155,7 +1155,7 @@
                                     },
                                     {
                                         "name": "td3.pdf",
-                                        "path": "/resources/td-pr5/td3.pdf",
+                                        "path": "/resources/university/td-pr5/td3.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD3 PR5 : Variables aléaotires, espérance, variance, lois usuelles",
                                         "date": "2026-06-20",
@@ -1163,7 +1163,7 @@
                                     },
                                     {
                                         "name": "td4.pdf",
-                                        "path": "/resources/td-pr5/td4.pdf",
+                                        "path": "/resources/university/td-pr5/td4.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD4 PR5 : Fonctions génératrices, transformée de Laplace, lois jointes",
                                         "date": "2026-06-20",
@@ -1171,7 +1171,7 @@
                                     },
                                     {
                                         "name": "td5.pdf",
-                                        "path": "/resources/td-pr5/td5.pdf",
+                                        "path": "/resources/university/td-pr5/td5.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD5 PR5 : Lois jointes, vecteurs Gaussiens",
                                         "date": "2026-06-20",
@@ -1179,7 +1179,7 @@
                                     },
                                     {
                                         "name": "td6.pdf",
-                                        "path": "/resources/td-pr5/td6.pdf",
+                                        "path": "/resources/university/td-pr5/td6.pdf",
                                         "credits": "Université Paris Cité",
                                         "title": "TD6 PR5 : Convergences",
                                         "date": "2026-06-20",
@@ -1349,7 +1349,7 @@
                         "children": [
                             {
                                 "name": "ea4-memento-complexites",
-                                "path": "/resources/ea4/ea4-memento-complexites.pdf",
+                                "path": "/resources/university/ea4/ea4-memento-complexites.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
                                 "title": "Mémento complexités algorithmiques",
                                 "comment": "Memento sur les complexités algorithmiques du cours EA4 de l'Université Paris Cité.",
@@ -1358,7 +1358,7 @@
                             },
                             {
                                 "name": "ea4_exam2021",
-                                "path": "/resources/ea4/ea4_exam2021.pdf",
+                                "path": "/resources/university/ea4/ea4_exam2021.pdf",
                                 "credits": "Dominique Poulalhon",
                                 "title": "Annale d'examen EA4 2021",
                                 "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
@@ -1367,7 +1367,7 @@
                             },
                             {
                                 "name": "ea4_exam2022",
-                                "path": "/resources/ea4/ea4_exam2022.pdf",
+                                "path": "/resources/university/ea4/ea4_exam2022.pdf",
                                 "credits": "Dominique Poulalhon",
                                 "title": "Annale d'examen EA4 2022",
                                 "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
@@ -1376,7 +1376,7 @@
                             },
                             {
                                 "name": "ea4_exam2023",
-                                "path": "/resources/ea4/ea4_exam2023.pdf",
+                                "path": "/resources/university/ea4/ea4_exam2023.pdf",
                                 "credits": "Dominique Poulalhon",
                                 "title": "Annale d'examen EA4 2023",
                                 "comment": "Annales d'éléments d'algorithmiques du cours EA4 de l'Université Paris Cité.",
@@ -1391,7 +1391,7 @@
                         "children": [
                             {
                                 "name": "lc4-partiel-annale-2024",
-                                "path": "/resources/lc4/partiel_2024.pdf",
+                                "path": "/resources/university/lc4/partiel_2024.pdf",
                                 "credits": "Lélia Blin, partagé par Anthony Fernandez.",
                                 "title": "Annale de partiel 2024",
                                 "comment": "Annale de partiel du cours Langage C4 de l'Université Paris Cité.",
@@ -1400,7 +1400,7 @@
                             },
                             {
                                 "name": "lc4-examen-annale-2024",
-                                "path": "/resources/lc4/exam_2024.pdf",
+                                "path": "/resources/university/lc4/exam_2024.pdf",
                                 "credits": "Lélia Blin, partagé par Anthony Fernandez.",
                                 "title": "Annale d'examen 2024",
                                 "comment": "Annale d'examen du cours Langage C4 de l'Université Paris Cité.",
@@ -1447,7 +1447,7 @@
                     },
                     {
                         "name": "pres-willys.pdf",
-                        "path": "/resources/pres-willys.pdf",
+                        "path": "/resources/university/pres-willys.pdf",
                         "heavy": true,
                         "credits": "Celine Bouhalia, William Fijean, Bastien Fortrye--Campait, Ewen Rodrigues de Oliveira, Dan Sandreschi et Elsa Vervischi..",
                         "warning": "Toute réutilisation, même partielle, de ce document est interdite sans l'accord préalable de **tous** ses auteurs.",
@@ -1580,14 +1580,14 @@
                 "children": [
                     {
                         "name": "Roadmap CAPES.pdf",
-                        "path": "/resources/Roadmap CAPES.pdf",
+                        "path": "/resources/university/Roadmap CAPES.pdf",
                         "credits": "Ewen Rodrigues de Oliveira.",
                         "title": "Planning de l'année 2026-2027",
                         "slug": "roadmap-capes-2027"
                     },
                     {
                         "name": "Programme du Capes",
-                        "path": "/resources/programme-capes1.pdf",
+                        "path": "/resources/university/programme-capes1.pdf",
                         "credits": "Ministère de l'Éducation Nationale",
                         "title": "Programme du CAPES - épreuve n°1",
                         "comment": "Document officiel listant les connaissances et compétences à maîtriser pour l'examen du CAPES de Mathématiques en 2025 (niveau Licence 3).",
@@ -1595,7 +1595,7 @@
                     },
                     {
                         "name": "Sujet 0",
-                        "path": "/resources/sujet_0_capes1.pdf",
+                        "path": "/resources/university/sujet_0_capes1.pdf",
                         "credits": "Ministère de l'Éducation Nationale",
                         "title": "Sujet 0 - épreuve n°1",
                         "comment": "Sujet d'examen du CAPES de Mathématiques pour l'épreuve n°1, fourni par le Ministère de l'Éducation Nationale dans le cadre de la réforme du concours des enseignants à Bac + 3.",
