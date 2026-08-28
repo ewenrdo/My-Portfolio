@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 function ResourceViewerModal({ item, isOpen, onClose }) {
     // États pour la gestion du formulaire de retour
@@ -9,12 +11,18 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
         comment: ''
     });
     const [status, setStatus] = useState({ loading: false, error: '', success: false });
+    const [markdownContent, setMarkdownContent] = useState('_Chargement du contenu Markdown..._');
 
     // Réinitialisation au changement de ressource
     useEffect(() => {
         setIsFormOpen(false);
         setFeedbackForm({ firstname: '', lastname: '', comment: '' });
         setStatus({ loading: false, error: '', success: false });
+
+        if (item && item.path?.toLowerCase().endsWith('.md')) {
+            getMarkdownContent();
+        }
+
     }, [item, isOpen]);
 
     useEffect(() => {
@@ -30,6 +38,7 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
     const isPdf = item.path?.toLowerCase().endsWith('.pdf');
     const isZip = item.path?.toLowerCase().endsWith('.zip');
     const isLink = item.type === 'link';
+    const isMd = item.path?.toLowerCase().endsWith('.md');
     const isHeavy = Boolean(item.heavy);
     const hasCredits = item.credits && item.credits.trim() !== '';
     const hasDate = item.date && item.date.trim() !== '';
@@ -102,6 +111,16 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
         }
     };
 
+    const getMarkdownContent = () => {
+        if (isMd) {
+            fetch(item.path)
+                .then(response => response.text())
+                .then(text => setMarkdownContent(text))
+                .catch(() => setMarkdownContent('_Impossible de charger le contenu Markdown._'));
+        }
+        return markdownContent;
+    }
+
     return (
         <div className="apple-modal-overlay" onClick={onClose}>
             <div className="apple-modal-container" onClick={(e) => e.stopPropagation()}>
@@ -153,6 +172,10 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
                             </div>
                         ) : isPdf ? (
                             <iframe src={item.path} title={item.title || item.name} className="pdf-iframe" />
+                        ) : isMd ? (
+                            <div className="md-viewer">
+                                <Markdown remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
+                            </div>
                         ) : (
                             <div className="viewer-error">
                                 <i className="fas fa-exclamation-triangle" />

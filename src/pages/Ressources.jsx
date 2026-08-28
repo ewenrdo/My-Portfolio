@@ -73,7 +73,7 @@ export default function RessourcesClone() {
     const contributeUrl = 'https://github.com/ewenrdo/dl-mathinfo-vault#contribuer';
 
     useEffect(() => {
-        const url = '/ressources.json?v=' + Date.now();
+        const url = '/resources/ressources.json?v=' + Date.now();
 
         fetch(url)
             .then((res) => {
@@ -94,7 +94,7 @@ export default function RessourcesClone() {
             .catch(() => {
                 setRootTree(EMPTY_TREE);
                 setDataSource('mock');
-                setLoadError('Le fichier ressources.json est indisponible. Affichage du mode démo.');
+                setLoadError('Le fichier ressources.json est indisponible, seuls les liens mockés seront affichés.');
             })
             .finally(() => {
                 setIsLoading(false);
@@ -384,7 +384,7 @@ export default function RessourcesClone() {
                                 {isLoading ? <p className="apple-feedback">Chargement...</p> : null}
                                 {loadError ? <p className="apple-feedback apple-feedback-error">{loadError}</p> : null}
                                 {dataSource === 'mock' && searchQuery.trim() === '' ? (
-                                    <p className="apple-feedback apple-feedback-subtle">Mode démo : données mockées.</p>
+                                    <p className="apple-feedback apple-feedback-subtle">Mode secure : liens mockés seulement.</p>
                                 ) : null}
 
                                 {/* NAVIGATION CHEVRON ET ARIANE */}
@@ -508,6 +508,7 @@ export default function RessourcesClone() {
                                                     const itemPath = String(item.path || '').toLowerCase();
                                                     const isPdf = file && itemPath.endsWith('.pdf');
                                                     const isZip = file && itemPath.endsWith('.zip');
+                                                    const isMd = file && itemPath.endsWith('.md');
                                                     const isLink = item.type === 'link';
                                                     const itemLabel = item.title || item.name || `Élément ${index + 1}`;
                                                     const itemMeta = folder
@@ -518,6 +519,8 @@ export default function RessourcesClone() {
                                                                 ? 'PDF'
                                                                 : isZip
                                                                     ? 'ZIP'
+                                                                    : isMd
+                                                                        ? 'Note'
                                                                     : 'Fichier quelconque';
 
                                                     return (
@@ -529,10 +532,10 @@ export default function RessourcesClone() {
                                                                 onDoubleClick={() => handleItemClick(item)}
                                                             >
                                                                 <span
-                                                                    className={`apple-row-leading ${folder ? 'is-folder' : isPdf ? 'is-pdf' : isZip ? 'is-zip' : isLink ? 'is-link' : 'is-file'}`}
+                                                                    className={`apple-row-leading ${folder ? 'is-folder' : isPdf ? 'is-pdf' : isZip ? 'is-zip' : isLink ? 'is-link' : isMd ? 'is-md' : 'is-file'}`}
                                                                     aria-hidden="true"
                                                                 >
-                                                                    <i className={`fas ${folder ? 'fa-folder' : isPdf ? 'fa-file-pdf' : isZip ? 'fa-file-archive' : isLink ? 'fa-link' : 'fa-file-alt'}`} />
+                                                                    <i className={`fas ${folder ? 'fa-folder' : isPdf ? 'fa-file-pdf' : isZip ? 'fa-file-archive' : isLink ? 'fa-link' : isMd ? 'fa-file-alt' : 'fa-file-alt'}`} />
                                                                 </span>
 
                                                                 <span className="apple-row-copy">
