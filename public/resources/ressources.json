@@ -1197,7 +1197,24 @@
                     {
                         "name": "Fiches d'entraînement et livrets de révision",
                         "slug": "fiches-dentrainement-et-livrets-de-revision-semestre5",
-                        "children": []
+                        "children": [
+                            {
+                                "name": "livret1.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/livrets/livret1/livret1.pdf",
+                                "credits": "Voir dans le document",
+                                "title": "Livret de révision Toussaint",
+                                "date": "2026-08-29",
+                                "slug": "livret-de-revision-du-semestre-5"
+                            },
+                            {
+                                "name": "sm1.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm1/sm1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Fiches d'entraînement semaine 1",
+                                "date": "2026-08-29",
+                                "slug": "fiches-dentraînement-semaine-1"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1565,6 +1582,13 @@
                                 "slug": "programmation-fonctionnelle-chapitre-9-introduction-au-lambda-calcul"
                             }
                         ]
+                    },
+                    {
+                        "name": "Fiches d'entraînement et livrets de révision",
+                        "slug": "fiches-dentrainement-et-livrets-de-revision-semestre5-info",
+                        "type": "link",
+                        "path": "https://ewenrdo.fr/ressources?slug=fiches-dentrainement-et-livrets-de-revision-semestre5",
+                        "date": "2026-08-29"
                     }
                 ]
             }
