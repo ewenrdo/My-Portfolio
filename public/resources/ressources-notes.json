@@ -48,5 +48,12 @@
                 "date": "2024-08-28"
             }
         ]
+    },
+    {
+        "slug": "questions-de-cours-s5",
+        "path": "/resources/md-notes/questions-cours-s5.md",
+        "title": "Questions de cours S5",
+        "credits": "Ewen Rodrigues de Oliveira",
+        "date": "2024-08-29"
     }
 ]
