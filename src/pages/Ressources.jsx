@@ -625,7 +625,7 @@ export default function Ressources() {
                             >
                                 <i className="fas fa-brain" />
                                 <span>
-                                    Notes
+                                    Wiki
                                 </span>
                             </button>
                         </div>
