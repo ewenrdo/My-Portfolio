@@ -1510,6 +1510,16 @@
                                 "children": []
                             },
                             {
+                                "name": "Site du cours de D. Kesner",
+                                "type": "link",
+                                "path": "https://www.irif.fr/~kesner/enseignement/licence/pf/",
+                                "credits": "Delia Kesner",
+                                "title": "Site du cours de D. Kesner",
+                                "comment": "Site du cours de programmation fonctionnelle de Delia Kesner, Université Paris Cité, Licence 3 Mathématiques et Informatique.",
+                                "date": "2026-08-29",
+                                "slug": "site-du-cours-de-d-kesner"
+                            },
+                            {
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/pf5/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Cours de l'Université Paris Cité, notes de cours de Delia Kesner (CC BY-NC 4.0)",
