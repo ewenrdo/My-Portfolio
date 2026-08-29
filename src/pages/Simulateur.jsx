@@ -34,49 +34,49 @@ const MATIERES = [
         label: "Algorithmique 5",
         desc: 'Étude et algorithmique sur les graphes (parcours, chemins, etc.).',
         icon: 'fa-sitemap',
-        disabled: false
+        disabled: true
     },
     {
         key: 'se',
         label: "Système d'Exploitation",
         desc: 'Maîtriser les concepts de bases d\'Unix.',
         icon: 'fa-terminal',
-        disabled: false
+        disabled: true
     },
     {
         key: 'pf',
         label: "Prog. Fonctionnelle",
         desc: 'Bases de la programmation fonctionnelle avec OCaml.',
         icon: 'fa-code-branch',
-        disabled: false
+        disabled: true
     },
     {
         key: 'groupes',
         label: "Groupes et actions",
         desc: 'Notions de la théorie des groupes et des actions de groupe.',
         icon: 'fa-shapes',
-        disabled: false
+        disabled: true
     },
     {
         key: 'diff',
         label: "Calcul Différentiel",
         desc: 'Maîtrise du calcul différentiel en dimension finie, étude locale.',
         icon: 'fa-chart-line',
-        disabled: false
+        disabled: true
     },
     {
         key: 'integ',
         label: "Intégration et Probabilités",
         desc: 'Étude des probabilités continues et liens avec l\'intégration.',
         icon: 'fa-infinity',
-        disabled: false
+        disabled: true
     },
     {
         key: 'anglais',
         label: "Anglais",
         desc: 'Keep calm and stay positive, it won\'t be difficult :)',
         icon: 'fa-language',
-        disabled: false
+        disabled: true
     },
 ];
 
