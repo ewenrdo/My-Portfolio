@@ -1,0 +1,226 @@
+[
+    {
+        "nom": "Poivron",
+        "type": "légume",
+        "consommable": "Oui",
+        "frequence": "Quotidien",
+        "quantite": "1/4 de poivron",
+        "remarque": "Excellente source de Vitamine C (surtout le rouge). Retirer le pédoncule et les graines."
+    },
+    {
+        "nom": "Endive",
+        "type": "légume",
+        "consommable": "Oui",
+        "frequence": "Quotidien",
+        "quantite": "1 à 2 feuilles",
+        "remarque": "Très appréciée et pauvre en sucre. À alterner car elle contient un peu de calcium."
+    },
+    {
+        "nom": "Concombre",
+        "type": "légume",
+        "consommable": "Limité",
+        "frequence": "2 à 3 fois / semaine max",
+        "quantite": "2-3 rondelles",
+        "remarque": "Très hydratant en été. Ne pas donner quotidiennement : l'excès d'eau peut causer des selles molles."
+    },
+    {
+        "nom": "Céleri branche",
+        "type": "légume",
+        "consommable": "Oui",
+        "frequence": "3-4 fois / semaine",
+        "quantite": "1 tronçon de 3 cm",
+        "remarque": "Couper en petits tronçons pour casser les fils et éviter les étouffements."
+    },
+    {
+        "nom": "Carotte",
+        "type": "légume",
+        "consommable": "Limité",
+        "frequence": "1 à 2 fois / semaine",
+        "quantite": "1 rondelle fine",
+        "remarque": "Très riche en sucre. Donner la fane de carotte en priorité (avec modération car riche en calcium)."
+    },
+    {
+        "nom": "Chou vert / frisé",
+        "type": "légume",
+        "consommable": "Limité",
+        "frequence": "1 fois / semaine",
+        "quantite": "1 petite feuille",
+        "remarque": "Riche en vitamine C mais très fermentescible. Risque de ballonnements douleureux."
+    },
+    {
+        "nom": "Brocoli",
+        "type": "légume",
+        "consommable": "Limité",
+        "frequence": "1 fois / semaine",
+        "quantite": "1 petit fleuron",
+        "remarque": "Excellente source de vitamine C mais peut provoquer des gaz. Préférer les feuilles du brocoli."
+    },
+    {
+        "nom": "Chou-fleur",
+        "type": "légume",
+        "consommable": "Limité",
+        "frequence": "1 fois / semaine",
+        "quantite": "1 petit fleuron",
+        "remarque": "Donner en très petites quantités à cause des gaz. Les feuilles vertes sont très appréciées."
+    },
+    {
+        "nom": "Pomme de terre",
+        "type": "légume",
+        "consommable": "Toxique",
+        "frequence": "Interdit",
+        "quantite": "0",
+        "remarque": "Toxique (contient de la solanine) et très riche en amidon cru indigeste. Danger mortel."
+    },
+    {
+        "nom": "Oignon / Échalote / Ail",
+        "type": "légume",
+        "consommable": "Toxique",
+        "frequence": "Interdit",
+        "quantite": "0",
+        "remarque": "Toxique pour le sang des rongeurs (détruit les globules rouges)."
+    },
+    {
+        "nom": "Pomme",
+        "type": "fruit",
+        "consommable": "Oui",
+        "frequence": "1 à 2 fois / semaine",
+        "quantite": "1 quartier fin",
+        "remarque": "Retirer impérativement les pépins (contiennent du cyanure). Friandise riche en sucre."
+    },
+    {
+        "nom": "Fraise",
+        "type": "fruit",
+        "consommable": "Oui",
+        "frequence": "Occasionnel",
+        "quantite": "1 petite fraise",
+        "remarque": "Très appréciée et riche en vitamine C. Les queues et feuilles vertes sont comestibles."
+    },
+    {
+        "nom": "Abricot",
+        "type": "fruit",
+        "consommable": "Oui",
+        "frequence": "1 fois / semaine (en saison)",
+        "quantite": "1/8 d'abricot",
+        "remarque": "Retirer impérativement le noyau (toxique/cyanure). Donner uniquement la chair bien mûre."
+    },
+    {
+        "nom": "Banane",
+        "type": "fruit",
+        "consommable": "Limité",
+        "frequence": "Rarissime",
+        "quantite": "1 rondelle très fine",
+        "remarque": "Très calorique, riche en sucre et en amidon. Risque élevé de ralentissement du transit et constipation."
+    },
+    {
+        "nom": "Pastèque / Melon",
+        "type": "fruit",
+        "consommable": "Oui",
+        "frequence": "1 fois / semaine (été)",
+        "quantite": "1 petit cube",
+        "remarque": "Très rafraîchissant mais riche en sucre. Retirer la peau et les pépins."
+    },
+    {
+        "nom": "Avocat",
+        "type": "fruit",
+        "consommable": "Toxique",
+        "frequence": "Interdit",
+        "quantite": "0",
+        "remarque": "Extrêmement toxique (contient de la persine). Mortel même à très faible dose."
+    },
+    {
+        "nom": "Persil (plat ou frisé)",
+        "type": "herbe",
+        "consommable": "Limité",
+        "frequence": "1 à 2 fois / semaine",
+        "quantite": "2 à 3 brin(s)",
+        "remarque": "Trés riche en vitamine C et très apprécié. Riche en calcium : à modérer pour éviter les calculs urinaires."
+    },
+    {
+        "nom": "Aneth",
+        "type": "herbe",
+        "consommable": "Oui",
+        "frequence": "2 à 3 fois / semaine",
+        "quantite": "2 petits brins",
+        "remarque": "Excellente pour la digestion et très stimulante pour l'appétit des cobayes."
+    },
+    {
+        "nom": "Basilic",
+        "type": "herbe",
+        "consommable": "Limité",
+        "frequence": "1 à 2 fois / semaine",
+        "quantite": "2 à 3 feuilles",
+        "remarque": "Très odorant et apprécié. Contient du calcium, donc à distribuer avec modération."
+    },
+    {
+        "nom": "Menthe",
+        "type": "herbe",
+        "consommable": "Oui",
+        "frequence": "1 à 2 fois / semaine",
+        "quantite": "1 à 2 feuilles",
+        "remarque": "Aide à la digestion. À donner en petite quantité car son odeur forte peut surprendre au début."
+    },
+    {
+        "nom": "Coriandre",
+        "type": "herbe",
+        "consommable": "Oui",
+        "frequence": "2 à 3 fois / semaine",
+        "quantite": "2 à 3 brins",
+        "remarque": "Riche en vitamines et pauvre en calcium par rapport au persil. Très bon choix quotidien modéré."
+    },
+    {
+        "nom": "Bois de Pommier",
+        "type": "herbe",
+        "consommable": "Oui",
+        "frequence": "À volonté",
+        "quantite": "1 à 2 bâtonnets",
+        "remarque": "Indispensable pour l'usure continue des dents. S'assurer qu'il soit non traité aux pesticides."
+    },
+    {
+        "nom": "Bois de Noisetier",
+        "type": "herbe",
+        "consommable": "Oui",
+        "frequence": "À volonté",
+        "quantite": "1 à 2 bâtonnets",
+        "remarque": "Très apprécié pour ronger l'écorce. Parfait pour occuper et user les incisives."
+    },
+    {
+        "nom": "Laitue (Pommée / Batavia)",
+        "type": "légume",
+        "consommable": "Toxique",
+        "frequence": "Interdit",
+        "quantite": "0",
+        "remarque": "Riche en nitrates et très laxative. Risque de diarrhée sévère et d'intoxication."
+    },
+    {
+        "nom": "Feuille de chêne / Mâche",
+        "type": "légume",
+        "consommable": "Oui",
+        "frequence": "2 à 3 fois / semaine",
+        "quantite": "1 à 2 feuilles / petites touffes",
+        "remarque": "Excellente alternative à la laitue. Bien laver et sécher avant distribution."
+    },
+    {
+        "nom": "Roquette / Sucrine",
+        "type": "légume",
+        "consommable": "Limité",
+        "frequence": "1 à 2 fois / semaine",
+        "quantite": "2 à 3 feuilles",
+        "remarque": "Trés appréciées mais contiennent un taux moyen de calcium. À donner en alternance."
+    },
+    {
+        "nom": "Romaine",
+        "type": "légume",
+        "consommable": "Oui",
+        "frequence": "3 à 4 fois / semaine",
+        "quantite": "1 belle feuille",
+        "remarque": "L'une des meilleures salades pour cobaye : croquante, riche en fibres et pauvre en nitrates."
+    },
+    {
+        "nom": "Frisée / Scarole",
+        "type": "légume",
+        "consommable": "Oui",
+        "frequence": "2 à 3 fois / semaine",
+        "quantite": "1 feuille",
+        "remarque": "Bon apport en minéraux. Rincer abondamment pour retirer la terre."
+    }
+]

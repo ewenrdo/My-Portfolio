@@ -8,6 +8,7 @@ import Simulateur from "./pages/Simulateur";
 import Cooldown from "./pages/Cooldown";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import AlimentationCochonInde from "./pages/guinea-pig/AlimentationGuineaPig";
 
 const App = () => {
     return (
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path="/mcc" element={<Simulateur />} />
                 <Route path="/holidays" element={<Cooldown />} />
                 <Route path="*" element={<NotFound />} />
+                <Route path="/guinea-pig/alimentation" element={<AlimentationCochonInde />} />
             </Routes>
             <Analytics />
             <SpeedInsights />

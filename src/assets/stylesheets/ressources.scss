@@ -1203,6 +1203,7 @@
 
 .resource-mode-switch {
     --mode-color: #007aff;
+    --items-count: 2; // Valeur par défaut (2 items)
 
     position: relative;
     display: inline-flex;
@@ -1227,17 +1228,22 @@
         box-shadow 0.3s ease,
         border-color 0.3s ease;
 
+    /* Prise en compte automatique s'il y a 3 boutons dans le conteneur */
+    &:has(.resource-mode-option:nth-child(3)) {
+        --items-count: 3;
+    }
+
+    /* Pastille coulissante en arrière-plan */
     &::after {
         content: '';
         position: absolute;
         inset: 4px auto 4px 4px;
 
-        width: calc(50% - 6px);
+        /* Calcul dynamique de la largeur selon le nombre d'items */
+        width: calc((100% - 8px) / var(--items-count));
 
         border-radius: 10px;
-
         background: rgba(0, 122, 255, 0.12);
-
         pointer-events: none;
 
         transition:
@@ -1245,13 +1251,48 @@
             background 0.35s ease;
     }
 
-    &:has(.notes.is-active) {
-        --mode-color: #af52de;
+    /* --- GESTION DU POSITIONNEMENT PAR TRANSLATION --- */
+
+    /* 1er bouton actif -> Reste à 0 */
+    &:has(.resource-mode-option:nth-child(1).is-active)::after {
+        transform: translateX(0);
     }
 
-    &:has(.notes.is-active)::after {
+    /* 2ème bouton actif -> Décale de 100% + l'espace du gap (4px) */
+    &:has(.resource-mode-option:nth-child(2).is-active)::after {
         transform: translateX(calc(100% + 4px));
-        background: rgba(175, 82, 222, 0.13);
+    }
+
+    /* 3ème bouton actif -> Décale de 200% + les espaces (8px) */
+    &:has(.resource-mode-option:nth-child(3).is-active)::after {
+        transform: translateX(calc(200% + 8px));
+    }
+
+    /* --- COULEURS DU FOND DE PASTILLE & VARIABLES SELON LA CLASSE --- */
+
+    &:has(.university.is-active) {
+        --mode-color: #007aff;
+        &::after { background: rgba(0, 122, 255, 0.13); }
+    }
+
+    &:has(.notes.is-active) {
+        --mode-color: #af52de;
+        &::after { background: rgba(175, 82, 222, 0.13); }
+    }
+
+    &:has(.fruits.is-active) {
+        --mode-color: #34c759;
+        &::after { background: rgba(52, 199, 89, 0.13); }
+    }
+
+    &:has(.vegetables.is-active) {
+        --mode-color: #ff9500;
+        &::after { background: rgba(255, 149, 0, 0.13); }
+    }
+
+    &:has(.herbs.is-active) {
+        --mode-color: #ad3b35;
+        &::after { background: rgba(173, 59, 53, 0.13); }
     }
 }
 
@@ -1264,7 +1305,7 @@
     justify-content: center;
     gap: 8px;
 
-    min-width: 130px;
+    min-width: 110px; // Réduit légèrement pour s'adapter à 3 boutons sur mobile
     height: 38px;
 
     padding: 0 16px;
@@ -1309,17 +1350,11 @@
         }
     }
 
-    &.university.is-active {
-        i {
-            color: #007aff;
-        }
-    }
-
-    &.notes.is-active {
-        i {
-            color: #af52de;
-        }
-    }
+    &.university.is-active i { color: #007aff; }
+    &.notes.is-active i { color: #af52de; }
+    &.fruits.is-active i { color: #34c759; }
+    &.vegetables.is-active i { color: #ff9500; }
+    &.herbs.is-active i { color: #ad3b35; }
 }
 
 .md-admonition {

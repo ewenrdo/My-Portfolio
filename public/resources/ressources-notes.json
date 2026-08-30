@@ -26,12 +26,13 @@
                 "date": "2024-08-28"
             },
             {
-                "name": "alimentation.md",
-                "slug": "alimentation",
-                "path": "/resources/md-notes/guinea-pig/alimentation.md",
+                "name": "alimentation",
+                "slug": "alimentation-cochon-dinde",
+                "type": "link",
+                "path": "https://ewenrdo.fr/guinea-pig/alimentation",
                 "title": "Alimentation du cochon d'inde",
                 "credits": "Ewen Rodrigues de Oliveira",
-                "date": "2024-08-28"
+                "date": "2024-08-30"
             }
         ]
     },

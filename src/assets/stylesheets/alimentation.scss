@@ -1,0 +1,121 @@
+@import './ressources.scss';
+
+.food-guide-page {
+
+    /* Conteneur épuré sans fond, ni ombre, ni bordure externe */
+    .food-table-container {
+        position: relative;
+        z-index: 1;
+        margin-top: 1.5rem;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+
+        /* Scrolling horizontal sur mobile */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table.food-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            text-align: left;
+            font-size: 0.92rem;
+            min-width: 650px;
+            background: #ffffff;
+            /* Fond blanc propre pour le tableau */
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            /* Bordure interne fine propre au tableau */
+
+            thead {
+                th {
+                    padding: 0.85rem 1rem;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.06em;
+                    color: rgba(0, 0, 0, 0.48);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                    background: rgba(0, 0, 0, 0.02);
+                }
+            }
+
+            tbody {
+                tr {
+                    transition: background 160ms ease;
+
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.015);
+                    }
+
+                    &:not(:last-child) td {
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+                }
+
+                td {
+                    padding: 1rem;
+                    color: #3a3a3c;
+                    vertical-align: middle;
+
+                    &.food-name-cell {
+                        font-weight: 600;
+                        color: #1d1d1f;
+                        white-space: nowrap;
+                    }
+
+                    &.food-remark-cell {
+                        font-size: 0.88rem;
+                        color: #636366;
+                        line-height: 1.45;
+                        max-width: 280px;
+                    }
+
+                    code {
+                        padding: 0.2em 0.5em;
+                        border-radius: 6px;
+                        background: rgba(0, 0, 0, 0.05);
+                        font-size: 0.85em;
+                        color: #1d1d1f;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Badges conservés */
+    .badge-status {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+
+        &.status-yes {
+            background: rgba(52, 199, 89, 0.14);
+            color: #248a3d;
+            border: 1px solid rgba(52, 199, 89, 0.25);
+        }
+
+        &.status-limited {
+            background: rgba(255, 149, 0, 0.14);
+            color: #c27100;
+            border: 1px solid rgba(255, 149, 0, 0.25);
+        }
+
+        &.status-toxic {
+            background: rgba(255, 59, 48, 0.14);
+            color: #d70015;
+            border: 1px solid rgba(255, 59, 48, 0.25);
+        }
+    }
+}
