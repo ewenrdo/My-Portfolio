@@ -22,7 +22,7 @@ const App = () => {
                 <Route path="/mcc" element={<Simulateur />} />
                 <Route path="/holidays" element={<Cooldown />} />
                 <Route path="*" element={<NotFound />} />
-                <Route path="/guinea-pig/alimentation" element={<AlimentationCochonInde />} />
+                <Route path="/alimentation-cobaye" element={<AlimentationCochonInde />} />
             </Routes>
             <Analytics />
             <SpeedInsights />
