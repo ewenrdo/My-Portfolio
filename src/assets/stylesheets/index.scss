@@ -1132,19 +1132,11 @@ body {
                 max-width: 38rem;
             }
         }
-
-        /*
-        
-                                <div className="card-side-social">
-                                    <a href="https://www.linkedin.com/in/ewen-rodrigues-de-oliveira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                        <i className="fab fa-linkedin" />
-                                    </a>
-                                </div>
-                                */
         .card-side-social {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            margin-top: 0.5rem;
 
             a {
                 display: inline-flex;
