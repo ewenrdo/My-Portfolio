@@ -37,6 +37,44 @@
         ]
     },
     {
+        "title": "Sport et anatomie",
+        "slug": "sport-anatomy",
+        "children": [
+            {
+                "name": "glycogene.md",
+                "slug": "glycogene",
+                "path": "/resources/md-notes/sport/glycogene.md",   
+                "title": "Glycogène",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-09-01"
+            },
+            {
+                "name": "recuperation-musculaire.md",
+                "slug": "recuperation-musculaire",
+                "path": "/resources/md-notes/sport/recuperation-musculaire.md",
+                "title": "Récupération musculaire",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-09-01"
+            },
+            {
+                "name": "type-travail.md",
+                "slug": "type-travail",
+                "path": "/resources/md-notes/sport/type-travail.md",
+                "title": "Types de travail en musculation",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-09-01"
+            },
+            {
+                "name": "anatomie.md",
+                "slug": "anatomie",
+                "path": "/resources/md-notes/sport/anatomie.md",
+                "title": "Anatomie appliquée",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-09-01"
+            }
+        ]
+    },
+    {
         "title": "Divers",
         "slug": "miscellaneous",
         "children": [
