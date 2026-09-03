@@ -1492,8 +1492,55 @@
                 "children": [
                     {
                         "name": "Algorithmique",
-                        "slug": "algo5",
-                        "children": []
+                        "slug": "al5",
+                        "children": [
+                            {
+                                "name": "Annales",
+                                "slug": "al5-annales",
+                                "children": [
+                                    {
+                                        "name": "cc1a.pdf",
+                                        "path": "/resources/university/al5/cc1a.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Contrôle Continu 1 (Sujet A)",
+                                        "date": "2026-09-03",
+                                        "slug": "al5-annale-cc1a"
+                                    },
+                                    {
+                                        "name": "cc1b.pdf",
+                                        "path": "/resources/university/al5/cc1b.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Contrôle Continu 1 (Sujet B)",
+                                        "date": "2026-09-03",
+                                        "slug": "al5-annale-cc1b"
+                                    },
+                                    {
+                                        "name": "cc2a.pdf",
+                                        "path": "/resources/university/al5/cc2a.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Contrôle Continu 2 (Sujet A)",
+                                        "date": "2026-09-03",
+                                        "slug": "al5-annale-cc2a"
+                                    },
+                                    {
+                                        "name": "cc2b.pdf",
+                                        "path": "/resources/university/al5/cc2b.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Contrôle Continu 2 (Sujet B)",
+                                        "date": "2026-09-03",
+                                        "slug": "al5-annale-cc2b"
+                                    },
+                                    {
+                                        "name": "exam.pdf",
+                                        "path": "/resources/university/al5/exam.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Examen session 1",
+                                        "date": "2026-09-03",
+                                        "slug": "al5-annale-exam-s1"
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "name": "Système d'exploitation",
@@ -1507,7 +1554,96 @@
                             {
                                 "name": "Feuilles de TP",
                                 "slug": "tp-pf5",
-                                "children": []
+                                "children": [
+                                    {
+                                        "name": "tp1.pdf",
+                                        "path": "/resources/university/tp-pf5/tp1.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP1 : Premiers pas",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-tp1"
+                                    },
+                                    {
+                                        "name": "tp2.pdf",
+                                        "path": "/resources/university/tp-pf5/tp2.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP2 : Listes",
+                                        "date": "2026-09-10",
+                                        "slug": "pf5-tp2"
+                                    },
+                                    {
+                                        "name": "tp3.pdf",
+                                        "path": "/resources/university/tp-pf5/tp3.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP3 : Listes (suite)",
+                                        "date": "2026-09-17",
+                                        "slug": "pf5-tp3"
+                                    },
+                                    {
+                                        "name": "tp4.pdf",
+                                        "path": "/resources/university/tp-pf5/tp4.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP4 : Arbres",
+                                        "date": "2026-09-24",
+                                        "slug": "pf5-tp4"
+                                    },
+                                    {
+                                        "name": "tp5.pdf",
+                                        "path": "/resources/university/tp-pf5/tp5.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP5 : Calcul propositionnel en OCaml",
+                                        "date": "2026-10-01",
+                                        "slug": "pf5-tp5"
+                                    },
+                                    {
+                                        "name": "tp6.pdf",
+                                        "path": "/resources/university/tp-pf5/tp6.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP6 : Récursivité terminale",
+                                        "date": "2026-10-08",
+                                        "slug": "pf5-tp6"
+                                    },
+                                    {
+                                        "name": "tp7.pdf",
+                                        "path": "/resources/university/tp-pf5/tp7.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP7 : Records et graphes",
+                                        "date": "2026-10-15",
+                                        "slug": "pf5-tp7"
+                                    },
+                                    {
+                                        "name": "tp8.pdf",
+                                        "path": "/resources/university/tp-pf5/tp8.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP8 : Exceptions et types",
+                                        "date": "2026-10-22",
+                                        "slug": "pf5-tp8"
+                                    },
+                                    {
+                                        "name": "tp9.pdf",
+                                        "path": "/resources/university/tp-pf5/tp9.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP9 : I/O",
+                                        "date": "2026-10-29",
+                                        "slug": "pf5-tp9"
+                                    },
+                                    {
+                                        "name": "tp10.pdf",
+                                        "path": "/resources/university/tp-pf5/tp10.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP10 : Modules et compilation séparée",
+                                        "date": "2026-11-05",
+                                        "slug": "pf5-tp10"
+                                    },
+                                    {
+                                        "name": "tp11.pdf",
+                                        "path": "/resources/university/tp-pf5/tp11.pdf",
+                                        "credits": "Université Paris Cité",
+                                        "title": "TP11 : Tableaux redimensionnables",
+                                        "date": "2026-11-12",
+                                        "slug": "pf5-tp11"
+                                    }
+                                ]
                             },
                             {
                                 "name": "Site du cours de D. Kesner",
