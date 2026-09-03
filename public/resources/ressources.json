@@ -1501,7 +1501,7 @@
                                     {
                                         "name": "cc1a.pdf",
                                         "path": "/resources/university/al5/cc1a.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "credits": "Université Paris Cité.",
                                         "title": "Contrôle Continu 1 (Sujet A)",
                                         "date": "2026-09-03",
                                         "slug": "al5-annale-cc1a"
@@ -1509,7 +1509,7 @@
                                     {
                                         "name": "cc1b.pdf",
                                         "path": "/resources/university/al5/cc1b.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "credits": "Université Paris Cité.",
                                         "title": "Contrôle Continu 1 (Sujet B)",
                                         "date": "2026-09-03",
                                         "slug": "al5-annale-cc1b"
@@ -1517,7 +1517,7 @@
                                     {
                                         "name": "cc2a.pdf",
                                         "path": "/resources/university/al5/cc2a.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "credits": "Université Paris Cité.",
                                         "title": "Contrôle Continu 2 (Sujet A)",
                                         "date": "2026-09-03",
                                         "slug": "al5-annale-cc2a"
@@ -1525,7 +1525,7 @@
                                     {
                                         "name": "cc2b.pdf",
                                         "path": "/resources/university/al5/cc2b.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "credits": "Université Paris Cité.",
                                         "title": "Contrôle Continu 2 (Sujet B)",
                                         "date": "2026-09-03",
                                         "slug": "al5-annale-cc2b"
@@ -1533,7 +1533,7 @@
                                     {
                                         "name": "exam.pdf",
                                         "path": "/resources/university/al5/exam.pdf",
-                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "credits": "Université Paris Cité.",
                                         "title": "Examen session 1",
                                         "date": "2026-09-03",
                                         "slug": "al5-annale-exam-s1"
@@ -1545,7 +1545,38 @@
                     {
                         "name": "Système d'exploitation",
                         "slug": "se5",
-                        "children": []
+                        "children": [
+                            {
+                                "name": "Annales",
+                                "slug": "se5-annales",
+                                "children": [
+                                    {
+                                        "name": "cc1.pdf",
+                                        "path": "/resources/university/se5/cc1.pdf",
+                                        "credits": "Université Paris Cité, Anthony Fernandez.",
+                                        "title": "Contrôle Continu 1",
+                                        "date": "2026-09-03",
+                                        "slug": "se5-annale-cc1"
+                                    },
+                                    {
+                                        "name": "cc2.pdf",
+                                        "path": "/resources/university/se5/cc2.pdf",
+                                        "credits": "Université Paris Cité, Anthony Fernandez.",
+                                        "title": "Contrôle Continu 2",
+                                        "date": "2026-09-03",
+                                        "slug": "se5-annale-cc2"
+                                    },
+                                    {
+                                        "name": "exam.pdf",
+                                        "path": "/resources/university/se5/exam.pdf",
+                                        "credits": "Université Paris Cité, Anthony Fernandez.",
+                                        "title": "Examen session 1",
+                                        "date": "2026-09-03",
+                                        "slug": "se5-annale-exam-s1"
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "name": "Programmation fonctionnelle",
