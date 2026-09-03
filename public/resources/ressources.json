@@ -1677,6 +1677,100 @@
                                 ]
                             },
                             {
+                                "name": "Slides du cours",
+                                "slug": "slides-pf5",
+                                "children": [
+                                    {
+                                        "name": "Introduction.pdf",
+                                        "path": "/resources/university/cours-pf5/Introduction.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 0 : Introduction",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c0"
+                                    },
+                                    {
+                                        "name": "TypesBase.pdf",
+                                        "path": "/resources/university/cours-pf5/TypesBase.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 1 : Types de base",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c1"
+                                    },
+                                    {
+                                        "name": "Definitions.pdf",
+                                        "path": "/resources/university/cours-pf5/Definitions.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 2 : Définitions",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c2"
+                                    },
+                                    {
+                                        "name": "Listes.pdf",
+                                        "path": "/resources/university/cours-pf5/Listes.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 3 : Listes",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c3"
+                                    },
+                                    {
+                                        "name": "TypesStructures.pdf",
+                                        "path": "/resources/university/cours-pf5/TypesStructures.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 4 : Types et Structures",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c4"
+                                    },
+                                    {
+                                        "name": "Exceptions.pdf",
+                                        "path": "/resources/university/cours-pf5/Exceptions.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 5 : Exceptions",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c5"
+                                    },
+                                    {
+                                        "name": "Efficacite.pdf",
+                                        "path": "/resources/university/cours-pf5/Efficacite.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 6 : Efficacité",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c6"
+                                    },
+                                    {
+                                        "name": "Entrees-Sorties.pdf",
+                                        "path": "/resources/university/cours-pf5/Entrees-Sorties.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 7 : Entrées-Sorties",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c7"
+                                    },
+                                    {
+                                        "name": "Compilation-Modules.pdf",
+                                        "path": "/resources/university/cours-pf5/Compilation-Modules.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 8 : Compilation et Modules",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c8"
+                                    },
+                                    {
+                                        "name": "Imperatif.pdf",
+                                        "path": "/resources/university/cours-pf5/Imperatif.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 9 : Traits impératifs",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c9"
+                                    },
+                                    {
+                                        "name": "Lambda-Calcul.pdf",
+                                        "path": "/resources/university/cours-pf5/Lambda-Calcul.pdf",
+                                        "credits": "Université Paris Cité, Delia Kesner (CC BY-NC 4.0).",
+                                        "title": "Cours 10 : Lambda-Calcul",
+                                        "date": "2026-09-03",
+                                        "slug": "pf5-slides-c10"
+                                    }
+                                ]
+                            },
+                            {
                                 "name": "Site du cours de D. Kesner",
                                 "type": "link",
                                 "path": "https://www.irif.fr/~kesner/enseignement/licence/pf/",
