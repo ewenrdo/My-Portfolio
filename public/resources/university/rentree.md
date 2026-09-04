@@ -22,7 +22,7 @@ C'est **LE** semestre à réussir.
 
 **ATTENTION :** Il faut valider toutes les UE dès la première session, car la seconde session est en juin, donc pas sur le bulletin pour MonMaster.
 
-Réunion en fin de semestre d'information pour MonMaster.
+Réunion en fin de semestre d'information pour MonMaster (fin novembre - début décembre).
 
 > [!NOTE]
 > Pour l'anglais, on ne sait pas encore s'il faut s'inscrire en **général** ou en **spécialité**.
