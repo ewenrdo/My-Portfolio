@@ -1215,7 +1215,15 @@
                                 "slug": "fiches-dentraînement-semaine-1"
                             }
                         ]
-                    }
+                    },
+                            {
+                                "name": "rentree.md",
+                                "path": "/resources/university/rentree.md",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Notes de réunion de rentrée",
+                                "date": "2026-09-04",
+                                "slug": "notes-de-reunion-de-rentrée"
+                            }
                 ]
             },
             {
