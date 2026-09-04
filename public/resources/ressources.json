@@ -1082,6 +1082,14 @@
                                 "children": []
                             },
                             {
+                                "name": "chap0.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/cd5/chap0/chap0.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 0 : Espaces préhilbertiens (supplément)",
+                                "date": "2026-09-04",
+                                "slug": "calcul-differentiel-5-chapitre-0-espaces-prehilbertiens"
+                            },
+                            {
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/cd5/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
@@ -1216,14 +1224,14 @@
                             }
                         ]
                     },
-                            {
-                                "name": "rentree.md",
-                                "path": "/resources/university/rentree.md",
-                                "credits": "Ewen Rodrigues de Oliveira.",
-                                "title": "Notes de réunion de rentrée",
-                                "date": "2026-09-04",
-                                "slug": "notes-de-reunion-de-rentrée"
-                            }
+                    {
+                        "name": "rentree.md",
+                        "path": "/resources/university/rentree.md",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Notes de réunion de rentrée",
+                        "date": "2026-09-04",
+                        "slug": "notes-de-reunion-de-rentrée"
+                    }
                 ]
             },
             {
