@@ -1,6 +1,6 @@
-# Consommation hydrique de l’IA
+# Consommation hydrique de l’IA
 
-## Contexte
+## Contexte
 
 On entend que l'IA consomme beaucoup de litres d'eaux par recherche et que c'est une catastrophe.
 
@@ -19,7 +19,7 @@ On entend que l'IA consomme beaucoup de litres d'eaux par recherche et que c'est
 - Pour comparer, en Arizona, les terrains de golf consomment 32x plus d'eau que les _datacenters_.
 - En France, les datacenters c'est 7.5 TWh 575 000 m^3 d'eau en un an. Pour les terrains de golf, c'est 29 000 000 m^3 d'eau par an.
 
-## Utilisation de l'eau par un datacenter
+## Utilisation de l'eau par un datacenter
 
 - L'électricité ressort sous la forme de chaleur. L'eau sert au refroidissement.
 - L'eau doit être potable (pour éviter d'abîmer les machines).
@@ -32,14 +32,14 @@ Donc le problème ce n'est pas d'utiliser de l'eau pour l'IA, mais :
 
 (eg. faire un datacenter dans le Texas _vs_ à Quimper)
 
-## Pistes d'amélioration
+## Pistes d'amélioration
 
 - Il y a des innovations locales qui réutilisent la chaleur des _datacenters_ pour chauffer des quartiers (D4 - Infomaniak à Genève, certaines piscines et serres à Paris, etc.).
 - C'est une question de volonté des propriétaires de _datacenter_.
 - Il faut travailler sur les **sources d'énergie** : décarbonner l'énergie (on est dans les meilleurs en France). Les _datacenters_ en France (nucléaire, barrages électriques) seraient plus écoresponsables que ceux au Texas (gaz, charbon) à consommation égale.
 - Arrêter de faire des terrains de golfs.
 
-## Conclusion
+## Conclusion
 
 - Les _datacenters_ consomment de l'eau de manière **modérée**.
 - Il y a des scandales sur l'utilisation de l'eau par l'IA (eau non déclarée, non facturée, etc.).
@@ -52,7 +52,7 @@ La "bonne" question : **combien d'eau pour quoi faire ? avec qu'elle énergie ? 
 
 Numerama (https://www.youtube.com/watch?v=Qddzc5iqP5U) - sources en description
 
-## Biais pré-recherches
+## Biais pré-recherches
 
 - L'IA consomme autant d'eau par requête que pour une recherche Google.
 - Les modèles de génération d'image (vidéos, etc.) consomment "énormément".
