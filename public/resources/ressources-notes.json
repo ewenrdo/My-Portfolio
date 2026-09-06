@@ -85,6 +85,14 @@
                 "title": "Fin du réseau téléphonique cuivre",
                 "credits": "Ewen Rodrigues de Oliveira",
                 "date": "2024-08-28"
+            },
+            {
+                "name": "consommation-ia.md",
+                "slug": "consommation-ia",
+                "path": "/resources/md-notes/miscellaneous/consommation-ia.md",
+                "title": "Consommation hydrique de l’IA",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-09-06"
             }
         ]
     },
