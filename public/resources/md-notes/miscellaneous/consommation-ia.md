@@ -46,7 +46,7 @@ Donc le problème ce n'est pas d'utiliser de l'eau pour l'IA, mais :
 - L'emplacement et le type d'énergie utilisé est très important pour mesurer la quantité d'eau _(le datacenter en lui-même n'utilisant que peu d'eau relativement à la production de son électricité)_.
 - C'est un choix politique : le _datacenter_ a une utilité (production, médecine, recherche, tout le secteur tertiaire, etc.), ce qui n'est pas le cas de toutes les autres pompeurs d'eau (golfs, piscines, etc.).
 
-La "bonne" question : **combien d'eau pour quoi faire ? avec qu'elle énergie ? où ? avec quel qualité de contrôle ?**.
+La "bonne" question : **combien d'eau pour quoi faire ? avec qu'elle énergie ? où ? quand ? avec quel qualité de contrôle ?**.
 
 ## Sources
 
