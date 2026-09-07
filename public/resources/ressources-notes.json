@@ -49,6 +49,14 @@
                 "date": "2024-09-01"
             },
             {
+                "name": "neat.md",
+                "slug": "neat",
+                "path": "/resources/md-notes/sport/neat.md",
+                "title": "Décomposition de la dépense énergétique",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2024-09-07"
+            },
+            {
                 "name": "recuperation-musculaire.md",
                 "slug": "recuperation-musculaire",
                 "path": "/resources/md-notes/sport/recuperation-musculaire.md",
