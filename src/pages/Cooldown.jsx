@@ -53,7 +53,7 @@ export default function Cooldown() {
                     <span className="cooldown-kicker">Prochaines vacances</span>
                     <h1>Encore un peu de patience</h1>
                     <p>
-                        Le minuteur ci-dessous suit en temps réel la date des prochaines vacances: {new Date(TARGET_TIME).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} à {new Date(TARGET_TIME).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}.
+                        Le minuteur <span className="mobile-only">ci-dessous</span><span className="computer-only">ci-contre</span> suit en temps réel la date des prochaines vacances: {new Date(TARGET_TIME).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} à {new Date(TARGET_TIME).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}.
                     </p>
 
                     <div className="cooldown-status">

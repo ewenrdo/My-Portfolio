@@ -10,6 +10,26 @@
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Rubik', sans-serif;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 900px) {
+        .mobile-only {
+            display: inline;
+        }
+
+        .computer-only {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 901px) {
+        .mobile-only {
+            display: none;
+        }
+
+        .computer-only {
+            display: inline;
+        }
+    }
 }
 
 .cooldown-page::before,
