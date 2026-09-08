@@ -34,7 +34,7 @@ const MATIERES = [
         label: "Algorithmique 5",
         desc: 'Étude et algorithmique sur les graphes (parcours, chemins, etc.).',
         icon: 'fa-sitemap',
-        disabled: true
+        disabled: false
     },
     {
         key: 'se',
@@ -95,13 +95,18 @@ export default function Simulateur() {
     };
 
     const [groupes, setGroupes] = useState(() => getInitial('simulateur_groupes', { CC1: '', P: '', CC2: '', E: '' }));
+    const [algo, setAlgo] = useState(() => getInitial('simulateur_algo', { CC1: '', CC2: '', E: '' }));
 
-    const [results, setResults] = useState({ prob: null, analyse: null, c: null, algo: null });
+    const [results, setResults] = useState({ groupes: null, algo: null });
 
     // Synchronisation localStorage
     useEffect(() => {
         localStorage.setItem('simulateur_groupes', JSON.stringify(groupes));
     }, [groupes]);
+
+    useEffect(() => {
+        localStorage.setItem('simulateur_algo', JSON.stringify(algo));
+    }, [algo]);
 
     // Groupes
     function calcGroupes() {
@@ -116,6 +121,16 @@ export default function Simulateur() {
         setResults(r => ({ ...r, groupes: { NF1: NF1.toFixed(2) } }));
     }
 
+    // Algo
+    function calcAlgo() {
+        const CC1 = parseFloat(algo.CC1) || 0;
+        const CC2 = parseFloat(algo.CC2) || 0;
+        const E = parseFloat(algo.E) || 0;
+
+        // NF1 NF = CC1/4 + CC2/4 + E/2 AVANT harmonisation
+        const NF1 = CC1 / 4 + CC2 / 4 + E / 2;
+        setResults(r => ({ ...r, algo: { NF1: NF1.toFixed(2) } }));
+    }
 
     return (
         <div className="simulateur-page">
@@ -208,8 +223,49 @@ export default function Simulateur() {
                                 </div>
                             )}
 
+                            {/* FORMULAIRE ALGO */}
+                            {selectedMatiere === 'algo5' && (
+                                <div className="simulator-form">
+                                    <div className="input-container-row">
+                                        <div className="input-group">
+                                            <label htmlFor="cc1_algo">Contrôle Continu 1</label>
+                                            <input id="cc1_algo" type="number" placeholder="CC1" className="apple-input" value={algo.CC1} onChange={e => setAlgo({ ...algo, CC1: e.target.value })} />
+                                        </div>
+                                        <div className="input-group">
+                                            <label htmlFor="cc2_algo">Contrôle Continu 2</label>
+                                            <input id="cc2_algo" type="number" placeholder="CC2" className="apple-input" value={algo.CC2} onChange={e => setAlgo({ ...algo, CC2: e.target.value })} />
+                                        </div>
+                                        <div className="input-group">
+                                            <label htmlFor="e_algo">Note Examen</label>
+                                            <input id="e_algo" type="number" placeholder="E" className="apple-input" value={algo.E} onChange={e => setAlgo({ ...algo, E: e.target.value })} />
+                                        </div>
+                                    </div>
 
-                            {selectedMatiere !== 'groupes' && (
+                                    <div className="simulator-formula">
+                                        <p>Formule de calcul : <b>NF1 = CC1 / 4 + CC2 / 4 + E / 2</b><br/>
+                                        En cas d'absence en CC1 ou CC2, la note diffère :
+                                        <ul>
+                                            <li>Absence justifiée : CC/3 + 2/3*E</li>
+                                            <li>Absence non justifiée : la note du CC est remplacée par 0</li>
+                                        </ul>
+                                        <b>IMPORTANT : La note calculée ne tient pas compte de l'harmonisation des notes qui aura lieu en fin de semestre.</b>
+                                        </p>
+                                    </div>
+
+                                    <div className="action-buttons">
+                                        <button type="button" onClick={calcAlgo} className="apple-btn-calc">Calculer</button>
+                                    </div>
+                                    {results.algo && (
+                                        <div className="simulator-results">
+                                            <p className="result-text">Note finale calculée (NF1) : <b>{results.algo.NF1} / 20</b></p>
+                                            <NoteProgressBar value={parseFloat(results.algo.NF1)} />
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+
+                            {selectedMatiere !== 'groupes' && selectedMatiere !== 'algo5' && (
                                 <div className="simulator-form">
                                     <p className="coming-soon-text">Le simulateur pour cette matière n'est pas encore disponible. Revenez plus tard !</p>
                                 </div>
