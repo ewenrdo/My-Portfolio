@@ -1602,6 +1602,15 @@
                                 "slug": "tp-pf5",
                                 "children": [
                                     {
+                                        "name": "codes-tp",
+                                        "type": "link",
+                                        "path": "github.com/ewenrdo/dl-mathinfo-pf5-tp",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Codes sources des TP",
+                                        "date": "2026-09-08",
+                                        "slug": "pf5-codes-tp"
+                                    },
+                                    {
                                         "name": "tp1.pdf",
                                         "path": "/resources/university/tp-pf5/tp1.pdf",
                                         "credits": "Université Paris Cité",
