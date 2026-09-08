@@ -1554,6 +1554,14 @@
                                         "slug": "al5-annale-exam-s1"
                                     }
                                 ]
+                            },
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/al5/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Chapitre 1 : Introduction aux graphes",
+                                "date": "2026-09-08",
+                                "slug": "al5-chapitre-1-introduction-aux-graphes"
                             }
                         ]
                     },
