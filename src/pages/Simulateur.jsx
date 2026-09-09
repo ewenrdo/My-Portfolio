@@ -48,7 +48,7 @@ const MATIERES = [
         label: "Prog. Fonctionnelle",
         desc: 'Bases de la programmation fonctionnelle avec OCaml.',
         icon: 'fa-code-branch',
-        disabled: true
+        disabled: false
     },
     {
         key: 'groupes',
@@ -96,8 +96,9 @@ export default function Simulateur() {
 
     const [groupes, setGroupes] = useState(() => getInitial('simulateur_groupes', { CC1: '', P: '', CC2: '', E: '' }));
     const [algo, setAlgo] = useState(() => getInitial('simulateur_algo', { CC1: '', CC2: '', E: '' }));
+    const [progFonct, setProgFonct] = useState(() => getInitial('simulateur_progFonct', { P: '', E: '' }));
 
-    const [results, setResults] = useState({ groupes: null, algo: null });
+    const [results, setResults] = useState({ groupes: null, algo: null, progFonct: null });
 
     // Synchronisation localStorage
     useEffect(() => {
@@ -107,6 +108,20 @@ export default function Simulateur() {
     useEffect(() => {
         localStorage.setItem('simulateur_algo', JSON.stringify(algo));
     }, [algo]);
+
+    useEffect(() => {
+        localStorage.setItem('simulateur_progFonct', JSON.stringify(progFonct));
+    }, [progFonct]);
+
+    // Programmation fonctionnelle (max(1/3 2/3, 1))
+    function calcProgFonct() {
+        const P = parseFloat(progFonct.P) || 0;
+        const E = parseFloat(progFonct.E) || 0;
+
+        // NF1 = max(P/3 + 2/3*E, E)
+        const NF1 = Math.max(P / 3 + (2 / 3) * E, E);
+        setResults(r => ({ ...r, progFonct: { NF1: NF1.toFixed(2) } }));
+    }
 
     // Groupes
     function calcGroupes() {
@@ -259,6 +274,35 @@ export default function Simulateur() {
                                         <div className="simulator-results">
                                             <p className="result-text">Note finale calculée (NF1) : <b>{results.algo.NF1} / 20</b></p>
                                             <NoteProgressBar value={parseFloat(results.algo.NF1)} />
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+                            {selectedMatiere === 'pf' && (
+                                <div className="simulator-form">
+                                    <div className="input-container-row">
+                                        <div className="input-group">
+                                            <label htmlFor="p_pf">Partiel</label>
+                                            <input id="p_pf" type="number" placeholder="P" className="apple-input" value={progFonct.P} onChange={e => setProgFonct({ ...progFonct, P: e.target.value })} />
+                                        </div>
+                                        <div className="input-group">
+                                            <label htmlFor="e_pf">Note Examen</label>
+                                            <input id="e_pf" type="number" placeholder="E" className="apple-input" value={progFonct.E} onChange={e => setProgFonct({ ...progFonct, E: e.target.value })} />
+                                        </div>
+                                    </div>
+
+                                    <div className="simulator-formula">
+                                        <p>Formule de calcul : <b>NF1 = max(P / 3 + 2 / 3 * E, E)</b></p>
+                                    </div>
+
+                                    <div className="action-buttons">
+                                        <button type="button" onClick={calcProgFonct} className="apple-btn-calc">Calculer</button>
+                                    </div>
+                                    {results.progFonct && (
+                                        <div className="simulator-results">
+                                            <p className="result-text">Note finale calculée (NF1) : <b>{results.progFonct.NF1} / 20</b></p>
+                                            <NoteProgressBar value={parseFloat(results.progFonct.NF1)} />
                                         </div>
                                     )}
                                 </div>
