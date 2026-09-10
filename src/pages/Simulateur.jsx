@@ -69,7 +69,7 @@ const MATIERES = [
         label: "Intégration et Probabilités",
         desc: 'Étude des probabilités continues et liens avec l\'intégration.',
         icon: 'fa-infinity',
-        disabled: true
+        disabled: false
     },
     {
         key: 'anglais',
@@ -97,7 +97,7 @@ export default function Simulateur() {
     const [groupes, setGroupes] = useState(() => getInitial('simulateur_groupes', { CC1: '', P: '', CC2: '', E: '' }));
     const [algo, setAlgo] = useState(() => getInitial('simulateur_algo', { CC1: '', CC2: '', E: '' }));
     const [progFonct, setProgFonct] = useState(() => getInitial('simulateur_progFonct', { P: '', E: '' }));
-
+    const [proba, setProba] = useState(() => getInitial('simulateur_proba', { CC1: '', P: '', CC2: '', E: '' }));
     const [results, setResults] = useState({ groupes: null, algo: null, progFonct: null });
 
     // Synchronisation localStorage
@@ -113,6 +113,10 @@ export default function Simulateur() {
         localStorage.setItem('simulateur_progFonct', JSON.stringify(progFonct));
     }, [progFonct]);
 
+    useEffect(() => {
+        localStorage.setItem('simulateur_proba', JSON.stringify(proba));
+    }, [proba]);
+
     // Programmation fonctionnelle (max(1/3 2/3, 1))
     function calcProgFonct() {
         const P = parseFloat(progFonct.P) || 0;
@@ -121,6 +125,18 @@ export default function Simulateur() {
         // NF1 = max(P/3 + 2/3*E, E)
         const NF1 = Math.max(P / 3 + (2 / 3) * E, E);
         setResults(r => ({ ...r, progFonct: { NF1: NF1.toFixed(2) } }));
+    }
+
+    // Intégration et Probabilités 
+    function calcProba() {
+        const CC1 = parseFloat(proba.CC1) || 0;
+        const P = parseFloat(proba.P) || 0;
+        const CC2 = parseFloat(proba.CC2) || 0;
+        const E = parseFloat(proba.E) || 0;
+
+        // NF1 = 1/8(max(CC1,E)+2max(P,E)+max(CC2,E)+4E)
+        const NF1 = (Math.max(CC1, E) + 2 * Math.max(P, E) + Math.max(CC2, E) + 4 * E) / 8;
+        setResults(r => ({ ...r, proba: { NF1: NF1.toFixed(2) } }));
     }
 
     // Groupes
@@ -303,6 +319,48 @@ export default function Simulateur() {
                                         <div className="simulator-results">
                                             <p className="result-text">Note finale calculée (NF1) : <b>{results.progFonct.NF1} / 20</b></p>
                                             <NoteProgressBar value={parseFloat(results.progFonct.NF1)} />
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+                            {selectedMatiere === 'proba' && (
+                                <div className="simulator-form">
+                                    <div className="input-group">
+                                        <label htmlFor="cc1_p">CC1</label>
+                                        <input id="cc1_p" type="number" placeholder="CC1" className="apple-input" value={proba.CC1} onChange={e => setProba({ ...proba, CC1: e.target.value })} />
+                                    </div>
+                                    <div className="input-group">
+                                        <label htmlFor="p_p">Partiel</label>
+                                        <input id="p_p" type="number" placeholder="P" className="apple-input" value={proba.P} onChange={e => setProba({ ...proba, P: e.target.value })} />
+                                    </div>
+                                    <div className="input-group">
+                                        <label htmlFor="cc2_p">CC2</label>
+                                        <input id="cc2_p" type="number" placeholder="CC2" className="apple-input" value={proba.CC2} onChange={e => setProba({ ...proba, CC2: e.target.value })} />
+                                    </div>
+                                    <div className="input-group">
+                                        <label htmlFor="e_p">Note Examen</label>
+                                        <input id="e_p" type="number" placeholder="E" className="apple-input" value={proba.E} onChange={e => setProba({ ...proba, E: e.target.value })} />
+                                    </div>
+                                    <div className="simulator-formula">
+                                        <p>Formule de calcul : <b>NF1 = (max(CC1,E) + 2 * max(P,E) + max(CC2,E) + 4 * E) / 8</b><br/>
+                                        Dates des épreuves :
+                                        <ul>
+                                            <li>CC1 : 7 octobre 2026 - 1h</li>
+                                            <li>P : 7 novembre 2026 à 9h30 - 2h</li>
+                                            <li>CC2 : début décembre 2026 (après le 2 décembre) - 1h</li>
+                                            <li>E : début janvier 2027 - 1h</li>
+                                        </ul>
+                                        </p>
+                                    </div>
+
+                                    <div className="action-buttons">
+                                        <button type="button" onClick={calcProba} className="apple-btn-calc">Calculer</button>
+                                    </div>
+                                    {results.proba && (
+                                        <div className="simulator-results">
+                                            <p className="result-text">Note finale calculée (NF1) : <b>{results.proba.NF1} / 20</b></p>
+                                            <NoteProgressBar value={parseFloat(results.proba.NF1)} />
                                         </div>
                                     )}
                                 </div>
