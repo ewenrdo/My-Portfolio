@@ -98,7 +98,8 @@ export default function Simulateur() {
     const [algo, setAlgo] = useState(() => getInitial('simulateur_algo', { CC1: '', CC2: '', E: '' }));
     const [progFonct, setProgFonct] = useState(() => getInitial('simulateur_progFonct', { P: '', E: '' }));
     const [proba, setProba] = useState(() => getInitial('simulateur_proba', { CC1: '', P: '', CC2: '', E: '' }));
-    const [results, setResults] = useState({ groupes: null, algo: null, progFonct: null });
+    const [calculDiff, setCalculDiff] = useState(() => getInitial('simulateur_calculDiff', { CC1: '', CC2: '', CC3: '', E: '' }));
+    const [results, setResults] = useState({ groupes: null, algo: null, progFonct: null, calculDiff: null });
 
     // Synchronisation localStorage
     useEffect(() => {
@@ -116,6 +117,10 @@ export default function Simulateur() {
     useEffect(() => {
         localStorage.setItem('simulateur_proba', JSON.stringify(proba));
     }, [proba]);
+
+    useEffect(() => {
+        localStorage.setItem('simulateur_calculDiff', JSON.stringify(calculDiff));
+    }, [calculDiff]);
 
     // Programmation fonctionnelle (max(1/3 2/3, 1))
     function calcProgFonct() {
@@ -161,6 +166,17 @@ export default function Simulateur() {
         // NF1 NF = CC1/4 + CC2/4 + E/2 AVANT harmonisation
         const NF1 = CC1 / 4 + CC2 / 4 + E / 2;
         setResults(r => ({ ...r, algo: { NF1: NF1.toFixed(2) } }));
+    }
+
+    function calcCalculDiff() {
+        const CC1 = parseFloat(calculDiff.CC1) || 0;
+        const CC2 = parseFloat(calculDiff.CC2) || 0;
+        const CC3 = parseFloat(calculDiff.CC3) || 0;
+        const E = parseFloat(calculDiff.E) || 0;
+
+        // NF1 = 1/2(E + 1/3 * (max(E, CC1) + max(E, CC2) + max(E, CC3)))
+        const NF1 = 1/2 * (E + 1/3 * (Math.max(E, CC1) + Math.max(E, CC2) + Math.max(E, CC3)));
+        setResults(r => ({ ...r, calculDiff: { NF1: NF1.toFixed(2) } }));
     }
 
     return (
@@ -366,8 +382,45 @@ export default function Simulateur() {
                                 </div>
                             )}
 
+                            {selectedMatiere === 'diff' && (
+                                <div className="simulator-form">
+                                    <div className="input-container-row">
+                                        <div className="input-group">
+                                            <label htmlFor="cc1_diff">Contrôle Continu 1</label>
+                                            <input id="cc1_diff" type="number" placeholder="CC1" className="apple-input" value={calculDiff.CC1} onChange={e => setCalculDiff({ ...calculDiff, CC1: e.target.value })} />
+                                        </div>
+                                        <div className="input-group">
+                                            <label htmlFor="cc2_diff">Contrôle Continu 2</label>
+                                            <input id="cc2_diff" type="number" placeholder="CC2" className="apple-input" value={calculDiff.CC2} onChange={e => setCalculDiff({ ...calculDiff, CC2: e.target.value })} />
+                                        </div>
+                                        <div className="input-group">
+                                            <label htmlFor="cc3_diff">Contrôle Continu 3</label>
+                                            <input id="cc3_diff" type="number" placeholder="CC3" className="apple-input" value={calculDiff.CC3} onChange={e => setCalculDiff({ ...calculDiff, CC3: e.target.value })} />
+                                        </div>
+                                        <div className="input-group">
+                                            <label htmlFor="e_diff">Note Examen</label>
+                                            <input id="e_diff" type="number" placeholder="E" className="apple-input" value={calculDiff.E} onChange={e => setCalculDiff({ ...calculDiff, E: e.target.value })} />
+                                        </div>
+                                    </div>
 
-                            {selectedMatiere !== 'groupes' && selectedMatiere !== 'algo5' && (
+                                    <div className="simulator-formula">
+                                        <p>Formule de calcul : <b>NF1 = 1/2(E + 1/3 * (max(E, CC1) + max(E, CC2) + max(E, CC3)))</b></p>
+                                    </div>
+
+                                    <div className="action-buttons">
+                                        <button type="button" onClick={calcCalculDiff} className="apple-btn-calc">Calculer</button>
+                                    </div>
+                                    {results.calculDiff && (
+                                        <div className="simulator-results">
+                                            <p className="result-text">Note finale calculée (NF1) : <b>{results.calculDiff.NF1} / 20</b></p>
+                                            <NoteProgressBar value={parseFloat(results.calculDiff.NF1)} />
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+
+                            {selectedMatiere !== 'groupes' && selectedMatiere !== 'algo5' && selectedMatiere !== 'pf' && selectedMatiere !== 'proba' && selectedMatiere !== 'diff' && (
                                 <div className="simulator-form">
                                     <p className="coming-soon-text">Le simulateur pour cette matière n'est pas encore disponible. Revenez plus tard !</p>
                                 </div>
