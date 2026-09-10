@@ -62,7 +62,7 @@ const MATIERES = [
         label: "Calcul Différentiel",
         desc: 'Maîtrise du calcul différentiel en dimension finie, étude locale.',
         icon: 'fa-chart-line',
-        disabled: true
+        disabled: false
     },
     {
         key: 'integ',
