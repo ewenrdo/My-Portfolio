@@ -419,7 +419,7 @@ export default function Simulateur() {
                                 </div>
                             )}
 
-                            {selectedMatiere == 'se' &&
+                            {selectedMatiere === 'se' &&
                                 <div className="simulator-form">
                                     <p className="coming-soon-text">Le simulateur pour cette matière n'est pas disponible, l'enseignante n'ayant pas donné de formule explicite.</p>
                                     <div className="simulator-formula">
