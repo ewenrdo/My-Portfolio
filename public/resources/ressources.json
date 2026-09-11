@@ -1623,6 +1623,14 @@
                                         "slug": "se5-annale-exam-s1"
                                     }
                                 ]
+                            },
+                            {
+                                "name": "cours1.pdf",
+                                "path": "/resources/notes/SY5/cours1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Schémas du cours 1",
+                                "date": "2026-09-11",
+                                "slug": "sy5-cours-notes-cours1"
                             }
                         ]
                     },
