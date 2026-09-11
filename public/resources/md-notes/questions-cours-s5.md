@@ -17,7 +17,7 @@ _Rien pour le moment_
 
 ## Groupes et actions (GA5)
 
-_Rien pour le moment_
+- Pour la proposition 1.1.2, il est écrit que "tout élément x admet un unique symétrique". L'existence de "e" garanti-t-elle l'existence du symétrique, ou la proposition porte-t-elle uniquement sur l'unicité d'un symétrique dans le cas où il existe ?
 
 ## Algorithmique (AL5)
 

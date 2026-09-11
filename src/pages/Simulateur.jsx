@@ -41,7 +41,7 @@ const MATIERES = [
         label: "Système d'Exploitation",
         desc: 'Maîtriser les concepts de bases d\'Unix.',
         icon: 'fa-terminal',
-        disabled: true
+        disabled: false
     },
     {
         key: 'pf',
@@ -175,7 +175,7 @@ export default function Simulateur() {
         const E = parseFloat(calculDiff.E) || 0;
 
         // NF1 = 1/2(E + 1/3 * (max(E, CC1) + max(E, CC2) + max(E, CC3)))
-        const NF1 = 1/2 * (E + 1/3 * (Math.max(E, CC1) + Math.max(E, CC2) + Math.max(E, CC3)));
+        const NF1 = 1 / 2 * (E + 1 / 3 * (Math.max(E, CC1) + Math.max(E, CC2) + Math.max(E, CC3)));
         setResults(r => ({ ...r, calculDiff: { NF1: NF1.toFixed(2) } }));
     }
 
@@ -289,13 +289,13 @@ export default function Simulateur() {
                                     </div>
 
                                     <div className="simulator-formula">
-                                        <p>Formule de calcul : <b>NF1 = CC1 / 4 + CC2 / 4 + E / 2</b><br/>
-                                        En cas d'absence en CC1 ou CC2, la note diffère :
-                                        <ul>
-                                            <li>Absence justifiée : CC/3 + 2/3*E</li>
-                                            <li>Absence non justifiée : la note du CC est remplacée par 0</li>
-                                        </ul>
-                                        <b>IMPORTANT : La note calculée ne tient pas compte de l'harmonisation des notes qui aura lieu en fin de semestre.</b>
+                                        <p>Formule de calcul : <b>NF1 = CC1 / 4 + CC2 / 4 + E / 2</b><br />
+                                            En cas d'absence en CC1 ou CC2, la note diffère :
+                                            <ul>
+                                                <li>Absence justifiée : CC/3 + 2/3*E</li>
+                                                <li>Absence non justifiée : la note du CC est remplacée par 0</li>
+                                            </ul>
+                                            <b>IMPORTANT : La note calculée ne tient pas compte de l'harmonisation des notes qui aura lieu en fin de semestre.</b>
                                         </p>
                                     </div>
 
@@ -359,14 +359,14 @@ export default function Simulateur() {
                                         <input id="e_p" type="number" placeholder="E" className="apple-input" value={proba.E} onChange={e => setProba({ ...proba, E: e.target.value })} />
                                     </div>
                                     <div className="simulator-formula">
-                                        <p>Formule de calcul : <b>NF1 = (max(CC1,E) + 2 * max(P,E) + max(CC2,E) + 4 * E) / 8</b><br/>
-                                        Dates des épreuves :
-                                        <ul>
-                                            <li>CC1 : 7 octobre 2026 - 1h</li>
-                                            <li>P : 7 novembre 2026 à 9h30 - 2h</li>
-                                            <li>CC2 : début décembre 2026 (après le 2 décembre) - 1h</li>
-                                            <li>E : début janvier 2027 - 1h</li>
-                                        </ul>
+                                        <p>Formule de calcul : <b>NF1 = (max(CC1,E) + 2 * max(P,E) + max(CC2,E) + 4 * E) / 8</b><br />
+                                            Dates des épreuves :
+                                            <ul>
+                                                <li>CC1 : 7 octobre 2026 - 1h</li>
+                                                <li>P : 7 novembre 2026 à 9h30 - 2h</li>
+                                                <li>CC2 : début décembre 2026 (après le 2 décembre) - 1h</li>
+                                                <li>E : début janvier 2027 - 1h</li>
+                                            </ul>
                                         </p>
                                     </div>
 
@@ -419,8 +419,16 @@ export default function Simulateur() {
                                 </div>
                             )}
 
+                            {selectedMatiere == 'se' &&
+                                <div className="simulator-form">
+                                    <p className="coming-soon-text">Le simulateur pour cette matière n'est pas disponible, l'enseignante n'ayant pas donné de formule explicite.</p>
+                                    <div className="simulator-formula">
+                                        <p>Évaluations : examen écrit (probablement en janvier), un projet (en trinôme) et deux QCM (un au moment des vacances, un autre plus tard).</p>
+                                    </div>
+                                </div>
+                            }
 
-                            {selectedMatiere !== 'groupes' && selectedMatiere !== 'algo5' && selectedMatiere !== 'pf' && selectedMatiere !== 'proba' && selectedMatiere !== 'diff' && (
+                            {selectedMatiere !== 'groupes' && selectedMatiere !== 'algo5' && selectedMatiere !== 'pf' && selectedMatiere !== 'proba' && selectedMatiere !== 'diff' && selectedMatiere !== 'se' && (
                                 <div className="simulator-form">
                                     <p className="coming-soon-text">Le simulateur pour cette matière n'est pas encore disponible. Revenez plus tard !</p>
                                 </div>
