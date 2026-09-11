@@ -980,7 +980,7 @@
                                         "path": "/resources/notes/GA5/TD1.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
                                         "title": "Notes de TD 1",
-                                        "date": "2026-07-10",
+                                        "date": "2026-09-11",
                                         "slug": "ga5-td-notes-td1"
                                     }
                                 ]
@@ -1197,7 +1197,24 @@
                             {
                                 "name": "Avancement en TD",
                                 "slug": "pr5-td-notes",
-                                "children": []
+                                "children": [
+                                    {
+                                        "name": "td1.pdf",
+                                        "path": "/resources/notes/PR5/TD1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Notes de TD 1",
+                                        "date": "2026-09-11",
+                                        "slug": "pr5-td-notes-td1"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "chap1.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/pr5/chap1/chap1.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
+                                "title": "Chapitre 1 : Espaces mesurés et probabilisés",
+                                "date": "2026-09-11",
+                                "slug": "calcul-differentiel-5-chapitre-1-topologie-des-espaces-vectoriels-normes"
                             }
                         ]
                     },
