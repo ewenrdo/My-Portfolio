@@ -1237,6 +1237,14 @@
                                 "title": "Fiches d'entraînement semaine 1",
                                 "date": "2026-08-29",
                                 "slug": "fiches-dentraînement-semaine-1"
+                            },
+                            {
+                                "name": "sm2.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm2/sm2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Fiches d'entraînement semaine 2",
+                                "date": "2026-09-11",
+                                "slug": "fiches-dentraînement-semaine-2"
                             }
                         ]
                     },
