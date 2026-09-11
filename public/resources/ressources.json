@@ -1625,6 +1625,16 @@
                                 ]
                             },
                             {
+                                "name": "Site du cours de D. Poulalhon",
+                                "type": "link",
+                                "path": "hhttps://moule.informatique.univ-paris-diderot.fr/poulalho/sy5-2026-2027",
+                                "credits": "Dominique Poulalhon",
+                                "title": "Site du cours de D. Poulalhon",
+                                "comment": "Site du cours de systèmes d'exploitation de Dominique Poulalhon, Université Paris Cité, Licence 3 Mathématiques et Informatique.",
+                                "date": "2026-09-11",
+                                "slug": "site-du-cours-de-d-poulalhon"
+                            },
+                            {
                                 "name": "cours1.pdf",
                                 "path": "/resources/notes/SY5/cours1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
