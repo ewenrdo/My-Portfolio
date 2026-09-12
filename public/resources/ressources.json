@@ -1581,6 +1581,20 @@
                                 ]
                             },
                             {
+                                "name": "Avancement en TD",
+                                "slug": "al5-td-notes",
+                                "children": [
+                                    {
+                                        "name": "td1.pdf",
+                                        "path": "/resources/notes/AL5/TD1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Notes de TD 1",
+                                        "date": "2026-09-12",
+                                        "slug": "al5-td-notes-td1"
+                                    }
+                                ]
+                            },
+                            {
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/al5/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
