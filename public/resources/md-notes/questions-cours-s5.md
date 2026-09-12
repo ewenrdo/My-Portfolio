@@ -13,7 +13,7 @@ _Rien pour le moment_
 
 ## Calcul différentiel (CD5)
 
-_Rien pour le moment_
+- On a vu que l'application u \mapsto \| u \| était une norme, ça veut dire quoi, puisque \| \cdot \| est elle-même une norme ? Quel intérêt ?
 
 ## Groupes et actions (GA5)
 
