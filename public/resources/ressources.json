@@ -1243,17 +1243,33 @@
                                 "name": "sm1.pdf",
                                 "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm1/sm1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
-                                "title": "Fiches d'entraînement semaine 1",
+                                "title": "Fiche d'entraînement semaine 1",
                                 "date": "2026-08-29",
-                                "slug": "fiches-dentraînement-semaine-1"
+                                "slug": "fiche-dentraînement-semaine-1"
                             },
                             {
                                 "name": "sm2.pdf",
                                 "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm2/sm2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
-                                "title": "Fiches d'entraînement semaine 2",
+                                "title": "Fiche d'entraînement semaine 2",
                                 "date": "2026-09-11",
-                                "slug": "fiches-dentraînement-semaine-2"
+                                "slug": "fiche-dentraînement-semaine-2"
+                            },
+                            {
+                                "name": "sm2-corr.pdf",
+                                "path": "/resources/notes/Training/SM2.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Corrigé fiche d'entraînement semaine 2",
+                                "date": "2026-09-18",
+                                "slug": "fiche-dentraînement-semaine-2"
+                            },
+                            {
+                                "name": "sm3.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm3/sm3.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Fiche d'entraînement semaine 3",
+                                "date": "2026-09-18",
+                                "slug": "fiche-dentraînement-semaine-3"
                             }
                         ]
                     },
