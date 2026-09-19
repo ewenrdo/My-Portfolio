@@ -1680,6 +1680,14 @@
                                 "title": "Schémas du cours 1",
                                 "date": "2026-09-11",
                                 "slug": "sy5-cours-notes-cours1"
+                            },
+                            {
+                                "name": "cours2.pdf",
+                                "path": "/resources/notes/SY5/cours2.pdf",
+                                "credits": "Stefan Zvonkovski.",
+                                "title": "Schémas du cours 2",
+                                "date": "2026-09-19",
+                                "slug": "sy5-cours-notes-cours2"
                             }
                         ]
                     },
