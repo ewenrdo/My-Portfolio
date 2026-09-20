@@ -1107,41 +1107,19 @@
                             },
                             {
                                 "name": "chap2.pdf",
-                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/cd5/chap2/chap2.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/cd5/chap1/chap1.2/chap1.2.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
-                                "title": "Chapitre 2 : Continuité",
+                                "title": "Chapitre 1.2 : Continuité",
                                 "date": "2026-06-29",
                                 "slug": "calcul-differentiel-5-chapitre-2-continuite"
                             },
                             {
                                 "name": "chap3.pdf",
-                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/cd5/chap3/chap3.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/cd5/chap1/chap1.3/chap1.3.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
-                                "title": "Chapitre 3 : Compacité",
+                                "title": "Chapitre 1.3 : Compacité et complétude",
                                 "date": "2026-06-29",
                                 "slug": "calcul-differentiel-5-chapitre-3-compacite"
-                            },
-                            {
-                                "name": "chap4.pdf",
-                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/cd5/chap4/chap4.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
-                                "title": "Chapitre 4 : Complétude",
-                                "date": "2026-06-29",
-                                "slug": "calcul-differentiel-5-chapitre-4-completeness"
-                            },
-                            {
-                                "name": "chap5.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
-                                "title": "Chapitre 5 : Calcul différentiel",
-                                "date": "2026-06-29",
-                                "slug": "calcul-differentiel-5-chapitre-5-calcul-differentiel"
-                            },
-                            {
-                                "name": "chap6.pdf",
-                                "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
-                                "title": "Chapitre 6 : Théorème d'inversion locale et fonctions implicites",
-                                "date": "2026-06-29",
-                                "slug": "calcul-differentiel-5-chapitre-6-theoreme-dinversion-locale-et-fonctions-implicites"
                             }
                         ]
                     },
