@@ -111,6 +111,28 @@
         ]
     },
     {
+        "id": "imersia",
+        "title": "Imersia",
+        "date": "Février 2025 - Mai 2025",
+        "intro": "Imersia est une mini-boîte de nuit. J'ai développé l'ensemble de l'interface graphique, ainsi que les transitions du prototype. Le projet a été réalisé en collaboration avec Raphaël Laurens qui a travaillé sur le backend et la partie technique du projet.",
+        "links": [
+            {
+                "href": "https://imersialab.com",
+                "label": "imersialab.com"
+            }
+        ],
+        "tags": [
+            "NextJS"
+        ],
+        "images": [
+            "/images/sliders/imersia1.png",
+            "/images/sliders/imersia2.png",
+            "/images/sliders/imersia3.png",
+            "/images/sliders/imersia4.png",
+            "/images/sliders/imersia5.png"
+        ]
+    },
+    {
         "id": "spotable",
         "title": "Spotable",
         "date": "Novembre 2024 - Décembre 2024",
@@ -122,6 +144,23 @@
         ],
         "images": [
             "/images/sliders/slider17.png"
+        ]
+    },
+    {
+        "id": "klimt",
+        "title": "Klimt & Co",
+        "date": "Avril 2025",
+        "intro": "Klimt & Co est une agence de montage de contenus courts (format shorts). J'ai participé au développé du site (implémentation du design par @Frostheda) et de toute la partie backend (gestion des contenus, des utilisateurs et de l'authentification).",
+        "tags": [
+            "NextJS",
+            "NestJS"
+        ],
+        "images": [
+            "/images/sliders/klimt4.png",
+            "/images/sliders/klimt1.png",
+            "/images/sliders/klimt2.png",
+            "/images/sliders/klimt3.png",
+            "/images/sliders/klimt5.png"
         ]
     },
     {
