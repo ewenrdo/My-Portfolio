@@ -568,6 +568,27 @@
     justify-content: center;
     padding: clamp(1rem, 3vw, 2.5rem);
     animation: modalFadeIn 300ms ease-out;
+
+
+    @media screen and (max-width: 900px) {
+        .mobile-only {
+            display: inline;
+        }
+
+        .computer-only {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 901px) {
+        .mobile-only {
+            display: none;
+        }
+
+        .computer-only {
+            display: inline;
+        }
+    }
 }
 
 .apple-modal-container {

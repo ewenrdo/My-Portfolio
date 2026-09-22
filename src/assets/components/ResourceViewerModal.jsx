@@ -354,12 +354,16 @@ function ResourceViewerModal({ item, isOpen, onClose }) {
                             <a
                                 href={item.path}
                                 download
-                                className="action-btn primary"
+                                className="action-btn"
                                 title="Télécharger"
                             >
                                 <i className="fas fa-download" />
                             </a>
                         )}
+
+                        <a href={item.path} target="_blank" rel="noopener noreferrer" className="action-btn primary computer-only" title="Ouvrir en plein écran">
+                            <i className="fas fa-up-right-and-down-left-from-center" />
+                        </a>
 
                         <button
                             onClick={onClose}
