@@ -131,22 +131,27 @@ export default function Simulateur() {
     // Synchronisation localStorage
     useEffect(() => {
         localStorage.setItem('simulateur_groupes', JSON.stringify(groupes));
+        calcGroupes();
     }, [groupes]);
 
     useEffect(() => {
         localStorage.setItem('simulateur_algo', JSON.stringify(algo));
+        calcAlgo();
     }, [algo]);
 
     useEffect(() => {
         localStorage.setItem('simulateur_progFonct', JSON.stringify(progFonct));
+        calcProgFonct();
     }, [progFonct]);
 
     useEffect(() => {
         localStorage.setItem('simulateur_proba', JSON.stringify(proba));
+        calcProba();
     }, [proba]);
 
     useEffect(() => {
         localStorage.setItem('simulateur_calculDiff', JSON.stringify(calculDiff));
+        calcCalculDiff();
     }, [calculDiff]);
 
     // Programmation fonctionnelle (max(1/3 2/3, 1))
