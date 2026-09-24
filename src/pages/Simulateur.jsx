@@ -80,6 +80,33 @@ const MATIERES = [
     },
 ];
 
+function isEmpty(value) {
+    return String(value ?? '').trim() === '';
+}
+
+function getRequiredExamGrade(calculateNote) {
+    if (calculateNote(0) >= 10) {
+        return 0;
+    }
+
+    if (calculateNote(20) < 10) {
+        return null;
+    }
+
+    let low = 0;
+    let high = 20;
+    for (let index = 0; index < 30; index += 1) {
+        const middle = (low + high) / 2;
+        if (calculateNote(middle) >= 10) {
+            high = middle;
+        } else {
+            low = middle;
+        }
+    }
+
+    return Number(high.toFixed(2));
+}
+
 export default function Simulateur() {
     // État pour la navigation (si nul, on affiche les grosses cartes)
     const [selectedMatiere, setSelectedMatiere] = useState(null);
@@ -129,7 +156,10 @@ export default function Simulateur() {
 
         // NF1 = max(P/3 + 2/3*E, E)
         const NF1 = Math.max(P / 3 + (2 / 3) * E, E);
-        setResults(r => ({ ...r, progFonct: { NF1: NF1.toFixed(2) } }));
+        const requiredExam = isEmpty(progFonct.E)
+            ? getRequiredExamGrade(exam => Math.max(P / 3 + (2 / 3) * exam, exam))
+            : null;
+        setResults(r => ({ ...r, progFonct: { NF1: NF1.toFixed(2), requiredExam } }));
     }
 
     // Intégration et Probabilités 
@@ -141,7 +171,10 @@ export default function Simulateur() {
 
         // NF1 = 1/8(max(CC1,E)+2max(P,E)+max(CC2,E)+4E)
         const NF1 = (Math.max(CC1, E) + 2 * Math.max(P, E) + Math.max(CC2, E) + 4 * E) / 8;
-        setResults(r => ({ ...r, proba: { NF1: NF1.toFixed(2) } }));
+        const requiredExam = isEmpty(proba.E)
+            ? getRequiredExamGrade(exam => (Math.max(CC1, exam) + 2 * Math.max(P, exam) + Math.max(CC2, exam) + 4 * exam) / 8)
+            : null;
+        setResults(r => ({ ...r, proba: { NF1: NF1.toFixed(2), requiredExam } }));
     }
 
     // Groupes
@@ -154,7 +187,10 @@ export default function Simulateur() {
         //NF1=(max(C1,E)+max(C2,E))/8+(max(P,E)/4+E/2.
 
         const NF1 = (Math.max(CC1, E) + Math.max(CC2, E)) / 8 + (Math.max(P, E) / 4 + E / 2);
-        setResults(r => ({ ...r, groupes: { NF1: NF1.toFixed(2) } }));
+        const requiredExam = isEmpty(groupes.E)
+            ? getRequiredExamGrade(exam => (Math.max(CC1, exam) + Math.max(CC2, exam)) / 8 + (Math.max(P, exam) / 4 + exam / 2))
+            : null;
+        setResults(r => ({ ...r, groupes: { NF1: NF1.toFixed(2), requiredExam } }));
     }
 
     // Algo
@@ -165,7 +201,10 @@ export default function Simulateur() {
 
         // NF1 NF = CC1/4 + CC2/4 + E/2 AVANT harmonisation
         const NF1 = CC1 / 4 + CC2 / 4 + E / 2;
-        setResults(r => ({ ...r, algo: { NF1: NF1.toFixed(2) } }));
+        const requiredExam = isEmpty(algo.E)
+            ? getRequiredExamGrade(exam => CC1 / 4 + CC2 / 4 + exam / 2)
+            : null;
+        setResults(r => ({ ...r, algo: { NF1: NF1.toFixed(2), requiredExam } }));
     }
 
     function calcCalculDiff() {
@@ -176,7 +215,10 @@ export default function Simulateur() {
 
         // NF1 = 1/2(E + 1/3 * (max(E, CC1) + max(E, CC2) + max(E, CC3)))
         const NF1 = 1 / 2 * (E + 1 / 3 * (Math.max(E, CC1) + Math.max(E, CC2) + Math.max(E, CC3)));
-        setResults(r => ({ ...r, calculDiff: { NF1: NF1.toFixed(2) } }));
+        const requiredExam = isEmpty(calculDiff.E)
+            ? getRequiredExamGrade(exam => 1 / 2 * (exam + 1 / 3 * (Math.max(exam, CC1) + Math.max(exam, CC2) + Math.max(exam, CC3))))
+            : null;
+        setResults(r => ({ ...r, calculDiff: { NF1: NF1.toFixed(2), requiredExam } }));
     }
 
     return (
@@ -264,7 +306,7 @@ export default function Simulateur() {
                                     {results.groupes && (
                                         <div className="simulator-results">
                                             <p className="result-text">Note finale calculée (NF1) : <b>{results.groupes.NF1} / 20</b></p>
-                                            <NoteProgressBar value={parseFloat(results.groupes.NF1)} />
+                                            <NoteProgressBar value={parseFloat(results.groupes.NF1)} requiredExam={results.groupes.requiredExam} />
                                         </div>
                                     )}
                                 </div>
@@ -305,7 +347,7 @@ export default function Simulateur() {
                                     {results.algo && (
                                         <div className="simulator-results">
                                             <p className="result-text">Note finale calculée (NF1) : <b>{results.algo.NF1} / 20</b></p>
-                                            <NoteProgressBar value={parseFloat(results.algo.NF1)} />
+                                            <NoteProgressBar value={parseFloat(results.algo.NF1)} requiredExam={results.algo.requiredExam} />
                                         </div>
                                     )}
                                 </div>
@@ -334,14 +376,15 @@ export default function Simulateur() {
                                     {results.progFonct && (
                                         <div className="simulator-results">
                                             <p className="result-text">Note finale calculée (NF1) : <b>{results.progFonct.NF1} / 20</b></p>
-                                            <NoteProgressBar value={parseFloat(results.progFonct.NF1)} />
+                                            <NoteProgressBar value={parseFloat(results.progFonct.NF1)} requiredExam={results.progFonct.requiredExam} />
                                         </div>
                                     )}
                                 </div>
                             )}
 
-                            {selectedMatiere === 'proba' && (
+                            {selectedMatiere === 'integ' && (
                                 <div className="simulator-form">
+                                    <div className="input-container-row">
                                     <div className="input-group">
                                         <label htmlFor="cc1_p">CC1</label>
                                         <input id="cc1_p" type="number" placeholder="CC1" className="apple-input" value={proba.CC1} onChange={e => setProba({ ...proba, CC1: e.target.value })} />
@@ -357,6 +400,7 @@ export default function Simulateur() {
                                     <div className="input-group">
                                         <label htmlFor="e_p">Note Examen</label>
                                         <input id="e_p" type="number" placeholder="E" className="apple-input" value={proba.E} onChange={e => setProba({ ...proba, E: e.target.value })} />
+                                    </div>
                                     </div>
                                     <div className="simulator-formula">
                                         <p>Formule de calcul : <b>NF1 = (max(CC1,E) + 2 * max(P,E) + max(CC2,E) + 4 * E) / 8</b><br />
@@ -376,7 +420,7 @@ export default function Simulateur() {
                                     {results.proba && (
                                         <div className="simulator-results">
                                             <p className="result-text">Note finale calculée (NF1) : <b>{results.proba.NF1} / 20</b></p>
-                                            <NoteProgressBar value={parseFloat(results.proba.NF1)} />
+                                            <NoteProgressBar value={parseFloat(results.proba.NF1)} requiredExam={results.proba.requiredExam} />
                                         </div>
                                     )}
                                 </div>
@@ -413,7 +457,7 @@ export default function Simulateur() {
                                     {results.calculDiff && (
                                         <div className="simulator-results">
                                             <p className="result-text">Note finale calculée (NF1) : <b>{results.calculDiff.NF1} / 20</b></p>
-                                            <NoteProgressBar value={parseFloat(results.calculDiff.NF1)} />
+                                            <NoteProgressBar value={parseFloat(results.calculDiff.NF1)} requiredExam={results.calculDiff.requiredExam} />
                                         </div>
                                     )}
                                 </div>
@@ -428,7 +472,7 @@ export default function Simulateur() {
                                 </div>
                             }
 
-                            {selectedMatiere !== 'groupes' && selectedMatiere !== 'algo5' && selectedMatiere !== 'pf' && selectedMatiere !== 'proba' && selectedMatiere !== 'diff' && selectedMatiere !== 'se' && (
+                            {selectedMatiere !== 'groupes' && selectedMatiere !== 'algo5' && selectedMatiere !== 'pf' && selectedMatiere !== 'integ' && selectedMatiere !== 'diff' && selectedMatiere !== 'se' && (
                                 <div className="simulator-form">
                                     <p className="coming-soon-text">Le simulateur pour cette matière n'est pas encore disponible. Revenez plus tard !</p>
                                 </div>
@@ -446,7 +490,7 @@ export default function Simulateur() {
 }
 
 // Progress bar composant épurée
-function NoteProgressBar({ value }) {
+function NoteProgressBar({ value, requiredExam }) {
     let color = '#d32f2f', label = 'Défaillant';
     if (value >= 16) {
         color = '#34c759'; label = 'Très bien'; // Teinte vert Apple
@@ -477,6 +521,11 @@ function NoteProgressBar({ value }) {
                     {value !== undefined && !isNaN(value) ? `${value} / 20` : ''}
                 </div>
             </div>
+            {requiredExam !== null && requiredExam !== undefined && (
+                <p className="required-exam-note">
+                    Note d'examen nécessaire pour valider : <b>{requiredExam.toFixed(2)} / 20</b>
+                </p>
+            )}
             {showBadge && (
                 <div className="progress-badge">
                     {label}

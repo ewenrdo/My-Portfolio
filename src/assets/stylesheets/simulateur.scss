@@ -405,6 +405,17 @@
     cursor: help;
 }
 
+.required-exam-note {
+    margin: 0.75rem 0 0;
+    color: rgba(0, 0, 0, 0.62);
+    font-size: 0.85rem;
+    line-height: 1.5;
+
+    b {
+        color: #111;
+    }
+}
+
 .progress-fill {
     height: 100%;
     display: flex;
