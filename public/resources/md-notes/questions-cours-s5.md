@@ -9,15 +9,15 @@ Ici sont listées les questions que je me pose sur le cours ou les exercices, ai
 
 ## Intégration et probabilités (PR5)
 
-- Exercice 6 question 1 : voir le problème dans mon raisonnement sur 1/n(n-k)
+- _Rien pour le moment_
 
 ## Calcul différentiel (CD5)
 
-- On a vu que l'application u \mapsto \| u \| était une norme, ça veut dire quoi, puisque \| \cdot \| est elle-même une norme ? Quel intérêt ?
+- _Rien pour le moment_ 
 
 ## Groupes et actions (GA5)
 
-- Pour la proposition 1.1.2, il est écrit que "tout élément x admet un unique symétrique". L'existence de "e" garanti-t-elle l'existence du symétrique, ou la proposition porte-t-elle uniquement sur l'unicité d'un symétrique dans le cas où il existe ?
+_Rien pour le moment_
 
 ## Algorithmique (AL5)
 
