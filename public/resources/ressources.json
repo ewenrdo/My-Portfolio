@@ -1256,6 +1256,22 @@
                                 "title": "Fiche d'entraînement semaine 3",
                                 "date": "2026-09-18",
                                 "slug": "fiche-dentraînement-semaine-3"
+                            },
+                            {
+                                "name": "sm3-corr.pdf",
+                                "path": "/resources/notes/Training/SM3.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Corrigé fiche d'entraînement semaine 3",
+                                "date": "2026-09-27",
+                                "slug": "fiche-dentraînement-semaine-3"
+                            },
+                            {
+                                "name": "sm4.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm4/sm4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Fiche d'entraînement semaine 4",
+                                "date": "2026-09-27",
+                                "slug": "fiche-dentraînement-semaine-4"
                             }
                         ]
                     },
