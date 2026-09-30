@@ -13,7 +13,7 @@ Ici sont listées les questions que je me pose sur le cours ou les exercices, ai
 
 ## Calcul différentiel (CD5)
 
-- _Rien pour le moment_ 
+- Exercice 16 SM4 : diff dans l'inégalité triangulaire, pas compris.
 
 ## Groupes et actions (GA5)
 

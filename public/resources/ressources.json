@@ -1676,6 +1676,14 @@
                                 "slug": "site-du-cours-de-d-poulalhon"
                             },
                             {
+                                "name": "poly.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/sy5/poly.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Polycopié de cours",
+                                "date": "2026-09-30",
+                                "slug": "sy5-poly-de-cours"
+                            },
+                            {
                                 "name": "cours1.pdf",
                                 "path": "/resources/notes/SY5/cours1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
