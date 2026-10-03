@@ -1647,7 +1647,7 @@
                             },
                             {
                                 "link": "https://youtu.be/ZmJOU_7JWi4?si=ZSbQEc-dRVmK5AxS",
-                                "name": "Algorithme de tri topologique",
+                                "name": "Algorithme de tri topologique (algorithme de Kahn)",
                                 "type": "link",
                                 "date": "2026-10-03"
                             },
@@ -1660,6 +1660,12 @@
                             {
                                 "link": "https://www.youtube.com/watch?v=Urx87-NMm6c",
                                 "name": "Algorithme de DFS (parcours en profondeur)",
+                                "type": "link",
+                                "date": "2026-10-03"
+                            },
+                            {
+                                "link": "https://www.youtube.com/watch?v=MybdP4kice4",
+                                "name": "Algorithme de Dijkstra",
                                 "type": "link",
                                 "date": "2026-10-03"
                             }
