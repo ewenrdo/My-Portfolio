@@ -1825,14 +1825,6 @@
                                 ]
                             },
                             {
-                                "name": "annale.pdf",
-                                "path": "/resources/university/tp-pf5/annale-partiel.pdf",
-                                "credits": "Université Paris Cité",
-                                "title": "Annale de partiel 2025",
-                                "date": "2026-10-03",
-                                "slug": "pf5-tp11"
-                            },
-                            {
                                 "name": "Slides du cours (2025-2026)",
                                 "slug": "slides-pf5",
                                 "children": [
@@ -1935,6 +1927,14 @@
                                 "comment": "Site du cours de programmation fonctionnelle de Delia Kesner, Université Paris Cité, Licence 3 Mathématiques et Informatique.",
                                 "date": "2026-08-29",
                                 "slug": "site-du-cours-de-d-kesner"
+                            },
+                            {
+                                "name": "annale.pdf",
+                                "path": "/resources/university/tp-pf5/annale-partiel.pdf",
+                                "credits": "Université Paris Cité",
+                                "title": "Annale de partiel 2025",
+                                "date": "2026-10-03",
+                                "slug": "pf5-tp11"
                             },
                             {
                                 "name": "chap1.pdf",
