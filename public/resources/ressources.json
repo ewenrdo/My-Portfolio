@@ -1641,9 +1641,27 @@
                                 "name": "chap1.pdf",
                                 "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/al5/chap1/chap1.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
-                                "title": "Chapitre 1 : Introduction aux graphes",
+                                "title": "Notes de cours : Introduction aux graphes",
                                 "date": "2026-09-08",
                                 "slug": "al5-chapitre-1-introduction-aux-graphes"
+                            },
+                            {
+                                "link": "https://youtu.be/ZmJOU_7JWi4?si=ZSbQEc-dRVmK5AxS",
+                                "name": "Algorithme de tri topologique",
+                                "type": "link",
+                                "date": "2026-10-03"
+                            },
+                            {
+                                "link": "https://youtu.be/HZ5YTanv5QE?si=ZSbQEc-dRVmK5AxS",
+                                "name": "Algorithme de BFS (parcours en largeur)",
+                                "type": "link",
+                                "date": "2026-10-03"
+                            },
+                            {
+                                "link": "https://www.youtube.com/watch?v=Urx87-NMm6c",
+                                "name": "Algorithme de DFS (parcours en profondeur)",
+                                "type": "link",
+                                "date": "2026-10-03"
                             }
                         ]
                     },
