@@ -1247,7 +1247,7 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
                                 "title": "Corrigé fiche d'entraînement semaine 2",
                                 "date": "2026-09-18",
-                                "slug": "fiche-dentraînement-semaine-2"
+                                "slug": "corr-fiche-dentraînement-semaine-2"
                             },
                             {
                                 "name": "sm3.pdf",
@@ -1263,7 +1263,7 @@
                                 "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
                                 "title": "Corrigé fiche d'entraînement semaine 3",
                                 "date": "2026-09-27",
-                                "slug": "fiche-dentraînement-semaine-3"
+                                "slug": "corr-fiche-dentraînement-semaine-3"
                             },
                             {
                                 "name": "sm4.pdf",
@@ -1272,6 +1272,22 @@
                                 "title": "Fiche d'entraînement semaine 4",
                                 "date": "2026-09-27",
                                 "slug": "fiche-dentraînement-semaine-4"
+                            },
+                            {
+                                "name": "sm4-corr.pdf",
+                                "path": "/resources/notes/Training/SM4.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Corrigé fiche d'entraînement semaine 4",
+                                "date": "2026-10-03",
+                                "slug": "corr-fiche-dentraînement-semaine-4"
+                            },
+                            {
+                                "name": "sm5.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm5/sm5.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Fiche d'entraînement semaine 5",
+                                "date": "2026-10-03",
+                                "slug": "fiche-dentraînement-semaine-5"
                             }
                         ]
                     },
@@ -1807,6 +1823,14 @@
                                         "slug": "pf5-tp11"
                                     }
                                 ]
+                            },
+                            {
+                                "name": "annale.pdf",
+                                "path": "/resources/university/tp-pf5/annale-partiel.pdf",
+                                "credits": "Université Paris Cité",
+                                "title": "Annale de partiel 2025",
+                                "date": "2026-10-03",
+                                "slug": "pf5-tp11"
                             },
                             {
                                 "name": "Slides du cours (2025-2026)",
