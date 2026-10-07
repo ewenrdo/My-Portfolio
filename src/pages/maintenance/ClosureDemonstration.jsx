@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../../assets/stylesheets/safety.scss';
 
-export default function Safety() {
+export default function ClosureDemonstration() {
 	const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 	const [cryptoState, setCryptoState] = useState({ key: '0x0000', hash: 0, activeDot: 0 });
 	const containerRef = useRef(null);
@@ -65,10 +65,10 @@ export default function Safety() {
             `}</style>
 
 			<main className="safety-shell" ref={containerRef}>
-				<span className="safety-kicker">Protocole de sécurité</span>
+				<span className="safety-kicker">Site fermé</span>
 				<h1>Accès restreint</h1>
 				<p>
-					Ce site a été temporairement désactivé pour des raisons de sécurité ou de maintenance critique. Veuillez m'excuser pour ce désagrément.
+					L'accès aux notes de cours et aux ressources est désactivé en soutien aux revendications des manifestations pour les droits des lycéens et des étudiants.
 				</p>
 
 				{/* Cadran d'intégrité et de cryptographie modulaire */}

@@ -9,6 +9,7 @@ import Cooldown from "./pages/Cooldown";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import AlimentationCochonInde from "./pages/guinea-pig/AlimentationGuineaPig";
+import ClosureDemonstration from "./pages/maintenance/ClosureDemonstration";
 
 const App = () => {
     return (
@@ -17,7 +18,8 @@ const App = () => {
 
                 <Route path="/" element={<Home />} />
                 <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/ressources" element={<Ressources />} />
+                <Route path="/res-prv" element={<Ressources />} />
+                <Route path="/ressources" element={<ClosureDemonstration />} />
                 {/*<Route path="/21-november" element={<November21 />} />*/}
                 <Route path="/mcc" element={<Simulateur />} />
                 <Route path="/holidays" element={<Cooldown />} />
