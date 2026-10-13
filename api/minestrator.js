@@ -1,10 +1,10 @@
 import dotenv from 'dotenv';
 import path from 'path';
 
-// Chargement des variables d'environnement en local
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
-const MINESTRATOR_API_BASE = 'https://api.minestrator.com';
+// URL de base officielle de l'API MineStrator
+const MINESTRATOR_API_BASE = 'https://mine.sttr.io';
 
 export default async function handler(req, res) {
     const apiKey = process.env.MINESTRATOR_API_KEY;
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     };
 
     try {
-        // --- GET : Récupérer le statut du serveur et les joueurs ---
+        // --- GET : Récupérer le statut et les informations du serveur ---
         if (req.method === 'GET') {
             const { serverId } = req.query;
 
@@ -27,26 +27,35 @@ export default async function handler(req, res) {
                 return res.status(400).json({ error: 'L\'ID du serveur (serverId) est requis.' });
             }
 
-            // Récupération du statut et des données temps réel du serveur
-            const response = await fetch(`${MINESTRATOR_API_BASE}/server/${serverId}`, {
-                headers,
-            });
+            // Récupération des informations et statistiques live du serveur
+            const [serverRes, liveRes] = await Promise.all([
+                fetch(`${MINESTRATOR_API_BASE}/server/${serverId}`, { headers }),
+                fetch(`${MINESTRATOR_API_BASE}/server/${serverId}/live`, { headers })
+            ]);
 
-            if (!response.ok) {
-                const errorData = await response.json();
-                return res.status(response.status).json({ error: errorData.message || 'Erreur lors de la récupération des données.' });
+            if (!serverRes.ok) {
+                const errorData = await serverRes.json().catch(() => ({}));
+                return res.status(serverRes.status).json({ 
+                    error: errorData.message || 'Erreur lors de la récupération des données du serveur.' 
+                });
             }
 
-            const data = await response.json();
+            const serverData = await serverRes.json();
+            const liveData = liveRes.ok ? await liveRes.json() : null;
+
+            // Détermination de l'état (ex: 'ON', 'OFF', 'STARTED', 'STARTING')
+            const status = liveData?.data?.status || serverData?.data?.status || 'OFFLINE';
+            const players = liveData?.data?.players || serverData?.data?.players || [];
+            const serverName = serverData?.data?.name || 'Mon Serveur Minecraft';
 
             return res.status(200).json({
-                status: data.data?.status || 'OFFLINE',
-                players: data.data?.players || [],
-                serverName: data.data?.name || 'Mon Serveur Minecraft',
+                status,
+                players,
+                serverName,
             });
         }
 
-        // --- POST : Actions sur le serveur (Démarrer / Éteindre) ---
+        // --- POST : Actions sur le serveur (start, stop, restart) ---
         if (req.method === 'POST') {
             const { serverId, action } = req.body;
 
@@ -54,27 +63,31 @@ export default async function handler(req, res) {
                 return res.status(400).json({ error: 'L\'ID du serveur et l\'action sont requis.' });
             }
 
-            if (!['start', 'stop', 'restart'].includes(action)) {
+            if (!['start', 'stop', 'restart', 'kill'].includes(action)) {
                 return res.status(400).json({ error: 'Action invalide.' });
             }
 
-            const response = await fetch(`${MINESTRATOR_API_BASE}/server/${serverId}/execute/${action}`, {
+            // Appel à l'endpoint /power de MineStrator
+            const response = await fetch(`${MINESTRATOR_API_BASE}/server/${serverId}/power`, {
                 method: 'POST',
                 headers,
+                body: JSON.stringify({ poweraction: action }),
             });
 
+            const data = await response.json().catch(() => ({}));
+
             if (!response.ok) {
-                const errorData = await response.json();
-                return res.status(response.status).json({ error: errorData.message || 'Erreur lors de l\'exécution de l\'action.' });
+                return res.status(response.status).json({ 
+                    error: data.message || 'Erreur lors de l\'exécution de l\'action.' 
+                });
             }
 
-            const data = await response.json();
             return res.status(200).json({ success: true, data });
         }
 
         return res.status(405).json({ error: 'Méthode non autorisée.' });
     } catch (error) {
         console.error('Erreur API MineStrator:', error);
-        return res.status(500).json({ error: 'Erreur interne du serveur.' });
+        return res.status(500).json({ error: 'Erreur interne du serveur lors du traitement de la requête.' });
     }
 }
