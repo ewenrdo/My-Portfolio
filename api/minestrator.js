@@ -10,8 +10,8 @@ export default async function handler(req, res) {
     const apiKey = process.env.MINESTRATOR_API_KEY;
 
     if (!apiKey) {
-        return res.status(500).json({ 
-            error: 'Clé API MineStrator non configurée dans la variable d\'environnement MINESTATOR_API_KEY.' 
+        return res.status(500).json({
+            error: 'Clé API MineStrator non configurée dans la variable d\'environnement MINESTATOR_API_KEY.'
         });
     }
 
@@ -51,8 +51,9 @@ export default async function handler(req, res) {
             const { ok, status, data } = await fetchJson(`${MINESTRATOR_API_BASE}/server/${serverId}`);
 
             if (!ok) {
-                return res.status(status).json({ 
-                    error: data?.message || 'Erreur lors de la récupération des informations du serveur.' 
+                // Renvoyer le message exact fourni par l'API MineStrator
+                return res.status(status).json({
+                    error: data?.message || data?.error || `Action refusée par MineStrator (Code HTTP ${status}).`
                 });
             }
 
@@ -86,8 +87,8 @@ export default async function handler(req, res) {
             });
 
             if (!ok) {
-                return res.status(status).json({ 
-                    error: data?.message || 'Erreur lors de l\'exécution de l\'action d\'alimentation.' 
+                return res.status(status).json({
+                    error: data?.message || 'Erreur lors de l\'exécution de l\'action d\'alimentation.'
                 });
             }
 
