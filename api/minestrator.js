@@ -86,9 +86,11 @@ export default async function handler(req, res) {
                 body: JSON.stringify({ poweraction: action }),
             });
 
+            
             if (!ok) {
+                // Renvoyer le message exact fourni par l'API MineStrator
                 return res.status(status).json({
-                    error: data?.message || 'Erreur lors de l\'exécution de l\'action d\'alimentation.'
+                    error: data?.message || data?.error || `Action refusée par MineStrator (Code HTTP ${status}).`
                 });
             }
 
