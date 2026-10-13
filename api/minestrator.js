@@ -7,6 +7,7 @@ const MINESTRATOR_API_BASE = 'https://mine.sttr.io';
 
 export default async function handler(req, res) {
     const key = process.env.MINESTRATOR_API_KEY;
+    console.error('MINESTRATOR_API_KEY:', key ? 'Clé API configurée et vaut : ' + key : 'Clé API non configurée.');
 
     if (!key) {
         return res.status(500).json({ 
