@@ -7,11 +7,10 @@ const MINESTRATOR_API_BASE = 'https://mine.sttr.io';
 
 export default async function handler(req, res) {
     const key = process.env.MINESTRATOR_API_KEY;
-    console.error('MINESTRATOR_API_KEY:', key ? 'Clé API configurée et vaut : ' + key : 'Clé API non configurée.');
 
     if (!key) {
         return res.status(500).json({ 
-            error: 'Clé API MineStrator non configurée (MINESTATOR_API_KEY).' 
+            error: 'Clé API MineStrator non configurée (MINESTRATOR_API_KEY).' 
         });
     }
 
@@ -68,15 +67,19 @@ export default async function handler(req, res) {
             });
 
             const data = await response.json().catch(() => ({}));
-
+            
             if (!response.ok) {
+                console.error('Erreur MineStrator:', data?.message || `Erreur MineStrator (HTTP ${response.status}).`);
                 return res.status(response.status).json({ 
                     error: data?.message || `Erreur MineStrator (HTTP ${response.status}). Vérifiez les permissions de votre clé ou l'ID serveur.` 
                 });
             }
 
+            console.error('Réponse MineStrator:', data);
+
             return res.status(200).json({ success: true, data: data?.api?.data || data });
         }
+
 
         return res.status(405).json({ error: 'Méthode non autorisée.' });
 
