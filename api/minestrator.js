@@ -66,6 +66,12 @@ export default async function handler(req, res) {
                 body: JSON.stringify({ poweraction: action }),
             });
 
+            console.error("Réponse brute MineStrator:", response);
+            console.error("Requête envoyée à PUT /server/" + serverId + "/poweraction avec action (" + action + "), auth: Bearer " + key + ", headers: " + JSON.stringify({
+                'Authorization': `Bearer ${key}`,
+                'Content-Type': 'application/json',
+            }) + ", body: " + JSON.stringify({ poweraction: action }));
+
             const data = await response.json().catch(() => ({}));
             
             if (!response.ok) {
