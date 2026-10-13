@@ -3,23 +3,44 @@ import path from 'path';
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
-// URL de base officielle de l'API MineStrator
+// URL de base officielle MineStrator d'après la documentation OpenAPI
 const MINESTRATOR_API_BASE = 'https://mine.sttr.io';
 
 export default async function handler(req, res) {
     const apiKey = process.env.MINESTRATOR_API_KEY;
 
     if (!apiKey) {
-        return res.status(500).json({ error: 'Clé API MineStrator non configurée.' });
+        return res.status(500).json({ 
+            error: 'Clé API MineStrator non configurée dans la variable d\'environnement MINESTATOR_API_KEY.' 
+        });
     }
 
     const headers = {
         'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
     };
 
+    // Helper fetch pour capturer et logger proprement les erreurs HTTP / HTML
+    async function fetchJson(url, options = {}) {
+        const response = await fetch(url, {
+            ...options,
+            headers: { ...headers, ...options.headers },
+        });
+
+        const text = await response.text();
+
+        try {
+            const data = JSON.parse(text);
+            return { ok: response.ok, status: response.status, data };
+        } catch (err) {
+            console.error(`[MineStrator API Error] Réponse non-JSON depuis ${url} (HTTP ${response.status}):\n`, text.substring(0, 300));
+            throw new Error(`Le serveur MineStrator a renvoyé un code HTTP ${response.status}. Vérifiez votre clé API et l'ID du serveur.`);
+        }
+    }
+
     try {
-        // --- GET : Récupérer le statut et les informations du serveur ---
+        // --- GET : Récupérer les informations du serveur ---
         if (req.method === 'GET') {
             const { serverId } = req.query;
 
@@ -27,35 +48,24 @@ export default async function handler(req, res) {
                 return res.status(400).json({ error: 'L\'ID du serveur (serverId) est requis.' });
             }
 
-            // Récupération des informations et statistiques live du serveur
-            const [serverRes, liveRes] = await Promise.all([
-                fetch(`${MINESTRATOR_API_BASE}/server/${serverId}`, { headers }),
-                fetch(`${MINESTRATOR_API_BASE}/server/${serverId}/live`, { headers })
-            ]);
+            const { ok, status, data } = await fetchJson(`${MINESTRATOR_API_BASE}/server/${serverId}`);
 
-            if (!serverRes.ok) {
-                const errorData = await serverRes.json().catch(() => ({}));
-                return res.status(serverRes.status).json({ 
-                    error: errorData.message || 'Erreur lors de la récupération des données du serveur.' 
+            if (!ok) {
+                return res.status(status).json({ 
+                    error: data?.message || 'Erreur lors de la récupération des informations du serveur.' 
                 });
             }
 
-            const serverData = await serverRes.json();
-            const liveData = liveRes.ok ? await liveRes.json() : null;
-
-            // Détermination de l'état (ex: 'ON', 'OFF', 'STARTED', 'STARTING')
-            const status = liveData?.data?.status || serverData?.data?.status || 'OFFLINE';
-            const players = liveData?.data?.players || serverData?.data?.players || [];
-            const serverName = serverData?.data?.name || 'Mon Serveur Minecraft';
+            const serverInfo = data?.data || {};
 
             return res.status(200).json({
-                status,
-                players,
-                serverName,
+                status: serverInfo.status || 'OFFLINE',
+                players: serverInfo.players || [],
+                serverName: serverInfo.name || 'Mon Serveur Minecraft',
             });
         }
 
-        // --- POST : Actions sur le serveur (start, stop, restart) ---
+        // --- POST : Action d'alimentation ---
         if (req.method === 'POST') {
             const { serverId, action } = req.body;
 
@@ -63,22 +73,21 @@ export default async function handler(req, res) {
                 return res.status(400).json({ error: 'L\'ID du serveur et l\'action sont requis.' });
             }
 
-            if (!['start', 'stop', 'restart', 'kill'].includes(action)) {
-                return res.status(400).json({ error: 'Action invalide.' });
+            // Cartographie des actions autorisées par l'API
+            const validActions = ['start', 'restart', 'restart10', 'stop', 'stop10', 'kill'];
+            if (!validActions.includes(action)) {
+                return res.status(400).json({ error: `Action invalide. Actions valides : ${validActions.join(', ')}` });
             }
 
-            // Appel à l'endpoint /power de MineStrator
-            const response = await fetch(`${MINESTRATOR_API_BASE}/server/${serverId}/power`, {
-                method: 'POST',
-                headers,
+            // L'API MineStrator utilise PUT /server/{id_server}/poweraction
+            const { ok, status, data } = await fetchJson(`${MINESTRATOR_API_BASE}/server/${serverId}/poweraction`, {
+                method: 'PUT',
                 body: JSON.stringify({ poweraction: action }),
             });
 
-            const data = await response.json().catch(() => ({}));
-
-            if (!response.ok) {
-                return res.status(response.status).json({ 
-                    error: data.message || 'Erreur lors de l\'exécution de l\'action.' 
+            if (!ok) {
+                return res.status(status).json({ 
+                    error: data?.message || 'Erreur lors de l\'exécution de l\'action d\'alimentation.' 
                 });
             }
 
@@ -86,8 +95,9 @@ export default async function handler(req, res) {
         }
 
         return res.status(405).json({ error: 'Méthode non autorisée.' });
+
     } catch (error) {
-        console.error('Erreur API MineStrator:', error);
-        return res.status(500).json({ error: 'Erreur interne du serveur lors du traitement de la requête.' });
+        console.error('Erreur interne API:', error.message);
+        return res.status(500).json({ error: error.message });
     }
 }
