@@ -3,44 +3,19 @@ import path from 'path';
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
-// URL de base officielle MineStrator d'après la documentation OpenAPI
 const MINESTRATOR_API_BASE = 'https://mine.sttr.io';
 
 export default async function handler(req, res) {
-    const apiKey = process.env.MINESTRATOR_API_KEY;
+    const key = process.env.MINESTRATOR_API_KEY;
 
-    if (!apiKey) {
-        return res.status(500).json({
-            error: 'Clé API MineStrator non configurée dans la variable d\'environnement MINESTATOR_API_KEY.'
+    if (!key) {
+        return res.status(500).json({ 
+            error: 'Clé API MineStrator non configurée (MINESTATOR_API_KEY).' 
         });
-    }
-
-    const headers = {
-        'Authorization': `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-    };
-
-    // Helper fetch pour capturer et logger proprement les erreurs HTTP / HTML
-    async function fetchJson(url, options = {}) {
-        const response = await fetch(url, {
-            ...options,
-            headers: { ...headers, ...options.headers },
-        });
-
-        const text = await response.text();
-
-        try {
-            const data = JSON.parse(text);
-            return { ok: response.ok, status: response.status, data };
-        } catch (err) {
-            console.error(`[MineStrator API Error] Réponse non-JSON depuis ${url} (HTTP ${response.status}):\n`, text.substring(0, 300));
-            throw new Error(`Le serveur MineStrator a renvoyé un code HTTP ${response.status}. Vérifiez votre clé API et l'ID du serveur.`);
-        }
     }
 
     try {
-        // --- GET : Récupérer les informations du serveur ---
+        // --- GET : Récupérer les données du serveur ---
         if (req.method === 'GET') {
             const { serverId } = req.query;
 
@@ -48,16 +23,23 @@ export default async function handler(req, res) {
                 return res.status(400).json({ error: 'L\'ID du serveur (serverId) est requis.' });
             }
 
-            const { ok, status, data } = await fetchJson(`${MINESTRATOR_API_BASE}/server/${serverId}`);
+            const response = await fetch(`${MINESTRATOR_API_BASE}/server/${serverId}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${key}`,
+                    'Accept': 'application/json',
+                },
+            });
 
-            if (!ok) {
-                // Renvoyer le message exact fourni par l'API MineStrator
-                return res.status(status).json({
-                    error: data?.message || data?.error || `Action refusée par MineStrator (Code HTTP ${status}).`
+            const data = await response.json().catch(() => ({}));
+
+            if (!response.ok) {
+                return res.status(response.status).json({ 
+                    error: data?.message || `Erreur serveur MineStrator (HTTP ${response.status}).` 
                 });
             }
 
-            const serverInfo = data?.data || {};
+            const serverInfo = data?.api?.data || data?.data || {};
 
             return res.status(200).json({
                 status: serverInfo.status || 'OFFLINE',
@@ -66,7 +48,7 @@ export default async function handler(req, res) {
             });
         }
 
-        // --- POST : Action d'alimentation ---
+        // --- POST : Action d'alimentation (start, stop, etc.) ---
         if (req.method === 'POST') {
             const { serverId, action } = req.body;
 
@@ -74,33 +56,31 @@ export default async function handler(req, res) {
                 return res.status(400).json({ error: 'L\'ID du serveur et l\'action sont requis.' });
             }
 
-            // Cartographie des actions autorisées par l'API
-            const validActions = ['start', 'restart', 'restart10', 'stop', 'stop10', 'kill'];
-            if (!validActions.includes(action)) {
-                return res.status(400).json({ error: `Action invalide. Actions valides : ${validActions.join(', ')}` });
-            }
-
-            // L'API MineStrator utilise PUT /server/{id_server}/poweraction
-            const { ok, status, data } = await fetchJson(`${MINESTRATOR_API_BASE}/server/${serverId}/poweraction`, {
+            // Exécution selon l'exemple exact de la documentation MineStrator
+            const response = await fetch(`${MINESTRATOR_API_BASE}/server/${serverId}/poweraction`, {
                 method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${key}`,
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify({ poweraction: action }),
             });
 
-            
-            if (!ok) {
-                // Renvoyer le message exact fourni par l'API MineStrator
-                return res.status(status).json({
-                    error: data?.message || data?.error || `Action refusée par MineStrator (Code HTTP ${status}).`
+            const data = await response.json().catch(() => ({}));
+
+            if (!response.ok) {
+                return res.status(response.status).json({ 
+                    error: data?.message || `Erreur MineStrator (HTTP ${response.status}). Vérifiez les permissions de votre clé ou l'ID serveur.` 
                 });
             }
 
-            return res.status(200).json({ success: true, data });
+            return res.status(200).json({ success: true, data: data?.api?.data || data });
         }
 
         return res.status(405).json({ error: 'Méthode non autorisée.' });
 
     } catch (error) {
-        console.error('Erreur interne API:', error.message);
-        return res.status(500).json({ error: error.message });
+        console.error('Erreur serveur Vercel:', error);
+        return res.status(500).json({ error: error.message || 'Erreur interne du serveur.' });
     }
 }
