@@ -1210,6 +1210,14 @@
                                 "title": "Chapitre 2 : Applications mesurables et intégrales généralisées",
                                 "date": "2026-09-24",
                                 "slug": "proba-5-chapitre-2-applications-mesurables-et-integrales-generalisees"
+                            },
+                            {
+                                "name": "chap3.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/pr5/chap3/chap3.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
+                                "title": "Chapitre 3 : Fonctions de répartition et variables aléatoires",
+                                "date": "2026-09-24",
+                                "slug": "proba-5-chapitre-3-fonctions-de-repartition-et-variables-aleatoires"
                             }
                         ]
                     },
