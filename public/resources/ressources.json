@@ -976,6 +976,22 @@
                                 "slug": "ga5-td-notes",
                                 "children": [
                                     {
+                                        "name": "cc1.pdf",
+                                        "path": "/resources/notes/GA5/CC1_sujet.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Contrôle continu 1 (annulé)",
+                                        "date": "2026-10-16",
+                                        "slug": "ga5-td-notes-cc1"
+                                    },
+                                    {
+                                        "name": "cc1.pdf",
+                                        "path": "/resources/notes/GA5/CC1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Contrôle continu 1 (annulé) : ma copie",
+                                        "date": "2026-10-16",
+                                        "slug": "ga5-td-notes-cc1"
+                                    },
+                                    {
                                         "name": "td1.pdf",
                                         "path": "/resources/notes/GA5/TD1.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
@@ -1312,6 +1328,22 @@
                                 "title": "Fiche d'entraînement semaine 6",
                                 "date": "2026-10-10",
                                 "slug": "fiche-dentraînement-semaine-6"
+                            },
+                            {
+                                "name": "sm6-corr.pdf",
+                                "path": "/resources/notes/Training/SM6.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Corrigé fiche d'entraînement semaine 6",
+                                "date": "2026-10-16",
+                                "slug": "corr-fiche-dentraînement-semaine-6"
+                            },
+                            {
+                                "name": "sm7.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm7/sm7.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Fiche d'entraînement semaine 7",
+                                "date": "2026-10-16",
+                                "slug": "fiche-dentraînement-semaine-7"
                             }
                         ]
                     },
