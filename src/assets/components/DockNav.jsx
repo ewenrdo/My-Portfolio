@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function DockNav() {
     const links = [
-        { to: '/', label: 'Home', icon: 'fas fa-home' },
+        { to: '/', label: 'Accueil', icon: 'fas fa-home' },
         { to: '/portfolio', label: 'Portfolio', icon: 'fas fa-folder-open' },
         { to: '/ressources', label: 'Ressources', icon: 'fas fa-book-open' },
     ];
