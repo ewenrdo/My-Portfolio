@@ -7,6 +7,13 @@
 * **Perte totale :** 5,2 à 5,5 kg sur environ 8 à 9 semaines (rythme moyen de 0,5 à 0,7 % du poids corporel/semaine, optimal pour préserver la masse maigre)
 * **Évolution visuelle / Composition :** Passage du statut *skinny-fat* à un physique nettement plus sec et affiné. Le haut du grand droit est tracé ; le bas et le milieu restent légèrement recouverts par la dernière réserve sous-cutanée du tronc et une légère rétention d'eau liée au déficit prolongé.
 
+* **Estimation de la masse grasse :** 14%
+- Pli adipeux abdominal : ???À RENSEIGNER???
+- Pli adipeux supra-iliaque : ???À RENSEIGNER???
+- Pli adipeux triceps (milieu entre l'épaule et le coude) : ???À RENSEIGNER???
+- Pli adipeux biceps (idem) : ???À RENSEIGNER???
+- Pli adipeux sous-scapulaire : ???À RENSEIGNER???
+
 ---
 
 ### 2. Points Forts & Validation du Processus
@@ -34,7 +41,7 @@
 1. **Pince à masse grasse / Adipomètre :** À acheter impérativement pour mesurer le pli adipeux au nombril (cible 10 -- 12 mm) au lieu de se fier uniquement au poids ou au miroir.
 2. **Prise de données initiale :** Relever les mensurations complètes (tour de taille, bras, cuisses, poitrine) dès le jour 1.
 3. **Optimisation des macros :** Stabiliser les lipides autour de 0.8 à 1.0 g/kg et viser 2.0 à 2.2 g/kg de protéines pour maximiser la satiété (mais 1.8 g/kg a suffit pour préserver la masse musculaire).
-4. **Durée de la sèche :** Limiter la durée de déficit à 9 semaines **grand** maximum pour éviter les effets secondaires liés au cortisol et à la fatigue nerveuse.
+4. **Durée de la sèche :** Limiter la durée de déficit à 9 semaines **grand** maximum pour éviter les effets secondaires liés au cortisol et à la fatigue nerveuse. Voir pour faire deux parties avec une phase de maintenance intermédiaire.
 
 #### B. Programme d'entraînement & PDM à venir
 
