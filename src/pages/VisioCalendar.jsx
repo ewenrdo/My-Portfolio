@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import DockNav from '../assets/components/DockNav';
 import '../assets/stylesheets/visio-calendar.scss';
 
-const CALENDAR_URL = 'https://calendar.proton.me/api/calendar/v1/url/FXVWefJdoofz1_T4f2tGmjhf3xsfUKKdSWWQFFqWnIeGkX0jIaF2vWtJAEUmGlEi_OhGVpHLdPZDuEvUmFsUsQ==/calendar.ics?CacheKey=AtEJSoUaVTrvzDS9hnYjiQ%3D%3D&PassphraseKey=toaVuEtBhDYsh5Q8Cen986X_SbAjEAez171FYXM6VU8%3D';
+const CALENDAR_URL = '/api/calendar';
 
 function unfoldIcsLines(ics) {
     return ics.replace(/\r\n[ \t]/g, '').replace(/\n[ \t]/g, '').split(/\r?\n/);
