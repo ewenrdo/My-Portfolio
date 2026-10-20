@@ -2159,5 +2159,12 @@
                 ]
             }
         ]
+    },
+    {
+        "path": "https://www.ewenrdo.fr/visio-calendar",
+        "name": "Calendrier des visios",
+        "type": "link",
+        "date": "2026-10-20",
+        "slug": "visio-calendar"
     }
 ]
