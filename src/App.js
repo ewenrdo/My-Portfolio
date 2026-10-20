@@ -9,7 +9,6 @@ import Cooldown from "./pages/Cooldown";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import AlimentationCochonInde from "./pages/guinea-pig/AlimentationGuineaPig";
-import ClosureDemonstration from "./pages/maintenance/ClosureDemonstration";
 import Minestrator from "./pages/Minestrator";
 
 const App = () => {
@@ -21,8 +20,7 @@ const App = () => {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/ressources" element={<Ressources />} />
                 <Route path="/minestrator" element={<Minestrator />} />
-                {/*<Route path="/ressources" element={<ClosureDemonstration />} />
-                <Route path="/21-november" element={<November21 />} />*/}
+                {/*<Route path="/21-november" element={<November21 />} />*/}
                 <Route path="/mcc" element={<Simulateur />} />
                 <Route path="/admin/minestrator" element={<Minestrator />} />
                 <Route path="/holidays" element={<Cooldown />} />
