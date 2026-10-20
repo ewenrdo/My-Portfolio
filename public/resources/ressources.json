@@ -1102,6 +1102,14 @@
                                         "title": "Notes de TD 1",
                                         "date": "2026-09-15",
                                         "slug": "cd5-td-notes-td1"
+                                    },
+                                    {
+                                        "name": "td2.pdf",
+                                        "path": "/resources/notes/CD5/TD2.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Notes de TD 2 (dont visio)",
+                                        "date": "2026-10-20",
+                                        "slug": "cd5-td-notes-td2"
                                     }
                                 ]
                             },
@@ -1128,6 +1136,14 @@
                                 "title": "Chapitre 2 : Continuité, compacité et complétude",
                                 "date": "2026-06-29",
                                 "slug": "calcul-differentiel-5-chapitre-2-continuite"
+                            },
+                            {
+                                "name": "chap3.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/cd5/chap3/chap3.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira, basé sur les cours de l'Université Paris Cité et le polycopié de Alessandro Zilio.",
+                                "title": "Chapitre 3 : Différentiabilité",
+                                "date": "2026-06-29",
+                                "slug": "calcul-differentiel-5-chapitre-3-differentiabilite"
                             }
                         ]
                     },
