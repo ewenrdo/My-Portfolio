@@ -17,13 +17,15 @@ Ici sont listées les questions que je me pose sur le cours ou les exercices, ai
 
 ## Groupes et actions (GA5)
 
-_Rien pour le moment_
+- Peut-il corriger les CC1 qu'on lui a rendu ?
+- On a vu l'utilité la relation \equiv_g, mais à quoi sert \equiv_d ?
+- Peut-il réexpliquer la propriété universelle du quotient ? Quel rapport avec la décomposition canonique ? Quels exercices pour manipuler ça et le premier théorème d'isomorphisme ?
 
 ## Algorithmique (AL5)
 
 _Rien pour le moment_
 
-## Système d'exploitation 5 (SE5)
+## Système d'exploitation 5 (SY5)
 
 _Rien pour le moment_
 
