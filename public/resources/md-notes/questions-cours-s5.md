@@ -9,7 +9,9 @@ Ici sont listées les questions que je me pose sur le cours ou les exercices, ai
 
 ## Intégration et probabilités (PR5)
 
-- _Rien pour le moment_
+- Quelle différence entre l'intégrale de Riemann et l'intégrale de Lebesgue ? À quelle condition sont-elles équivalentes ?
+- On a vu la notion d'intégration de Lebesgue, mais à quoi ça sert concrètement ? Ça ne semble pas être présent dans les feuilles de TD, si ?
+- En TD on a parlé du théorème de convergence dominée et monotone, on l'a vu en cours ?
 
 ## Calcul différentiel (CD5)
 
