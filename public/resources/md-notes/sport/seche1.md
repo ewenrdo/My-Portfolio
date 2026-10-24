@@ -7,12 +7,16 @@
 * **Perte totale :** 5,2 à 5,5 kg sur environ 8 à 9 semaines (rythme moyen de 0,5 à 0,7 % du poids corporel/semaine, optimal pour préserver la masse maigre)
 * **Évolution visuelle / Composition :** Passage du statut *skinny-fat* à un physique nettement plus sec et affiné. Le haut du grand droit est tracé ; le bas et le milieu restent légèrement recouverts par la dernière réserve sous-cutanée du tronc et une légère rétention d'eau liée au déficit prolongé.
 
-* **Estimation de la masse grasse :** 14%
+* **Estimation de la masse grasse :** 14% _(après semaine de maintenance calorique)_
 - Pli adipeux abdominal : ???À RENSEIGNER???
 - Pli adipeux supra-iliaque : ???À RENSEIGNER???
 - Pli adipeux triceps (milieu entre l'épaule et le coude) : ???À RENSEIGNER???
 - Pli adipeux biceps (idem) : ???À RENSEIGNER???
 - Pli adipeux sous-scapulaire : ???À RENSEIGNER???
+- Tour de taille : ???À RENSEIGNER???
+- Tour de poitrine : ???À RENSEIGNER???
+- Tour de cuisses : ???À RENSEIGNER???
+- Tour de bras : ???À RENSEIGNER???
 
 ---
 

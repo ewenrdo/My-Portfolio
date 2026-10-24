@@ -2,7 +2,7 @@
 
 ## Mesures et suivi
 (i) Suivi : Hevy, photos (face, profil, dos) toutes les 3 semaines à jeun.
-(i) Mensurations clés : Tour de taille au nombril (<1 cm/mois), Tour de poitrine, Tour de cuisses.
+(i) Mensurations clés : Tour de taille au nombril (<1 cm/mois), Tour de poitrine, Tour de cuisses et Tour de bras (1 cm/mois).
 
 **DÉBUT :**
 - 68 kg en sortie de sèche à -400 kcal (14.5 % MG).

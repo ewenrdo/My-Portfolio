@@ -1035,9 +1035,10 @@
                             },
                             {
                                 "name": "chap5.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/ga5/chap5/chap5.pdf",
                                 "credits": "Ewen Rodrigues de Oliveira.",
                                 "title": "Chapitre 5 : Produit semi-direct de groupes",
-                                "date": "2026-07-19",
+                                "date": "2026-10-24",
                                 "slug": "ga5-chapitre-5-produit-semi-direct-de-groupes"
                             },
                             {
@@ -1709,6 +1710,14 @@
                                         "slug": "al5-td-notes-td1"
                                     }
                                 ]
+                            },
+                            {
+                                "name": "reu_organisation_20-oct.md",
+                                "path": "/resources/university/al5/reu_organisation_20-oct.md",
+                                "credits": "Ewen Rodrigues de Oliveira.",
+                                "title": "Notes de réunion Zoom du 20 octobre 2026",
+                                "date": "2026-10-24",
+                                "slug": "al5-notes-de-reunion-zoom-du-20-octobre-2026"
                             },
                             {
                                 "name": "chap1.pdf",
