@@ -103,6 +103,14 @@
                 "title": "PDM 1",
                 "credits": "Ewen Rodrigues de Oliveira",
                 "date": "2026-09-20"
+            },
+            {
+                "name": "seancesEte2026.md",
+                "slug": "seances-ete-2026",
+                "path": "/resources/md-notes/sport/seancesEte2026.md",
+                "title": "Séances été 2026",
+                "credits": "Ewen Rodrigues de Oliveira",
+                "date": "2026-10-28"
             }
         ]
     },
