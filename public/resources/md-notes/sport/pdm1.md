@@ -46,15 +46,15 @@
   ├─ S7      : Overreaching (RIR 0-1) ──> Intensité maximale sur la dernière série
   └─ S8      : Deload (Décharge active, réduction du volume de 40 %, récupération nerveuse) + Préparation M2
 
-**DÉTAIL DES MÉSOCYCLES (3 × 2 mois) :**
+**DÉTAIL DES MÉSOCYCLES (3 x 2 mois) :**
 - M1 : Fondations, Sécurité & Lombaires (Mois 1-2) ──> Reps : 8-10 (Polyarticulaires)
 - M2 : Hypertrophie & Volume Maximal (Mois 3-4) ──> Reps : 10-12 (Focus volume & temps sous tension)
 - M3 : Surcharge Mécanique & Force (Mois 5-6) ──> Reps : 6-8 (Focus force & conversion)
 
 **CONTRAINTES HEBDOMADAIRES :**
-- 3 × 1h15 (Salle) : Upper / Lower / Full-Body (Rappels)
-- 1 × 1h00 (Salle) : 35 min Cardio (Marche inclinée) + 25 min Posture
-- 2 × 30 min (Maison) : 1 séance Abdos/Core + 1 séance Mobilité/Hanches
+- 3 x 1h15 (Salle) : Upper / Lower / Full-Body (Rappels)
+- 1 x 1h00 (Salle) : 35 min Cardio (Marche inclinée) + 25 min Posture
+- 2 x 30 min (Maison) : 1 séance Abdos/Core + 1 séance Mobilité/Hanches
 
 
 ## SORTIE DE PDM (Fin macrocycle)
@@ -71,47 +71,47 @@
 ## PROGRAMME SEMAINE — MÉSOCYCLE 1
 
 ### Séance 1 : Upper Body (Salle — 1h15) | RIR 2 (8 à 10 reps)
-- Dvp Incliné Haltères (30°) : 4 × 8-10 (2'30)
-- Tractions prise neutre : 4 × 8-10 (2'30)
-- Développé couché : 3 × 8-10 (2')
-- Rowing haltère unilatéral : 3 × 8-10 (1'30)
-- Curl pupitre (machine) : 3 × 10-12 (1'30)
-- Extension triceps poulie haute corde : 3 × 10-12 (1'30)
+- Dvp Incliné Haltères (30°) : 4 x 8-10 (2'30)
+- Tractions prise neutre : 4 x 8-10 (2'30)
+- Développé couché : 3 x 8-10 (2')
+- Rowing haltère unilatéral : 3 x 8-10 (1'30)
+- Curl pupitre (machine) : 3 x 10-12 (1'30)
+- Extension triceps poulie haute corde : 3 x 10-12 (1'30)
 
 ### Séance 2 : Lower Body (Salle — 1h15) | RIR 2 (8 à 10 reps)
-- SDT roumain haltères : 4 × 8-10 (2')
-- [SUPERSET] Leg press : 4 × 8-10 (—)
-- [SUPERSET] Mollets debout : 3 × 15-20 (2'30)
-- Leg extension : 3 × 10-12 (1'30)
-- Leg curl : 3 × 10-12 (1'30)
-- Extension buste au banc lombaires (lestées) : 3 × 12-15 (1'30)
+- SDT roumain haltères : 4 x 8-10 (2')
+- [SUPERSET] Leg press : 4 x 8-10 (—)
+- [SUPERSET] Mollets debout : 3 x 15-20 (2'30)
+- Leg extension : 3 x 10-12 (1'30)
+- Leg curl : 3 x 10-12 (1'30)
+- Extension buste au banc lombaires (lestées) : 3 x 12-15 (1'30)
 
 ### Séance 3 : Full-Body / Rappels (Salle — 1h15) | RIR 2 (8 à 10 reps)
-- Dvp Incliné Haltères (30°) : 4 × 8-10 (2'30)
-- Tirage vertical prise neutre : 4 × 8-10 (2')
-- Fentes bulgares : 3 × 10-12 / jambe (1'30)
-- Élévations latérales haltères : 3 × 12-15 (1'15)
-- [SUPERSET] Curl marteau haltères : 3 × 10-12 (—)
-- [SUPERSET] Extension triceps poulie hauteur de hanche : 3 × 10-12 (1'30)
+- Dvp Incliné Haltères (30°) : 4 x 8-10 (2'30)
+- Tirage vertical prise neutre : 4 x 8-10 (2')
+- Fentes bulgares : 3 x 10-12 / jambe (1'30)
+- Élévations latérales haltères : 3 x 12-15 (1'15)
+- [SUPERSET] Curl marteau haltères : 3 x 10-12 (—)
+- [SUPERSET] Extension triceps poulie hauteur de hanche : 3 x 10-12 (1'30)
 
 ### Séance 4 : Abdos & Cardio (Salle — 1h00 max)
-- Roue abdominale (Ab Wheel) : 3 × 8-10 (1'30) — [Tempo 3-1-1, progression : amplitude -> tempo 4s -> lest/pieds]
-- Relevé de jambes suspendu à la barre / chaise romaine : 3 × 10-12 (1'30) — [Focus rétroversion du bassin]
-- Woodchopper / Russian Twists poulie : 3 × 12-15 / côté (1'15) — [Bras tendus, bassin fixe]
-- Vacuum : 3-4 × 30-45s (1') — [Aspiration & contrôle du transverse]
+- Cable Crunch à la poulie : 4 x 10-12 (1'30) 
+- Relevé de bassin à la chaise romaine (lesté) : 3 x 10-12 (1'30) -> quand trop facile, passer à suspendu à la barre
+- Woodchopper à la poulie : 3 x 10-12 / côté (1'15) Woodchopper à la poulie : 3 x 10-12 / côté (1'15) 
+- Vacuum : 3x 30-45s (1') 
 - Marche inclinée sur tapis (Pente 8-10 %, 5,0 km/h) : 35 min
 
 ### Séance 5 : Posture & Mobilité upper body (Maison — 30 min)
-- Face pull élastique : 3 × 15-20 (1'15)
-- Oiseau / Band Pull-Apart élastique : 3 × 12-15 (1'15)
-- Y-T-W élévations au sol ou sur chaise : 3 × 10-12 (1')
-- Gainage latéral / Anti-rotation élastique : 3 × 30-45s (1')
+- Face pull élastique : 3 x 15-20 (1'15)
+- Oiseau / Band Pull-Apart élastique : 3 x 12-15 (1'15)
+- Y-T-W élévations au sol ou sur chaise : 3 x 10-12 (1')
+- Gainage latéral / Anti-rotation élastique : 3 x 30-45s (1')
 
 ### Séance 6 : Mobilité & Prévention (Maison — 30 min)
-- Dorsiflexion des chevilles contre mur : 3 × 10 reps / côté
-- Ouverture de hanches (90/90) : 3 × 45s / côté
-- Cat-Cow (Mobilisation colonne) : 2 × 10 cycles
-- Étirement chaîne postérieure avec élastique : 3 × 45s / côté
+- Dorsiflexion des chevilles contre mur : 3 x 10 reps / côté
+- Ouverture de hanches (90/90) : 3 x 45s / côté
+- Cat-Cow (Mobilisation colonne) : 2 x 10 cycles
+- Étirement chaîne postérieure avec élastique : 3 x 45s / côté
 
 ## INSTRUCTIONS DE TRANSITION M2 & M3
 

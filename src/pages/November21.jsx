@@ -6,56 +6,35 @@ export default function November21() {
         {
             id: 'spa',
             time: 'Matin',
-            title: 'Moment Calicéo',
-            text: 'Pour profiter d\'une matinée de détente tous les deux, loin du bruit et du stress.',
-            location: 'Calicéo, région parisienne',
+            title: 'Moment piscine',
+            text: 'Pour profiter d\'une matinée de détente tous les deux',
+            location: 'La Vague',
             accent: '#7cc6ff',
             glow: 'rgba(124, 198, 255, 0.22)',
         },
         {
             id: 'restaurant',
             time: 'Midi',
-            title: 'Resto',
+            title: 'Raclette',
             text: 'Parce que parler c\'est bien, mais parfois manger c\'est mieux. Et puis, on a faim !',
-            location: 'Table choisie à deux',
             accent: '#ff9f5a',
             glow: 'rgba(255, 159, 90, 0.2)',
         },
         {
             id: 'walk',
             time: 'Après manger',
-            title: 'Balade et self-shooting',
-            text: 'Pour digérer et profiter d\'un moment de calme, main dans la main, en se racontant nos souvenirs.',
-            location: 'Quelque part au calme',
+            title: 'Balade',
+            text: 'Pour digérer et profiter d\'un moment de calme, main dans la main, en allant chercher quelques douceurs pour le reste de la journée...',
             accent: '#de6d73',
             glow: 'rgba(222, 109, 115, 0.18)',
         },
         {
-            id: 'sport',
-            time: 'Après manger',
-            title: 'Sport',
-            text: 'Parce que ça fait partie de moi, alors autant partager ce moment avec toi !',
-            location: 'Parc ou terrain de sport',
+            id: 'disney',
+            time: 'Après-midi',
+            title: 'Goûter et disney',
+            text: 'Parce que le goûter c\'est sacré, et que tu aimes bien les petits Disney et que c\'est encore mieux à deux !',
             accent: '#dea96d',
             glow: 'rgba(222, 169, 109, 0.18)',
-        },
-        {
-            id: 'activity',
-            time: 'Fin de journée',
-            title: 'Activité',
-            text: 'Afin que de nos mains nous créions notre avenir, et que de nos yeux nous voyions le monde à deux.',
-            location: 'Là où l\'on voudra créer',
-            accent: '#c46dde',
-            glow: 'rgba(209, 109, 222, 0.18)',
-        },
-        {
-            id: 'cine',
-            time: 'Soirée',
-            title: 'Cinéma',
-            text: 'Pour passer une soirée cinématographique inoubliable, à deux, parce que le cinéma, tu aimes ça !',
-            location: 'Cinéma sélectionné',
-            accent: '#de6db3',
-            glow: 'rgba(222, 109, 115, 0.18)',
         },
     ];
 
@@ -130,6 +109,36 @@ export default function November21() {
             setIsNoThanksTeleporting(false);
         }, 420);
     };
+
+    useEffect(() => {
+        const metaTags = ['robots', 'googlebot'].map((name) => {
+            let metaTag = document.querySelector(`meta[name="${name}"]`);
+            const previousContent = metaTag?.getAttribute('content');
+            const wasCreated = !metaTag;
+
+            if (!metaTag) {
+                metaTag = document.createElement('meta');
+                metaTag.setAttribute('name', name);
+                document.head.appendChild(metaTag);
+            }
+
+            metaTag.setAttribute('content', 'noindex, nofollow');
+
+            return { metaTag, previousContent, wasCreated };
+        });
+
+        return () => {
+            metaTags.forEach(({ metaTag, previousContent, wasCreated }) => {
+                if (wasCreated) {
+                    metaTag.remove();
+                } else if (previousContent) {
+                    metaTag.setAttribute('content', previousContent);
+                } else {
+                    metaTag.removeAttribute('content');
+                }
+            });
+        };
+    }, []);
 
     useEffect(() => {
         const scrollContainer = itineraryScrollRef.current;
@@ -229,10 +238,12 @@ export default function November21() {
                                             <h2>{moment.title}</h2>
                                         </div>
                                         <p>{moment.text}</p>
-                                        <div className="november-itinerary-location" aria-label={moment.location}>
-                                            <i className="fas fa-map-marker-alt" aria-hidden="true" />
-                                            <span>{moment.location}</span>
-                                        </div>
+                                        {moment.location && (
+                                            <div className="november-itinerary-location" aria-label={moment.location}>
+                                                <i className="fas fa-map-marker-alt" aria-hidden="true" />
+                                                <span>{moment.location}</span>
+                                            </div>
+                                        )}
                                     </div>
                                 </section>
                             ))}
@@ -241,7 +252,7 @@ export default function November21() {
 
                         <div className="november-card-footer">
                             <p>
-                                Si tu veux, on peut garder cette trame et la modifier ensemble jusqu’à ce qu’elle nous ressemble parfaitement.
+                                Je ne fais que proposer, on peut faire autre chose si tu préfères. Le plus important, c'est d'être tous les deux !
                             </p>
 
                             <div className="cta-section november-cta-section">

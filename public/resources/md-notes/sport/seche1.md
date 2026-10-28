@@ -13,10 +13,10 @@
 - Pli adipeux triceps (milieu entre l'épaule et le coude) : ???À RENSEIGNER???
 - Pli adipeux biceps (idem) : ???À RENSEIGNER???
 - Pli adipeux sous-scapulaire : ???À RENSEIGNER???
-- Tour de taille : ???À RENSEIGNER???
-- Tour de poitrine : ???À RENSEIGNER???
-- Tour de cuisses : ???À RENSEIGNER???
-- Tour de bras : ???À RENSEIGNER???
+- Tour de taille : 70cm (creux, partie la plus fine)
+- Tour de poitrine : 87-90cm (ligne fin pectoral)
+- Tour de cuisses : 43.5 (partie la plus épaisse, droite)
+- Tour de bras : 28cm (partie la plus épaisse)
 
 ---
 
