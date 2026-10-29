@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import DockNav from '../assets/components/DockNav';
 import '../assets/stylesheets/cooldown.scss';
 
-const END_DATE = '2026-10-23 12:45:00';
+const END_DATE = '2026-12-10 12:45:00';
 const TARGET_TIME = new Date(END_DATE.replace(' ', 'T')).getTime();
 
 const MESSAGES = [
@@ -51,7 +51,7 @@ export default function Cooldown() {
             <main className="cooldown-shell">
                 <section className="cooldown-copy">
                     <span className="cooldown-kicker">Prochaines vacances</span>
-                    <h1>Encore un peu de patience</h1>
+                    <h1>{countdown.totalSeconds > 0 ? 'Encore un peu de patience' : 'Vive les vacances !'}</h1>
                     <p>
                         Le minuteur <span className="mobile-only">ci-dessous</span><span className="computer-only">ci-contre</span> suit en temps réel la date des prochaines vacances: {new Date(TARGET_TIME).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} à {new Date(TARGET_TIME).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}.
                     </p>
