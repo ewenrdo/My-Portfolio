@@ -90,13 +90,15 @@ function parseIcsEvents(ics) {
 
 function enrichEvent(event) {
     const titleContainsVisio = event.title.toLowerCase().includes('visio');
+    const isDisabled = event.title.includes('⌛');
     const videoLink = event.location || (!titleContainsVisio ? extractVideoLink(event.description) : null);
 
     return {
         ...event,
+        isDisabled,
         titleContainsVisio,
         videoLink,
-        color: event.location || titleContainsVisio ? VISIO_EVENT_COLOR : '#3f51b5',
+        color: isDisabled ? '#888888' : (event.location || titleContainsVisio ? VISIO_EVENT_COLOR : '#3f51b5'),
     };
 }
 
@@ -183,8 +185,6 @@ function CalendarView({ events, weekStart, onPreviousWeek, onNextWeek, onCurrent
 
     const eventsInWeek = events.filter((event) => event.start <= weekEnd && (event.end || event.start) >= weekStart);
 
-    console.log('Événements affichés dans le calendrier :', eventsInWeek);
-
     return (
         <section className="visio-calendar-view" aria-label="Calendrier de la semaine">
             <div className="visio-calendar-navigation">
@@ -233,7 +233,7 @@ function CalendarView({ events, weekStart, onPreviousWeek, onNextWeek, onCurrent
 
                                 return (
                                     <button
-                                        className="visio-calendar-event"
+                                        className={`visio-calendar-event${event.isDisabled ? ' is-disabled' : ''}`}
                                         type="button"
                                         onClick={() => onSelectEvent(event)}
                                         key={event.id}
@@ -280,7 +280,7 @@ function EventDetails({ event }) {
 
 function EventCard({ event }) {
     return (
-        <article className="visio-event-card" style={{ '--visio-event-color': event.color }}>
+        <article className={`visio-event-card${event.isDisabled ? ' is-disabled' : ''}`} style={{ '--visio-event-color': event.color }}>
             <div className="visio-event-icon" aria-hidden="true">
                 <i className="fas fa-video" />
             </div>
@@ -304,7 +304,7 @@ function EventModal({ event, onClose }) {
         <div className="visio-event-modal-backdrop" role="presentation" onMouseDown={(mouseEvent) => {
             if (mouseEvent.target === mouseEvent.currentTarget) onClose();
         }}>
-            <section className="visio-event-modal" role="dialog" aria-modal="true" aria-labelledby="visio-event-modal-title">
+            <section className={`visio-event-modal${event.isDisabled ? ' is-disabled' : ''}`} role="dialog" aria-modal="true" aria-labelledby="visio-event-modal-title">
                 <button className="visio-event-modal-close" type="button" onClick={onClose} aria-label="Fermer">
                     <i className="fas fa-times" aria-hidden="true" />
                 </button>
