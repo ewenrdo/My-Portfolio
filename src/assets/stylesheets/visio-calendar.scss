@@ -155,6 +155,143 @@
     }
 }
 
+.visio-calendar-view {
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.68);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(14px);
+}
+
+.visio-calendar-navigation {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    h2 {
+        flex: 1;
+        margin: 0;
+        color: rgba(0, 0, 0, 0.72);
+        font-size: 0.95rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    button {
+        display: grid;
+        place-items: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.05);
+        color: #283593;
+        cursor: pointer;
+        font: inherit;
+
+        &:hover {
+            background: rgba(63, 81, 181, 0.12);
+        }
+    }
+
+    .visio-calendar-today {
+        width: auto;
+        padding: 0 0.85rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 700;
+    }
+}
+
+.visio-calendar-grid {
+    display: grid;
+    grid-template-columns: 3.25rem repeat(6, minmax(7rem, 1fr));
+    min-width: 46rem;
+}
+
+.visio-calendar-corner,
+.visio-calendar-day-label {
+    min-height: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.visio-calendar-day-label {
+    display: grid;
+    place-items: center;
+    padding: 0.5rem;
+    color: #283593;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.visio-calendar-times {
+    display: grid;
+    grid-template-rows: repeat(10, 4rem);
+    padding-top: 0.25rem;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 0.7rem;
+    text-align: right;
+
+    span {
+        padding-right: 0.45rem;
+        transform: translateY(-0.45rem);
+    }
+}
+
+.visio-calendar-column {
+    position: relative;
+    height: 40rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.visio-calendar-hour {
+    height: 4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.visio-calendar-event {
+    position: absolute;
+    right: 0.2rem;
+    left: 0.2rem;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-height: 2rem;
+    padding: 0.35rem 0.45rem;
+    border: 0;
+    border-left: 3px solid var(--visio-event-color, #3f51b5);
+    border-radius: 0.45rem;
+    background: color-mix(in srgb, var(--visio-event-color, #3f51b5) 14%, transparent);
+    color: var(--visio-event-color, #1a237e);
+    font-size: 0.68rem;
+    line-height: 1.2;
+    text-decoration: none;
+
+    strong {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    span {
+        opacity: 0.72;
+    }
+
+    &:hover {
+        background: color-mix(in srgb, var(--visio-event-color, #3f51b5) 24%, transparent);
+    }
+}
+
+.visio-calendar-list-tabs {
+    margin-top: 0.5rem;
+}
+
 .visio-event-card {
     display: flex;
     gap: 1.25rem;
@@ -173,8 +310,50 @@
     display: grid;
     place-items: center;
     border-radius: 0.85rem;
-    background: linear-gradient(135deg, #3f51b5, #1a237e);
+    background: linear-gradient(135deg, var(--visio-event-color, #3f51b5), #1a237e);
     color: #fff;
+}
+
+.visio-event-modal-backdrop {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(17, 17, 17, 0.32);
+    backdrop-filter: blur(4px);
+}
+
+.visio-event-modal {
+    position: relative;
+    display: flex;
+    gap: 1.25rem;
+    width: min(100%, 34rem);
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 1.5rem;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
+
+    .visio-event-content {
+        flex: 1;
+    }
+}
+
+.visio-event-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.58);
+    cursor: pointer;
 }
 
 .visio-event-content {
@@ -237,6 +416,44 @@
 }
 
 @media (max-width: 520px) {
+    .visio-calendar-grid {
+        min-width: 0;
+        grid-template-columns: 2.2rem repeat(6, minmax(0, 1fr));
+    }
+
+    .visio-calendar-day-label {
+        padding: 0.35rem 0.1rem;
+        font-size: 0.65rem;
+    }
+
+    .visio-calendar-times {
+        font-size: 0.58rem;
+
+        span {
+            padding-right: 0.2rem;
+        }
+    }
+
+    .visio-calendar-event {
+        right: 0.1rem;
+        left: 0.1rem;
+        padding: 0.25rem 0.2rem;
+        border-left-width: 2px;
+        font-size: 0.56rem;
+    }
+
+    .visio-calendar-navigation {
+        padding: 0.75rem;
+
+        h2 {
+            font-size: 0.8rem;
+        }
+
+        .visio-calendar-today {
+            display: none;
+        }
+    }
+
     .visio-event-card {
         gap: 0.9rem;
         padding: 1.15rem;
