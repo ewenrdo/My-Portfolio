@@ -90,7 +90,7 @@ function parseIcsEvents(ics) {
 
 function enrichEvent(event) {
     const titleContainsVisio = event.title.toLowerCase().includes('visio');
-    const videoLink = titleContainsVisio ? null : (event.location || extractVideoLink(event.description));
+    const videoLink = event.location || (!titleContainsVisio ? extractVideoLink(event.description) : null);
 
     return {
         ...event,
