@@ -3,7 +3,7 @@ import DockNav from '../assets/components/DockNav';
 import '../assets/stylesheets/visio-calendar.scss';
 
 const CALENDAR_URL = '/api/calendar';
-const VISIO_EVENT_COLOR = '#ff0000';
+const VISIO_EVENT_COLOR = '#8a1538';
 
 function unfoldIcsLines(ics) {
     return ics.replace(/\r\n[ \t]/g, '').replace(/\n[ \t]/g, '').split(/\r?\n/);
@@ -42,6 +42,7 @@ function parseIcsDate(value, isDateOnly) {
 }
 
 function extractVideoLink(description) {
+    if (!description) return null;
     return description.match(/https?:\/\/[^\s<>"']+/i)?.[0]?.replace(/[),.;]+$/, '') || null;
 }
 
@@ -165,6 +166,12 @@ function formatCalendarTime(date) {
     return date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 }
 
+function formatCalendarTimeRange(event) {
+    const start = formatCalendarTime(event.start);
+    if (!event.end) return start;
+    return `${start} - ${formatCalendarTime(event.end)}`;
+}
+
 function CalendarView({ events, weekStart, onPreviousWeek, onNextWeek, onCurrentWeek, onSelectEvent }) {
     const days = getCalendarDays(weekStart);
     const dayStartHour = 8;
@@ -175,6 +182,8 @@ function CalendarView({ events, weekStart, onPreviousWeek, onNextWeek, onCurrent
     weekEnd.setHours(23, 59, 59, 999);
 
     const eventsInWeek = events.filter((event) => event.start <= weekEnd && (event.end || event.start) >= weekStart);
+
+    console.log('Événements affichés dans le calendrier :', eventsInWeek);
 
     return (
         <section className="visio-calendar-view" aria-label="Calendrier de la semaine">
@@ -233,10 +242,10 @@ function CalendarView({ events, weekStart, onPreviousWeek, onNextWeek, onCurrent
                                             height: `${((endMinutes - startMinutes) / 60) * 10}%`,
                                             '--visio-event-color': event.color,
                                         }}
-                                        title={`${event.title} — ${formatCalendarTime(event.start)}`}
+                                        title={`${event.title} — ${formatCalendarTimeRange(event)}`}
                                     >
                                         <strong>{event.title}</strong>
-                                        <span>{formatCalendarTime(event.start)}</span>
+                                        <span>{formatCalendarTimeRange(event)}</span>
                                     </button>
                                 );
                             })}
@@ -356,9 +365,11 @@ export default function VisioCalendar() {
         <div className="visio-calendar-page">
             <main className="visio-calendar-shell">
                 <section className="visio-calendar-copy">
-                    <span className="visio-calendar-kicker">Calendrier synchronisé</span>
-                    <h1>Événements de visioconférence</h1>
-                    <p>Retrouvez ici les prochains événements. Le lien de visioconférence est affiché lorsqu’il est présent dans la description.</p>
+                    <span className="visio-calendar-kicker">Double licence Mathématiques Informatique</span>
+                    <h1>Calendrier de distanciel</h1>
+                    <p>
+                        Retrouvez ici les prochains événements et liens de visioconférence, ainsi que le travail à préparer pour chaque séance.
+                    </p>
                 </section>
 
                 {status === 'loading' && <p className="visio-calendar-state">Chargement des événements…</p>}
