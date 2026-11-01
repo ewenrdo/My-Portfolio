@@ -1362,6 +1362,14 @@
                                 "title": "Fiche d'entraînement semaine 7",
                                 "date": "2026-10-16",
                                 "slug": "fiche-dentraînement-semaine-7"
+                            },
+                            {
+                                "name": "sm8.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm8/sm8.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Fiche d'entraînement semaine 8",
+                                "date": "2026-11-01",
+                                "slug": "fiche-dentraînement-semaine-8"
                             }
                         ]
                     },
