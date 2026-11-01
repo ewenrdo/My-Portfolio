@@ -74,7 +74,7 @@
 - Dvp Incliné Haltères (30°) : 4 x 8-10 (2'30)
 - Tractions prise neutre : 4 x 8-10 (2'30)
 - Développé couché : 3 x 8-10 (2')
-- Rowing haltère unilatéral : 3 x 8-10 (1'30)
+- Seated row : 3 x 8-10 (1'30)
 - Curl pupitre (machine) : 3 x 10-12 (1'30)
 - Extension triceps poulie haute corde : 3 x 10-12 (1'30)
 
@@ -97,8 +97,7 @@
 ### Séance 4 : Abdos & Cardio (Salle — 1h00 max)
 - Cable Crunch à la poulie : 4 x 10-12 (1'30) 
 - Relevé de bassin à la chaise romaine (lesté) : 3 x 10-12 (1'30) -> quand trop facile, passer à suspendu à la barre
-- Woodchopper à la poulie : 3 x 10-12 / côté (1'15) Woodchopper à la poulie : 3 x 10-12 / côté (1'15) 
-- Vacuum : 3x 30-45s (1') 
+- Woodchopper à la poulie : 3 x 10-12 / côté (1'15) - Vacuum : 3x 30-45s (1') 
 - Marche inclinée sur tapis (Pente 8-10 %, 5,0 km/h) : 35 min
 
 ### Séance 5 : Posture & Mobilité upper body (Maison — 30 min)
