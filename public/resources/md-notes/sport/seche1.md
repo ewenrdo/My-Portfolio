@@ -8,16 +8,21 @@
 * **Évolution visuelle / Composition :** Passage du statut *skinny-fat* à un physique nettement plus sec et affiné. Le haut du grand droit est tracé ; le bas et le milieu restent légèrement recouverts par la dernière réserve sous-cutanée du tronc et une légère rétention d'eau liée au déficit prolongé.
 
 * **Estimation de la masse grasse :** 14% _(après semaine de maintenance calorique)_
-- Pli adipeux abdominal : ???À RENSEIGNER???
-- Pli adipeux supra-iliaque : ???À RENSEIGNER???
-- Pli adipeux triceps (milieu entre l'épaule et le coude) : ???À RENSEIGNER???
-- Pli adipeux biceps (idem) : ???À RENSEIGNER???
-- Pli adipeux sous-scapulaire : ???À RENSEIGNER???
+- Pli adipeux abdomen (2 cm à gauche du nombril) : 19 mm (J+11 après la fin de la sèche)
+- Pli adipeux supra-iliaque (au niveau de la crête iliaque) : 10 mm (J+11 après la fin de la sèche)
+- Pli adipeux cuisse (vertical, milieu de la cuisse) : 19 mm - 15mm - 15mm (moyenne 16.3 mm) (J+11 après la fin de la sèche)
+- **Somme des trois plis :** 19+10+16.3 = 45.3 mm (J+11 après la fin de la sèche)
+
 - Tour de taille : 70cm (creux, partie la plus fine)
 - Tour de poitrine : 87-90cm (ligne fin pectoral)
 - Tour de cuisses : 43.5 (partie la plus épaisse, droite)
-- Tour de bras : 28cm (partie la plus épaisse)
+- Tour de bras : 28cm (partie la plus épaisse, gauche)
 
+Indications de mesures :
+- Mesures prises à gauche, 30 minutes après petit déjeuner.
+- Pli Abdominal : À 2cm à gauche du nombril. Pincer un pli **vertical** de peau et de tissu adipeux. 
+- Pli Supra-iliaque : Juste au-dessus de la crête iliaque (l'os de la hanche gauche), sur la ligne du flanc (en diagonale donc). Pincer un pli diagonal (45°).
+- Pli Cuisse : Sur la face antérieure gauche, à mi-distance entre le pli de l'aine et le sommet de la rotule. Être assis au bord d'une chaise pour relâcher totalement le quadriceps. 
 ---
 
 ### 2. Points Forts & Validation du Processus
