@@ -7,6 +7,7 @@
 **DÉBUT :**
 - 68 kg en sortie de sèche à -400 kcal (14.5 % MG).
 - Homme, 180 cm.
+- Voir mensurations et plis de début sur le bilan de sèche 1.
 
 **OBJECTIF GLOBAL :**
 - Macrocycle 6 mois à +250 kcal (Objectif : +5 à +6 kg total dont ~3,5 à 4 kg de muscle pur).
