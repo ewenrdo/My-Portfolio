@@ -1736,6 +1736,14 @@
                                 "slug": "al5-chapitre-1-introduction-aux-graphes"
                             },
                             {
+                                "name": "ancien_poly.pdf",
+                                "path": "/resources/university/al5/ancien_poly.pdf",
+                                "credits": "Sophie Laplace.",
+                                "title": "Ancien polycopié de Sophie Laplace (2015)",
+                                "date": "2026-11-03",
+                                "slug": "al5-ancien-poly"
+                            },
+                            {
                                 "link": "https://youtu.be/ZmJOU_7JWi4?si=ZSbQEc-dRVmK5AxS",
                                 "name": "Algorithme de tri topologique (algorithme de Kahn)",
                                 "type": "link",
