@@ -124,6 +124,7 @@
   - Biceps : Curl Pupitre -> Curl Incliné Haltères
   - Triceps : Extension Poulie -> Dips Lestés ou Extension au-dessus de la tête à un bras
   - Pecs : DVP Couché -> Écarté Incliné Poulie / Machine Convergente
+  - Ajouter un exercice avant-bras ? (superset curl poignet vers le haut & bas ?)
 - Action : À la semaine 8 du M1, faire un bilan sur Hevy (charges atteintes, fatigue lombaire, ressenti) pour générer la version exacte des séances M2.
 
 ### MÉSOCYCLE 3 (Mois 5-6) — Surcharge Mécanique & Force
