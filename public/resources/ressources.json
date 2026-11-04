@@ -1218,6 +1218,14 @@
                                         "title": "Notes de TD 1",
                                         "date": "2026-09-11",
                                         "slug": "pr5-td-notes-td1"
+                                    },
+                                    {
+                                        "name": "td2.pdf",
+                                        "path": "/resources/notes/PR5/TD2.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Notes de TD 2",
+                                        "date": "2026-11-04",
+                                        "slug": "pr5-td-notes-td2"
                                     }
                                 ]
                             },
