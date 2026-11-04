@@ -102,10 +102,10 @@
 - Marche inclinée sur tapis (Pente 8-10 %, 5,0 km/h) : 35 min
 
 ### Séance 5 : Posture & Mobilité upper body (Maison — 30 min)
-- Face pull élastique : 3 x 15-20 (1'15)
-- Oiseau / Band Pull-Apart élastique : 3 x 12-15 (1'15)
-- Y-T-W élévations au sol ou sur chaise : 3 x 10-12 (1')
-- Gainage latéral / Anti-rotation élastique : 3 x 30-45s (1')
+- Oiseau : 3 x 15-20 (1'15) (6kg)
+- Band Pull-Apart élastique : 3 x 12-15 (1'15)
+- Y-T-W élévations au sol : 3 x 10-12 (1')
+- Gainage latéral : 3 x 30-45s (1')
 
 ### Séance 6 : Mobilité & Prévention (Maison — 30 min)
 - Dorsiflexion des chevilles contre mur : 3 x 10 reps / côté
