@@ -1420,6 +1420,14 @@
                         "title": "Notes de réunion de rentrée",
                         "date": "2026-09-04",
                         "slug": "notes-de-reunion-de-rentrée"
+                    },
+                    {
+                        "name": "ag0611.pdf",
+                        "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl3_lmath_info/ag/ag2.pdf",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Compte-rendu de l'AG du 6 novembre (inter UFR)",
+                        "date": "2026-11-06",
+                        "slug": "ag0611-compte-rendu-de-lag-du-6-novembre-inter-ufr"
                     }
                 ]
             },
