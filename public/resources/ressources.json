@@ -1410,6 +1410,22 @@
                                 "title": "Fiche d'entraînement semaine 8",
                                 "date": "2026-11-01",
                                 "slug": "fiche-dentraînement-semaine-8"
+                            },
+                            {
+                                "name": "sm8-corr.pdf",
+                                "path": "/resources/notes/Training/SM8.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Corrigé fiche d'entraînement semaine 8",
+                                "date": "2026-11-09",
+                                "slug": "corr-fiche-dentraînement-semaine-8"
+                            },
+                            {
+                                "name": "sm9.pdf",
+                                "path": "https://ewenrdo.github.io/dl-mathinfo-vault/exercises/dl3_lmath_info/training/sm9/sm9.pdf",
+                                "credits": "Ewen Rodrigues de Oliveira. Exercices de l'Université Paris Cité.",
+                                "title": "Fiche d'entraînement semaine 9",
+                                "date": "2026-11-09",
+                                "slug": "fiche-dentraînement-semaine-9"
                             }
                         ]
                     },
