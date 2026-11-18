@@ -1224,6 +1224,37 @@
                                 ]
                             },
                             {
+                                "name": "Ressources visio",
+                                "slug": "pr5-td-ressources-visio",
+                                "children": [
+                                    {
+                                        "name": "cc1-annule.pdf",
+                                        "path": "/resources/notes/PR5/cc1-annule.pdf",
+                                        "credits": "Mathieu Merle.",
+                                        "title": "Sujet de CC1",
+                                        "date": "2026-11-18",
+                                        "slug": "pr5-td-visio-cc1"
+                                    },
+                                    {
+                                        "name": "dm-20-nov.pdf",
+                                        "path": "/resources/notes/PR5/dm-20-nov.pdf",
+                                        "credits": "Mathieu Merle.",
+                                        "title": "Devoir maison du 20 novembre",
+                                        "date": "2026-11-20",
+                                        "slug": "pr5-td-visio-dm-20-nov"
+                                    },
+                                    {
+                                        "name": "dm-prepa-cc2.pdf",
+                                        "path": "/resources/notes/PR5/dm-prepa-cc2.pdf",
+                                        "credits": "Mathieu Merle.",
+                                        "title": "Devoir maison de préparation pour le CC2",
+                                        "date": "2026-11-18",
+                                        "slug": "pr5-td-visio-dm-prepa-cc2"
+                                    }
+                                    
+                                ]
+                            },
+                            {
                                 "name": "Avancement en TD",
                                 "slug": "pr5-td-notes",
                                 "children": [
