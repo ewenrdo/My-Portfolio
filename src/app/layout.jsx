@@ -93,12 +93,6 @@ export default function RootLayout({ children }) {
                     href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400..800;1,400..800&family=Aleo:ital,wght@0,400..800;1,400..800&family=Great+Vibes&display=swap"
                     rel="stylesheet"
                 />
-                <link
-                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-                    rel="stylesheet"
-                    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-                    crossOrigin="anonymous"
-                />
                 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
                 <script
                     type="application/ld+json"
