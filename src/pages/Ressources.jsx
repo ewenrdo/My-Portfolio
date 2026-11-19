@@ -3,7 +3,18 @@ import '../assets/stylesheets/ressources.scss';
 import DockNav from '../assets/components/DockNav';
 import ResourceViewerModal from '../assets/components/ResourceViewerModal';
 import WarningModal from '../assets/components/WarningModal';
+import '../assets/stylesheets/avent.scss';
+import AventPromoModal from '../assets/components/AventPromoModal';
 
+const AVENT_PROMO_STORAGE_KEY = 'avent_maths_promo_last_seen';
+
+function getTodayStorageStamp() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
 const EMPTY_TREE = [];
 
 function isFolderNode(node) {
@@ -12,6 +23,12 @@ function isFolderNode(node) {
 
 function isFileNode(node) {
     return Boolean(node && node.path && !Array.isArray(node.children));
+}
+
+function isAventPromoPeriod(date = new Date()) {
+    const start = new Date(2026, 10, 25, 0, 0, 0);   // 25 nov. 2026 à 00:00:00 (heure locale)
+    const end = new Date(2026, 11, 25, 23, 59, 59);   // 25 déc. 2026 à 23:59:59 (heure locale)
+    return date >= start && date <= end;
 }
 
 function findNodeBySlug(nodes, slug, path = []) {
@@ -168,6 +185,32 @@ export default function Ressources() {
                 setDataSource('json');
             });
     }, []);
+
+    // Gestion du calendrier de l'avent
+    const [isAventPromoOpen, setIsAventPromoOpen] = useState(false);
+
+    // Affichage max 1 fois par jour
+    useEffect(() => {
+        const now = new Date();
+        if (!isAventPromoPeriod(now)) return;
+
+        try {
+            const todayStamp = getTodayStorageStamp();
+            const lastSeen = localStorage.getItem(AVENT_PROMO_STORAGE_KEY);
+
+            if (lastSeen !== todayStamp) {
+                setIsAventPromoOpen(true);
+                localStorage.setItem(AVENT_PROMO_STORAGE_KEY, todayStamp);
+            }
+        } catch {
+            // Ignore si localStorage est bloqué
+        }
+    }, []);
+
+    function handleOpenAventCalendar() {
+        setIsAventPromoOpen(false);
+        window.location.assign('/advent'); 
+    }
 
     // Gestion du mode actif (université ou notes)
     const activeTree =
@@ -546,7 +589,7 @@ export default function Ressources() {
             });
         }
     };
-    
+
     return (
         <>
             <div
@@ -602,12 +645,11 @@ export default function Ressources() {
                                     resourceMode ===
                                     'university'
                                 }
-                                className={`resource-mode-option university ${
-                                    resourceMode ===
-                                    'university'
+                                className={`resource-mode-option university ${resourceMode ===
+                                        'university'
                                         ? 'is-active'
                                         : ''
-                                }`}
+                                    }`}
                                 onClick={() =>
                                     switchResourceMode(
                                         'university'
@@ -627,12 +669,11 @@ export default function Ressources() {
                                     resourceMode ===
                                     'notes'
                                 }
-                                className={`resource-mode-option notes ${
-                                    resourceMode ===
-                                    'notes'
+                                className={`resource-mode-option notes ${resourceMode ===
+                                        'notes'
                                         ? 'is-active'
                                         : ''
-                                }`}
+                                    }`}
                                 onClick={() =>
                                     switchResourceMode(
                                         'notes'
@@ -656,7 +697,7 @@ export default function Ressources() {
                                     className="apple-search-input"
                                     placeholder={
                                         resourceMode ===
-                                        'university'
+                                            'university'
                                             ? 'Rechercher un document...'
                                             : 'Rechercher une note...'
                                     }
@@ -694,34 +735,32 @@ export default function Ressources() {
 
                             {resourceMode ===
                                 'university' && (
-                                <button
-                                    type="button"
-                                    className={`apple-suggest-trigger ${
-                                        isSuggesting
-                                            ? 'is-active'
-                                            : ''
-                                    }`}
-                                    onClick={() => {
-                                        window.location.assign(
-                                            contributeUrl
-                                        );
-                                    }}
-                                    aria-label="Contribuer sur GitHub"
-                                    title="Contribuer sur GitHub"
-                                >
-                                    <i
-                                        className={`fas ${
-                                            isSuggesting
-                                                ? 'fa-times'
-                                                : 'fa-plus'
-                                        }`}
-                                    />
+                                    <button
+                                        type="button"
+                                        className={`apple-suggest-trigger ${isSuggesting
+                                                ? 'is-active'
+                                                : ''
+                                            }`}
+                                        onClick={() => {
+                                            window.location.assign(
+                                                contributeUrl
+                                            );
+                                        }}
+                                        aria-label="Contribuer sur GitHub"
+                                        title="Contribuer sur GitHub"
+                                    >
+                                        <i
+                                            className={`fas ${isSuggesting
+                                                    ? 'fa-times'
+                                                    : 'fa-plus'
+                                                }`}
+                                        />
 
-                                    <span className="btn-text">
-                                        Contribuer
-                                    </span>
-                                </button>
-                            )}
+                                        <span className="btn-text">
+                                            Contribuer
+                                        </span>
+                                    </button>
+                                )}
                         </div>
 
                         {isSuggesting ? (
@@ -911,12 +950,11 @@ export default function Ressources() {
 
                             <div
                                 key={transitionKey}
-                                className={`apple-list-wrap ${
-                                    navDirection ===
-                                    'forward'
+                                className={`apple-list-wrap ${navDirection ===
+                                        'forward'
                                         ? 'is-forward'
                                         : 'is-back'
-                                }`}
+                                    }`}
                             >
 
                                 {isLoading && (
@@ -934,88 +972,87 @@ export default function Ressources() {
                                 {dataSource ===
                                     'mock' &&
                                     searchQuery.trim() ===
-                                        '' && (
-                                    <p className="apple-feedback apple-feedback-subtle">
-                                        Mode secure : liens
-                                        mockés seulement.
-                                    </p>
-                                )}
+                                    '' && (
+                                        <p className="apple-feedback apple-feedback-subtle">
+                                            Mode secure : liens
+                                            mockés seulement.
+                                        </p>
+                                    )}
 
                                 {searchQuery.trim() ===
                                     '' && (
-                                    <header className="apple-explorer-head">
+                                        <header className="apple-explorer-head">
 
-                                        <button
-                                            type="button"
-                                            className="apple-back"
-                                            aria-label="Remonter d'un dossier"
-                                            onClick={
-                                                goBackOneLevel
-                                            }
-                                            disabled={
-                                                pathStack.length ===
-                                                0
-                                            }
-                                        >
-                                            <i className="fas fa-chevron-left" />
-                                        </button>
+                                            <button
+                                                type="button"
+                                                className="apple-back"
+                                                aria-label="Remonter d'un dossier"
+                                                onClick={
+                                                    goBackOneLevel
+                                                }
+                                                disabled={
+                                                    pathStack.length ===
+                                                    0
+                                                }
+                                            >
+                                                <i className="fas fa-chevron-left" />
+                                            </button>
 
-                                        <nav
-                                            className="apple-breadcrumbs"
-                                            aria-label="Fil d'ariane"
-                                        >
-                                            {breadcrumbs.map(
-                                                (
-                                                    item,
-                                                    index
-                                                ) => (
-                                                    <React.Fragment
-                                                        key={`${item.label}-${index}`}
-                                                    >
-
-                                                        {index >
-                                                            0 && (
-                                                            <span className="apple-crumb-separator">
-                                                                /
-                                                            </span>
-                                                        )}
-
-                                                        <button
-                                                            type="button"
-                                                            className={`apple-crumb ${
-                                                                index ===
-                                                                breadcrumbs.length -
-                                                                    1
-                                                                    ? 'is-current'
-                                                                    : ''
-                                                            }`}
-                                                            onClick={() =>
-                                                                goToLevel(
-                                                                    index -
-                                                                        1
-                                                                )
-                                                            }
-                                                            disabled={
-                                                                index ===
-                                                                breadcrumbs.length -
-                                                                    1
-                                                            }
+                                            <nav
+                                                className="apple-breadcrumbs"
+                                                aria-label="Fil d'ariane"
+                                            >
+                                                {breadcrumbs.map(
+                                                    (
+                                                        item,
+                                                        index
+                                                    ) => (
+                                                        <React.Fragment
+                                                            key={`${item.label}-${index}`}
                                                         >
-                                                            {
-                                                                item.label
-                                                            }
-                                                        </button>
 
-                                                    </React.Fragment>
-                                                )
-                                            )}
-                                        </nav>
+                                                            {index >
+                                                                0 && (
+                                                                    <span className="apple-crumb-separator">
+                                                                        /
+                                                                    </span>
+                                                                )}
 
-                                    </header>
-                                )}
+                                                            <button
+                                                                type="button"
+                                                                className={`apple-crumb ${index ===
+                                                                        breadcrumbs.length -
+                                                                        1
+                                                                        ? 'is-current'
+                                                                        : ''
+                                                                    }`}
+                                                                onClick={() =>
+                                                                    goToLevel(
+                                                                        index -
+                                                                        1
+                                                                    )
+                                                                }
+                                                                disabled={
+                                                                    index ===
+                                                                    breadcrumbs.length -
+                                                                    1
+                                                                }
+                                                            >
+                                                                {
+                                                                    item.label
+                                                                }
+                                                            </button>
+
+                                                        </React.Fragment>
+                                                    )
+                                                )}
+                                            </nav>
+
+                                        </header>
+                                    )}
 
                                 {searchQuery.trim() !==
-                                '' ? (
+                                    '' ? (
                                     <>
                                         <div className="apple-search-results-header">
                                             Résultats de recherche
@@ -1027,7 +1064,7 @@ export default function Ressources() {
                                         </div>
 
                                         {searchResults.length ===
-                                        0 ? (
+                                            0 ? (
                                             <p className="apple-feedback">
                                                 Aucun document ne
                                                 correspond à votre
@@ -1045,7 +1082,7 @@ export default function Ressources() {
                                                         const itemPath =
                                                             String(
                                                                 item.path ||
-                                                                    ''
+                                                                ''
                                                             ).toLowerCase();
 
                                                         const isPdf =
@@ -1070,9 +1107,8 @@ export default function Ressources() {
                                                         const itemLabel =
                                                             item.title ||
                                                             item.name ||
-                                                            `Élément ${
-                                                                index +
-                                                                1
+                                                            `Élément ${index +
+                                                            1
                                                             }`;
 
                                                         const itemMeta =
@@ -1102,13 +1138,11 @@ export default function Ressources() {
                                                                 >
 
                                                                     <span
-                                                                        className={`apple-row-leading ${
-                                                                            resourceMode ===
-                                                                            'notes'
+                                                                        className={`apple-row-leading ${resourceMode ===
+                                                                                'notes'
                                                                                 ? 'notes-mode'
                                                                                 : 'university-mode'
-                                                                        } ${
-                                                                            isPdf
+                                                                            } ${isPdf
                                                                                 ? 'is-pdf'
                                                                                 : isZip
                                                                                     ? 'is-zip'
@@ -1117,19 +1151,18 @@ export default function Ressources() {
                                                                                         : isMd
                                                                                             ? 'is-md'
                                                                                             : 'is-file'
-                                                                        }`}
+                                                                            }`}
                                                                         aria-hidden="true"
                                                                     >
                                                                         <i
-                                                                            className={`fas ${
-                                                                                isPdf
+                                                                            className={`fas ${isPdf
                                                                                     ? 'fa-file-pdf'
                                                                                     : isZip
                                                                                         ? 'fa-file-archive'
                                                                                         : isLink
                                                                                             ? 'fa-link'
                                                                                             : 'fa-file-alt'
-                                                                            }`}
+                                                                                }`}
                                                                         />
                                                                     </span>
 
@@ -1163,7 +1196,7 @@ export default function Ressources() {
                                     <>
                                         {!isLoading &&
                                             unifiedRootChildren.length ===
-                                                0 && (
+                                            0 && (
                                                 <p className="apple-feedback">
                                                     Ce dossier est
                                                     vide.
@@ -1317,7 +1350,7 @@ export default function Ressources() {
                                                         const itemPath =
                                                             String(
                                                                 item.path ||
-                                                                    ''
+                                                                ''
                                                             ).toLowerCase();
 
                                                         const isPdf =
@@ -1345,22 +1378,20 @@ export default function Ressources() {
                                                         const itemLabel =
                                                             item.title ||
                                                             item.name ||
-                                                            `Élément ${
-                                                                index +
-                                                                1
+                                                            `Élément ${index +
+                                                            1
                                                             }`;
 
                                                         const itemMeta =
                                                             folder
-                                                                ? `${
-                                                                      Array.isArray(
-                                                                          item.children
-                                                                      )
-                                                                          ? item
-                                                                                .children
-                                                                                .length
-                                                                          : 0
-                                                                  } élément(s)`
+                                                                ? `${Array.isArray(
+                                                                    item.children
+                                                                )
+                                                                    ? item
+                                                                        .children
+                                                                        .length
+                                                                    : 0
+                                                                } élément(s)`
                                                                 : isLink
                                                                     ? 'Lien'
                                                                     : isPdf
@@ -1392,13 +1423,11 @@ export default function Ressources() {
                                                                 >
 
                                                                     <span
-                                                                        className={`apple-row-leading ${
-                                                                            resourceMode ===
-                                                                            'notes'
+                                                                        className={`apple-row-leading ${resourceMode ===
+                                                                                'notes'
                                                                                 ? 'notes-mode'
                                                                                 : 'university-mode'
-                                                                        } ${
-                                                                            folder
+                                                                            } ${folder
                                                                                 ? 'is-folder'
                                                                                 : isPdf
                                                                                     ? 'is-pdf'
@@ -1409,13 +1438,12 @@ export default function Ressources() {
                                                                                             : isMd
                                                                                                 ? 'is-md'
                                                                                                 : 'is-file'
-                                                                        }`}
+                                                                            }`}
                                                                         aria-hidden="true"
                                                                     >
 
                                                                         <i
-                                                                            className={`fas ${
-                                                                                folder
+                                                                            className={`fas ${folder
                                                                                     ? 'fa-folder'
                                                                                     : isPdf
                                                                                         ? 'fa-file-pdf'
@@ -1424,7 +1452,7 @@ export default function Ressources() {
                                                                                             : isLink
                                                                                                 ? 'fa-link'
                                                                                                 : 'fa-file-alt'
-                                                                            }`}
+                                                                                }`}
                                                                         />
 
                                                                     </span>
@@ -1498,12 +1526,11 @@ export default function Ressources() {
                                                         page
                                                     }
                                                     type="button"
-                                                    className={`pagination-btn ${
-                                                        currentPage ===
-                                                        page
+                                                    className={`pagination-btn ${currentPage ===
+                                                            page
                                                             ? 'is-active'
                                                             : ''
-                                                    }`}
+                                                        }`}
                                                     onClick={() =>
                                                         setCurrentPage(
                                                             page
@@ -1530,7 +1557,7 @@ export default function Ressources() {
                                                         Math.min(
                                                             totalPages,
                                                             p +
-                                                                1
+                                                            1
                                                         )
                                                 )
                                             }
@@ -1566,6 +1593,11 @@ export default function Ressources() {
 
             </div>
 
+            <AventPromoModal
+                isOpen={isAventPromoOpen}
+                onClose={() => setIsAventPromoOpen(false)}
+                onDiscover={handleOpenAventCalendar}
+            />
             <WarningModal
                 item={warningItem}
                 isOpen={!!warningItem}

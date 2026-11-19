@@ -10,6 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import AlimentationCochonInde from "./pages/guinea-pig/AlimentationGuineaPig";
 import VisioCalendar from "./pages/VisioCalendar";
+import AventMaths from "./pages/AventMaths";
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/ressources" element={<Ressources />} />
                 <Route path="/mcc" element={<Simulateur />} />
+                <Route path="/advent" element={<AventMaths />} />
                 <Route path="/holidays" element={<Cooldown />} />
                 <Route path="/visio-calendar" element={<VisioCalendar />} />
                 <Route path="*" element={<NotFound />} />
