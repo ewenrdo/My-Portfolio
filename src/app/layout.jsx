@@ -13,6 +13,7 @@ import '../assets/stylesheets/ressources.scss';
 import '../assets/stylesheets/safety.scss';
 import '../assets/stylesheets/simulateur.scss';
 import '../assets/stylesheets/visio-calendar.scss';
+import '../assets/stylesheets/documentation.scss';
 
 export const metadata = {
     title: 'Ewen Rodrigues de Oliveira - Étudiant en DLMI',
