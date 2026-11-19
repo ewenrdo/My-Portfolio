@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import Link from 'next/link';
 import DockNav from '../assets/components/DockNav';
 
 function Home() {
@@ -81,8 +83,8 @@ function Home() {
                         <div className="row">
                             <div className="col-xs-12 col-lg-5 col-xxl-4">
                                 <div className="avatar">
-                                    <img src={process.env.PUBLIC_URL + "/images/photo.jpg"} alt="Ewen Rodrigues" className="profile-picture" />
-                                    <img src={process.env.PUBLIC_URL + "/images/panda.avif"} alt="@funoxpanda" className="profile-picture-hover" />
+                                    <img src="/images/photo.jpg" alt="Ewen Rodrigues" className="profile-picture" />
+                                    <img src="/images/panda.avif" alt="@funoxpanda" className="profile-picture-hover" />
                                 </div>
                                 <h1>{new Date().getHours() < 18 ? "Bonjour" : "Bonsoir"}, je suis Ewen Rodrigues de Oliveira <div className="tooltipHint">👋<span className="tooltiptext">"Rodrigues" avec un "s", pas un "z"</span></div></h1>
 
@@ -92,7 +94,7 @@ function Home() {
                                     <div className="diploma-badge">
                                         <div className="tooltiptext">Double licence en cours de préparation</div>
                                         <div className="content">
-                                            <img src={process.env.PUBLIC_URL + "/images/upc.jpeg"} alt="Université Paris Cité" />
+                                            <img src="/images/upc.jpeg" alt="Université Paris Cité" />
                                             Double licence Maths & Informatique <i className="far fa-hourglass iconTooltip" />
                                         </div>
                                     </div>
@@ -111,8 +113,8 @@ function Home() {
                                     <span className="description">Développeur à mes heures perdues, et étudiant le plus souvent (même en rêves).<br />Je prépare une double licence de Mathématiques et d'Informatique fondamentale.</span>
 
                                     <div className="cta-section">
-                                        <NavLink className="btn btn-black mb-2" to="/contact">Me contacter</NavLink>
-                                        <NavLink className="btn btn-outline-black" to="/portfolio">Découvrir mes projets</NavLink>
+                                        <Link className="btn btn-black mb-2" href="/contact">Me contacter</Link>
+                                        <Link className="btn btn-outline-black" href="/portfolio">Découvrir mes projets</Link>
                                     </div>
 
                                 </div>
@@ -187,13 +189,13 @@ function Home() {
                                     mon parcours, en quelques mots.
                                 </p>
                                 <div className="card-side-social">
-                                    <Link to="https://www.linkedin.com/in/ewen-rodrigues-de-oliveira-500736267/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <Link href="https://www.linkedin.com/in/ewen-rodrigues-de-oliveira-500736267/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                         <i className="fab fa-linkedin" />
                                     </Link>
-                                    <Link to="mailto:contact@ewenrdo.fr" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                                    <Link href="mailto:contact@ewenrdo.fr" target="_blank" rel="noopener noreferrer" aria-label="Email">
                                         <i className="fas fa-envelope" />
                                     </Link>
-                                    <Link to="https://www.strava.com/athletes/ewenrdo" target="_blank" rel="noopener noreferrer" aria-label="Strava">
+                                    <Link href="https://www.strava.com/athletes/ewenrdo" target="_blank" rel="noopener noreferrer" aria-label="Strava">
                                         <i className="fab fa-strava" />
                                     </Link>
                                 </div>

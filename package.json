@@ -3,7 +3,6 @@
   "version": "0.1.9",
   "author": "Ewen Rodrigues de Oliveira",
   "private": true,
-  "homepage": ".",
   "overrides": {
     "typescript": "4.9.5"
   },
@@ -17,40 +16,26 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "dotenv": "^17.4.2",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^15.5.29",
     "katex": "^0.19.1",
     "nodemailer": "^8.0.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^10.1.0",
     "react-qr-code": "^2.0.13",
-    "react-router-dom": "^7.14.2",
-    "react-scripts": "5.0.1",
     "remark-gfm": "^4.0.1",
     "sass": "^1.77.1",
-    "web-vitals": "^2.1.4"
+    "next": "^15.5.28"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "CI=false react-scripts build GENERATE_SOURCEMAP=false",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }

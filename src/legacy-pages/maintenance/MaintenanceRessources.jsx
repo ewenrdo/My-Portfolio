@@ -1,6 +1,7 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import '../assets/stylesheets/maintenance.scss';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function MaintenanceRessources() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -161,9 +162,9 @@ export default function MaintenanceRessources() {
                 </div>
 
                 <div className="btn-container">
-                    <NavLink to="/" className="apple-btn-primary">
+                    <Link href="/" className="apple-btn-primary">
                         <i className="fas fa-home" style={{ marginRight: '0.5rem' }} /> Retour à l'accueil
-                    </NavLink>
+                    </Link>
                 </div>
             </main>
         </div>

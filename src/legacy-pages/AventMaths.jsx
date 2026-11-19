@@ -1,7 +1,8 @@
+'use client';
+
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import 'katex/dist/katex.min.css';
 import renderMathInElement from 'katex/contrib/auto-render';
-import '../assets/stylesheets/avent.scss';
 import DockNav from '../assets/components/DockNav';
 
 const DEMO_MODE = false; // Afficher / masquer le mode démo pour tester le calendrier en dehors de décembre
@@ -282,6 +283,7 @@ export default function AventMaths() {
 
     // Suivi des cases déjà ouvertes dans localStorage
     const [openedDays, setOpenedDays] = useState(() => {
+        if (typeof window === 'undefined') return [];
         try {
             const saved = localStorage.getItem('avent_maths_opened');
             return saved ? JSON.parse(saved) : [];

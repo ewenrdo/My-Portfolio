@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import '../../assets/stylesheets/safety.scss';
 
 export default function Safety() {
 	const [mousePos, setMousePos] = useState({ x: 0, y: 0 });

@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 function DockNav() {
+    const pathname = usePathname();
     const links = [
         { to: '/', label: 'Accueil', icon: 'fas fa-home' },
         { to: '/portfolio', label: 'Portfolio', icon: 'fas fa-folder-open' },
@@ -14,14 +18,14 @@ function DockNav() {
                 <div className="dock-nav-shell">
                     <nav className="dock-nav-list" aria-label="Navigation principale">
                         {links.map((link) => (
-                            <NavLink
+                            <Link
                                 key={link.to}
-                                to={link.to}
-                                className={({ isActive }) => `dock-nav-link${isActive ? ' is-active' : ''}`}
+                                href={link.to}
+                                className={`dock-nav-link${pathname === link.to ? ' is-active' : ''}`}
                             >
                                 <i className={link.icon} aria-hidden="true" />
                                 <span>{link.label}</span>
-                            </NavLink>
+                            </Link>
                         ))}
                     </nav>
                 </div>

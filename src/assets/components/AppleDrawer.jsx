@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 
 function AppleDrawer({ open, onClose, selected, galleryIndex, setGalleryIndex, prevImage, nextImage }) {
@@ -82,7 +84,7 @@ function AppleDrawer({ open, onClose, selected, galleryIndex, setGalleryIndex, p
 
                                 {hasImages ? (
                                     <img
-                                        src={process.env.PUBLIC_URL + selected.images[galleryIndex]}
+                                        src={selected.images[galleryIndex]}
                                         alt={`${selected.title} ${galleryIndex + 1}`}
                                         onError={(e) => {
                                             e.target.src = "data:image/svg+xml;charset=UTF-8,%3Csvg width='320' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='%23f1f1f1'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='14' fill='%23888' text-anchor='middle' dy='.3em'%3EAperçu du projet%3C/text%3E%3C/svg%3E";
@@ -116,7 +118,7 @@ function AppleDrawer({ open, onClose, selected, galleryIndex, setGalleryIndex, p
                                             onClick={() => setGalleryIndex(idx)}
                                         >
                                             <img 
-                                                src={process.env.PUBLIC_URL + img} 
+                                                src={img} 
                                                 alt={`Vignette ${idx + 1}`} 
                                                 onError={(e) => {
                                                     e.target.src = "data:image/svg+xml;charset=UTF-8,%3Csvg width='72' height='48' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='%23ddd'/%3E%3C/svg%3E";

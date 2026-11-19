@@ -1,7 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import DockNav from '../assets/components/DockNav';
 import projects from '../assets/projects.json';
-import '../assets/stylesheets/portfolio.scss';
 import AppleDrawer from '../assets/components/AppleDrawer';
 
 export default function Portfolio() {
@@ -57,7 +58,7 @@ export default function Portfolio() {
                                 onClick={() => openProject(p)}
                                 style={{
                                     backgroundImage: hasCover 
-                                        ? `url(${process.env.PUBLIC_URL + p.images[0]})` 
+                                        ? `url(${p.images[0]})` 
                                         : undefined,
                                 }}
                             >

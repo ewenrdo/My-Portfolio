@@ -1,9 +1,9 @@
+'use client';
+
 import React, { useEffect, useMemo, useState } from 'react';
-import '../assets/stylesheets/ressources.scss';
 import DockNav from '../assets/components/DockNav';
 import ResourceViewerModal from '../assets/components/ResourceViewerModal';
 import WarningModal from '../assets/components/WarningModal';
-import '../assets/stylesheets/avent.scss';
 import AventPromoModal from '../assets/components/AventPromoModal';
 
 const AVENT_PROMO_STORAGE_KEY = 'avent_maths_promo_last_seen';
