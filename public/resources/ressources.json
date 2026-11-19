@@ -1251,7 +1251,6 @@
                                         "date": "2026-11-18",
                                         "slug": "pr5-td-visio-dm-prepa-cc2"
                                     }
-                                    
                                 ]
                             },
                             {
@@ -1683,22 +1682,136 @@
                         "slug": "langage-c4",
                         "children": [
                             {
-                                "name": "lc4-partiel-annale-2024",
-                                "path": "/resources/university/lc4/partiel_2024.pdf",
-                                "credits": "Lélia Blin, partagé par Anthony Fernandez.",
-                                "title": "Annale de partiel 2024",
-                                "comment": "Annale de partiel du cours Langage C4 de l'Université Paris Cité.",
-                                "date": "2026-05-07",
-                                "slug": "annale-de-partiel-langage-c4-2024"
+                                "name": "Annales",
+                                "slug": "langage-c4",
+                                "children": [
+                                    {
+                                        "name": "lc4-partiel-annale-2024",
+                                        "path": "/resources/university/lc4/partiel_2024.pdf",
+                                        "credits": "Lélia Blin, partagé par Anthony Fernandez.",
+                                        "title": "Annale de partiel 2024",
+                                        "comment": "Annale de partiel du cours Langage C4 de l'Université Paris Cité.",
+                                        "date": "2026-05-07",
+                                        "slug": "annale-de-partiel-langage-c4-2024"
+                                    },
+                                    {
+                                        "name": "lc4-examen-annale-2024",
+                                        "path": "/resources/university/lc4/exam_2024.pdf",
+                                        "credits": "Lélia Blin, partagé par Anthony Fernandez.",
+                                        "title": "Annale d'examen 2024",
+                                        "comment": "Annale d'examen du cours Langage C4 de l'Université Paris Cité.",
+                                        "date": "2026-05-07",
+                                        "slug": "annale-d-examen-langage-c4-2024"
+                                    }
+                                ]
                             },
                             {
-                                "name": "lc4-examen-annale-2024",
-                                "path": "/resources/university/lc4/exam_2024.pdf",
-                                "credits": "Lélia Blin, partagé par Anthony Fernandez.",
-                                "title": "Annale d'examen 2024",
-                                "comment": "Annale d'examen du cours Langage C4 de l'Université Paris Cité.",
+                                "name": "lc4-cours1",
+                                "path": "/resources/university/lc4/c1.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 1",
+                                "comment": "Cours 1 du cours Langage C4 de l'Université Paris Cité.",
                                 "date": "2026-05-07",
-                                "slug": "annale-d-examen-langage-c4-2024"
+                                "slug": "cours-1-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours2",
+                                "path": "/resources/university/lc4/c2.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 2",
+                                "comment": "Cours 2 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-2-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours3",
+                                "path": "/resources/university/lc4/c3.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 3",
+                                "comment": "Cours 3 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-3-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours4",
+                                "path": "/resources/university/lc4/c4.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 4",
+                                "comment": "Cours 4 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-4-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours5",
+                                "path": "/resources/university/lc4/c5.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 5",
+                                "comment": "Cours 5 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-5-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours6",
+                                "path": "/resources/university/lc4/c6.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 6",
+                                "comment": "Cours 6 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-6-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours7",
+                                "path": "/resources/university/lc4/c7.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 7",
+                                "comment": "Cours 7 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-7-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours8",
+                                "path": "/resources/university/lc4/c8.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 8",
+                                "comment": "Cours 8 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-8-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours9",
+                                "path": "/resources/university/lc4/c9.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 9",
+                                "comment": "Cours 9 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-9-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours10",
+                                "path": "/resources/university/lc4/c10.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 10",
+                                "comment": "Cours 10 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-10-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours11",
+                                "path": "/resources/university/lc4/c11.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 11",
+                                "comment": "Cours 11 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-11-langage-c4-2024"
+                            },
+                            {
+                                "name": "lc4-cours12",
+                                "path": "/resources/university/lc4/c12.pdf",
+                                "credits": "Juliusz Chroboczek",
+                                "title": "Cours 12",
+                                "comment": "Cours 12 du cours Langage C4 de l'Université Paris Cité.",
+                                "date": "2026-05-07",
+                                "slug": "cours-12-langage-c4-2024"
                             },
                             {
                                 "name": "lc4-fiche-revision",
