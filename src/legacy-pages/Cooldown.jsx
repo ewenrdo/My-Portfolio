@@ -3,9 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import DockNav from '../assets/components/DockNav';
 
-const END_DATE = '2026-12-10 12:45:00';
-const TARGET_TIME = new Date(END_DATE.replace(' ', 'T')).getTime();
-
 const MESSAGES = [
     'Les prochaines vacances se rapprochent à grands pas.',
     'Dernière ligne droite avant de décrocher un peu.',
@@ -16,8 +13,10 @@ const MESSAGES = [
     'Encore un peu de patience avant de profiter des vacances.'
 ];
 
-const getCountdownParts = () => {
-    const totalSeconds = Math.max(0, Math.floor((TARGET_TIME - Date.now()) / 1000));
+const getCountdownParts = (targetTimestamp) => {
+    const totalSeconds = targetTimestamp
+        ? Math.max(0, Math.floor((targetTimestamp - Date.now()) / 1000))
+        : 0;
 
     const days = Math.floor(totalSeconds / 86400);
     const hours = Math.floor((totalSeconds % 86400) / 3600);
@@ -28,23 +27,45 @@ const getCountdownParts = () => {
 };
 
 export default function Cooldown() {
-    const [countdown, setCountdown] = useState(getCountdownParts);
+    const [countdown, setCountdown] = useState(null);
+    const [target, setTarget] = useState(null);
     const [message] = useState(() => MESSAGES[Math.floor(Math.random() * MESSAGES.length)]);
 
     useEffect(() => {
-        const updateCountdown = () => setCountdown(getCountdownParts());
+        const controller = new AbortController();
+
+        fetch('/api/holidays-countdown', { signal: controller.signal })
+            .then((response) => {
+                if (!response.ok) throw new Error('Unable to load holidays countdown');
+                return response.json();
+            })
+            .then((data) => {
+                setTarget(data);
+                setCountdown(getCountdownParts(data.timestamp));
+            })
+            .catch((error) => {
+                if (error.name !== 'AbortError') console.error(error);
+            });
+
+        return () => controller.abort();
+    }, []);
+
+    useEffect(() => {
+        if (!target) return undefined;
+
+        const updateCountdown = () => setCountdown(getCountdownParts(target.timestamp));
 
         updateCountdown();
         const intervalId = window.setInterval(updateCountdown, 1000);
 
         return () => window.clearInterval(intervalId);
-    }, []);
+    }, [target]);
 
     const countdownItems = [
-        { label: 'Jours', value: countdown.days },
-        { label: 'Heures', value: countdown.hours },
-        { label: 'Minutes', value: countdown.minutes },
-        { label: 'Secondes', value: countdown.seconds },
+        { label: 'Jours', value: countdown?.days ?? 0 },
+        { label: 'Heures', value: countdown?.hours ?? 0 },
+        { label: 'Minutes', value: countdown?.minutes ?? 0 },
+        { label: 'Secondes', value: countdown?.seconds ?? 0 },
     ];
 
     return (
@@ -52,14 +73,14 @@ export default function Cooldown() {
             <main className="cooldown-shell">
                 <section className="cooldown-copy">
                     <span className="cooldown-kicker">Prochaines vacances</span>
-                    <h1>{countdown.totalSeconds > 0 ? 'Encore un peu de patience' : 'Vive les vacances !'}</h1>
+                    <h1>{!target || !countdown ? 'Chargement du minuteur' : countdown.totalSeconds > 0 ? 'Encore un peu de patience' : 'Vive les vacances !'}</h1>
                     <p>
-                        Le minuteur <span className="mobile-only">ci-dessous</span><span className="computer-only">ci-contre</span> suit en temps réel la date des prochaines vacances: {new Date(TARGET_TIME).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} à {new Date(TARGET_TIME).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}.
+                        Le minuteur <span className="mobile-only">ci-dessous</span><span className="computer-only">ci-contre</span> suit en temps réel la date des prochaines vacances: {target ? new Date(target.timestamp).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Europe/Paris' }) : 'chargement...'} à {target ? new Date(target.timestamp).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris' }) : ''}.
                     </p>
 
                     <div className="cooldown-status">
                         <span className="cooldown-status-dot" />
-                        <span>{countdown.totalSeconds > 0 ? 'C\'est bientôt les vacances' : 'Vive les vacances !'}</span>
+                        <span>{!target || !countdown ? 'Connexion au minuteur' : countdown.totalSeconds > 0 ? 'C\'est bientôt les vacances' : 'Vive les vacances !'}</span>
                     </div>
                 </section>
 

@@ -8,6 +8,36 @@ export const metadata = {
 const endpoints = [
     {
         method: 'GET',
+        path: '/api/holidays-countdown',
+        description: 'Récupère la date des prochaines vacances ainsi que plusieurs formats du compteur.',
+        parameters: null,
+        responseType: 'application/json',
+        example: `{
+  "timestamp": 1796903100000,
+  "targetTimestamp": 1796903100000,
+  "unixTimestamp": 1796903100,
+  "isoTimestamp": "2026-12-10T12:45:00+01:00",
+  "date": "2026-12-10",
+  "time": "12:45:00",
+  "days": 21,
+  "hours": 4,
+  "minutes": 30,
+  "seconds": 15,
+  "totalSeconds": 1855815,
+  "countdown": {
+    "days": 21,
+    "hours": 4,
+    "minutes": 30,
+    "seconds": 15,
+    "totalSeconds": 1855815
+  }
+}`,
+        errorExample: `{
+  "error": "Impossible de charger le compteur des vacances."
+}`,
+    },
+    {
+        method: 'GET',
         path: '/api/resources',
         description: 'Récupère l’arborescence complète des ressources universitaires au format JSON.',
         parameters: null,
