@@ -1,6 +1,7 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import DockNav from '../assets/components/DockNav';
-import '../assets/stylesheets/cooldown.scss';
 
 const END_DATE = '2026-12-10 12:45:00';
 const TARGET_TIME = new Date(END_DATE.replace(' ', 'T')).getTime();

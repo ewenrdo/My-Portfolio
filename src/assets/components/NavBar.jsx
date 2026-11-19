@@ -1,9 +1,12 @@
+'use client';
+
 import React, { useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 function NavBar({ home, background }) {
 
-    const location = useLocation();
+    const location = usePathname();
 
     useEffect(() => {
         const offcanvasEl = document.getElementById('menuOffcanvas');
@@ -17,7 +20,7 @@ function NavBar({ home, background }) {
         <>
             <nav className={home ? "navbar navbar-expand-lg fixed-top " + background : "navbar navbar-expand-lg " + background}>
                     <div className="container">
-                        <NavLink className="navbar-brand" to="/">Ewen</NavLink>
+                        <Link className="navbar-brand" href="/">Ewen</Link>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas">
                             <span className="navbar-toggler-icon"></span>
@@ -26,22 +29,22 @@ function NavBar({ home, background }) {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" to="/"><i className="fas fa-home" /></NavLink>
+                                    <Link className="nav-link" href="/"><i className="fas fa-home" /></Link>
                                 </li>
                                 <li className="nav-item ms-lg-3">
-                                    <NavLink className="nav-link" to="/experience">Expérience</NavLink>
+                                    <Link className="nav-link" href="/experience">Expérience</Link>
                                 </li>
                                 <li className="nav-item ms-lg-3">
-                                    <NavLink className="nav-link" to="/experience2">Experience2</NavLink>
+                                    <Link className="nav-link" href="/experience2">Experience2</Link>
                                 </li>
                                 <li className="nav-item ms-lg-3">
-                                    <NavLink className="nav-link" to="/portfolio">Portfolio</NavLink>
+                                    <Link className="nav-link" href="/portfolio">Portfolio</Link>
                                 </li>
                                 <li className="nav-item ms-lg-3">
-                                    <NavLink className="nav-link" to="/ressources">Ressources</NavLink>
+                                    <Link className="nav-link" href="/ressources">Ressources</Link>
                                 </li>
                                 <li className="nav-item ms-lg-3">
-                                    <NavLink className="nav-link" to="/contact">Me contacter</NavLink>
+                                    <Link className="nav-link" href="/contact">Me contacter</Link>
                                 </li>
                             </ul>
                             <div className="d-none d-lg-flex">
@@ -53,29 +56,29 @@ function NavBar({ home, background }) {
 
                 <div className="offcanvas offcanvas-end" tabIndex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
                     <div className="offcanvas-header">
-                        <NavLink className="offcanvas-title navbar-brand" to="/">Ewen</NavLink>
+                        <Link className="offcanvas-title navbar-brand" href="/">Ewen</Link>
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div className="offcanvas-body">
 
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/" ><i className="fas fa-home" /></NavLink>
+                                <Link className="nav-link w-100 text-center" href="/" ><i className="fas fa-home" /></Link>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/experience" >Expérience</NavLink>
+                                <Link className="nav-link w-100 text-center" href="/experience" >Expérience</Link>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/experience2" >Experience2</NavLink>
+                                <Link className="nav-link w-100 text-center" href="/experience2" >Experience2</Link>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/portfolio" >Portfolio</NavLink>
+                                <Link className="nav-link w-100 text-center" href="/portfolio" >Portfolio</Link>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/ressources" >Ressources</NavLink>
+                                <Link className="nav-link w-100 text-center" href="/ressources" >Ressources</Link>
                             </li>
                             <li className="nav-item text-center">
-                                <NavLink className="nav-link w-100 text-center" to="/contact" >Me contacter</NavLink>
+                                <Link className="nav-link w-100 text-center" href="/contact" >Me contacter</Link>
                             </li>
                         </ul>
                     </div>

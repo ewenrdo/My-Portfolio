@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import '../assets/stylesheets/simulateur.scss';
 import DockNav from '../assets/components/DockNav';
 
 const MATIERES = [
@@ -113,6 +114,7 @@ export default function Simulateur() {
 
     // Chargement initial depuis le localStorage
     const getInitial = (key, def) => {
+        if (typeof window === 'undefined') return def;
         try {
             const val = localStorage.getItem(key);
             return val ? JSON.parse(val) : def;

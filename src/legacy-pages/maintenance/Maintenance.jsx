@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import '../assets/stylesheets/maintenance.scss';
 
 export default function Maintenance() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });

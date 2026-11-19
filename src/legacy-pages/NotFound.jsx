@@ -1,6 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import DockNav from '../assets/components/DockNav';
-import '../assets/stylesheets/not-found.scss';
 
 export default function Page404() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });

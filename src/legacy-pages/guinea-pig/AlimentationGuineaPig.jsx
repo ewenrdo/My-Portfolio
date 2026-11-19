@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useState, useMemo } from 'react';
-import '../../assets/stylesheets/alimentation.scss';
 import DockNav from '../../assets/components/DockNav';
 import FOODS from './aliments.json';
 

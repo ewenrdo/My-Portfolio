@@ -1,6 +1,7 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import DockNav from '../assets/components/DockNav';
-import '../assets/stylesheets/visio-calendar.scss';
 
 const CALENDAR_URL = '/api/calendar';
 const VISIO_EVENT_COLOR = '#8a1538';
