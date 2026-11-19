@@ -14,14 +14,33 @@ const endpoints = [
         responseType: 'application/json',
         example: `[
   {
-    "name": "Mathématiques",
-    "slug": "mathematiques",
+    "name": "Dossier",
+    "slug": "slug-d-access-via-ewenrdo",
     "children": [
-      {
-        "name": "Licence 1",
-        "slug": "licence-1",
-        "children": []
-      }
+        {
+            "name": "integration.pdf",
+            "path": "https://ewenrdo.github.io/dl-mathinfo-vault/lessons/dl1_lmath_info/an2/integration/integration.pdf",
+            "credits": "Ewen Rodrigues de Oliveira.",
+            "title": "Chapitre 2 : Intégration de fonctions continues par morceaux",
+            "date": "2026-04-09",
+            "slug": "analyse-2-integration-de-fonctions-continues-par-morceaux"
+        },
+        {
+            "name": "td1.pdf",
+            "path": "/resources/university/an2/TD1_AN2.pdf",
+            "credits": "Université Paris Cité. Amina Mecherbet.",
+            "title": "TD1 AN2 : Dérivation",
+            "date": "2026-06-16",
+            "slug": "analyse-2-td1-derivation"
+        },
+
+        {
+            "path": "https://www.ewenrdo.fr/visio-calendar",
+            "name": "Calendrier des visios",
+            "type": "link",
+            "date": "2026-10-20",
+            "slug": "visio-calendar"
+        }
     ]
   }
 ]`,
