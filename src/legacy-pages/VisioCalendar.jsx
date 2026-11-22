@@ -2,12 +2,28 @@
 
 import React, { useEffect, useState } from 'react';
 import DockNav from '../assets/components/DockNav';
+import AventPromoModal from '../assets/components/AventPromoModal';
 
 const CALENDAR_URL = '/api/calendar';
 const VISIO_EVENT_COLOR = '#8a1538';
 
 function unfoldIcsLines(ics) {
     return ics.replace(/\r\n[ \t]/g, '').replace(/\n[ \t]/g, '').split(/\r?\n/);
+}
+
+const AVENT_PROMO_STORAGE_KEY = 'avent_maths_promo_last_seen';
+
+function getTodayStorageStamp() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+function isAventPromoPeriod(date = new Date()) {
+    const start = new Date(2026, 10, 10, 0, 0, 0);   // 25 nov. 2026 à 00:00:00 (heure locale)
+    const end = new Date(2026, 11, 25, 23, 59, 59);   // 25 déc. 2026 à 23:59:59 (heure locale)
+    return date >= start && date <= end;
 }
 
 function unescapeIcsValue(value = '') {
@@ -436,6 +452,33 @@ export default function VisioCalendar() {
         return () => controller.abort();
     }, []);
 
+
+    // Gestion du calendrier de l'avent
+    const [isAventPromoOpen, setIsAventPromoOpen] = useState(false);
+
+    // Affichage max 1 fois par jour
+    useEffect(() => {
+        const now = new Date();
+        if (!isAventPromoPeriod(now)) return;
+
+        try {
+            const todayStamp = getTodayStorageStamp();
+            const lastSeen = localStorage.getItem(AVENT_PROMO_STORAGE_KEY);
+
+            if (lastSeen !== todayStamp) {
+                setIsAventPromoOpen(true);
+                localStorage.setItem(AVENT_PROMO_STORAGE_KEY, todayStamp);
+            }
+        } catch {
+            // Ignore si localStorage est bloqué
+        }
+    }, []);
+
+    function handleOpenAventCalendar() {
+        setIsAventPromoOpen(false);
+        window.location.assign('/advent');
+    }
+
     const now = new Date();
     const upcomingEvents = events
         .filter((event) => (event.end || event.start) >= now)
@@ -447,79 +490,88 @@ export default function VisioCalendar() {
     const eventGroups = groupEventsByDay(visibleEvents);
 
     return (
-        <div className="visio-calendar-page">
-            <main className="visio-calendar-shell">
-                <section className="visio-calendar-copy">
-                    <span className="visio-calendar-kicker">Double licence Mathématiques Informatique</span>
-                    <h1>Calendrier de distanciel</h1>
-                    <p>
-                        Retrouvez ici les prochains événements et liens de visioconférence, ainsi que le travail à préparer pour chaque séance.
-                    </p>
-                </section>
+        <>
+            <div className="visio-calendar-page">
+                <main className="visio-calendar-shell">
+                    <section className="visio-calendar-copy">
+                        <span className="visio-calendar-kicker">Double licence Mathématiques Informatique</span>
+                        <h1>Calendrier de distanciel</h1>
+                        <p>
+                            Retrouvez ici les prochains événements et liens de visioconférence, ainsi que le travail à préparer pour chaque séance.
+                        </p>
+                    </section>
 
-                {status === 'loading' && <p className="visio-calendar-state">Chargement des événements…</p>}
-                {status === 'error' && <p className="visio-calendar-state is-error">{error}</p>}
-                {status === 'success' && (
-                    <>
-                        <div className="visio-calendar-tabs" role="tablist" aria-label="Choisir la vue">
-                            <button type="button" role="tab" aria-selected={activeView === 'calendar'} className={activeView === 'calendar' ? 'is-active' : ''} onClick={() => setActiveView('calendar')}>
-                                Calendrier
-                            </button>
-                            <button type="button" role="tab" aria-selected={activeView === 'list'} className={activeView === 'list' ? 'is-active' : ''} onClick={() => setActiveView('list')}>
-                                Liste
-                            </button>
-                        </div>
+                    {status === 'loading' && <p className="visio-calendar-state">Chargement des événements…</p>}
+                    {status === 'error' && <p className="visio-calendar-state is-error">{error}</p>}
+                    {status === 'success' && (
+                        <>
+                            <div className="visio-calendar-tabs" role="tablist" aria-label="Choisir la vue">
+                                <button type="button" role="tab" aria-selected={activeView === 'calendar'} className={activeView === 'calendar' ? 'is-active' : ''} onClick={() => setActiveView('calendar')}>
+                                    Calendrier
+                                </button>
+                                <button type="button" role="tab" aria-selected={activeView === 'list'} className={activeView === 'list' ? 'is-active' : ''} onClick={() => setActiveView('list')}>
+                                    Liste
+                                </button>
+                            </div>
 
-                        {activeView === 'calendar' ? (
-                            <CalendarView
-                                events={events}
-                                weekStart={weekStart}
-                                onPreviousWeek={() => setWeekStart((date) => {
-                                    const previous = new Date(date);
-                                    previous.setDate(previous.getDate() - 7);
-                                    return previous;
-                                })}
-                                onNextWeek={() => setWeekStart((date) => {
-                                    const next = new Date(date);
-                                    next.setDate(next.getDate() + 7);
-                                    return next;
-                                })}
-                                onCurrentWeek={() => setWeekStart(getMonday(new Date()))}
-                                onSelectEvent={setSelectedEvent}
-                            />
-                        ) : (
-                            <>
-                                <div className="visio-calendar-tabs visio-calendar-list-tabs" role="tablist" aria-label="Filtrer les événements">
-                                    <button type="button" role="tab" aria-selected={activeTab === 'upcoming'} className={activeTab === 'upcoming' ? 'is-active' : ''} onClick={() => setActiveTab('upcoming')}>
-                                        À venir <span>{upcomingEvents.length}</span>
-                                    </button>
-                                    <button type="button" role="tab" aria-selected={activeTab === 'past'} className={activeTab === 'past' ? 'is-active' : ''} onClick={() => setActiveTab('past')}>
-                                        Passées <span>{pastEvents.length}</span>
-                                    </button>
-                                </div>
-                                {eventGroups.length === 0 ? (
-                                    <p className="visio-calendar-state">
-                                        {activeTab === 'upcoming' ? 'Aucun événement à venir.' : 'Aucun événement passé.'}
-                                    </p>
-                                ) : (
-                                    <section className="visio-events" aria-label={`Événements ${activeTab === 'upcoming' ? 'à venir' : 'passés'}`}>
-                                        {eventGroups.map((group) => (
-                                            <div className="visio-day-group" key={group.key}>
-                                                <h2 className="visio-day-heading">{formatDay(group.date)}</h2>
-                                                <div className="visio-day-events">
-                                                    {group.events.map((event) => <EventCard event={event} key={event.id} />)}
+                            {activeView === 'calendar' ? (
+                                <CalendarView
+                                    events={events}
+                                    weekStart={weekStart}
+                                    onPreviousWeek={() => setWeekStart((date) => {
+                                        const previous = new Date(date);
+                                        previous.setDate(previous.getDate() - 7);
+                                        return previous;
+                                    })}
+                                    onNextWeek={() => setWeekStart((date) => {
+                                        const next = new Date(date);
+                                        next.setDate(next.getDate() + 7);
+                                        return next;
+                                    })}
+                                    onCurrentWeek={() => setWeekStart(getMonday(new Date()))}
+                                    onSelectEvent={setSelectedEvent}
+                                />
+                            ) : (
+                                <>
+                                    <div className="visio-calendar-tabs visio-calendar-list-tabs" role="tablist" aria-label="Filtrer les événements">
+                                        <button type="button" role="tab" aria-selected={activeTab === 'upcoming'} className={activeTab === 'upcoming' ? 'is-active' : ''} onClick={() => setActiveTab('upcoming')}>
+                                            À venir <span>{upcomingEvents.length}</span>
+                                        </button>
+                                        <button type="button" role="tab" aria-selected={activeTab === 'past'} className={activeTab === 'past' ? 'is-active' : ''} onClick={() => setActiveTab('past')}>
+                                            Passées <span>{pastEvents.length}</span>
+                                        </button>
+                                    </div>
+                                    {eventGroups.length === 0 ? (
+                                        <p className="visio-calendar-state">
+                                            {activeTab === 'upcoming' ? 'Aucun événement à venir.' : 'Aucun événement passé.'}
+                                        </p>
+                                    ) : (
+                                        <section className="visio-events" aria-label={`Événements ${activeTab === 'upcoming' ? 'à venir' : 'passés'}`}>
+                                            {eventGroups.map((group) => (
+                                                <div className="visio-day-group" key={group.key}>
+                                                    <h2 className="visio-day-heading">{formatDay(group.date)}</h2>
+                                                    <div className="visio-day-events">
+                                                        {group.events.map((event) => <EventCard event={event} key={event.id} />)}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        ))}
-                                    </section>
-                                )}
-                            </>
-                        )}
-                    </>
-                )}
-            </main>
-            <DockNav />
-            {selectedEvent && <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />}
-        </div>
+                                            ))}
+                                        </section>
+                                    )}
+                                </>
+                            )}
+                        </>
+                    )}
+                </main>
+                <DockNav />
+                {selectedEvent && <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />}
+
+            </div>
+
+            <AventPromoModal
+                isOpen={isAventPromoOpen}
+                onClose={() => setIsAventPromoOpen(false)}
+                onDiscover={handleOpenAventCalendar}
+            />
+        </>
     );
 }
