@@ -21,7 +21,7 @@ function getTodayStorageStamp() {
     return `${year}-${month}-${day}`;
 }
 function isAventPromoPeriod(date = new Date()) {
-    const start = new Date(2026, 10, 10, 0, 0, 0);   // 25 nov. 2026 à 00:00:00 (heure locale)
+    const start = new Date(2026, 10, 25, 0, 0, 0);   // 25 nov. 2026 à 00:00:00 (heure locale)
     const end = new Date(2026, 11, 25, 23, 59, 59);   // 25 déc. 2026 à 23:59:59 (heure locale)
     return date >= start && date <= end;
 }
