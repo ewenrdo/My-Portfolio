@@ -91,6 +91,7 @@ function parseIcsEvents(ics) {
 
 function enrichEvent(event) {
     const titleContainsVisio = event.title.toLowerCase().includes('visio');
+    const titleContainsTutoring = event.title.toLowerCase().includes('tutorat');
     const isDisabled = event.title.includes('⌛');
     const videoLink = event.location || (!titleContainsVisio ? extractVideoLink(event.description) : null);
 
@@ -98,8 +99,9 @@ function enrichEvent(event) {
         ...event,
         isDisabled,
         titleContainsVisio,
+        titleContainsTutoring,
         videoLink,
-        color: isDisabled ? '#888888' : (event.location || titleContainsVisio ? VISIO_EVENT_COLOR : '#3f51b5'),
+        color: isDisabled ? '#888888' : (event.location || titleContainsVisio ? VISIO_EVENT_COLOR : titleContainsTutoring ? '#52d657' : '#3f51b5'),
     };
 }
 
