@@ -101,6 +101,8 @@ function enrichEvent(event) {
         titleContainsVisio,
         titleContainsTutoring,
         videoLink,
+        hasDescription: Boolean(event.description && event.description.trim().length > 0),
+        hasVideoLink: Boolean(videoLink),
         color: isDisabled ? '#888888' : (event.location || titleContainsVisio ? VISIO_EVENT_COLOR : titleContainsTutoring ? '#52d657' : '#3f51b5'),
     };
 }
@@ -177,6 +179,65 @@ function formatCalendarTimeRange(event) {
     return `${start} - ${formatCalendarTime(event.end)}`;
 }
 
+// Calcule le placement horizontal (colonne + nombre total de colonnes) pour éviter les superpositions
+function layoutDayEvents(dayEvents, dayStartHour, dayEndHour) {
+    if (dayEvents.length === 0) return [];
+
+    const items = dayEvents
+        .map((event) => {
+            const startMinutes = Math.max(
+                dayStartHour * 60,
+                event.start.getHours() * 60 + event.start.getMinutes(),
+            );
+            const end = event.end || new Date(event.start.getTime() + 60 * 60 * 1000);
+            const endMinutes = Math.min(
+                dayEndHour * 60,
+                Math.max(startMinutes + 30, end.getHours() * 60 + end.getMinutes()),
+            );
+            return { event, startMinutes, endMinutes, colIndex: 0, totalCols: 1 };
+        })
+        .sort((a, b) => a.startMinutes - b.startMinutes || b.endMinutes - a.endMinutes);
+
+    // Découpe en groupes d'événements qui se chevauchent (clusters)
+    const clusters = [];
+    let currentCluster = [];
+    let clusterEnd = -1;
+
+    items.forEach((item) => {
+        if (currentCluster.length === 0 || item.startMinutes < clusterEnd) {
+            currentCluster.push(item);
+            clusterEnd = Math.max(clusterEnd, item.endMinutes);
+        } else {
+            clusters.push(currentCluster);
+            currentCluster = [item];
+            clusterEnd = item.endMinutes;
+        }
+    });
+    if (currentCluster.length > 0) clusters.push(currentCluster);
+
+    // Attribution gloutonne d'une colonne libre dans chaque cluster
+    clusters.forEach((cluster) => {
+        const columnsEnd = [];
+        cluster.forEach((item) => {
+            let placedCol = columnsEnd.findIndex((endMin) => endMin <= item.startMinutes);
+            if (placedCol === -1) {
+                placedCol = columnsEnd.length;
+                columnsEnd.push(item.endMinutes);
+            } else {
+                columnsEnd[placedCol] = item.endMinutes;
+            }
+            item.colIndex = placedCol;
+        });
+
+        const totalCols = columnsEnd.length;
+        cluster.forEach((item) => {
+            item.totalCols = totalCols;
+        });
+    });
+
+    return items;
+}
+
 function CalendarView({ events, weekStart, onPreviousWeek, onNextWeek, onCurrentWeek, onSelectEvent }) {
     const days = getCalendarDays(weekStart);
     const dayStartHour = 8;
@@ -219,36 +280,50 @@ function CalendarView({ events, weekStart, onPreviousWeek, onNextWeek, onCurrent
                 {days.map((day) => {
                     const dayKey = getDayKey(day);
                     const dayEvents = eventsInWeek.filter((event) => getDayKey(event.start) === dayKey);
+                    const positionedEvents = layoutDayEvents(dayEvents, dayStartHour, dayEndHour);
 
                     return (
                         <div className="visio-calendar-column" key={dayKey}>
                             {hours.map((hour) => <div className="visio-calendar-hour" key={hour} />)}
-                            {dayEvents.map((event) => {
-                                const startMinutes = Math.max(
-                                    dayStartHour * 60,
-                                    event.start.getHours() * 60 + event.start.getMinutes(),
-                                );
-                                const end = event.end || new Date(event.start.getTime() + 60 * 60 * 1000);
-                                const endMinutes = Math.min(
-                                    dayEndHour * 60,
-                                    Math.max(startMinutes + 30, end.getHours() * 60 + end.getMinutes()),
-                                );
+                            {positionedEvents.map(({ event, startMinutes, endMinutes, colIndex, totalCols }) => {
+                                const widthPct = 100 / totalCols;
+                                const leftPct = colIndex * widthPct;
 
                                 return (
                                     <button
-                                        className={`visio-calendar-event${event.isDisabled ? ' is-disabled' : ''}`}
+                                        className={`visio-calendar-event${event.isDisabled ? ' is-disabled' : ''}${totalCols > 1 ? ' is-overlapping' : ''}`}
                                         type="button"
                                         onClick={() => onSelectEvent(event)}
                                         key={event.id}
                                         style={{
                                             top: `${((startMinutes - dayStartHour * 60) / 60) * 10}%`,
                                             height: `${((endMinutes - startMinutes) / 60) * 10}%`,
+                                            left: `calc(${leftPct}% + 2px)`,
+                                            width: `calc(${widthPct}% - 4px)`,
                                             '--visio-event-color': event.color,
                                         }}
-                                        title={`${event.title} — ${formatCalendarTimeRange(event)}`}
+                                        title={`${event.title} — ${formatCalendarTimeRange(event)} (${event.hasDescription ? 'Avec description' : 'Sans description'}, ${event.hasVideoLink ? 'Lien disponible' : 'Lien manquant'})`}
                                     >
                                         <strong>{event.title}</strong>
-                                        <span>{formatCalendarTimeRange(event)}</span>
+
+                                        <div className="visio-calendar-event-badges">
+                                            <span
+                                                className={`event-meta-badge ${event.hasDescription ? 'is-present' : 'is-missing'}`}
+                                                title={event.hasDescription ? 'Description disponible' : 'Aucune description'}
+                                            >
+                                                <i className="fas fa-align-left" aria-hidden="true" />
+                                                <span className="badge-label">{event.hasDescription ? 'Desc.' : 'Sans desc.'}</span>
+                                            </span>
+                                            <span
+                                                className={`event-meta-badge ${event.hasVideoLink ? 'is-present' : 'is-missing'}`}
+                                                title={event.hasVideoLink ? 'Lien de visio disponible' : 'Lien de visio manquant'}
+                                            >
+                                                <i className={`fas ${event.hasVideoLink ? 'fa-link' : 'fa-unlink'}`} aria-hidden="true" />
+                                                <span className="badge-label">{event.hasVideoLink ? 'Lien' : 'Sans lien'}</span>
+                                            </span>
+                                        </div>
+
+                                        <span className="visio-calendar-event-time">{formatCalendarTimeRange(event)}</span>
                                     </button>
                                 );
                             })}
@@ -265,7 +340,14 @@ function EventDetails({ event }) {
         <>
             <p className="visio-event-date" style={{ color: event.color }}>{formatEventDate(event.start, event.end)}</p>
             <h3>{event.title}</h3>
-            {event.description && <p className="visio-event-description">{event.description}</p>}
+            {event.description ? (
+                <p className="visio-event-description">{event.description}</p>
+            ) : (
+                <p className="visio-event-missing visio-event-no-desc">
+                    <i className="fas fa-align-left" aria-hidden="true" />
+                    Aucune description renseignée
+                </p>
+            )}
             {event.videoLink ? (
                 <a className="visio-event-link" href={event.videoLink} target="_blank" rel="noreferrer" style={{ color: event.color }}>
                     <i className="fas fa-external-link-alt" aria-hidden="true" />
