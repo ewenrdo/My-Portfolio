@@ -5,7 +5,7 @@ import 'katex/dist/katex.min.css';
 import renderMathInElement from 'katex/contrib/auto-render';
 import DockNav from '../assets/components/DockNav';
 
-const DEMO_MODE = false; // Afficher / masquer le mode démo pour tester le calendrier en dehors de décembre
+const DEMO_MODE = true; // Afficher / masquer le mode démo pour tester le calendrier en dehors de décembre
 
 function MathText({ content }) {
     const containerRef = useRef(null);
@@ -34,216 +34,216 @@ const JOURS_AVENT = [
         span: 'span-1x1',
         theme: 'forest',
         icon: 'fa-infinity',
-        titre: 'Séries & Convergence',
-        question: String.raw`Soit $(u_n)_{n \ge 0}$ une suite réelle telle que $\lim_{n \to +\infty} (u_{n+1} - u_n) = 0$. Étudier la nature de la série associée et déterminer un équivalent simple.`,
-        solution: String.raw`En utilisant le critère de Cauchy et une sommation par parties, on montre que la série associée peut diverger logarithmiquement selon la vitesse de convergence vers $0$.`
+        titre: String.raw`Inégalité triangulaire inversée`,
+        question: String.raw`Rappeler les trois axiomes d'une norme $N$ sur un $\mathbb{K}$-espace vectoriel $E$, puis démontrer l'inégalité triangulaire inversée : $\forall (x,y) \in E^2,\ |\|x\| - \|y\|| \le \|x - y\|$.`,
+        solution: String.raw`Une norme vérifie l'homogénéité ($N(\lambda x) = |\lambda|N(x)$), l'inégalité triangulaire ($N(x+y) \le N(x)+N(y)$) et la séparation ($N(x)=0 \Rightarrow x=0$). En écrivant $\|x\| = \|(x-y)+y\| \le \|x-y\| + \|y\|$, on obtient $\|x\| - \|y\| \le \|x-y\|$, et par symétrie des rôles, $|\|x\| - \|y\|| \le \|x-y\|$.`
     },
     {
         day: 2,
         span: 'span-2x1',
         theme: 'crimson',
         icon: 'fa-shapes',
-        titre: 'Sous-groupes distingués',
-        question: String.raw`Montrer que tout sous-groupe $H$ d'indice $[G : H] = 2$ d'un groupe fini $G$ est nécessairement normal ($H \trianglelefteq G$).`,
-        solution: String.raw`Les partitions en classes à gauche et à droite ne comportent que deux éléments ($H$ et $G \setminus H$), d'où $gH = Hg$ pour tout $g \in G$.`
+        titre: String.raw`Sous-groupes de $(\mathbb{Z}, +)$`,
+        question: String.raw`Rappeler la caractérisation d'un sous-groupe en une seule opération ($x * y^{-1} \in H$) et déterminer la forme générale de tous les sous-groupes de $(\mathbb{Z}, +)$.`,
+        solution: String.raw`$H \subset G$ est un sous-groupe si et seulement si $H \neq \emptyset$ et $\forall (x,y) \in H^2,\ x * y^{-1} \in H$. Par division euclidienne par le plus petit élément strictement positif (si $H \neq \{0\}$), les sous-groupes de $(\mathbb{Z}, +)$ sont exactement les $n\mathbb{Z}$ avec $n \in \mathbb{N}$.`
     },
     {
         day: 3,
         span: 'span-1x1',
         theme: 'sand',
         icon: 'fa-wave-square',
-        titre: 'Intégrale de Dirichlet',
-        question: String.raw`Calculer la valeur de l'intégrale impropre $\displaystyle \int_0^{+\infty} \frac{\sin(x)}{x}\,\mathrm{d}x$ à l'aide d'une intégrale à paramètre.`,
-        solution: String.raw`En introduisant $I(t) = \int_0^{+\infty} e^{-tx}\frac{\sin(x)}{x}\,\mathrm{d}x$ pour $t \ge 0$, on obtient par dérivation sous le signe somme que $I(0) = \frac{\pi}{2}$.`
+        titre: String.raw`Tribu & Tribu borélienne`,
+        question: String.raw`Donner les trois axiomes définissant une tribu $\mathcal{A}$ sur un ensemble $\Omega$, puis définir la tribu borélienne $\mathcal{B}(\mathbb{R})$.`,
+        solution: String.raw`Une tribu contient $\Omega$, est stable par passage au complémentaire et par réunion dénombrable. La tribu borélienne $\mathcal{B}(\mathbb{R})$ est la plus petite tribu sur $\mathbb{R}$ contenant tous les ouverts (elle est engendrée par les intervalles $]-\infty, a]$ pour $a \in \mathbb{R}$).`
     },
     {
         day: 4,
         span: 'span-1x2',
         theme: 'ink',
         icon: 'fa-project-diagram',
-        titre: 'Graphes eulériens',
-        question: String.raw`Démontrer qu'un graphe connexe non orienté $G = (V, E)$ admet un cycle eulérien si et seulement si $\forall v \in V,\ \deg(v) \equiv 0 \pmod{2}$.`,
-        solution: String.raw`Par récurrence sur $|E|$ : on extrait un premier cycle fermé puis on recolle les cycles eulériens des composantes connexes restantes.`
+        titre: String.raw`Normes non équivalentes`,
+        question: String.raw`Sur $E = \mathcal{C}([0,1], \mathbb{R})$, exhiber une suite de fonctions $(f_n)_{n \ge 1}$ permettant de montrer que les normes $\|\cdot\|_1$ et $\|\cdot\|_\infty$ ne sont pas équivalentes.`,
+        solution: String.raw`En posant $f_n(t) = t^n$ sur $[0,1]$, on a $\|f_n\|_\infty = 1$ tandis que $\|f_n\|_1 = \int_0^1 t^n\,\mathrm{d}t = \frac{1}{n+1} \xrightarrow[n\to+\infty]{} 0$. Le rapport $\frac{\|f_n\|_\infty}{\|f_n\|_1} = n+1$ n'est pas borné, donc les normes ne sont pas équivalentes.`
     },
     {
         day: 5,
         span: 'span-1x1',
         theme: 'sand',
         icon: 'fa-dice',
-        titre: 'Paradoxe des anniversaires',
-        question: String.raw`Combien de personnes faut-il réunir pour que la probabilité que deux d'entre elles aient la même date d'anniversaire dépasse $\frac{1}{2}$ ?`,
-        solution: String.raw`À partir de $n = 23$ personnes, on a $P = 1 - \frac{365!}{365^{23} \cdot 342!} \approx 0{,}507 > \frac{1}{2}$.`
+        titre: String.raw`Fonction génératrice`,
+        question: String.raw`Soit $X$ une variable aléatoire à valeurs dans $\mathbb{N}$ de fonction génératrice $G_X(t) = \mathbb{E}[t^X]$. Exprimer $\mathbb{P}(X = k)$ et le $k$-ième moment factoriel à l'aide de $G_X$.`,
+        solution: String.raw`Pour tout $k \in \mathbb{N}$, on a $\mathbb{P}(X = k) = \frac{G_X^{(k)}(0)}{k!}$, et si $X$ admet un moment d'ordre $k$, $\mathbb{E}[X(X-1)\dots(X-k+1)] = G_X^{(k)}(1^-)$.`
     },
     {
         day: 6,
         span: 'span-1x2',
         theme: 'crimson',
         icon: 'fa-chart-line',
-        titre: 'Théorème de Rolle généralisé',
-        question: String.raw`Soit $f : [0, +\infty[ \to \mathbb{R}$ dérivable telle que $\lim_{x \to +\infty} f(x) = f(0)$. Montrer qu'il existe $c \in ]0, +\infty[$ tel que $f'(c) = 0$.`,
-        solution: String.raw`En posant $g(t) = f(\tan t)$ sur $[0, \frac{\pi}{2}[$ prolongée par continuité en $\frac{\pi}{2}$ par $f(0)$, on applique le théorème de Rolle classique sur $[0, \frac{\pi}{2}]$.`
+        titre: String.raw`Théorème de Lagrange`,
+        question: String.raw`Énoncer le théorème de Lagrange (avec la notion d'indice $[G:H]$) et justifier brièvement pourquoi tout groupe fini d'ordre premier $p$ est cyclique.`,
+        solution: String.raw`Si $H$ est un sous-groupe d'un groupe fini $G$, alors $|G| = |H| \times [G:H]$ où $[G:H] = |G/H|$. Si $|G| = p$ premier, tout élément $x \neq e_G$ a un ordre divisant $p$ et différent de $1$, donc égal à $p$, d'où $G = \langle x \rangle$.`
     },
     {
         day: 7,
         span: 'span-1x1',
         theme: 'forest',
         icon: 'fa-superscript',
-        titre: 'Polynômes cyclotomiques',
-        question: String.raw`Déterminer le degré et l'expression explicite du $6^{\text{ème}}$ polynôme cyclotomique $\Phi_6(X)$.`,
-        solution: String.raw`On a $\deg(\Phi_6) = \varphi(6) = 2$ et $\Phi_6(X) = \frac{X^6 - 1}{(X^3 - 1)(X + 1)} = X^2 - X + 1$.`
+        titre: String.raw`Boules unités dans $\mathbb{R}^2$`,
+        question: String.raw`Décrire géométriquement et analytiquement la boule unité fermée $D((0,0), 1)$ de $\mathbb{R}^2$ pour les normes $\|\cdot\|_1$, $\|\cdot\|_2$ et $\|\cdot\|_\infty$.`,
+        solution: String.raw`Pour $\|\cdot\|_2$, c'est le disque fermé $\{x^2+y^2 \le 1\}$ ; pour $\|\cdot\|_\infty$, le carré $[-1,1]^2$ ($\max(|x|,|y|) \le 1$) ; pour $\|\cdot\|_1$, le losange $\{|x|+|y| \le 1\}$ de sommets $(\pm 1, 0)$ et $(0, \pm 1)$.`
     },
     {
         day: 8,
         span: 'span-2x1',
         theme: 'crimson',
         icon: 'fa-compass',
-        titre: 'Isométries du cube',
-        question: String.raw`Déterminer la structure et le cardinal du groupe $\mathrm{Isom}^+(\mathcal{C})$ des isométries directes laissant un cube $\mathcal{C}$ globalement invariant.`,
-        solution: String.raw`Par action fidèle sur les $4$ grandes diagonales du cube, $\mathrm{Isom}^+(\mathcal{C}) \cong \mathfrak{S}_4$, d'où $|\mathrm{Isom}^+(\mathcal{C})| = 4! = 24$.`
+        titre: String.raw`Inégalités de Markov & Tchebychev`,
+        question: String.raw`Énoncer l'inégalité de Markov généralisée et en déduire l'inégalité de Bienaymé-Tchebychev pour une v.a.r. $X \in L^2$.`,
+        solution: String.raw`Pour $\varphi : \mathbb{R}_+ \to \mathbb{R}_+$ croissante et $a > 0$ avec $\varphi(a) > 0$, $\mathbb{P}(|Y| \ge a) \le \frac{\mathbb{E}[\varphi(|Y|)]}{\varphi(a)}$. En posant $Y = X - \mathbb{E}[X]$, $\varphi(t) = t^2$ et $a = \varepsilon > 0$, on obtient $\mathbb{P}(|X - \mathbb{E}[X]| \ge \varepsilon) \le \frac{\mathrm{Var}(X)}{\varepsilon^2}$.`
     },
     {
         day: 9,
         span: 'span-1x1',
         theme: 'forest',
         icon: 'fa-percentage',
-        titre: 'Loi géométrique sans mémoire',
-        question: String.raw`Caractériser les variables aléatoires $X$ à valeurs dans $\mathbb{N}^*$ vérifiant $\forall (n, k) \in \mathbb{N}^2,\ \mathbb{P}(X > n + k \mid X > n) = \mathbb{P}(X > k)$.`,
-        solution: String.raw`La condition impose $\mathbb{P}(X > k) = q^k$ avec $q = \mathbb{P}(X > 1) \in ]0, 1[$, donc $X \hookrightarrow \mathcal{G}(1 - q)$.`
+        titre: String.raw`Ordre d\'un élément`,
+        question: String.raw`Définir l'ordre d'un élément $x$ dans un groupe $G$ et donner la formule de l'ordre de la classe $\overline{a}$ dans le groupe additif $\mathbb{Z}/n\mathbb{Z}$.`,
+        solution: String.raw`L'ordre de $x$ est le cardinal de $\langle x \rangle$ (ou le plus petit entier $k > 0$ tel que $x^k = e_G$ s'il est fini). Dans $\mathbb{Z}/n\mathbb{Z}$, l'ordre de $\overline{a}$ vaut $\frac{n}{\mathrm{pgcd}(a, n)}$.`
     },
     {
         day: 10,
         span: 'span-1x1',
         theme: 'crimson',
         icon: 'fa-calculator',
-        titre: 'Matrices nilpotentes',
-        question: String.raw`Montrer que la trace d'une matrice nilpotente $A \in \mathcal{M}_n(\mathbb{C})$ est toujours nulle.`,
-        solution: String.raw`Toutes les valeurs propres complexes de $A$ sont nulles ($\mathrm{Sp}_{\mathbb{C}}(A) = \{0\}$), donc $\mathrm{Tr}(A) = \sum_{i=1}^n \lambda_i = 0$.`
+        titre: String.raw`Convergence dominée & monotone`,
+        question: String.raw`Énoncer les hypothèses et conclusions du théorème de convergence monotone (Beppo-Levi) et du théorème de convergence dominée de Lebesgue.`,
+        solution: String.raw`Beppo-Levi : si $(f_n)$ est une suite croissante de fonctions mesurables positives, $\lim \int f_n\,\mathrm{d}\mu = \int (\lim f_n)\,\mathrm{d}\mu$. Lebesgue : si $f_n \to f$ simplement (ou $\mu$-p.p.) et $|f_n| \le g$ avec $g$ $\mu$-intégrable, alors $f$ est intégrable et $\int f_n\,\mathrm{d}\mu \to \int f\,\mathrm{d}\mu$.`
     },
     {
         day: 11,
         span: 'span-1x1',
         theme: 'ink',
         icon: 'fa-vector-square',
-        titre: 'Inégalité de Cauchy-Schwarz',
-        question: String.raw`Étudier le cas d'égalité $|\langle x, y \rangle| = \|x\| \, \|y\|$ dans un espace préhilbertien réel $(E, \langle \cdot, \cdot \rangle)$.`,
-        solution: String.raw`Le discriminant du trinôme $P(t) = \|x + ty\|^2 \ge 0$ est nul si et seulement si la famille $(x, y)$ est liée.`
+        titre: String.raw`Caractérisations séquentielles`,
+        question: String.raw`Énoncer la caractérisation séquentielle de l'adhérence $\overline{A}$ d'une partie $A$, puis celle d'une partie fermée $F$ dans un espace vectoriel normé $E$.`,
+        solution: String.raw`$a \in \overline{A}$ si et seulement s'il existe une suite $(x_n)$ d'éléments de $A$ convergeant vers $a$. Une partie $F$ est fermée si et seulement si la limite de toute suite convergente d'éléments de $F$ appartient à $F$.`
     },
     {
         day: 12,
         span: 'span-1x1',
         theme: 'sand',
         icon: 'fa-code-branch',
-        titre: 'Récurrence & Complexité',
-        question: String.raw`Résoudre la relation de récurrence $T(n) = 2T(n/2) + \mathcal{O}(n \log n)$ par le Master Theorem.`,
-        solution: String.raw`Comme $n^{\log_2 2} = n$, on se situe dans le cas critique avec facteur $\log^1 n$, d'où $T(n) = \Theta(n \log^2 n)$.`
+        titre: String.raw`Sous-groupes distingués`,
+        question: String.raw`Donner trois caractérisations équivalentes de $H \triangleleft G$ et citer deux sous-groupes non distingués dans $GL_n(\mathbb{R})$ pour $n \ge 2$.`,
+        solution: String.raw`$H \triangleleft G \iff \forall x \in G,\ xHx^{-1} \subset H \iff \forall x \in G,\ xH = Hx \iff \forall x \in G,\ xHx^{-1} = H$. Dans $GL_n(\mathbb{R})$ ($n \ge 2$), le groupe orthogonal $O(n)$ et le sous-groupe des matrices triangulaires supérieures inversibles ne sont pas distingués.`
     },
     {
         day: 13,
         span: 'span-1x1',
         theme: 'crimson',
         icon: 'fa-divide',
-        titre: 'Petit théorème de Fermat',
-        question: String.raw`Calculer le reste de la division euclidienne de $3^{2026}$ par $17$.`,
-        solution: String.raw`Par le petit théorème de Fermat, $3^{16} \equiv 1 \pmod{17}$. Comme $2026 = 16 \times 126 + 10$, on a $3^{2026} \equiv 3^{10} \equiv 8 \pmod{17}$.`
+        titre: String.raw`Transformée de Laplace`,
+        question: String.raw`Donner la transformée de Laplace $\Psi_X(t) = \mathbb{E}[e^{-tX}]$ et son domaine de définition $I_X$ pour $\mathcal{E}(\lambda)$ et $\mathcal{N}(\mu, \sigma^2)$.`,
+        solution: String.raw`Pour $X \sim \mathcal{E}(\lambda)$, $\Psi_X(t) = \frac{\lambda}{\lambda + t}$ sur $I_X = ]-\lambda, +\infty[$. Pour $X \sim \mathcal{N}(\mu, \sigma^2)$, $\Psi_X(t) = \exp\!\left(-t\mu + \frac{\sigma^2 t^2}{2}\right)$ sur $I_X = \mathbb{R}$.`
     },
     {
         day: 14,
         span: 'span-1x2',
         theme: 'sand',
         icon: 'fa-cubes',
-        titre: 'Compacité en dimension finie',
-        question: String.raw`Pourquoi la boule unité fermée $\overline{B}(0, 1)$ d'un espace vectoriel normé $E$ est-elle compacte si et seulement si $\dim(E) < +\infty$ ?`,
-        solution: String.raw`C'est le théorème de Riesz : en dimension infinie, le lemme de Riesz permet de construire une suite de la sphère unité sans sous-suite convergente.`
+        titre: String.raw`Ouverts et fermés matriciels`,
+        question: String.raw`En utilisant la continuité de $\det$, justifier rapidement que $GL_n(\mathbb{K})$ est un ouvert de $\mathcal{M}_n(\mathbb{K})$ et que $SL_n(\mathbb{K})$ en est un fermé.`,
+        solution: String.raw`L'application $\det : \mathcal{M}_n(\mathbb{K}) \to \mathbb{K}$ est polynomiale donc continue. Ainsi, $GL_n(\mathbb{K}) = \det^{-1}(\mathbb{K}^*)$ est ouvert comme image réciproque d'un ouvert, et $SL_n(\mathbb{K}) = \det^{-1}(\{1\})$ est fermé comme image réciproque du fermé $\{1\}$.`
     },
     {
         day: 15,
         span: 'span-1x1',
         theme: 'sand',
         icon: 'fa-sigma',
-        titre: 'Somme des inverses des carrés',
-        question: String.raw`Retrouver $\zeta(2) = \sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6}$ à l'aide de la série de Fourier de $f(x) = x^2$ sur $[-\pi, \pi]$.`,
-        solution: String.raw`L'identité de Parseval appliquée aux coefficients de Fourier $c_n(f) = \frac{2(-1)^n}{n^2}$ donne directement $\sum_{n=1}^{+\infty} \frac{1}{n^4}$, et l'évaluation en $\pi$ donne $\zeta(2) = \frac{\pi^2}{6}$.`
+        titre: String.raw`Stabilité par somme`,
+        question: String.raw`Déterminer la loi de $X + Y$ lorsque $X$ et $Y$ sont indépendantes suivant respectivement $\mathcal{P}(\lambda_1)$ et $\mathcal{P}(\lambda_2)$, puis $\Gamma(a_1, \lambda)$ et $\Gamma(a_2, \lambda)$.`,
+        solution: String.raw`Par produit des fonctions génératrices ou transformées de Laplace, on obtient $X + Y \sim \mathcal{P}(\lambda_1 + \lambda_2)$ dans le premier cas, et $X + Y \sim \Gamma(a_1 + a_2, \lambda)$ dans le second.`
     },
     {
         day: 16,
         span: 'span-1x1',
         theme: 'crimson',
         icon: 'fa-braille',
-        titre: 'Espaces connexes par arcs',
-        question: String.raw`Montrer que $\mathrm{GL}_n(\mathbb{C})$ est connexe par arcs alors que $\mathrm{GL}_n(\mathbb{R})$ possède exactement deux composantes connexes.`,
-        solution: String.raw`L'application $\det$ est continue sur $\mathbb{R}^*$ qui possède deux composantes ($]0, +\infty[$ et $]-\infty, 0[$), tandis que $\mathbb{C}^*$ est connexe par arcs.`
+        titre: String.raw`Décomposition canonique`,
+        question: String.raw`Énoncer le théorème de décomposition canonique (premier théorème d'isomorphisme) pour un morphisme de groupes $f : G \to G'$.`,
+        solution: String.raw`Tout morphisme $f : G \to G'$ se décompose en $f = j \circ \tilde{f} \circ \pi$, où $\pi : G \to G/\ker(f)$ est la surjection canonique, $j : \mathrm{Im}(f) \to G'$ l'injection canonique, et $\tilde{f} : G/\ker(f) \to \mathrm{Im}(f)$ définie par $\tilde{f}(x\ker f) = f(x)$ est un isomorphisme de groupes.`
     },
     {
         day: 17,
         span: 'span-2x1',
         theme: 'forest',
         icon: 'fa-random',
-        titre: 'Loi forte des grands nombres',
-        question: String.raw`Énoncer les hypothèses minimales pour la convergence presque sûre de $\overline{X}_n = \frac{1}{n} \sum_{k=1}^n X_k$.`,
-        solution: String.raw`Des variables aléatoires $(X_k)_{k \ge 1}$ i.i.d. et intégrables ($\mathbb{E}[|X_1|] < +\infty$) suffisent pour assurer $\overline{X}_n \xrightarrow{\text{p.s.}} \mathbb{E}[X_1]$.`
+        titre: String.raw`Applications linéaires continues`,
+        question: String.raw`Donner quatre caractérisations équivalentes de la continuité d'une application linéaire $f \in \mathcal{L}(E,F)$ entre deux espaces vectoriels normés.`,
+        solution: String.raw`$f \in \mathcal{L}(E,F)$ est continue $\iff$ $f$ est continue en $0_E$ $\iff$ $\exists C > 0,\ \forall x \in E,\ \|f(x)\|_F \le C\|x\|_E$ $\iff$ $\sup_{\|x\|_E = 1} \|f(x)\|_F < +\infty$ $\iff$ $f$ est lipschitzienne.`
     },
     {
         day: 18,
         span: 'span-1x1',
         theme: 'forest',
         icon: 'fa-border-all',
-        titre: 'Déterminant de Vandermonde',
-        question: String.raw`Factoriser le déterminant de Vandermonde $V(x_1, \dots, x_n)$ et donner une condition nécessaire et suffisante d'inversibilité.`,
-        solution: String.raw`On a $V(x_1, \dots, x_n) = \prod_{1 \le i < j \le n} (x_j - x_i)$, non nul si et seulement si les scalaires $x_1, \dots, x_n$ sont deux à deux distincts.`
+        titre: String.raw`Minimum d\'exponentielles`,
+        question: String.raw`Soient $X_1, \dots, X_n$ des v.a.r. indépendantes suivant des lois $\mathcal{E}(\lambda_1), \dots, \mathcal{E}(\lambda_n)$. Déterminer la loi de $M = \min(X_1, \dots, X_n)$.`,
+        solution: String.raw`Pour $t \ge 0$, $\mathbb{P}(M > t) = \prod_{i=1}^n \mathbb{P}(X_i > t) = \prod_{i=1}^n e^{-\lambda_i t} = e^{-\left(\sum_{i=1}^n \lambda_i\right) t}$, donc $M \sim \mathcal{E}\!\left(\sum_{i=1}^n \lambda_i\right)$.`
     },
     {
         day: 19,
         span: 'span-1x1',
         theme: 'crimson',
         icon: 'fa-angle-double-right',
-        titre: 'Développement asymptotique',
-        question: String.raw`Donner un développement asymptotique à trois termes de l'unique solution $u_n \in \left]n\pi, n\pi + \frac{\pi}{2}\right[$ de l'équation $\tan(u_n) = u_n$.`,
-        solution: String.raw`En inversant $u_n = n\pi + \arctan(u_n)$, on obtient $u_n = n\pi + \frac{\pi}{2} - \frac{1}{n\pi} + \mathcal{O}\!\left(\frac{1}{n^2}\right)$.`
+        titre: String.raw`Sous-groupes de $\mathbb{Z}/8\mathbb{Z}$`,
+        question: String.raw`Lister tous les sous-groupes propres de $\mathbb{Z}/8\mathbb{Z}$ en précisant leur ordre et leurs éléments.`,
+        solution: String.raw`Les sous-groupes propres correspondent aux diviseurs stricts $d \in \{2, 4\}$ de $8$ : $2\mathbb{Z}/8\mathbb{Z} = \{\overline{0}, \overline{2}, \overline{4}, \overline{6}\}$ (d'ordre $4$) et $4\mathbb{Z}/8\mathbb{Z} = \{\overline{0}, \overline{4}\}$ (d'ordre $2$).`
     },
     {
         day: 20,
         span: 'span-1x1',
         theme: 'forest',
         icon: 'fa-circle-notch',
-        titre: 'Théorème des résidus',
-        question: String.raw`Calculer $\displaystyle \int_{-\infty}^{+\infty} \frac{\mathrm{d}x}{1 + x^4}$ en intégrant sur un demi-cercle supérieur de rayon $R \to +\infty$.`,
-        solution: String.raw`En sommant les résidus aux pôles simples $z_1 = e^{i\pi/4}$ et $z_2 = e^{3i\pi/4}$ situés dans le demi-plan supérieur, on trouve $\frac{\pi\sqrt{2}}{2}$ sur $\mathbb{R}$ (et $\frac{\pi\sqrt{2}}{4}$ sur $\mathbb{R}_+$).`
+        titre: String.raw`Calcul de norme subordonnée`,
+        question: String.raw`On munit $\mathbb{R}^2$ de $\|\cdot\|_\infty$ et on considère $f(x,y) = 3x + 4y$. Calculer sa norme subordonnée $|||f|||$ en justifiant l'égalité.`,
+        solution: String.raw`Pour tout $(x,y) \in \mathbb{R}^2$, $|f(x,y)| \le 3|x| + 4|y| \le 7\|(x,y)\|_\infty$, d'où $|||f||| \le 7$. Comme $\|(1,1)\|_\infty = 1$ et $f(1,1) = 7$, la borne est atteinte et $|||f||| = 7$.`
     },
     {
         day: 21,
         span: 'span-1x2',
         theme: 'crimson',
         icon: 'fa-stream',
-        titre: 'Diagonalisation simultanée',
-        question: String.raw`Montrer que deux endomorphismes diagonalisables $u, v \in \mathcal{L}(E)$ qui commutent ($u \circ v = v \circ u$) sont co-diagonalisables.`,
-        solution: String.raw`Les sous-espaces propres $E_\lambda(u)$ sont stables par $v$, et la restriction $v_{|E_\lambda(u)}$ reste diagonalisable, ce qui fournit une base commune de vecteurs propres.`
+        titre: String.raw`Étude de la loi Gamma $\Gamma(a, \lambda)$`,
+        question: String.raw`Soient $a > 0$ et $\lambda > 0$. Donner la densité $f_X$, l'espérance, la variance et le moment d'ordre $k \ge 1$ d'une variable aléatoire $X \sim \Gamma(a, \lambda)$.`,
+        solution: String.raw`La densité de $X$ sur $\mathbb{R}$ est $f_X(x) = \frac{\lambda^a}{\Gamma(a)} x^{a-1} e^{-\lambda x} \mathbf{1}_{\{x > 0\}}$. On a $\mathbb{E}[X] = \frac{a}{\lambda}$, $\mathrm{Var}(X) = \frac{a}{\lambda^2}$, et pour tout entier $k \ge 1$, $\mathbb{E}[X^k] = \frac{a(a+1)\dots(a+k-1)}{\lambda^k}$.`
     },
     {
         day: 22,
         span: 'span-1x1',
         theme: 'sand',
         icon: 'fa-balance-scale',
-        titre: 'Inégalité de Jensen',
-        question: String.raw`Appliquer l'inégalité de Jensen à la fonction $\ln$ pour démontrer l'inégalité arithmético-géométrique sur $x_1, \dots, x_n > 0$.`,
-        solution: String.raw`Par concavité de $\ln$, $\ln\!\left(\frac{1}{n}\sum_{i=1}^n x_i\right) \ge \frac{1}{n}\sum_{i=1}^n \ln(x_i)$, d'où $\sqrt[n]{x_1 \cdots x_n} \le \frac{x_1 + \dots + x_n}{n}$ par croissance de $\exp$.`
+        titre: String.raw`Cycles et conjugaison dans $S_n$`,
+        question: String.raw`Donner la formule de conjugaison $\sigma (a_1 \dots a_r) \sigma^{-1}$ dans $S_n$, puis décomposer $\sigma = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 3 & 2 & 4 & 1 & 7 & 6 & 5 \end{pmatrix}$ et donner son ordre.`,
+        solution: String.raw`On a $\sigma (a_1 \dots a_r) \sigma^{-1} = (\sigma(a_1) \dots \sigma(a_r))$. La permutation se décompose en $(1\ 3\ 4)(5\ 7)$ ; les supports étant disjoints, son ordre est $\mathrm{ppcm}(3, 2) = 6$.`
     },
     {
         day: 23,
         span: 'span-2x1',
         theme: 'crimson',
         icon: 'fa-atom',
-        titre: 'Théorème spectral',
-        question: String.raw`Démontrer que toute matrice symétrique réelle $S \in \mathcal{S}_n(\mathbb{R})$ est orthogonalement semblable à une matrice diagonale.`,
-        solution: String.raw`Par récurrence sur $n$ en utilisant l'orthogonal $H = (\mathbb{R}e_1)^\perp$ d'un vecteur propre unitaire, qui est stable par l'endomorphisme symétrique associé.`
+        titre: String.raw`Compacité et complétude`,
+        question: String.raw`Caractériser les compacts en dimension finie (avec un contre-exemple en dimension infinie) et rappeler le lien entre sous-espace complet et fermé dans un espace vectoriel normé complet.`,
+        solution: String.raw`En dimension finie, les compacts sont exactement les fermés bornés (faux en dimension infinie, ex. la boule unité fermée de $(\mathcal{C}([0,1]), \|\cdot\|_\infty)$). Dans un espace vectoriel normé complet $(E, \|\cdot\|)$, un sous-espace vectoriel $F$ est complet si et seulement s'il est fermé dans $E$.`
     },
     {
         day: 24,
         span: 'span-2x2',
         theme: 'grand-finale',
         icon: 'fa-star',
-        titre: 'Le défi du Réveillon',
-        question: String.raw`Problème de synthèse : relier la fonction zêta de Riemann $\zeta(s) = \sum_{n=1}^{+\infty} \frac{1}{n^s}$, l'ensemble $\mathcal{P}$ des nombres premiers et le produit eulérien pour $\mathrm{Re}(s) > 1$.`,
-        solution: String.raw`Joyeux Noël ! Par unicité de la décomposition en facteurs premiers dans $\mathbb{N}^*$, on obtient $\displaystyle \zeta(s) = \prod_{p \in \mathcal{P}} \left(1 - p^{-s}\right)^{-1}$.`
+        titre: String.raw`Orbites et stabilisateurs`,
+        question: String.raw`Définir l'orbite $G \bullet x$, le stabilisateur $\mathrm{Stab}_G(x)$ et la transitivité d'une action, puis déterminer les orbites de l'action de $G = \{\mathrm{id}, s_{Ox}\}$ sur $\mathbb{S}^1$.`,
+        solution: String.raw`Joyeux Noël ! $G \bullet x = \{g \bullet x \mid g \in G\}$, $\mathrm{Stab}_G(x) = \{g \in G \mid g \bullet x = x\}$, et l'action est transitive s'il n'y a qu'une seule orbite ($G \bullet x = X$). Sur $\mathbb{S}^1$, les orbites sont les singletons $\{1\}$ et $\{-1\}$, ainsi que les paires $\{e^{i\theta}, e^{-i\theta}\}$ pour $\theta \in ]0, \pi[$.`
     }
 ];
 
@@ -468,7 +468,7 @@ export default function AventMaths() {
 
                         <div className="avent-modal-body">
                             <span className="modal-script-subtitle">Défi du jour</span>
-                            <h2 id="avent-modal-title">{selectedDay.titre}</h2>
+                            <h2 id="avent-modal-title"><MathText content={selectedDay.titre} /></h2>
 
                             <div className="exercise-box">
                                 <span className="box-tag">Énoncé</span>
