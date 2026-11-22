@@ -326,7 +326,7 @@ export default function DlmiPollPage() {
                                     <PollAccordion
                                         key={ue.key}
                                         title={ue.label}
-                                        subtitle="Compréhension et confiance pour le partiel"
+                                        subtitle={'« J\'ai compris et suis confiant pour le partiel pour cette partie du programme »'}
                                         icon={ue.icon}
                                         count={`${ueQuestions.length} parties`}
                                         isOpen={openAccordions[ue.key]}
