@@ -984,6 +984,14 @@
                                         "slug": "ga5-td-notes-cc1"
                                     },
                                     {
+                                        "name": "cc2.pdf",
+                                        "path": "/resources/notes/GA5/CC2_sujet.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Contrôle continu 2 (annulé)",
+                                        "date": "2026-11-23",
+                                        "slug": "ga5-td-notes-cc2"
+                                    },
+                                    {
                                         "name": "cc1.pdf",
                                         "path": "/resources/notes/GA5/CC1.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
@@ -1242,6 +1250,14 @@
                                         "title": "Devoir maison du 20 novembre",
                                         "date": "2026-11-20",
                                         "slug": "pr5-td-visio-dm-20-nov"
+                                    },
+                                    {
+                                        "name": "dm-27-nov.pdf",
+                                        "path": "/resources/notes/PR5/dm-27-nov.pdf",
+                                        "credits": "Mathieu Merle.",
+                                        "title": "Devoir maison du 27 novembre",
+                                        "date": "2026-11-23",
+                                        "slug": "pr5-td-visio-dm-27-nov"
                                     },
                                     {
                                         "name": "dm-prepa-cc2.pdf",
