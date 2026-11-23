@@ -977,7 +977,7 @@
                                 "children": [
                                     {
                                         "name": "cc1.pdf",
-                                        "path": "/resources/notes/GA5/CC1_sujet.pdf",
+                                        "path": "/resources/university/td-ga5/CC1_sujet.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
                                         "title": "Contrôle continu 1 (annulé)",
                                         "date": "2026-10-16",
@@ -985,7 +985,7 @@
                                     },
                                     {
                                         "name": "cc2.pdf",
-                                        "path": "/resources/notes/GA5/CC2_sujet.pdf",
+                                        "path": "/resources/university/td-ga5/CC2_sujet.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
                                         "title": "Contrôle continu 2 (annulé)",
                                         "date": "2026-11-23",
@@ -994,6 +994,14 @@
                                     {
                                         "name": "cc1.pdf",
                                         "path": "/resources/notes/GA5/CC1.pdf",
+                                        "credits": "Ewen Rodrigues de Oliveira.",
+                                        "title": "Contrôle continu 1 (annulé) : ma copie",
+                                        "date": "2026-10-16",
+                                        "slug": "ga5-td-notes-cc1"
+                                    },
+                                    {
+                                        "name": "cc1.pdf",
+                                        "path": "/resources/notes/GA5/CC2.pdf",
                                         "credits": "Ewen Rodrigues de Oliveira.",
                                         "title": "Contrôle continu 1 (annulé) : ma copie",
                                         "date": "2026-10-16",
@@ -2432,5 +2440,12 @@
         "type": "link",
         "date": "2026-10-20",
         "slug": "visio-calendar"
+    },
+    {
+        "path": "https://www.ewenrdo.fr/advent",
+        "name": "Calendrier de l'Avent",
+        "type": "link",
+        "date": "2026-11-25",
+        "slug": "advent-calendar"
     }
 ]
