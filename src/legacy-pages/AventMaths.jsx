@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import 'katex/dist/katex.min.css';
 import renderMathInElement from 'katex/contrib/auto-render';
 import DockNav from '../assets/components/DockNav';
 
-const DEMO_MODE = true; // Afficher / masquer le mode démo pour tester le calendrier en dehors de décembre
+const DEMO_MODE = false; // Afficher / masquer le mode démo pour tester le calendrier en dehors de décembre
 
 function MathText({ content }) {
     const containerRef = useRef(null);
