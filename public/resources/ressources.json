@@ -2014,6 +2014,12 @@
                                 "name": "Algorithme de Dijkstra",
                                 "type": "link",
                                 "date": "2026-10-03"
+                            },
+                            {
+                                "link": "https://www.youtube.com/watch?v=obWXjtg0L64",
+                                "name": "Algorithme de Bellman-Ford",
+                                "type": "link",
+                                "date": "2026-11-24"
                             }
                         ]
                     },
