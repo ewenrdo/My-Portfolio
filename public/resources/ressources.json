@@ -1500,14 +1500,6 @@
                         ]
                     },
                     {
-                        "name": "rentree.md",
-                        "path": "/resources/university/rentree.md",
-                        "credits": "Ewen Rodrigues de Oliveira.",
-                        "title": "Notes de réunion de rentrée",
-                        "date": "2026-09-04",
-                        "slug": "notes-de-reunion-de-rentrée"
-                    },
-                    {
                         "name": "Fiches d'entraînement et livrets de révision",
                         "slug": "fiches-dentrainement-et-livrets-de-revision-semestre5",
                         "children": [
@@ -1544,6 +1536,14 @@
                                 "slug": "cp_ufr-commission-pedagogique-ufr-maths"
                             }
                         ]
+                    },
+                    {
+                        "name": "rentree.md",
+                        "path": "/resources/university/rentree.md",
+                        "credits": "Ewen Rodrigues de Oliveira.",
+                        "title": "Notes de réunion de rentrée",
+                        "date": "2026-09-04",
+                        "slug": "notes-de-reunion-de-rentrée"
                     }
                 ]
             },
