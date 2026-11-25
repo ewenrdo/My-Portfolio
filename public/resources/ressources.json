@@ -1500,8 +1500,8 @@
                         ]
                     },
                     {
-                        "name": "Fiches d'entraînement et livrets de révision",
-                        "slug": "fiches-dentrainement-et-livrets-de-revision-semestre5",
+                        "name": "Compte-rendus mouvement étudiant",
+                        "slug": "compte-rendus-mouvement-etudiant",
                         "children": [
                             {
                                 "name": "ag0611.pdf",
