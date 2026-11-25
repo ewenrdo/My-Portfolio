@@ -27,7 +27,7 @@ Réunion en fin de semestre d'information pour MonMaster (fin novembre - début 
 > [!NOTE]
 > Pour l'anglais, on ne sait pas encore s'il faut s'inscrire en **général** ou en **spécialité**.
 
-## Tutorat
+## Tutorat
 
 Il n'y a _a priori_ plus de tutorat pour la L3 (ni en informatique, ni en mathématiques).
 
