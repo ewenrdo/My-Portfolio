@@ -43,9 +43,9 @@ const JOURS_AVENT = [
         span: 'span-2x1',
         theme: 'crimson',
         icon: 'fa-shapes',
-        titre: String.raw`Sous-groupes de $(\mathbb{Z}, +)$`,
-        question: String.raw`Rappeler la caractérisation d'un sous-groupe en une seule opération ($x * y^{-1} \in H$) et déterminer la forme générale de tous les sous-groupes de $(\mathbb{Z}, +)$.`,
-        solution: String.raw`$H \subset G$ est un sous-groupe si et seulement si $H \neq \emptyset$ et $\forall (x,y) \in H^2,\ x * y^{-1} \in H$. Par division euclidienne par le plus petit élément strictement positif (si $H \neq \{0\}$), les sous-groupes de $(\mathbb{Z}, +)$ sont exactement les $n\mathbb{Z}$ avec $n \in \mathbb{N}$.`
+        titre: String.raw`Intersection $a\mathbb{Z} \cap b\mathbb{Z}$`,
+        question: String.raw`Soient $a, b \in \mathbb{N}^*$. Rappeler pourquoi $a\mathbb{Z} \cap b\mathbb{Z}$ est un sous-groupe de $(\mathbb{Z}, +)$, puis montrer que $a\mathbb{Z} \cap b\mathbb{Z} = \mathrm{ppcm}(a,b)\mathbb{Z}$.`,
+        solution: String.raw`L'intersection de deux sous-groupes est un sous-groupe (non vide car $0$ y est, et stable par différence). Par double inclusion : pour $x \in \mathbb{Z}$, $x \in a\mathbb{Z} \cap b\mathbb{Z} \iff a \mid x \text{ et } b \mid x \iff \mathrm{ppcm}(a,b) \mid x \iff x \in \mathrm{ppcm}(a,b)\mathbb{Z}$ (par définition du plus petit commun multiple).`
     },
     {
         day: 3,
@@ -106,9 +106,9 @@ const JOURS_AVENT = [
         span: 'span-1x1',
         theme: 'forest',
         icon: 'fa-percentage',
-        titre: String.raw`Ordre d\'un élément`,
-        question: String.raw`Définir l'ordre d'un élément $x$ dans un groupe $G$ et donner la formule de l'ordre de la classe $\overline{a}$ dans le groupe additif $\mathbb{Z}/n\mathbb{Z}$.`,
-        solution: String.raw`L'ordre de $x$ est le cardinal de $\langle x \rangle$ (ou le plus petit entier $k > 0$ tel que $x^k = e_G$ s'il est fini). Dans $\mathbb{Z}/n\mathbb{Z}$, l'ordre de $\overline{a}$ vaut $\frac{n}{\mathrm{pgcd}(a, n)}$.`
+        titre: String.raw`Ordre d'un élément`,
+        question: String.raw`Définir l'ordre d'un élément $x$ dans un groupe $G$, montrer que $x^n = e_G \Rightarrow \mathrm{ord}(x) \mid n$ (pour $n \in \mathbb{N}^*$), et donner l'ordre de $\overline{a}$ dans $\mathbb{Z}/n\mathbb{Z}$.`,
+        solution: String.raw`L'ordre $d$ de $x$ est le plus petit entier $k > 0$ tel que $x^k = e_G$ (s'il existe). Par division euclidienne $n = dq + r$ avec $0 \le r < d$, on a $e_G = x^n = (x^d)^q x^r = x^r$, d'où $r = 0$ par minimalité de $d$, donc $d \mid n$. Dans $\mathbb{Z}/n\mathbb{Z}$, $\mathrm{ord}(\overline{a}) = \frac{n}{\mathrm{pgcd}(a, n)}$.`
     },
     {
         day: 10,
@@ -134,8 +134,8 @@ const JOURS_AVENT = [
         theme: 'sand',
         icon: 'fa-code-branch',
         titre: String.raw`Sous-groupes distingués`,
-        question: String.raw`Donner trois caractérisations équivalentes de $H \triangleleft G$ et citer deux sous-groupes non distingués dans $GL_n(\mathbb{R})$ pour $n \ge 2$.`,
-        solution: String.raw`$H \triangleleft G \iff \forall x \in G,\ xHx^{-1} \subset H \iff \forall x \in G,\ xH = Hx \iff \forall x \in G,\ xHx^{-1} = H$. Dans $GL_n(\mathbb{R})$ ($n \ge 2$), le groupe orthogonal $O(n)$ et le sous-groupe des matrices triangulaires supérieures inversibles ne sont pas distingués.`
+        question: String.raw`Montrer l'équivalence $\forall x \in G,\ xH = Hx \iff \forall x \in G,\ \forall h \in H,\ xhx^{-1} \in H$. Les sous-groupes $H_1 = \{\mathrm{id}, (1\,2\,3), (1\,3\,2)\}$ et $H_2 = \{\mathrm{id}, (1\,2)\}$ sont-ils distingués dans $S_4$ ?`,
+        solution: String.raw`Si $xH = Hx$, alors pour $h \in H$, $xh \in xH = Hx$ donc $\exists h' \in H,\ xh = h'x$, soit $xhx^{-1} = h' \in H$ (réciproque analogue avec $x^{-1}$). Dans $S_4$ : $H_1$ n'est pas distingué car $(1\,4)(1\,2\,3)(1\,4)^{-1} = (2\,3\,4) \notin H_1$ ; $H_2$ non plus car $(1\,3)(1\,2)(1\,3)^{-1} = (2\,3) \notin H_2$.`
     },
     {
         day: 13,
@@ -196,9 +196,9 @@ const JOURS_AVENT = [
         span: 'span-1x1',
         theme: 'crimson',
         icon: 'fa-angle-double-right',
-        titre: String.raw`Sous-groupes de $\mathbb{Z}/8\mathbb{Z}$`,
-        question: String.raw`Lister tous les sous-groupes propres de $\mathbb{Z}/8\mathbb{Z}$ en précisant leur ordre et leurs éléments.`,
-        solution: String.raw`Les sous-groupes propres correspondent aux diviseurs stricts $d \in \{2, 4\}$ de $8$ : $2\mathbb{Z}/8\mathbb{Z} = \{\overline{0}, \overline{2}, \overline{4}, \overline{6}\}$ (d'ordre $4$) et $4\mathbb{Z}/8\mathbb{Z} = \{\overline{0}, \overline{4}\}$ (d'ordre $2$).`
+        titre: String.raw`Produits et morphismes cycliques`,
+        question: String.raw`Le groupe $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$ est-il isomorphe à $\mathbb{Z}/8\mathbb{Z}$ ? Déterminer tous les morphismes de groupes $f : \mathbb{Z}/6\mathbb{Z} \to \mathbb{Z}/9\mathbb{Z}$.`,
+        solution: String.raw`Non : $\mathbb{Z}/8\mathbb{Z}$ possède un élément d'ordre $8$, alors que dans $\mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/4\mathbb{Z}$, $4(x,y) = (0,0)$ donc tout élément est d'ordre au plus $4$. Un morphisme $f : \mathbb{Z}/6\mathbb{Z} \to \mathbb{Z}/9\mathbb{Z}$ est entièrement déterminé par $f(\overline{1}) = \overline{k}$ tel que $6\overline{k} = \overline{0}$ dans $\mathbb{Z}/9\mathbb{Z}$, soit $9 \mid 6k \iff 3 \mid k$ : il y en a exactement $3$ ($k \in \{0, 3, 6\}$).`
     },
     {
         day: 20,
@@ -242,8 +242,8 @@ const JOURS_AVENT = [
         theme: 'grand-finale',
         icon: 'fa-star',
         titre: String.raw`Orbites et stabilisateurs`,
-        question: String.raw`Définir l'orbite $G \bullet x$, le stabilisateur $\mathrm{Stab}_G(x)$ et la transitivité d'une action, puis déterminer les orbites de l'action de $G = \{\mathrm{id}, s_{Ox}\}$ sur $\mathbb{S}^1$.`,
-        solution: String.raw`Joyeux Noël ! $G \bullet x = \{g \bullet x \mid g \in G\}$, $\mathrm{Stab}_G(x) = \{g \in G \mid g \bullet x = x\}$, et l'action est transitive s'il n'y a qu'une seule orbite ($G \bullet x = X$). Sur $\mathbb{S}^1$, les orbites sont les singletons $\{1\}$ et $\{-1\}$, ainsi que les paires $\{e^{i\theta}, e^{-i\theta}\}$ pour $\theta \in ]0, \pi[$.`
+        question: String.raw`Définir l'orbite $G \bullet x$ et le stabilisateur $\mathrm{Stab}_G(x)$, montrer que $\mathrm{Stab}_G(x)$ est un sous-groupe de $G$, puis déterminer les orbites de l'action de $G = \{\mathrm{id}, s_{Ox}\}$ sur $\mathbb{S}^1$.`,
+        solution: String.raw`Joyeux Noël ! $G \bullet x = \{g \bullet x \mid g \in G\}$ et $\mathrm{Stab}_G(x) = \{g \in G \mid g \bullet x = x\}$. On a $e_G \in \mathrm{Stab}_G(x)$, et si $g, h \in \mathrm{Stab}_G(x)$, alors $(gh^{-1}) \bullet x = g \bullet (h^{-1} \bullet x) = g \bullet x = x$ (car $h \bullet x = x \Rightarrow x = h^{-1} \bullet x$). Sur $\mathbb{S}^1$, les orbites sont $\{1\}$, $\{-1\}$ et les paires $\{e^{i\theta}, e^{-i\theta}\}$ ($\theta \in ]0, \pi[$).`
     }
 ];
 
@@ -484,13 +484,12 @@ export default function AventMaths() {
                                     onClick={() => setShowSolution((prev) => !prev)}
                                 >
                                     <i
-                                        className={`fas ${
-                                            isSolutionUnlocked
+                                        className={`fas ${isSolutionUnlocked
                                                 ? showSolution
                                                     ? 'fa-eye-slash'
                                                     : 'fa-lightbulb'
                                                 : 'fa-lock'
-                                        }`}
+                                            }`}
                                     />
                                     <span>
                                         {isSolutionUnlocked
